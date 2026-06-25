@@ -101,7 +101,7 @@ binary "https://nh.nu/nhncloudsdk"
 
 #### Link Frameworks
 
-* NHN Cloudの[Downloads](../../../Download/#toast-sdk)ページで全体iOS SDKをダウンロードできます。
+* NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページで全体iOS SDKをダウンロードできます。
 ![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
 
 * NHN Cloud LoggerのCrash Report機能を使用するには、一緒に配布されるCrashReporter.frameworkもプロジェクトに追加する必要があります。
@@ -132,7 +132,7 @@ binary "https://nh.nu/nhncloudsdk"
 * **CrashReporter.framework**を直接ダウンロードするか、ビルドした場合は**Build Settings**の**Enable Bitcode**の値を**NO**に変更する必要があります。
     * **Project Target > Build Settings > Build Options > Enable Bitcode**
 ![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> NHN Cloud SDKの[Downloads](../../../Download/#toast-sdk)ページでダウンロードしたCrashReporter.frameworkは、bitCodeをサポートします。
+> NHN Cloud SDKの[Downloads](../../Download/#nhn-cloud-sdk)ページでダウンロードしたCrashReporter.frameworkは、bitCodeをサポートします。
 
 <a id="import-framework"></a>
 

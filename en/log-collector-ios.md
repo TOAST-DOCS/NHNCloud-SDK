@@ -66,7 +66,7 @@ end
 
 #### Set up Framework
 
-* The entire iOS SDK can be downloaded from [Downloads](../../../Download/#toast-sdk) of NHN Cloud.
+* The entire iOS SDK can be downloaded from [Downloads](../../Download/#nhn-cloud-sdk) of NHN Cloud.
 * Add **NHNCloudLogger.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework** to the Xcode Project.
 * To enable Crash Report of NHN Cloud Logger, CrashReporter.framework which is distributed as well, must be added to the project.
 ![linked_frameworks_logger](https://static.toastoven.net/toastcloud/sdk/ios/logger_link_frameworks_logger_202206.png)
@@ -82,7 +82,7 @@ end
 * To directly download or build **CrashReporter.framework**, the **Bitcode** at **Build Settings** must be changed to **NO**.
     * **Project Target > Build Settings > Build Options > Enable Bitcode**
 ![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> CrashReporter.framework downloaded from [Downloads](../../../Download/#toast-sdk) of NHN Cloud supports bitCode.
+> CrashReporter.framework downloaded from [Downloads](../../Download/#nhn-cloud-sdk) of NHN Cloud supports bitCode.
 
 <a id="apply-nhn-cloud-symbol-uploader"></a>
 
@@ -151,7 +151,7 @@ OPTIONS:
 ### Precautions when using CrashReport
 
 * Crash analysis of devices using the arm64e architecture requires the use of PLCrashReporter, which is distributed with the NHN Cloud Logger.
-    * Crash analysis of devices using the arm64e architecture is not possible if you use a PLCrashReporter that is downloaded or built directly from a location other than the [Downloads](../../../Download/#toast-sdk) of NHN Cloud.
+    * Crash analysis of devices using the arm64e architecture is not possible if you use a PLCrashReporter that is downloaded or built directly from a location other than the [Downloads](../../Download/#nhn-cloud-sdk) of NHN Cloud.
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
 

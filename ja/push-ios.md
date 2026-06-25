@@ -71,7 +71,7 @@ end
 
 #### フレームワーク設定
 
-* NHN Cloudの [Downloads](../../../Download/#toast-sdk)ベージでiOS SDKをダウンロードできます。
+* NHN Cloudの [Downloads](../../Download/#nhn-cloud-sdk)ベージでiOS SDKをダウンロードできます。
 * Xcode Projectに、**NHNCloudPush.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework, UserNotifications.framework**を追加します。
 * UserNotifications.frameworkは下記の方法で追加できます。
 ![linked_usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)

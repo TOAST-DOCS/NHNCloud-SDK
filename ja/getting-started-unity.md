@@ -44,7 +44,7 @@ Unity 用 NHN Cloud SDK は、次のフォルダ構造になっています。
 
 ## NHN Cloud SDK を Unity プロジェクトに適用
 
-NHN Cloud の [Download](../../../Download/#toast-sdk) ページから NHN Cloud SDK Unity をダウンロードします。
+NHN Cloud の [Download](../../Download/#nhn-cloud-sdk) ページから NHN Cloud SDK Unity をダウンロードします。
 
 <a id="import-unity-package"></a>
 
