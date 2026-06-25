@@ -450,8 +450,6 @@ public class MyApplication extends Application {
 
 ## 通知設定
 
-**通知設定**
-
 <a id="default-notification-channel-name-setting"></a>
 
 ### 基本通知チャネル名の設定
@@ -593,7 +591,6 @@ public class MyApplication extends Application {
 
 ## リッチメッセージ
 
-**リッチメッセージとは？**
 * リッチメッセージは、お知らせのタイトル、本文と共にイメージをお知らせに表現し、ボタン、返信などのアクションを追加します。
 
 <a id="supported-rich-messages"></a>
