@@ -79,11 +79,6 @@ end
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-* **CrashReporter.framework**를 직접 다운로드하거나 빌드한 경우에는 **Build Setting**의 **Enable Bitcode**의 값을 **NO**로 변경해야 합니다.
-    * **Project Target > Build Settings > Build Options > Enable Bitcode**
-![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 다운로드한 CrashReporter.framework는 bitCode를 지원합니다.
-
 <a id="apply-nhn-cloud-symbol-uploader"></a>
 
 ## NHN Cloud Symbol Uploader 적용

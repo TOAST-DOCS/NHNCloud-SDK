@@ -129,10 +129,6 @@ binary "https://nh.nu/nhncloudsdk"
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-* **CrashReporter.framework**を直接ダウンロードするか、ビルドした場合は**Build Settings**の**Enable Bitcode**の値を**NO**に変更する必要があります。
-    * **Project Target > Build Settings > Build Options > Enable Bitcode**
-![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> NHN Cloud SDKの[Downloads](../../Download/#nhn-cloud-sdk)ページでダウンロードしたCrashReporter.frameworkは、bitCodeをサポートします。
 
 <a id="import-framework"></a>
 
