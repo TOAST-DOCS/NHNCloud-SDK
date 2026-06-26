@@ -91,7 +91,7 @@ binary "https://nh.nu/nhncloudsdk"
 * NHN Cloud SDKを使用するために**フレームワーク設定**と**プロジェクト設定**を行う必要があります。
 
 > サービスのいずれかの機能を選択して使用するには、サービスごとに必要なFrameworkのみ選択してプロジェクトに追加する必要があります。
-> サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](./getting-started-ios/#toast-sdk)で確認できます。  
+> サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](./getting-started-ios/#nhn-cloud-sdk-components)で確認できます。  
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 

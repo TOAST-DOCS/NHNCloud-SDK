@@ -398,9 +398,9 @@ ToastIap.RequestActivatedPurchases(false, (result, purchases) =>
 ## サブスクリプション状態照会
 
 - 各User IDで購入したサブスクリプション商品の状態を照会できます。
-- サブスクリプション状態の照会結果は[IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus)オブジェクトのリストで返されます。
-- サブスクリプションの状態は[IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus).GetStatus()メソッドで確認できます。
-- サブスクリプションのステータスコードは[IapSubscriptionStatus.Status](./iap-android/#iapsubscriptionstatusstatus)に定義されています。
+- サブスクリプション状態の照会結果は[IapSubscriptionStatus](./iap-unity/#iapsubscriptionstatus)オブジェクトのリストで返されます。
+- サブスクリプションの状態は[IapSubscriptionStatus](./iap-unity/#iapsubscriptionstatus).GetStatus()メソッドで確認できます。
+- サブスクリプションのステータスコードは[IapSubscriptionStatus.Status](./iap-unity/#iapsubscriptionstatusstatus)に定義されています。
 
 <a id="specification-for-subscription-status-query-api"></a>
 

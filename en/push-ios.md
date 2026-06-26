@@ -461,7 +461,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 * `Received metrics collection is supported in iOS 10.0+ or higher.`
 * Received metrics are automatically collected by the NHN Cloud Push SDK that was added to the Notification Service Extension.
 * To collect received metrics, you need to implement Notification Service Extension that inherits and implements NHNCloudPushServiceExtension in the user application. (Refer to the [Notification Service Extension](./push-ios/#notification-service-extension) section below for how to add the Notification Service Extension)
-* To enable the collection of received metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#nhn-cloud-push-sdk) in the Notification Service Extension constructor or **extension's info.plist file**.
+* To enable the collection of received metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) in the Notification Service Extension constructor or **extension's info.plist file**.
 
 <a id="example-of-received-metrics-collection-setting-through-initialization"></a>
 
@@ -518,7 +518,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 ### Opened Metric Collection Setting
 
 * Opened metrics are automatically collected from the NHN Cloud Push SDK that was added to the application.
-* To enable the collection of opened metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#nhn-cloud-push-sdk) or **application's info.plist file**.
+* To enable the collection of opened metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) or **application's info.plist file**.
 
 <a id="example-of-opened-metrics-collection-setting-through-infoplist-definition"></a>
 
@@ -563,7 +563,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 
 ### Notification Service Extension Setting
 
-* Add the extension's [Project Settings](./push-ios/#project-settings) in the same way as the app's project settings.
+* Add the extension's [Project Settings](./push-ios/#set-up-project) in the same way as the app's project settings.
 * `The extension for iOS is installed along with the app, but they do not share a container because it is on a separate sandbox environment which is separate from the app.'
 
 <a id="notification-service-extension-setting-example"></a>
@@ -739,7 +739,7 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 
 ### Initialization
 
-* VoIP function is available only when [NHN Cloud Push SDK initialization](./push-ios/#nhn-cloud-push-sdk) has been performed.
+* VoIP function is available only when [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) has been performed.
 * The VoIP function is separated as a submodule of the NHN Cloud Push SDK.
 
 <a id="delegate-setting"></a>

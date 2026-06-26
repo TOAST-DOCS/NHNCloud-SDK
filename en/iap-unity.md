@@ -401,7 +401,7 @@ ToastIap.RequestActivatedPurchases(false, (result, purchases) =>
 - You can query the status of purchased subscription product by user ID.
 - The result of subscription status query is returned as a list of [IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus) object.
 - Subscription status can be checked with the [IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus).GetStatus() method.
-- Subscription status codes are defined in  [IapSubscriptionStatus.Status](./iap-android/#iapsubscriptionstatusstatus).
+- Subscription status codes are defined in  [IapSubscriptionStatus.Status](./iap-unity/#iapsubscriptionstatusstatus).
 
 <a id="specification-for-subscription-status-query-api"></a>
 

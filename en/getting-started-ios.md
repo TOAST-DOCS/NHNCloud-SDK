@@ -91,7 +91,7 @@ binary "https://nh.nu/nhncloudsdk"
 * To use NHN Cloud SDK, you must perform **Framework setting** and **Project setting**.
 
 > To use desired features among the services selectively, you need to choose only the required frameworks per service and add them to the project.
-> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#toast-sdk).
+> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#nhn-cloud-sdk-components).
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 

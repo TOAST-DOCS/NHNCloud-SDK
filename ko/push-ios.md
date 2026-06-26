@@ -461,7 +461,7 @@ agreement.allowNightAdvertisements = YES;   // 야간 홍보성 알림 메시지
 * `수신 지표 수집은 iOS 10.0+ 이상부터 지원합니다.`
 * 수신 지표는 Notification Service Extension에 추가한 NHN Cloud Push SDK 에서 자동으로 수집됩니다.
 * 수신 지표 수집을 위해서는 사용자 애플리케이션에 NHNCloudPushServiceExtension를 상속 구현하는 Notification Service Extension을 구현해야 합니다. (Notification Service Extension 추가 방법은 아래 [Notification Service Extension](./push-ios/#notification-service-extension) 섹션 참고)
-* Notification Service Extension 생성자에서 [NHN Cloud Push SDK 초기화](./push-ios/#nhn-cloud-push-sdk) 혹은 **익스텐션의 info.plist 파일**에 앱키가 정의되어 있어야 수신 지표 수집이 가능합니다.
+* Notification Service Extension 생성자에서 [NHN Cloud Push SDK 초기화](./push-ios/#initialize-nhn-cloud-push-sdk) 혹은 **익스텐션의 info.plist 파일**에 앱키가 정의되어 있어야 수신 지표 수집이 가능합니다.
 
 <a id="example-of-received-metrics-collection-setting-through-initialization"></a>
 
@@ -518,7 +518,7 @@ agreement.allowNightAdvertisements = YES;   // 야간 홍보성 알림 메시지
 ### 실행(Opened) 지표 수집 설정
 
 * 실행 지표는 애플리케이션에 추가한 NHN Cloud Push SDK 에서 자동으로 수집됩니다.
-* [NHN Cloud Push SDK 초기화](./push-ios/#nhn-cloud-push-sdk) 혹은 **애플리케이션의 info.plist 파일**에 앱키가 정의되어 있어야 실행 지표 수집이 가능합니다.
+* [NHN Cloud Push SDK 초기화](./push-ios/#initialize-nhn-cloud-push-sdk) 혹은 **애플리케이션의 info.plist 파일**에 앱키가 정의되어 있어야 실행 지표 수집이 가능합니다.
 
 <a id="example-of-opened-metrics-collection-setting-through-infoplist-definition"></a>
 
@@ -563,7 +563,7 @@ agreement.allowNightAdvertisements = YES;   // 야간 홍보성 알림 메시지
 
 ### Notification Service Extension 설정
 
-* 앱의 프로젝트 설정과 동일하게 Extension의 [프로젝트 설정](./push-ios/#프로젝트-설정)을 추가합니다.
+* 앱의 프로젝트 설정과 동일하게 Extension의 [프로젝트 설정](./push-ios/#set-up-project)을 추가합니다.
 * `iOS의 Extension은 앱과 함께 설치되지만 앱과는 분리된 별도의 샌드박스 환경이라 컨테이너를 공유하지 않습니다.`
 
 <a id="notification-service-extension-setting-example"></a>
@@ -739,7 +739,7 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 
 ### 초기화
 
-* VoIP 기능은 [NHN Cloud Push SDK 초기화](./push-ios/#nhn-cloud-push-sdk)가 되어 있어야 사용 가능합니다.
+* VoIP 기능은 [NHN Cloud Push SDK 초기화](./push-ios/#initialize-nhn-cloud-push-sdk)가 되어 있어야 사용 가능합니다.
 * VoIP 기능은 NHN Cloud Push SDK의 서브모듈로 별도 분리되어 있습니다.
 
 <a id="delegate-setting"></a>

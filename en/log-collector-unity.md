@@ -263,7 +263,7 @@ var loggerConfiguration = new ToastLoggerConfiguration
 ```
 
 > If the User ID is set, you can check the user-specific crash experience in the 'Crash User' section of the Log & Crash Search console.
-> User ID setting can be checked in [Getting Started](./getting-started-unity/#set-userid).
+> User ID setting can be checked in [Getting Started](./getting-started-unity/#set-user-id).
 
 <a id="further-tasks-after-sending-crash-logs"></a>
 

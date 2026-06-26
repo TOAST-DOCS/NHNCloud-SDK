@@ -178,7 +178,7 @@ NhnCloudLogger.initialize(configuration);
 ```
 
 > If the User ID is set, you can check the user-specific crash experience in the 'Crash User' section of the Log & Crash Search console.
-> User ID setting can be checked in [Getting Started](./getting-started-android/#set-userid).
+> User ID setting can be checked in [Getting Started](./getting-started-android/#set-user-id).
 
 <a id="use-handled-exception-api"></a>
 

@@ -263,7 +263,7 @@ var loggerConfiguration = new ToastLoggerConfiguration
 ```
 
 > User ID가 설정되어 있으면 Log&Crash Search 콘솔의 `크래시 사용자` 항목에서 사용자별 크래시 경험을 확인 할 수 있습니다.
-> User ID 설정은 [시작하기](./getting-started-unity/#userid)에서 확인 가능합니다.
+> User ID 설정은 [시작하기](./getting-started-unity/#set-user-id)에서 확인 가능합니다.
 
 <a id="further-tasks-after-sending-crash-logs"></a>
 

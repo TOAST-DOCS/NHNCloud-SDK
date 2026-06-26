@@ -398,9 +398,9 @@ ToastIap.RequestActivatedPurchases(false, (result, purchases) =>
 ## 구독 상태 조회
 
 - User ID 기준으로 구입한 구독 상품의 상태를 조회할 수 있습니다.
-- 구독 상태 조회 결과는 [IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus) 객체의 리스트로 반환됩니다.
-- 구독 상태는 [IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus).GetStatus() 메서드로 확인할 수 있습니다.
-- 구독 상태 코드는 [IapSubscriptionStatus.Status](./iap-android/#iapsubscriptionstatusstatus)에 정의되어 있습니다.
+- 구독 상태 조회 결과는 [IapSubscriptionStatus](./iap-unity/#iapsubscriptionstatus) 객체의 리스트로 반환됩니다.
+- 구독 상태는 [IapSubscriptionStatus](./iap-unity/#iapsubscriptionstatus).GetStatus() 메서드로 확인할 수 있습니다.
+- 구독 상태 코드는 [IapSubscriptionStatus.Status](./iap-unity/#iapsubscriptionstatusstatus)에 정의되어 있습니다.
 
 <a id="specification-for-subscription-status-query-api"></a>
 
