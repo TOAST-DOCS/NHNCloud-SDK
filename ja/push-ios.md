@@ -71,7 +71,7 @@ end
 
 #### フレームワーク設定
 
-* NHN Cloudの [Downloads](../../../Download/#toast-sdk)ベージでiOS SDKをダウンロードできます。
+* NHN Cloudの [Downloads](../../Download/#nhn-cloud-sdk)ベージでiOS SDKをダウンロードできます。
 * Xcode Projectに、**NHNCloudPush.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework, UserNotifications.framework**を追加します。
 * UserNotifications.frameworkは下記の方法で追加できます。
 ![linked_usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)
@@ -456,7 +456,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 * `受信指標の収集は、iOS 10.0+以上からサポートします。`
 * 受信指標は、Notification Service Extensionに追加したNHN Cloud Push SDKで自動的に収集されます。
 * 受信指標を収集には、ユーザーアプリケーションにNHNCloudPushServiceExtensionを継承するNotification Service Extensionを実装しなければなりません。(Notification Service Extension追加方法は、 [Notification Service Extension](./push-ios/#notification-service-extension)セクション参照)
-* Notification Service Extensionの生成者で、[NHN Cloud Push SDK初期化](./push-ios/#nhn-cloud-push-sdk)、あるいは**エクステンションのinfo.plistファイル**にAppKeyが定義されていないと、受信指標の収集ができません。
+* Notification Service Extensionの生成者で、[NHN Cloud Push SDK初期化](./push-ios/#initialize-nhn-cloud-push-sdk)、あるいは**エクステンションのinfo.plistファイル**にAppKeyが定義されていないと、受信指標の収集ができません。
 
 <a id="example-of-received-metrics-collection-setting-through-initialization"></a>
 
@@ -513,7 +513,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 ### 実行(Opened)指標収集設定
 
 * 実行指標は、アプリケーションに追加したNHN Cloud Push SDKから自動的に収集されます。
-* [NHN Cloud Push SDK初期化](./push-ios/#nhn-cloud-push-sdk)、あるいは**アプリケーションのinfo.plistファイル**にAppKeyが定義されている場合、実行指標の収集が可能です。
+* [NHN Cloud Push SDK初期化](./push-ios/#initialize-nhn-cloud-push-sdk)、あるいは**アプリケーションのinfo.plistファイル**にAppKeyが定義されている場合、実行指標の収集が可能です。
 
 <a id="example-of-opened-metrics-collection-setting-through-infoplist-definition"></a>
 
@@ -558,7 +558,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 
 ### Notification Service Extension設定
 
-* アプリのプロジェクト設定と同様に、Extensionの[プロジェクト設定](./push-ios/#プロジェクト-設定)を追加します。
+* アプリのプロジェクト設定と同様に、Extensionの[プロジェクト設定](./push-ios/#set-up-project)を追加します。
 * `iOSのExtensionはアプリと一緒にインストールされますが、アプリとは分離された別のサンドボックス環境であるため、コンテナを共有することはできません。`
 
 <a id="notification-service-extension-setting-example"></a>
@@ -733,7 +733,7 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 
 ### 初期化
 
-* VoIP機能は[NHN Cloud Push SDK 初期化](./push-ios/#nhn-cloud-push-sdk)がされていなければ使用できません。
+* VoIP機能は[NHN Cloud Push SDK 初期化](./push-ios/#initialize-nhn-cloud-push-sdk)がされていなければ使用できません。
 * VoIP機能はNHN Cloud Push SDKのサブモジュールで別途分離されています。
 
 <a id="delegate-setting"></a>

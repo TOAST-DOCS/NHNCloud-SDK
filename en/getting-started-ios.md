@@ -91,7 +91,7 @@ binary "https://nh.nu/nhncloudsdk"
 * To use NHN Cloud SDK, you must perform **Framework setting** and **Project setting**.
 
 > To use desired features among the services selectively, you need to choose only the required frameworks per service and add them to the project.
-> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#toast-sdk).
+> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#nhn-cloud-sdk-components).
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 
@@ -101,7 +101,7 @@ binary "https://nh.nu/nhncloudsdk"
 
 #### Frameworks Setup
 
-* The entire iOS SDK can be downloaded from the [Downloads](../../../Download/#toast-sdk) page of NHN Cloud.
+* The entire iOS SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
 ![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
 
 * To use the Crash Report feature of Logger, CrashReporter.framework which is released along with the service, must be added to the project.
@@ -129,10 +129,6 @@ binary "https://nh.nu/nhncloudsdk"
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-* If you directly downloaded or built **CrashReporter.framework**, the **Enable Bitcode** under **Build Settings** must be changed to **No**.
-    * **Project Target > Build Settings > Build Options > Enable Bitcode**
-![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> CrashReporter.framework downloaded from the [Downloads](../../../Download/#toast-sdk) page of NHN Cloud supports bitcode.
 
 <a id="import-framework"></a>
 
