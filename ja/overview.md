@@ -53,7 +53,7 @@ NHN Cloud iOS SDKは、**Github**で配布され、簡単な**CocoaPods**, **Car
 
 ### Windows C++ 
  
-NHN Cloud Windows C++ SDKは、Windows 7、10(32/64bit)環境をサポートします。 
+NHN Cloud Windows C++ SDKは、Windows 7、10(32/64bit)、11(64bit)環境をサポートします。 
  
 - [Windows C++で開始する](./getting-started-windows) 
  
