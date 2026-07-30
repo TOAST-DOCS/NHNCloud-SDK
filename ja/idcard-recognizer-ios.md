@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=baf2528eea97 -->
+<!-- pre-align:aligned sig=f8d6fa48ab1b -->
+
+<a id="nhn-cloud-sdk-user-guide-ocr-id-card-ios"></a>
 
 ## NHN Cloud > SDK使用ガイド > OCR > ID Card (iOS)
 
