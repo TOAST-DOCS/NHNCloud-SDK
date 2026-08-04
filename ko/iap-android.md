@@ -1,3 +1,5 @@
+<a id="nhn-cloud-sdk-user-guide-iap-android"></a>
+
 ## NHN Cloud > SDK 사용 가이드 > IAP > Android
 
 <a id="prerequisites"></a>

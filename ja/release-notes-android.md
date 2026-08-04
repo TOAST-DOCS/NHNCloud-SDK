@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=df783d99cb29 -->
+<!-- pre-align:aligned sig=fd94f1629e00 -->
+
+<a id="nhn-cloud-sdk-user-guide-release-notes-android"></a>
 
 ## NHN Cloud > SDK使用ガイド > リリースノート > Android
 

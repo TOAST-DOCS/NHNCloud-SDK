@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=e0af4daa264a -->
+<!-- pre-align:aligned sig=e89c3d6cd7a6 -->
+
+<a id="nhn-cloud-sdk-user-guide-log-crash-windows-c"></a>
 
 ## NHN Cloud > SDK User Guide > Log & Crash > Windows C++
 

@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=f489a938dab7 -->
+<!-- pre-align:aligned sig=bce24ccc7be6 -->
+
+<a id="nhn-cloud-sdk-user-guide-log-crash-android-symbol-uploader"></a>
 
 ## NHN Cloud > SDK使用ガイド > Log & Crash > Android (Symbol Uploader)
 

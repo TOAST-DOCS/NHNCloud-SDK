@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=754cf2cb5d13 -->
+<!-- pre-align:aligned sig=a0cd6b6bb2af -->
+
+<a id="nhn-cloud-sdk-user-guide-log-crash-ios"></a>
 
 ## NHN Cloud > SDK使用ガイド > Log & Crash > iOS
 

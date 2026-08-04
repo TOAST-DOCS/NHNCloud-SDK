@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=5686df8dc3c5 -->
+<!-- pre-align:aligned sig=fe0eee54692e -->
+
+<a id="nhn-cloud-sdk-user-guide-ocr-credit-card-ios"></a>
 
 ## NHN Cloud > SDK User Guide > OCR > Credit Card (iOS)
 

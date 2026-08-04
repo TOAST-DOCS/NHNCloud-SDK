@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=2ef3f6cfec8f -->
+<!-- pre-align:aligned sig=f43b6cdf1fbf -->
+
+<a id="nhn-cloud-sdk-user-guide-getting-started-windows-c"></a>
 
 ## NHN Cloud > SDK User Guide > Getting Started > Windows C++
 

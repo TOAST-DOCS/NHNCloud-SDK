@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=48d2b659f224 -->
+<!-- pre-align:aligned sig=74de1cda7688 -->
+
+<a id="nhn-cloud-sdk-user-guide-getting-started-android"></a>
 
 ## NHN Cloud > SDK使用ガイド > 開始する > Android
 

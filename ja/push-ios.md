@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=126a8787ad5d -->
+<!-- pre-align:aligned sig=82fa5b59d3cd -->
+
+<a id="nhn-cloud-sdk-user-guide-push-ios"></a>
 
 ## NHN Cloud > SDK使用ガイド > Push > iOS
 

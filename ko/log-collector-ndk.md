@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=6c313885377c -->
+<!-- pre-align:aligned sig=b91e3d4ff2a8 -->
+
+<a id="nhn-cloud-sdk-user-guide-log-crash-android-ndk"></a>
 
 ## NHN Cloud > SDK 사용 가이드 > Log & Crash > Android (NDK)
 
