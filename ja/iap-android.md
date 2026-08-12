@@ -1,18 +1,17 @@
-<a id="nhn-cloud-sdk-user-guide-iap-android"></a>
+<!-- pre-align:aligned sig=3ec34520922b -->
 
-## NHN Cloud > SDK 사용 가이드 > IAP > Android
+<a id="nhn-cloud-sdk-user-guide-iap-android"></a>
+## NHN Cloud > SDK 사용 가이드 > IAP > Android { #nhn-cloud-sdk-user-guide-iap-android }
 
 <a id="prerequisites"></a>
-
-## 事前準備
+## 事前準備 { #prerequisites }
 
 1. [NHN Cloud SDK](./getting-started-android)をインストールします。
 2. [NHN Cloud コンソール](https://console.nhncloud.com)で [IAP サービスを有効化](/Mobile%20Service/IAP/ja/console-guide/)します。
 3. IAP コンソールで [AppKey を確認](/Mobile%20Service/IAP/ja/console-guide/#appkey)します。
 
 <a id="console-guide-for-stores"></a>
-
-## ストア別コンソールガイド
+## ストア別コンソールガイド { #console-guide-for-stores }
 
 - [Google コンソールガイド](/Mobile%20Service/IAP/ja/console-google-guide/)
 - [ONE store コンソールガイド](/Mobile%20Service/IAP/ja/console-onestore-guide/)
@@ -24,8 +23,7 @@
 > Google Play でサブスクリプション商品を販売する場合は、[リアルタイムのサブスクリプション状態を受信するための Google 通知設定](/Mobile%20Service/IAP/ja/console-google-guide/#google_1)を行う必要があります。
 
 <a id="in-app-purchase-guide-for-each-store-type"></a>
-
-## ストア別アプリ内課金ガイド
+## ストア別アプリ内課金ガイド { #in-app-purchase-guide-for-each-store-type }
 
 - [Android Developers アプリ内課金](https://developer.android.com/google/play/billing)
 - [ONE store アプリ内課金 API V7（SDK V21）案内およびダウンロード](https://onestore-dev.gitbook.io/dev/tools/tools)
@@ -34,12 +32,10 @@
 - [Huawei App Gallery アプリ内課金 API 案内およびダウンロード](https://developer.huawei.com/consumer/kr/hms/huawei-iap)
 
 <a id="library-setting"></a>
-
-## ライブラリ設定
+## ライブラリ設定 { #library-setting }
 
 <a id="google-play-store"></a>
-
-### Google Play Store
+### Google Play Store { #google-play-store }
 
 - Google Play Store のアプリ内課金を使用するには、以下のように build.gradle に依存性を追加します。
 
@@ -56,8 +52,7 @@ dependencies {
 ```
 
 <a id="one-store"></a>
-
-### ONE store
+### ONE store { #one-store }
 
 - ONE store のアプリ内課金を使用するには、以下のように build.gradle に依存性を追加します。
 - ONE store V19 の場合は、V19 IAP SDK を[ダウンロード](https://github.com/ONE-store/onestore_iap_release/tree/iap19-release/android_app_sample/app/libs)して libs ディレクトリにコピーし、依存性を合わせて追加します。
@@ -88,8 +83,7 @@ dependencies {
 > ONE store 統合バージョン(V21) のアプリ内課金は、Android 6.0(API レベル 23) 以上で動作します。
 
 <a id="galaxy-store"></a>
-
-### Galaxy Store
+### Galaxy Store { #galaxy-store }
 
 - Galaxy Store のアプリ内課金を使用するには、以下のように build.gradle に依存性を追加します。
 
@@ -105,8 +99,7 @@ dependencies {
 ```
 
 <a id="amazon-appstore"></a>
-
-### Amazon Appstore
+### Amazon Appstore { #amazon-appstore }
 
 - Amazon Appstore のアプリ内課金を使用するには、以下のように build.gradle に依存性を追加します。
 
@@ -122,8 +115,7 @@ dependencies {
 ```
 
 <a id="huawei-app-gallery"></a>
-
-### Huawei App Gallery
+### Huawei App Gallery { #huawei-app-gallery }
 
 - AppGallery Connection 構成ファイル(agconnect-service.json) を追加します。
     - [AppGallery Connect](https://developer.huawei.com/consumer/en/service/josp/agc/index.html) にサインインし、**[マイプロジェクト]** をクリックします。
@@ -167,8 +159,7 @@ dependencies {
 ```
 
 <a id="mycard"></a>
-
-### MyCard
+### MyCard { #mycard }
 
 - MyCard のアプリ内課金を使用するには、以下のように build.gradle に依存性を追加します。
 
@@ -184,12 +175,10 @@ dependencies {
 ```
 
 <a id="androidmanifest-setting"></a>
-
-## AndroidManifest 設定
+## AndroidManifest 設定 { #androidmanifest-setting }
 
 <a id="one-store-purchase-screen-setting-optional"></a>
-
-### ONE store 決済画面設定（オプション）
+### ONE store 決済画面設定（オプション） { #one-store-purchase-screen-setting-optional }
 
 ONE store は全体決済画面とポップアップ決済画面をサポートします。
 AndroidManifest.xml に meta-data を追加することで、全体決済画面（"full"）またはポップアップ決済画面（"popup"）を選択できます。
@@ -210,14 +199,12 @@ meta-data を設定しない場合、デフォルト値（"full"）が適用さ�
 詳細については、[ONE store 決済画面設定](https://dev.onestore.co.kr/devpoc/reference/view/Tools)を参照してください。
 
 <a id="app-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore"></a>
-
-### Android 11 以上をターゲットにするアプリ（ONE store、Galaxy Store、Amazon Appstore）
+### Android 11 以上をターゲットにするアプリ（ONE store、Galaxy Store、Amazon Appstore） { #app-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore }
 
 Android 11 では、アプリがユーザーのデバイスにインストールされている他のアプリをクエリし、相互作用する方法が変更されます。
 Android 11 以上をターゲットにするアプリで ONE store、Galaxy Store、または Amazon Appstore 決済を使用するには、以下のように AndroidManifest.xml に `queries` 要素または権限を定義する必要があります。
 
 <a id="one-store-2"></a>
-
 #### ONE store
 
 ```xml
@@ -233,7 +220,6 @@ Android 11 以上をターゲットにするアプリで ONE store、Galaxy Stor
 ```
 
 <a id="galaxy-store-2"></a>
-
 #### Galaxy Store
 
 ```xml
@@ -243,8 +229,7 @@ Android 11 以上をターゲットにするアプリで ONE store、Galaxy Stor
 ```
 
 <a id="amazon-appstore-2"></a>
-
-### Amazon Appstore
+### Amazon Appstore { #amazon-appstore-2 }
 
 Amazon Appstore では、`queries` 要素の代わりに権限を追加します。
 
@@ -260,11 +245,9 @@ Amazon Appstore では、`queries` 要素の代わりに権限を追加します
 > <span style="color:#e11d21">**注意！)**</span> QUERY_ALL_PACKAGES 権限を Google Play Store に適用しないよう注意してください。
 
 <a id="mycard-2"></a>
-
-### MyCard
+### MyCard { #mycard-2 }
 
 <a id="androidname-setting"></a>
-
 #### android:name 設定
 
 android:name を定義していない場合は、次のように追加します。
@@ -294,7 +277,6 @@ class MyApplication extends NhnCloudMyCardApplication {
 ```
 
 <a id="test-payment-mode-option"></a>
-
 #### テスト決済モード（オプション）
 
 決済テストを行うには、`test_mode` を追加します。`test_mode` を設定しない場合、デフォルト値は false です。
@@ -307,8 +289,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 ```
 
 <a id="store-codes"></a>
-
-## ストアコード
+## ストアコード { #store-codes }
 
 | ストア | コード |
 | ----------- | ---------- |
@@ -322,8 +303,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 > [注記] ストアコードは [IapStoreCode](./iap-android/#iapstorecode) クラスに定義されています。
 
 <a id="product-types"></a>
-
-## 商品の種類
+## 商品の種類 { #product-types }
 
 - 現在サポートしている商品の種類は3つで、消費性商品、サブスクリプション商品、消費性サブスクリプション商品があります。
 
@@ -336,8 +316,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 > [注記] サブスクリプション商品と消費性サブスクリプション商品は、**Google Play ストア**のみサポートします。
 
 <a id="in-app-purchase-iap-setting"></a>
-
-## アプリ内課金設定
+## アプリ内課金設定 { #in-app-purchase-iap-setting }
 
 * [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) オブジェクトはアプリ内課金の設定情報を含んでいます。
 * [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) オブジェクトは [NhnCloudIapConfiguration.Builder](./iap-android/#nhncloudiapconfigurationbuilder) を使用して作成できます。
@@ -345,8 +324,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 * setStoreCode メソッドを使用して、アプリ内課金に使用する [ストアコード](./iap-android/#_3) を設定します。
 
 <a id="example-of-iap-setting"></a>
-
-### アプリ内課金設定の例
+### アプリ内課金設定の例 { #example-of-iap-setting }
 
 ```java
 NhnCloudIapConfiguration configuration =
@@ -357,14 +335,12 @@ NhnCloudIapConfiguration configuration =
 ```
 
 <a id="initialize-iap"></a>
-
-## アプリ内課金の初期化
+## アプリ内課金の初期化 { #initialize-iap }
 
 - NhnCloudIap.initialize() メソッドを呼び出して、NHN Cloud IAP を初期化します。
 
 <a id="specification-for-iap-initialization-api"></a>
-
-### アプリ内課金初期化 API 明細
+### アプリ内課金初期化 API 明細 { #specification-for-iap-initialization-api }
 
 * アプリ内課金は NhnCloudIap.initialize メソッドを使用して初期化します。
 * NhnCloudIap.initialize メソッドは [NhnCloudIapConfiguration.Builder](./iap-android/#nhncloudiapconfigurationbuilder) で生成された [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) オブジェクトをパラメータとして使用します。
@@ -379,8 +355,7 @@ public static void initialize(NhnCloudIapConfiguration configuration)
 | configuration | NhnCloudIapConfiguration: アプリ内課金設定情報 |
 
 <a id="example-of-iap-initialization"></a>
-
-### アプリ内課金初期化の例
+### アプリ内課金初期化の例 { #example-of-iap-initialization }
 
 - NhnCloudIap を初期化します。
 
@@ -408,8 +383,7 @@ public class MainApplication extends Application {
 ```
 
 <a id="service-login"></a>
-
-## サービスログイン
+## サービスログイン { #service-login }
 
 * NHN Cloud SDK で提供するすべての商品（IAP、Log & Crash など）は、同一のユーザー ID を使用します。
     * [NhnCloudSdk.setUserId](/nhncloud/ja/nhncloud-sdk/getting-started-android/#userid) でユーザー ID を設定できます。
@@ -417,8 +391,7 @@ public class MainApplication extends Application {
 * サービスログイン段階で、ユーザー ID の設定、未消費決済履歴の照会、有効化されたサブスクリプション商品の照会機能を実装することをお勧めします。
 
 <a id="login"></a>
-
-### ログイン
+### ログイン { #login }
 
 ```java
 // Login.
@@ -426,8 +399,7 @@ NhnCloudSdk.setUserId(userId);
 ```
 
 <a id="logout"></a>
-
-### ログアウト
+### ログアウト { #logout }
 
 ```java
 // Logout.
@@ -437,8 +409,7 @@ NhnCloudSdk.setUserId(null);
 > [注記] サービスログアウト時には、必ずユーザー ID を null に設定してください。これにより、プロモーションコードがリディームされたり、決済再処理が動作した際に誤ったユーザー ID で購入が進行されることを防ぐことができます。
 
 <a id="register-purchases-update-listener"></a>
-
-## 決済アップデートリスナーの登録
+## 決済アップデートリスナーの登録 { #register-purchases-update-listener }
 
 * アプリ内で購入した決済とGoogle Playストアアプリでのプロモーションリデームまたはサブスクリプション状態の変更（復元、定期決済の再申請など）の際に、NhnCloudIapに設定された[IapService.PurchasesUpdatedListener](./iap-android/#iapservicepurchasesupdatedlistener)を通じて決済結果が通知されます。
 * 決済アップデートリスナーはNhnCloudIap.registerPurchasesUpdatedListenerメソッドを使用して登録できます。
@@ -447,8 +418,7 @@ NhnCloudSdk.setUserId(null);
 > [注記] 決済アップデートリスナーはActivity.onCreate()で登録し、Activity.onDestroy()で必ず解除してください。
 
 <a id="specification-for-registering-purchases-update-listener-api"></a>
-
-### 決済アップデートリスナー登録 API 明細
+### 決済アップデートリスナー登録 API 明細 { #specification-for-registering-purchases-update-listener-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -462,7 +432,6 @@ public static void unregisterPurchasesUpdatedListener(IapService.PurchasesUpdate
 | unregisterPurchasesUpdatedListener | listener   | IapService.<br>PurchasesUpdatedListener: <br>登録解除するリスナー | 決済アップデートリスナーの登録を解除します。 |
 
 <a id="example-of-registering-purchases-update-listener"></a>
-
 #### 決済アップデートリスナー登録例
 
 ```java
@@ -507,16 +476,14 @@ public class MainActivity extends AppCompatActivity {
 > 決済を安全に処理するために、決済結果を通知される前にユーザーがActivityを終了（戻るボタンまたは終了ボタンのクリック）できないようにする必要があります。
 
 <a id="query-product-list"></a>
-
-## 商品リスト照会
+## 商品リスト照会 { #query-product-list }
 
 * IAPコンソールに登録された商品のうち、使用可能な商品リストを照会します。
 * IAPコンソールに登録された商品のうち、購入可能な商品は [IapProductDetails](./iap-android/#iapproductdetails) リスト(Product Details List)として返されます。
 * IAPコンソールに登録された商品のうち、ストアに登録されていない商品は [IapProduct](./iap-android/#iapproduct) リスト(Invalid Product List)として返されます。
 
 <a id="specification-for-product-list-query-api"></a>
-
-### 商品リスト照会 API 명세
+### 商品リスト照会 API 명세 { #specification-for-product-list-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -531,8 +498,7 @@ public static void queryProductDetails(Activity activity,
 
 
 <a id="example-of-product-list-query"></a>
-
-### 商品リスト照会の例
+### 商品リスト照会の例 { #example-of-product-list-query }
 
 ```java
 /**
@@ -561,8 +527,7 @@ void queryProductDetails() {
 ```
 
 <a id="purchase-products"></a>
-
-## 商品の購入
+## 商品の購入 { #purchase-products }
 
 * NHN Cloud IAPはストアに登録された商品IDを使用して商品を購入できます。
 * 商品情報はNhnCloudIap.queryProductDetails()メソッドを呼び出して返された[IapProductDetails](./iap-android/#iapproductdetails)オブジェクトに含まれています。
@@ -572,8 +537,7 @@ void queryProductDetails() {
 * 商品購入の結果はNhnCloudIapに登録した[IapService.PurchasesUpdatedListener](./iap-android/#iapservicepurchasesupdatedlistener)を通じて返されます。
 
 <a id="specification-for-product-purchase-iap"></a>
-
-### 商品購入IAP明細
+### 商品購入IAP明細 { #specification-for-product-purchase-iap }
 
 ```java
 /* NhnCloudIap.java */
@@ -587,8 +551,7 @@ public static void launchPurchaseFlow(Activity activity,
 |                    | params     | IapPurchaseFlowParams: 購入情報パラメータ |
 
 <a id="example-of-product-purchase"></a>
-
-### 商品購入の例
+### 商品購入の例 { #example-of-product-purchase }
 
 ```java
 /**
@@ -603,8 +566,7 @@ void launchPurchaseFlow(Activity activity, String productId) {
 ```
 
 <a id="set-user-data"></a>
-
-### ユーザーデータ設定
+### ユーザーデータ設定 { #set-user-data }
 
 * NHN Cloud IAPは購入リクエスト時にユーザー情報を追加できます。
 * ユーザー情報はIapPurchaseFlowParams.BuilderのsetDeveloperPayload()メソッドで設定します。
@@ -622,8 +584,7 @@ NhnCloudIap.launchPurchaseFlow(activity, params);
 > Google Play Storeでプロモーションコードを使用して商品を購入した場合、ユーザーデータは使用できません。
 
 <a id="query-unconsumed-purchases"></a>
-
-## 未消費決済照会
+## 未消費決済照会 { #query-unconsumed-purchases }
 
 * まだ消費されていない一回性商品(CONSUMABLE)と消費性サブスクリプション商品(CONSUMABLE_AUTO_RENEWABLE)の情報を照会します。
 * ユーザーに商品を付与した後、[Consume API](/Mobile%20Service/IAP/ja/api-guide-for-toast-sdk/#consume-api)を使用して商品を消費します。
@@ -632,8 +593,7 @@ NhnCloudIap.launchPurchaseFlow(activity, params);
 * 照会結果は[IapService.PurchasesResponseListener](./iap-android/#iapservicepurchasesresponselistener)を通じて[IapPurchase](./iap-android/#iappurchase)オブジェクトリストとして返されます。
 
 <a id="specification-for-unconsumed-purchases-query-api"></a>
-
-### 未消費決済照会 API 명세
+### 未消費決済照会 API 명세 { #specification-for-unconsumed-purchases-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -649,8 +609,7 @@ public static void queryConsumablePurchases(Activity activity,
 |                          | listener   | IapService.PurchasesResponseListener: <br>未消費購入履歴照会結果リスナー |
 
 <a id="example-of-unconsumed-purchases-query"></a>
-
-### 未消費決済照会の例
+### 未消費決済照会の例 { #example-of-unconsumed-purchases-query }
 
 ```java
 /**
@@ -677,8 +636,7 @@ void queryConsumablePurchases(boolean isQueryAllStores) {
 ```
 
 <a id="query-activated-subscription"></a>
-
-## アクティブなサブスクリプションの照会
+## アクティブなサブスクリプションの照会 { #query-activated-subscription }
 
 * User ID を基準に、アクティブなサブスクリプション商品（AUTO_RENEWABLE & CONSUMABLE_AUTO_RENEWABLE）を照会できます。
 * 決済が完了したサブスクリプション商品は、使用期間が残っている場合、引き続き照会できます。
@@ -690,8 +648,7 @@ void queryConsumablePurchases(boolean isQueryAllStores) {
 > 現在、サブスクリプション商品は Google Play Store のみサポートしています。
 
 <a id="specification-for-activated-subscription-query-api"></a>
-
-### アクティブなサブスクリプション照会 API の仕様
+### アクティブなサブスクリプション照会 API の仕様 { #specification-for-activated-subscription-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -707,8 +664,7 @@ public static void queryActivatedPurchases(Activity activity,
 |                         | listener   | IapService.PurchasesResponseListener: <br>アクティブなサブスクリプション照会結果リスナー |
 
 <a id="example-of-activated-subscription-query"></a>
-
-### アクティブなサブスクリプション照会の例
+### アクティブなサブスクリプション照会の例 { #example-of-activated-subscription-query }
 
 ```java
 /**
@@ -735,8 +691,7 @@ void queryActivatedPurchases(boolean isQueryAllStores) {
 ```
 
 <a id="query-subscription-status"></a>
-
-## サブスクリプション状態の照会
+## サブスクリプション状態の照会 { #query-subscription-status }
 
 * User ID を基準に購入したサブスクリプション商品の状態を照会できます。
 * 期限切れのサブスクリプション商品は、includeExpiredSubscriptions の設定で照会または除外できます。（default: false）
@@ -749,8 +704,7 @@ void queryActivatedPurchases(boolean isQueryAllStores) {
 ```
 
 <a id="specification-for-subscription-status-query-api"></a>
-
-### サブスクリプション状態照会 API 仕様
+### サブスクリプション状態照会 API 仕様 { #specification-for-subscription-status-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -766,8 +720,7 @@ public static void querySubscriptionsStatus(Activity activity,
 |  | listener | IapService.SubscriptionsStatusResponseListener:<br>サブスクリプション状態照会結果リスナー |
 
 <a id="example-of-subscription-status-query"></a>
-
-### サブスクリプション状態照会の例
+### サブスクリプション状態照会の例 { #example-of-subscription-status-query }
 
 ```java
 /**
@@ -791,15 +744,13 @@ private void querySubscriptionsStatus() {
 ```
 
 <a id="google-store-subscription-feature"></a>
-
-## Google Play Store サブスクリプション(定期決済)機能
+## Google Play Store サブスクリプション(定期決済)機能 { #google-store-subscription-feature }
 
 Google Play Store のサブスクリプション決済の更新や有効期限切れなど、ライフサイクルに応じたイベントを処理する方法について説明します。
 詳細については、[定期決済別機能追加](https://developer.android.com/google/play/billing/billing_subscriptions)を参照してください。
 
 <a id="subscription-lifecycle-handling"></a>
-
-### サブスクリプションライフサイクルの処理
+### サブスクリプションライフサイクルの処理 { #subscription-lifecycle-handling }
 
 Google Play Store のサブスクリプションは、ライフサイクルの間にさまざまな状態変化を経ており、アプリは各状態に応じて対応する必要があります。
 
@@ -820,8 +771,7 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 | 有効期限切れ (Expired) | No | No | 過去時間 | No |
 
 <a id="grace-period"></a>
-
-### 猶予期間
+### 猶予期間 { #grace-period }
 
 猶予期間が有効になっている場合、決済周期の終了時に決済手段に問題があると、定期決済は猶予期間に移行します。
 <span style="color:#e11d21">猶予期間中、ユーザーは定期決済コンテンツにアクセスできる必要があります。</span>
@@ -830,22 +780,19 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 > <span style="color:#e11d21">**注意!)**</span> 猶予期間中に決済手段の変更などによって復元された場合、自動更新を再開します。NHN Cloud IAP は更新された決済件を決済アップデートリスナー(IapService.PurchaseUpdatedListener)を通じて決済結果を通知します。ゲームやアプリは、重要な動作中に決済アップデートリスナーによって不要なポップアップがユーザーに表示されないよう注意してください。
 
 <a id="ordinary-subscription-product-autorenewable"></a>
-
 #### 一般サブスクリプション商品 (AUTO_RENEWABLE))
 
 * 猶予期間中、一般サブスクリプション商品は定期決済コンテンツにアクセスできる必要があります。
 * 猶予期間中は NhnCloudIap.queryActivatedPurchases() で照会できます。
 
 <a id="consumable-subscription-product-consumableautorenewable"></a>
-
 #### 消費性サブスクリプション商品 (CONSUMABLE_AUTO_RENEWABLE)
 
 * 猶予期間が開始されると、Googleは新しいレシートを発行しますが、決済手段を変更しない場合はアカウント保留状態になるか取り消されます。
 * 消費性サブスクリプション商品は、猶予期間中に商品を消費できないよう NhnCloudIap.queryConsumablePurchases() では照会されません。
 
 <a id="account-hold"></a>
-
-### アカウント保留
+### アカウント保留 { #account-hold }
 
 アカウント保留とは、決済手段の問題により更新が失敗した際のユーザー状態を指します。
 決済に失敗すると猶予期間中に再試行し、猶予期間中も決済が失敗すると定期決済の状態は保留状態になります。
@@ -857,22 +804,19 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 > <span style="color:#e11d21">**注意!)**</span> アカウント保留期間中に決済手段の変更などによって復元された場合、自動更新を再開します。NHN Cloud IAP は更新された決済件を決済アップデートリスナー(IapService.PurchaseUpdatedListener)を通じて決済結果を通知します。ゲームやアプリは、重要な動作中に決済アップデートリスナーによって不要なポップアップがユーザーに表示されないよう注意してください。
 
 <a id="ordinary-subscription-product-autorenewable-2"></a>
-
 #### 一般サブスクリプション商品 (AUTO_RENEWABLE))
 
 * アカウント保留期間中、一般サブスクリプション商品は定期決済コンテンツにアクセスできません。
 * アカウント保留期間中は NhnCloudIap.queryActivatedPurchases() で照会されません。
 
 <a id="consumable-subscription-product-consumableautorenewable-2"></a>
-
 #### 消費性サブスクリプション商品 (CONSUMABLE_AUTO_RENEWABLE)
 
 * アカウント保留期間中、消費性サブスクリプション商品は新しい購入を生成しません。
 * アカウント保留期間中は NhnCloudIap.queryConsumablePurchases() で新しい購入が照会されません。
 
 <a id="pause"></a>
-
-### 一時停止
+### 一時停止 { #pause }
 
 一時停止機能を設定すると、ユーザーが定期決済を1週間から3か月の間で一時停止できます。
 定期決済の一時停止は、現在のサブスクリプション期間が終了した後に適用されます。
@@ -882,22 +826,19 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 > <span style="color:#e11d21">**注意!)**</span> 一時停止期間が終了すると、自動更新を再開します。NHN Cloud IAP は更新された決済件を決済アップデートリスナー(IapService.PurchaseUpdatedListener)を通じて決済結果を通知します。ゲームやアプリは、重要な動作中に決済アップデートリスナーによって不要なポップアップがユーザーに表示されないよう注意してください。
 
 <a id="ordinary-subscription-product-autorenewable-3"></a>
-
 #### 一般サブスクリプション商品 (AUTO_RENEWABLE))
 
 * 一時停止期間中、一般サブスクリプション商品は定期決済コンテンツにアクセスできません。
 * 一時停止期間中は NhnCloudIap.queryActivatedPurchases() で照会されません。
 
 <a id="consumable-subscription-product-consumableautorenewable-3"></a>
-
 #### 消費性サブスクリプション商品 (CONSUMABLE_AUTO_RENEWABLE)
 
 * 一時停止期間中、消費性サブスクリプション商品は新しい購入を生成しません。
 * 一時停止期間中は NhnCloudIap.queryConsumablePurchases() で新しい購入が照会されません。
 
 <a id="resubscription"></a>
-
-### 定期決済の再申請
+### 定期決済の再申請 { #resubscription }
 
 定期決済の再申請機能を設定すると、ユーザーが定期決済の有効期限日から12か月以内に取り消した定期決済を再申請できます。
 定期決済の再申請では、新しい定期決済および購入トークンが生成されます。
@@ -908,12 +849,10 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 > <span style="color:#e11d21">**注意!)**</span> Google Play Store で定期決済の再申請によりサブスクリプション商品を購入した場合、NHN Cloud IAP は購入した決済件を決済アップデートリスナー(IapService.PurchaseUpdatedListener)を通じて決済結果を通知します。ゲームやアプリは、重要な動作中に決済アップデートリスナーによって不要なポップアップがユーザーに表示されないよう注意してください。
 
 <a id="nhn-cloud-iap-class-reference"></a>
-
-## NHN Cloud IAP Class Reference
+## NHN Cloud IAP Class Reference { #nhn-cloud-iap-class-reference }
 
 <a id="nhncloudiapconfiguration"></a>
-
-### NhnCloudIapConfiguration
+### NhnCloudIapConfiguration { #nhncloudiapconfiguration }
 
 NHN Cloud IAP 初期化メソッドのパラメータとして使用されるアプリ内課金設定情報です。
 
@@ -929,8 +868,7 @@ public String getStoreCode();
 | getStoreCode | String  | ストアコード情報 ("GG" or "ONESTORE", "GALAXY", ...) |
 
 <a id="nhncloudiapconfigurationbuilder"></a>
-
-### NhnCloudIapConfiguration.Builder
+### NhnCloudIapConfiguration.Builder { #nhncloudiapconfigurationbuilder }
 
 IAP サービスのアプリキーやストアの種類などを入力して、[NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) オブジェクトを作成します。
 
@@ -946,8 +884,7 @@ public void setStoreCode(String storeCode)
 | setStoreCode | storeCode  | String: ストアコード情報   | ストアコードを設定します。<br>("GG" or "ONESTORE", "GALAXY", ...) |
 
 <a id="iapstorecode"></a>
-
-### IapStoreCode
+### IapStoreCode { #iapstorecode }
 
 ```java
 /* IapStoreCode.java */
@@ -967,8 +904,7 @@ String MYCARD
 * MYCARD<br>MyCard のアプリ内課金を使用します。<br>Constant Value: "MYCARD"
 
 <a id="iappurchaseresult"></a>
-
-### IapPurchaseResult
+### IapPurchaseResult { #iappurchaseresult }
 
 * 決済結果および決済情報を含むオブジェクトです。
 
@@ -992,8 +928,7 @@ public Throwable getCause()
 | isFailure   | boolean     | 決済失敗の有無を返します。                 |
 
 <a id="iapresult"></a>
-
-### IapResult
+### IapResult { #iapresult }
 
 ```java
 /* IapResult.java */
@@ -1013,8 +948,7 @@ public Throwable getCause()
 | isFailure  | boolean   | 失敗の有無を返します。  |
 
 <a id="iappurchase"></a>
-
-### IapPurchase
+### IapPurchase { #iappurchase }
 
 * IapPurchase オブジェクトで決済情報を確認できます。
 
@@ -1052,8 +986,7 @@ public String getDeveloperPayload()
 | getDeveloperPayload  | String  | ユーザーデータを返します。                          |
 
 <a id="iapproductdetails"></a>
-
-### IapProductDetails
+### IapProductDetails { #iapproductdetails }
 
 * IapProductDetails オブジェクトで商品の詳細情報を確認できます。
 * NHN Cloud IAP コンソールに登録された情報と、Google Play コンソールまたは ONE store Developer に登録された詳細情報を含みます。
@@ -1090,8 +1023,7 @@ public boolean isActivated()
 | isActivated           | boolean | 商品の有効化状態               |
 
 <a id="iapproduct"></a>
-
-### IapProduct
+### IapProduct { #iapproduct }
 
 * NHN Cloud IAP コンソールに登録された概要情報を確認できます。
 
@@ -1115,8 +1047,7 @@ public boolean isActivated()
 | isActivated           | boolean | 商品の有効化状態    |
 
 <a id="iappurchaseflowparams"></a>
-
-### IapPurchaseFlowParams
+### IapPurchaseFlowParams { #iappurchaseflowparams }
 
 * IapPurchaseFlowParams は購入しようとする商品情報を含みます。
 
@@ -1130,8 +1061,7 @@ public String getProductId()
 | getProductId | String  | 商品 ID |
 
 <a id="iappurchaseflowparamsbuilder"></a>
-
-### IapPurchaseFlowParams.Builder
+### IapPurchaseFlowParams.Builder { #iappurchaseflowparamsbuilder }
 
 * IapPurchaseFlowParams オブジェクトを作成します。
 
@@ -1145,8 +1075,7 @@ public void setProductId(String productId)
 | setProductId | productId  | String: 商品 ID | 商品 ID を設定します。 |
 
 <a id="iapquerypurchasesparams"></a>
-
-### IapQueryPurchasesParams
+### IapQueryPurchasesParams { #iapquerypurchasesparams }
 
 * IapQueryPurchasesParams は照会する条件を設定します。
 
@@ -1160,8 +1089,7 @@ public String isQueryAllStores()
 | isQueryAllStores | boolean  | すべてのストアを照会 |
 
 <a id="iapquerypurchasesparamsbuilder"></a>
-
-### IapQueryPurchasesParams.Builder
+### IapQueryPurchasesParams.Builder { #iapquerypurchasesparamsbuilder }
 
 * IapQueryPurchasesParams オブジェクトを作成します。
 
@@ -1175,8 +1103,7 @@ public void setQueryAllStores(boolean isQueryAllStores)
 | setQueryAllStores | isQueryAllStores  | boolean: すべてのストアを照会 | 照会範囲を設定します。 |
 
 <a id="iapsubscriptionstatus"></a>
-
-### IapSubscriptionStatus
+### IapSubscriptionStatus { #iapsubscriptionstatus }
 
 * IapSubscriptionStatus オブジェクトで購読状態情報を確認できます。
 * 購読状態コードは IapSubscriptionStatus.StatusCode に定義されています。
@@ -1223,8 +1150,7 @@ public String getStatusDescription()
 | getStatusDescription | String | 購読状態コードの説明を返します。 |
 
 <a id="iapsubscriptionstatusstatuscode"></a>
-
-### IapSubscriptionStatus.StatusCode
+### IapSubscriptionStatus.StatusCode { #iapsubscriptionstatusstatuscode }
 
 * 구독 상태를 나타내는 코드 입니다。
 
@@ -1252,8 +1178,7 @@ int UNKNOWN
 | UNKNOWN | 9999 | 未定義 | 定義されていない状態です。 |
 
 <a id="iapservicepurchasesupdatedlistener"></a>
-
-### IapService.PurchasesUpdatedListener
+### IapService.PurchasesUpdatedListener { #iapservicepurchasesupdatedlistener }
 
 * 決済情報が更新されたとき、IapService.PurchasesUpdatedListener を継承して実装したオブジェクトの onPurchasesUpdated メソッドを通じて通知されます。
 
@@ -1262,8 +1187,7 @@ void onPurchasesUpdated(List<IapPurchaseResult> purchaseResults)
 ```
 
 <a id="iapservicepurchasesresponselistener"></a>
-
-### IapService.PurchasesResponseListener
+### IapService.PurchasesResponseListener { #iapservicepurchasesresponselistener }
 
 * 未消費決済の照会またはアクティブなサブスクリプションの照会時に、IapService.PurchasesResponseListener を継承して実装したオブジェクトの onPurchasesResponse メソッドを通じて通知されます。
 
@@ -1273,8 +1197,7 @@ void onPurchasesResponse(IapResult result,
 ```
 
 <a id="iapservicesubscriptionsstatusresponselistener"></a>
-
-### IapService.SubscriptionsStatusResponseListener
+### IapService.SubscriptionsStatusResponseListener { #iapservicesubscriptionsstatusresponselistener }
 
 * サブスクリプション状態の照会時に、SubscriptionsStatusResponseListener を継承して実装したオブジェクトの onSubscriptionsStatusResponse メソッドを通じて通知されます。
 
@@ -1284,12 +1207,10 @@ void onSubscriptionsStatusResponse(IapResult result,
 ```
 
 <a id="error-codes"></a>
-
-## エラーコード
+## エラーコード { #error-codes }
 
 <a id="common-error-codes"></a>
-
-### 共通エラーコード
+### 共通エラーコード { #common-error-codes }
 
 | RESULT                 | CODE | DESC                                     |
 | ---------------------- | ---- | ---------------------------------------- |
@@ -1309,8 +1230,7 @@ void onSubscriptionsStatusResponse(IapResult result,
 | UNDEFINED_ERROR        | 9999 | 定義されていないエラー。<br>Undefined error.           |
 
 <a id="server-error-codes"></a>
-
-### サーバーエラーコード
+### サーバーエラーコード { #server-error-codes }
 
 | RESULT                    | CODE | DESC                                     |
 | ------------------------- | ---- | ---------------------------------------- |
@@ -1321,8 +1241,7 @@ void onSubscriptionsStatusResponse(IapResult result,
 | PURCHASE_LIMIT_EXCEEDED   | 106  | 購入限度を超えました。<br>Purchase limit exceeded. |
 
 <a id="one-store-error-codes"></a>
-
-### ONE store エラーコード
+### ONE store エラーコード { #one-store-error-codes }
 
 | RESULT                   | CODE | DESC                                     |
 | ------------------------ | ---- | ---------------------------------------- |
@@ -1332,8 +1251,7 @@ void onSubscriptionsStatusResponse(IapResult result,
 | ONESTORE_PURCHASE_FAILED | 304  | 決済リクエストに失敗しました。<br>Purchase request failed. |
 
 <a id="galaxy-store-error-codes"></a>
-
-### Galaxy store エラーコード
+### Galaxy store エラーコード { #galaxy-store-error-codes }
 
 | RESULT                   | CODE | DESC                                     |
 | ------------------------ | ---- | ---------------------------------------- |
