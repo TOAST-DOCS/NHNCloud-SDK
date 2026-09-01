@@ -517,7 +517,7 @@ agreement.allowNightAdvertisements = YES;   // 야간 홍보성 알림 메시지
 <a id="notification-service-extension-setting"></a>
 ### Notification Service Extension 설정 { #notification-service-extension-setting }
 
-* 앱의 프로젝트 설정과 동일하게 Extension의 [프로젝트 설정](./push-ios/#set-up-project)을 추가합니다.
+* 앱의 프로젝트 설정과 동일하게 Extension의 [프로젝트 설정](./push-ios/#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project)을 추가합니다.
 * `iOS의 Extension은 앱과 함께 설치되지만 앱과는 분리된 별도의 샌드박스 환경이라 컨테이너를 공유하지 않습니다.`
 
 <a id="notification-service-extension-setting-example"></a>
