@@ -84,26 +84,28 @@ end
 <a id="apply-nhn-cloud-symbol-uploader"></a>
 ## NHN Cloud Symbol Uploader 적용
 
-> Log & Crash Search Symbol API가 v3로 전환되었습니다. v3부터는 앱키 외에 **User Access Token** 인증이 필요합니다.
+!!! tip "알아두기"
+    Log & Crash Search Symbol API가 v3로 전환되었습니다. v3부터는 앱키 외에 **User Access Token** 인증이 필요합니다.
 
 <a id="symbol-uploader-preparation-for-auth"></a>
 ### 인증 준비
 
 v3 API 호출에는 NHN Cloud User Access Token이 필요하며, 다음 두 가지 방법 중 하나로 제공합니다.
 
-**방법 1. User Access Key ID / Secret Access Key 로 전달 (권장)**
+**방법 1. User Access Key ID / Secret Access Key로 전달(권장)**
 
 - 콘솔 우측 상단 계정 > **API 보안 설정**에서 User Access Key를 생성합니다. (User Access Key ID, Secret Access Key)
 - SymbolUploader가 전달받은 Key로 토큰을 자동 발급하여 사용합니다.
 - 옵션: `--user-access-key-id`(`-uak`), `--secret-access-key`(`-sak`)
 
-**방법 2. User Access Token 을 직접 전달**
+**방법 2. User Access Token을 직접 전달**
 
 - 이미 발급받은 User Access Token(Bearer)을 그대로 사용합니다.
 - 옵션: `--user-access-token`(`-uat`)
 
-> 방법 1(`-uak`/`-sak`)과 방법 2(`-uat`)는 **동시에 사용할 수 없습니다.** 둘 중 하나만 전달하세요.
-> 인증 정보를 전달하지 않으면 업로드가 진행되지 않습니다.
+!!! danger "주의"
+    방법 1(`-uak`/`-sak`)과 방법 2(`-uat`)는 동시에 사용할 수 없습니다. 둘 중 하나만 전달하세요.
+    인증 정보를 전달하지 않으면 업로드가 진행되지 않습니다.
 
 <a id="change-project-debug-settings"></a>
 
@@ -119,7 +121,7 @@ v3 API 호출에는 NHN Cloud User Access Token이 필요하며, 다음 두 가�
 * 표시되는 새 Run Script 섹션을 펼칩니다.
 * Shell(셸) 필드 아래에 있는 스크립트 필드에서 새 실행 스크립트를 추가합니다.
 
-**방법 1 (User Access Key)**
+**방법 1(User Access Key)**
 
 ```sh
 if [ "${CONFIGURATION}" = "Debug" ]; then

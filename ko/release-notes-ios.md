@@ -14,7 +14,7 @@
 
 <a id="improved-logger-260915"></a>
 
-#### 개선 사항
+#### 기능 개선
 * Log & Crash Search API 도메인 변경
     * 로그 수집 API 도메인이 api-logncrash.cloud.toast.com에서 api-logncrash.nhncloudservice.com으로 변경되었습니다.
     * 설정 API 도메인이 setting-logncrash.cloud.toast.com에서 api-setting-logncrash.nhncloudservice.com으로 변경되었습니다.
@@ -30,7 +30,7 @@
     * v0.0.5부터 User Access Token 인증이 필요합니다. 
       * appKey 단독 인증을 사용할 수 없으며, User Access Token 인증이 필요합니다.
       * User Access Token을 직접 설정하거나 User Access Key와 Secret Access Key를 사용해 자동으로 발급받을 수 있습니다.
-      * 자세한 사항은 [NHN Cloud Symbol Uploader 적용](https://docs.nhncloud.com/ko/nhncloud-sdk/ko/log-collector-ios/#apply-nhn-cloud-symbol-uploader)을 참고하세요.
+      * 자세한 사항은 [NHN Cloud Symbol Uploader 적용](https://docs.nhncloud.com/ko/nhncloud-sdk/ko/log-collector-ios/#apply-nhn-cloud-symbol-uploader)을 참고합니다.
 
 <a id="nhn-cloud-push-260915"></a>
 
@@ -38,7 +38,7 @@
 
 <a id="improved-push-260915"></a>
 
-#### 개선 사항
+#### 기능 개선
 * Push API 도메인 변경
     * 토큰 API와 사용자 태그 API 도메인이 api-push.cloud.toast.com에서 push.api.nhncloudservice.com으로 변경되었습니다.
 * Notification Hub 지표 전송 방식 개선
@@ -56,7 +56,7 @@
 
 <a id="improved-ocr-260915"></a>
 
-#### 개선 사항
+#### 기능 개선
 * OCR API 도메인 변경
     * OCR API 도메인이 ocr.api.nhncloudservice.com에서 api-ocr.nhncloudservice.com으로 변경되었습니다.
 * PublicKey 획득 실패 오류 전달 개선
