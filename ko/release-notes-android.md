@@ -3,7 +3,7 @@
 <a id="nhn-cloud-sdk-user-guide-release-notes-android"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Android { #nhn-cloud-sdk-user-guide-release-notes-android }
 
-## 1.13.0 (2026. 09. 15.)
+## 1.13.0(2026. 09. 15.)
 
 ### NHN Cloud Logger
 
@@ -36,7 +36,7 @@
 * OCR API 도메인 변경
     * OCR API 도메인이 ocr.api.nhncloudservice.com에서 api-ocr.nhncloudservice.com으로 변경되었습니다.
 
-### TOAST Gradle Plugin (0.1.0)
+### TOAST Gradle Plugin(0.1.0)
 
 #### 기능 추가
 
