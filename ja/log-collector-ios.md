@@ -141,7 +141,7 @@ fi
 * Run Script セクション下部の Input Files に dSYM のデフォルトパスを設定します。
     * `${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}`
 
-![](../static/images/ios/symbol-uploader/debug-symbol-uploader-settings.png){ height="100%" }
+![debug_symbol_uploader_settings](../static/images/ios/symbol-uploader/debug-symbol-uploader-settings.png){ height="100%" }
 
 <a id="upload-manually-using-symbol-uploader"></a>
 ### Symbol Uploaderを使用して直接アップロード { #upload-manually-using-symbol-uploader }
