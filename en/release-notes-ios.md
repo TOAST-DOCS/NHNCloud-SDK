@@ -6,11 +6,11 @@
 <a id="90-2025-04-29"></a>
 ## 1.9.0 (2025. 04. 29.) { #90-2025-04-29 }
 
-<a id="nhn-cloud-push"></a>
-### NHN Cloud Push { #nhn-cloud-push }
+<a id="90-2025-04-29-nhn-cloud-push"></a>
+### NHN Cloud Push { #90-2025-04-29-nhn-cloud-push }
 
-<a id="nhn-cloud-push-added-features"></a>
-#### Added Features 
+<a id="90-2025-04-29-nhn-cloud-push-added-features"></a>
+#### Added Features
 * Added Notification Hub 
     * NHN Cloud Push SDK supports Notification Hub
     * You can use it by setting the value NHNCloudPushServiceTypeNotificationHub in the serviceType property of NHNCloudPushConfiguration.
@@ -28,10 +28,10 @@
 <a id="85-2024-10-08"></a>
 ## 1.8.5 (2024. 10. 08.) { #85-2024-10-08 }
 
-<a id="nhn-cloud-iap"></a>
-### NHN Cloud IAP { #nhn-cloud-iap }
+<a id="85-2024-10-08-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #85-2024-10-08-nhn-cloud-iap }
 
-<a id="nhn-cloud-iap-improved"></a>
+<a id="85-2024-10-08-nhn-cloud-iap-improved"></a>
 #### Improved
 * Improved the feature to send payment details
 
@@ -49,10 +49,10 @@
 <a id="83-2024-07-23"></a>
 ## 1.8.3 (2024. 07. 23.) { #83-2024-07-23 }
 
-<a id="common"></a>
-### Common { #common }
+<a id="83-2024-07-23-common"></a>
+### Common { #83-2024-07-23-common }
 
-<a id="common-improved"></a>
+<a id="83-2024-07-23-common-improved"></a>
 #### Improved
 * Improved stability
 
@@ -107,17 +107,17 @@
 * Signature applied
     * Applied the `NHN Cloud Corp.` signature to the binaries being distributed.
 
-<a id="logger"></a>
-### Logger { #logger }
+<a id="71-2023-12-19-logger"></a>
+### Logger { #71-2023-12-19-logger }
 
-<a id="logger-improved"></a>
+<a id="71-2023-12-19-logger-improved"></a>
 #### Improved
 * Improved NetworkInsight stability of Instance Logger
 
-<a id="symboluploaderv004"></a>
-### SymbolUploader(v0.0.4) { #symboluploaderv004 }
+<a id="71-2023-12-19-symboluploaderv004"></a>
+### SymbolUploader(v0.0.4) { #71-2023-12-19-symboluploaderv004 }
 
-<a id="symboluploaderv004-improved"></a>
+<a id="71-2023-12-19-symboluploaderv004-improved"></a>
 #### Improved
 * Improved stability
 
@@ -151,10 +151,10 @@
 #### Improved
 * Fixed an issue where CountryCode is not obtained
 
-<a id="nhn-cloud-ocr"></a>
-### NHN Cloud OCR { #nhn-cloud-ocr }
+<a id="62-2023-08-29-nhn-cloud-ocr"></a>
+### NHN Cloud OCR { #62-2023-08-29-nhn-cloud-ocr }
 
-<a id="nhn-cloud-ocr-added-features"></a>
+<a id="62-2023-08-29-nhn-cloud-ocr-added-features"></a>
 #### Added Features
 * Added recognition area in the result of credit card/ID card recognition
 
@@ -189,8 +189,8 @@
 * Improved the token registration feature
     * Provided the option to register a token regardless of the app's notification permissions.
 
-<a id="50-2023-06-27-nhn-cloud-push-symboluploaderv003"></a>
-#### SymbolUploader(v0.0.3)
+<a id="50-2023-06-27-symboluploaderv003"></a>
+### SymbolUploader(v0.0.3) { #50-2023-06-27-symboluploaderv003 }
 * Improved stability
 
 <a id="40-2023-05-30"></a>
@@ -206,13 +206,13 @@
 <a id="40-2023-05-30-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #40-2023-05-30-nhn-cloud-iap }
 
-<a id="40-2023-05-30-nhn-cloud-iap-added-featrues"></a>
+<a id="40-2023-05-30-nhn-cloud-iap-added-features"></a>
 #### Added Featrues
 * Added a feature to send payment details 
     * You can view payment details on the Transaction tab in the IAP console.
 
-<a id="40-2023-05-30-nhn-cloud-iap-symboluploaderv002"></a>
-#### SymbolUploader(v0.0.2)
+<a id="40-2023-05-30-symboluploaderv002"></a>
+### SymbolUploader(v0.0.2) { #40-2023-05-30-symboluploaderv002 }
 * Improved run script
     * Added support for Cocoapods, SPM
 
@@ -258,10 +258,10 @@
 <a id="20-2022-11-29"></a>
 ## 1.2.0 (2022. 11. 29.) { #20-2022-11-29 }
 
-<a id="nhn-cloud-logger"></a>
-### NHN Cloud Logger { #nhn-cloud-logger }
+<a id="20-2022-11-29-nhn-cloud-logger"></a>
+### NHN Cloud Logger { #20-2022-11-29-nhn-cloud-logger }
 
-<a id="nhn-cloud-logger-added-features"></a>
+<a id="20-2022-11-29-nhn-cloud-logger-added-features"></a>
 #### Added Features
 * Added support for Logger for government agencies
 
@@ -318,20 +318,20 @@
 <a id="300-2022-03-29"></a>
 ## 0.30.0 (2022. 03. 29.) { #300-2022-03-29 }
 
-<a id="toast-iap"></a>
-### TOAST IAP { #toast-iap }
+<a id="300-2022-03-29-toast-iap"></a>
+### TOAST IAP { #300-2022-03-29-toast-iap }
 
-<a id="toast-iap-added-features"></a>
+<a id="300-2022-03-29-toast-iap-added-features"></a>
 #### Added Features
 * Added a property to check whether the payment is sandbox payment or not (sandboxPayment) to ToastPurchaseResult
 
 <a id="292-2021-11-23"></a>
 ## 0.29.2 (2021. 11. 23.) { #292-2021-11-23 }
 
-<a id="toast-push"></a>
-### TOAST Push { #toast-push }
+<a id="292-2021-11-23-toast-push"></a>
+### TOAST Push { #292-2021-11-23-toast-push }
 
-<a id="toast-push-improvements"></a>
+<a id="292-2021-11-23-toast-push-improvements"></a>
 #### Improvements
 * Improved stability
 
@@ -373,10 +373,10 @@
 * Added xcframework
     * Added support for arm Simulator
 
-<a id="toast-logger"></a>
-### TOAST Logger { #toast-logger }
+<a id="280-2021-05-25-toast-logger"></a>
+### TOAST Logger { #280-2021-05-25-toast-logger }
 
-<a id="toast-logger-crashreporter-buildinfo-20210525"></a>
+<a id="280-2021-05-25-toast-logger-crashreporter-buildinfo-20210525"></a>
 #### CrashReporter (BuildInfo 20210525)
 * Improved the way to classify architectures
     * Fixed an issue where iOS14 Core Library is not symbolicated
@@ -847,10 +847,10 @@
   * Add Description
   * Support Nullability, NSCoding, NSCopying
 
-<a id="toast-core"></a>
-### TOAST Core { #toast-core }
+<a id="130-2019-03-26-toast-core"></a>
+### TOAST Core { #130-2019-03-26-toast-core }
 
-<a id="toast-core-improvements"></a>
+<a id="130-2019-03-26-toast-core-improvements"></a>
 #### Improvements
 
 * Added internal exception handling
@@ -905,10 +905,10 @@
 <a id="123-2019-02-26"></a>
 ## 0.12.3 (2019. 02. 26.) { #123-2019-02-26 }
 
-<a id="toast-core-common"></a>
-### TOAST Core, Common { #toast-core-common }
+<a id="123-2019-02-26-toast-core-common"></a>
+### TOAST Core, Common { #123-2019-02-26-toast-core-common }
 
-<a id="toast-core-common-improvements"></a>
+<a id="123-2019-02-26-toast-core-common-improvements"></a>
 #### Improvements
 
 * Added exception handling for utility function
@@ -988,10 +988,10 @@
 <a id="110-2018-11-20"></a>
 ## 0.11.0 (2018. 11. 20.) { #110-2018-11-20 }
 
-<a id="toast-log-crash"></a>
-### TOAST Log & Crash { #toast-log-crash }
+<a id="110-2018-11-20-toast-log-crash"></a>
+### TOAST Log & Crash { #110-2018-11-20-toast-log-crash }
 
-<a id="toast-log-crash-added-features"></a>
+<a id="110-2018-11-20-toast-log-crash-added-features"></a>
 #### Added Features
 
 * Added Network Insights function

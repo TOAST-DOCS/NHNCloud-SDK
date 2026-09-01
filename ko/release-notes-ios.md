@@ -3,13 +3,65 @@
 <a id="nhn-cloud-sdk-user-guide-release-notes-ios"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > iOS { #nhn-cloud-sdk-user-guide-release-notes-ios }
 
+<a id="100-2026-09-15"></a>
+## 1.10.0 (2026. 09. 15.) { #100-2026-09-15 }
+
+<a id="100-2026-09-15-nhn-cloud-logger"></a>
+### NHN Cloud Logger { #100-2026-09-15-nhn-cloud-logger }
+
+<a id="100-2026-09-15-nhn-cloud-logger-improved"></a>
+#### 기능 개선
+* Log & Crash Search API 도메인 변경
+    * 로그 수집 API 도메인이 api-logncrash.cloud.toast.com에서 api-logncrash.nhncloudservice.com으로 변경되었습니다.
+    * 설정 API 도메인이 setting-logncrash.cloud.toast.com에서 api-setting-logncrash.nhncloudservice.com으로 변경되었습니다.
+
+<a id="100-2026-09-15-symboluploaderv005"></a>
+### SymbolUploader(v0.0.5) { #100-2026-09-15-symboluploaderv005 }
+
+<a id="100-2026-09-15-symboluploaderv005-added-features"></a>
+#### 기능 추가     
+* Log & Crash Search Symbol API v3 적용
+    * v0.0.5부터 User Access Token 인증이 필요합니다. 
+      * appKey 단독 인증을 사용할 수 없으며, User Access Token 인증이 필요합니다.
+      * User Access Token을 직접 설정하거나 User Access Key와 Secret Access Key를 사용해 자동으로 발급받을 수 있습니다.
+      * 자세한 사항은 [NHN Cloud Symbol Uploader 적용](https://docs.nhncloud.com/ko/nhncloud-sdk/ko/log-collector-ios/#apply-nhn-cloud-symbol-uploader)을 참고합니다.
+
+<a id="100-2026-09-15-nhn-cloud-push"></a>
+### NHN Cloud Push { #100-2026-09-15-nhn-cloud-push }
+
+<a id="100-2026-09-15-nhn-cloud-push-improved"></a>
+#### 기능 개선
+* Push API 도메인 변경
+    * 토큰 API와 사용자 태그 API 도메인이 api-push.cloud.toast.com에서 push.api.nhncloudservice.com으로 변경되었습니다.
+* Notification Hub 지표 전송 방식 개선
+    * 지표 전송이 재시도되더라도 동일한 지표가 중복 집계되지 않도록 개선하였습니다.
+
+<a id="100-2026-09-15-nhn-cloud-push-bugfix"></a>
+#### 버그 수정
+* Notification Hub 토큰 업데이트 실패 문제 수정
+    * 사용자 ID를 변경한 뒤 토큰 등록이 항상 실패하던 문제를 수정하였습니다.
+
+<a id="100-2026-09-15-nhn-cloud-ocr"></a>
+### NHN Cloud OCR { #100-2026-09-15-nhn-cloud-ocr }
+
+<a id="100-2026-09-15-nhn-cloud-ocr-improved"></a>
+#### 기능 개선
+* OCR API 도메인 변경
+    * OCR API 도메인이 ocr.api.nhncloudservice.com에서 api-ocr.nhncloudservice.com으로 변경되었습니다.
+* PublicKey 획득 실패 오류 전달 개선
+    * Delegate 등록 전에 발생한 PublicKey 획득 실패 오류를 Delegate 등록 이후 전달하도록 개선하였습니다.
+
+<a id="100-2026-09-15-nhn-cloud-ocr-bugfix"></a>
+#### 버그 수정
+* Default UI 아이콘 비율 왜곡 문제 수정
+
 <a id="90-2025-04-29"></a>
 ## 1.9.0 (2025. 04. 29.) { #90-2025-04-29 }
 
-<a id="nhn-cloud-push"></a>
-### NHN Cloud Push { #nhn-cloud-push }
+<a id="90-2025-04-29-nhn-cloud-push"></a>
+### NHN Cloud Push { #90-2025-04-29-nhn-cloud-push }
 
-<a id="nhn-cloud-push-added-features"></a>
+<a id="90-2025-04-29-nhn-cloud-push-added-features"></a>
 #### 기능 추가 
 * Notification Hub 지원 
     * NHNCloudPush SDK에서  Notification Hub를 이용할 수 있습니다.
@@ -28,10 +80,10 @@
 <a id="85-2024-10-08"></a>
 ## 1.8.5 (2024. 10. 08.) { #85-2024-10-08 }
 
-<a id="nhn-cloud-iap"></a>
-### NHN Cloud IAP { #nhn-cloud-iap }
+<a id="85-2024-10-08-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #85-2024-10-08-nhn-cloud-iap }
 
-<a id="nhn-cloud-iap-improved"></a>
+<a id="85-2024-10-08-nhn-cloud-iap-improved"></a>
 #### 개선 사항
 * 결제 상세정보 전송 기능 개선
 
@@ -49,10 +101,10 @@
 <a id="83-2024-07-23"></a>
 ## 1.8.3 (2024. 07. 23.) { #83-2024-07-23 }
 
-<a id="common"></a>
-### 공통 { #common }
+<a id="83-2024-07-23-common"></a>
+### 공통 { #83-2024-07-23-common }
 
-<a id="common-improved"></a>
+<a id="83-2024-07-23-common-improved"></a>
 #### 개선 사항
 * 안정성 개선
 
@@ -107,17 +159,17 @@
 * 서명 적용
     * 배포되는 바이너리에 `NHN Cloud Corp.` 서명이 적용되었습니다. 
 
-<a id="logger"></a>
-### Logger { #logger }
+<a id="71-2023-12-19-logger"></a>
+### Logger { #71-2023-12-19-logger }
 
-<a id="logger-improved"></a>
+<a id="71-2023-12-19-logger-improved"></a>
 #### 개선 사항
 * Instance Logger의 NetworkInsight 안정성 개선 
 
-<a id="symboluploaderv004"></a>
-### SymbolUploader(v0.0.4) { #symboluploaderv004 }
+<a id="71-2023-12-19-symboluploaderv004"></a>
+### SymbolUploader(v0.0.4) { #71-2023-12-19-symboluploaderv004 }
 
-<a id="symboluploaderv004-improved"></a>
+<a id="71-2023-12-19-symboluploaderv004-improved"></a>
 #### 개선 사항
 * 안정성 개선
 
@@ -151,10 +203,10 @@
 #### 개선 사항
 * CountryCode 획득 실패 문제 수정
 
-<a id="nhn-cloud-ocr"></a>
-### NHN Cloud OCR { #nhn-cloud-ocr }
+<a id="62-2023-08-29-nhn-cloud-ocr"></a>
+### NHN Cloud OCR { #62-2023-08-29-nhn-cloud-ocr }
 
-<a id="nhn-cloud-ocr-added-features"></a>
+<a id="62-2023-08-29-nhn-cloud-ocr-added-features"></a>
 #### 기능 추가
 * 신용카드/신분증 인식 결과 데이터에 인식 영역 추가
 
@@ -189,8 +241,8 @@
 * 토큰 등록 기능 개선
     * 앱의 알림 권한과 무관하게 토큰을 등록할 수 있는 옵션을 제공합니다.
 
-<a id="50-2023-06-27-nhn-cloud-push-symboluploaderv003"></a>
-#### SymbolUploader(v0.0.3)
+<a id="50-2023-06-27-symboluploaderv003"></a>
+### SymbolUploader(v0.0.3) { #50-2023-06-27-symboluploaderv003 }
 * 안정성 개선
 
 <a id="40-2023-05-30"></a>
@@ -206,13 +258,13 @@
 <a id="40-2023-05-30-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #40-2023-05-30-nhn-cloud-iap }
 
-<a id="40-2023-05-30-nhn-cloud-iap-added-featrues"></a>
+<a id="40-2023-05-30-nhn-cloud-iap-added-features"></a>
 #### 기능 추가
 * 결제 상세정보 전송 기능 추가 
     * IAP 콘솔의 Transaction 탭에서 결제 상세정보를 조회할 수 있습니다.
 
-<a id="40-2023-05-30-nhn-cloud-iap-symboluploaderv002"></a>
-#### SymbolUploader(v0.0.2)
+<a id="40-2023-05-30-symboluploaderv002"></a>
+### SymbolUploader(v0.0.2) { #40-2023-05-30-symboluploaderv002 }
 * run script 개선 
     * Cocoapods, SPM 대응 추가
 
@@ -258,10 +310,10 @@
 <a id="20-2022-11-29"></a>
 ## 1.2.0 (2022. 11. 29.) { #20-2022-11-29 }
 
-<a id="nhn-cloud-logger"></a>
-### NHN Cloud Logger { #nhn-cloud-logger }
+<a id="20-2022-11-29-nhn-cloud-logger"></a>
+### NHN Cloud Logger { #20-2022-11-29-nhn-cloud-logger }
 
-<a id="nhn-cloud-logger-added-features"></a>
+<a id="20-2022-11-29-nhn-cloud-logger-added-features"></a>
 #### 기능 추가
 * 공공기관용 Logger 지원
 
@@ -318,20 +370,20 @@
 <a id="300-2022-03-29"></a>
 ## 0.30.0 (2022. 03. 29.) { #300-2022-03-29 }
 
-<a id="toast-iap"></a>
-### TOAST IAP { #toast-iap }
+<a id="300-2022-03-29-toast-iap"></a>
+### TOAST IAP { #300-2022-03-29-toast-iap }
 
-<a id="toast-iap-added-features"></a>
+<a id="300-2022-03-29-toast-iap-added-features"></a>
 #### 기능 추가
 * ToastPurchaseResult에 샌드박스 결제 여부 추가 (sandboxPayment)
 
 <a id="292-2021-11-23"></a>
 ## 0.29.2 (2021. 11. 23.) { #292-2021-11-23 }
 
-<a id="toast-push"></a>
-### TOAST Push { #toast-push }
+<a id="292-2021-11-23-toast-push"></a>
+### TOAST Push { #292-2021-11-23-toast-push }
 
-<a id="toast-push-improvements"></a>
+<a id="292-2021-11-23-toast-push-improvements"></a>
 #### 개선 사항
 * 안정성 개선
 
@@ -373,10 +425,10 @@
 * xcframework 추가
     * arm Simulator 지원 추가
 
-<a id="toast-logger"></a>
-### TOAST Logger { #toast-logger }
+<a id="280-2021-05-25-toast-logger"></a>
+### TOAST Logger { #280-2021-05-25-toast-logger }
 
-<a id="toast-logger-crashreporter-buildinfo-20210525"></a>
+<a id="280-2021-05-25-toast-logger-crashreporter-buildinfo-20210525"></a>
 #### CrashReporter (BuildInfo 20210525)
 * 아키텍쳐 분류 방식 개선
     * iOS14 Core Library가 심볼리케이션되지 않는 문제 개선
@@ -822,10 +874,10 @@
   * Description 추가
   * Nullability, NSCoding, NSCopying 지원
 
-<a id="toast-core"></a>
-### TOAST Core { #toast-core }
+<a id="130-2019-03-26-toast-core"></a>
+### TOAST Core { #130-2019-03-26-toast-core }
 
-<a id="toast-core-improvements"></a>
+<a id="130-2019-03-26-toast-core-improvements"></a>
 #### 개선 사항
 * 내부 예외 처리 추가
 
@@ -873,10 +925,10 @@
 <a id="123-2019-02-26"></a>
 ## 0.12.3 (2019. 02. 26.) { #123-2019-02-26 }
 
-<a id="toast-core-common"></a>
-### TOAST Core, Common { #toast-core-common }
+<a id="123-2019-02-26-toast-core-common"></a>
+### TOAST Core, Common { #123-2019-02-26-toast-core-common }
 
-<a id="toast-core-common-improvements"></a>
+<a id="123-2019-02-26-toast-core-common-improvements"></a>
 #### 개선 사항
 * 유틸 기능의 예외처리 추가
 
@@ -948,10 +1000,10 @@
 <a id="110-2018-11-20"></a>
 ## 0.11.0 (2018. 11. 20.) { #110-2018-11-20 }
 
-<a id="toast-log-crash"></a>
-### TOAST Log & Crash { #toast-log-crash }
+<a id="110-2018-11-20-toast-log-crash"></a>
+### TOAST Log & Crash { #110-2018-11-20-toast-log-crash }
 
-<a id="toast-log-crash-added-features"></a>
+<a id="110-2018-11-20-toast-log-crash-added-features"></a>
 #### 추가 사항
 * Network Insights 기능 추가
 
