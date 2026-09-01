@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=82fa5b59d3cd -->
+<!-- machine_translated: true -->
+
+<!-- pre-align:aligned sig=8cab0d86f5f0 -->
 
 <a id="nhn-cloud-sdk-user-guide-push-ios"></a>
 ## NHN Cloud > SDK User Guide > Push > iOS { #nhn-cloud-sdk-user-guide-push-ios }
@@ -100,8 +102,8 @@ end
 <a id="login"></a>
 ### Login { #login }
 
-* `If a user ID is not set at the time of initial token registration, it is registered using the device identifier.` ([Refer to the token registration section](./push-ios/#token-registration))
-* `Setting or changing the user ID after token registration will update token information.`
+* `If the user ID is not set at the time of initial token registration, the device identifier is used for registration.` ([Refer to the token registration section](./push-ios/#token-registration))
+* `If the user ID is set or changed after token registration, the token information is updated.`
 
 ``` objc
 // Service login, set the user ID

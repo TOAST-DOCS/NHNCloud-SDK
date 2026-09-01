@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=82fa5b59d3cd -->
+<!-- machine_translated: true -->
+
+<!-- pre-align:aligned sig=8cab0d86f5f0 -->
 
 <a id="nhn-cloud-sdk-user-guide-push-ios"></a>
 ## NHN Cloud > SDK使用ガイド > Push > iOS { #nhn-cloud-sdk-user-guide-push-ios }
@@ -100,8 +102,8 @@ end
 <a id="login"></a>
 ### ログイン { #login }
 
-* `初回トークン登録時に、ユーザーIDが設定されていない場合は、デバイス識別子を使用して登録します。` ([トークン登録セクション参照](./push-ios/#token-registration))
-* `トークン登録後、ユーザーIDを設定、または変更すると、トークン情報を更新します。`
+* `最初のトークン登録時にユーザーIDが設定されていない場合、端末識別子を使用して登録します。` ([トークン登録セクションを参照](./push-ios/#token-registration))
+* `トークン登録後にユーザーIDを設定または変更すると、トークン情報を更新します。`
 
 ``` objc
 // サービスログイン、ユーザーID設定
