@@ -75,7 +75,7 @@ end
 ## NHN Cloud Symbol Uploader 적용 { #apply-nhn-cloud-symbol-uploader }
 
 !!! tip "알아두기"
-    Log & Crash Search Symbol API가 v3로 전환되었습니다. v3부터는 앱키 외에 **User Access Token** 인증이 필요합니다.
+    Log & Crash Search Symbol API가 v3로 전환되었습니다. v3부터는 앱키 외에 `User Access Token` 인증이 필요합니다.
 
 <a id="symbol-uploader-preparation-for-auth"></a>
 ### 인증 준비 { #symbol-uploader-preparation-for-auth }
@@ -130,8 +130,8 @@ if [ "${CONFIGURATION}" = "Debug" ]; then
 fi
 ```
 
-* `LOG_N_CRASH_SEARCH_APPKEY`에는 Log & Crash Search의 앱키를 입력해야합니다.
-* 인증 정보는 위 두 방법 중 사용하는 쪽의 정보를 입력해야합니다.
+* `LOG_N_CRASH_SEARCH_APPKEY`에는 Log & Crash Search의 앱키를 입력해야 합니다.
+* 인증 정보는 위 두 방법 중 사용하는 쪽의 정보를 입력해야 합니다.
     * 방법 1: `USER_ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`
     * 방법 2: `USER_ACCESS_TOKEN`
     
@@ -191,10 +191,10 @@ OPTIONS:
 ```
 
 !!! tip "알아두기"
-    `동일한 버전에 같은 파일명의 Symbol이 이미 업로드되어 있는 경우` 서버는 업로드를 거부합니다.
+    동일한 버전에 같은 파일명의 Symbol이 이미 업로드되어 있는 경우 서버는 업로드를 거부합니다.
     (resultMessage: "A file with the same filename for this version has already been uploaded.")
     SymbolUploader는 이 경우 업로드되어 있는 동일 파일명의 Symbol을 제거하고 다시 업로드합니다.
-    두 Symbol 파일의 `파일명이 다를 경우 업로드되어 있던 Symbol은 제거되지 않으므로`, Log & Crash Search 콘솔에서 직접 제거해야 합니다.
+    두 Symbol 파일의 파일명이 다를 경우 업로드되어 있던 Symbol은 제거되지 않으므로, Log & Crash Search 콘솔에서 직접 제거해야 합니다.
     https://console.nhncloud.com/ -> 조직 선택 -> 프로젝트 선택 -> Analytics -> Log & Crash Search -> 설정 -> 심벌 파일
 
 <a id="precautions-when-using-crashreport"></a>
