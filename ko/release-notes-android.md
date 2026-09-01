@@ -7,7 +7,7 @@
 
 ### NHN Cloud Logger
 
-#### 기능 개선
+#### 기능 개선/변경
 
 * Log & Crash Search API 도메인 변경
     * 로그 수집 API 도메인이 api-logncrash.cloud.toast.com에서 api-logncrash.nhncloudservice.com으로 변경되었습니다.
@@ -15,7 +15,7 @@
 
 ### NHN Cloud Push
 
-#### 기능 개선
+#### 기능 개선/변경
 
 * Push API 도메인 변경
     * 토큰 API와 사용자 태그 API 도메인이 api-push.cloud.toast.com에서 push.api.nhncloudservice.com으로 변경되었습니다.
@@ -31,14 +31,14 @@
 
 ### NHN Cloud OCR
 
-#### 기능 개선
+#### 기능 개선/변경
 
 * OCR API 도메인 변경
     * OCR API 도메인이 ocr.api.nhncloudservice.com에서 api-ocr.nhncloudservice.com으로 변경되었습니다.
 
 ### TOAST Gradle Plugin(0.1.0)
 
-#### 기능 추가
+#### 신규 기능 추가
 
 * Log & Crash Search Symbol API v3를 이용한 mapping 파일 및 native symbol 업로드 지원
     * 0.1.0부터 심벌 업로드에 User Access Token 인증이 필요합니다.
@@ -65,7 +65,7 @@
 ### NHN Cloud SDK { #nhn-cloud-sdk }
 
 <a id="nhn-cloud-sdk-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 최소 지원 버전 상향
     * Android 최소 지원 버전이 API 16(Android 4.1)에서 API 22(Android 5.1)로 상향되었습니다.
@@ -106,7 +106,7 @@
 ### NHN Cloud Push { #110-april-29-2025-nhn-cloud-push }
 
 <a id="110-april-29-2025-nhn-cloud-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Notification Hub 지원
     * NHN Cloud Push SDK에서 Notification Hub 사용을 지원합니다.
@@ -119,7 +119,7 @@
 ### NHN Cloud IAP { #nhn-cloud-iap }
 
 <a id="nhn-cloud-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * ONE store 버전 통합
     * ONE store v17, v19, v21 버전을 하나로 통합하였습니다.
@@ -133,7 +133,7 @@
     * 이를 통해 ONE store에서도 정기 결제 기반의 상품을 제공할 수 있습니다.
 
 <a id="nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * ONE store 결제 히스토리 로그 지원
     * ONE store 통합 버전(nhncloud-iap-onestore2)부터 콘솔에서 결제 히스토리 로그를 확인할 수 있습니다.
@@ -145,7 +145,7 @@
 ### NHN Cloud IAP { #95-january-23-2025-nhn-cloud-iap }
 
 <a id="95-january-23-2025-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Google Play Billing Library(PBL) 업데이트
     * Google Play Billing Library(PBL)가 7.1.1로 업데이트되었습니다.
@@ -156,7 +156,7 @@
 ### NHN Cloud Push { #95-january-23-2025-nhn-cloud-push }
 
 <a id="95-january-23-2025-nhn-cloud-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 알림 진동 설정 API 추가
     * 알림 수신 시 진동 여부를 설정할 수 있는 기능이 추가되었습니다.
@@ -169,7 +169,7 @@
 ### NHN Cloud Push { #94-november-15-2024-nhn-cloud-push }
 
 <a id="94-november-15-2024-nhn-cloud-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Device ID 설정 기능 추가
     * 사용자의 Device ID를 Push 서비스에서 사용할 수 있도록 설정하는 API(NhnCloudPush.setDeviceId)를 추가했습니다.
@@ -212,7 +212,7 @@
 ### NHN Cloud IAP { #92-august-27-2024-nhn-cloud-iap }
 
 <a id="92-august-27-2024-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Amazon 결제 재처리 개선
     * 앱을 삭제한 뒤 재설치하거나 앱 데이터를 삭제하면 실패한 결제가 재처리될 때 신규 구매 건으로 처리되는 문제를 개선하였습니다.
@@ -224,7 +224,7 @@
 ### NHN Cloud IAP { #91-july-23-2024-nhn-cloud-iap }
 
 <a id="91-july-23-2024-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Amazon 결제 재처리 개선
     * 구매 진행 중 앱 종료 또는 네트워크 차단 등으로 인해 결제를 실패한 경우 해당 결제를 재처리할 때 신규 구매 건으로 처리하는 문제를 개선하였습니다.
@@ -238,7 +238,7 @@
 ### NHN Cloud IAP { #90-may-28-2024-nhn-cloud-iap }
 
 <a id="90-may-28-2024-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Google Play Billing Library(PBL) 6.2.1 업데이트
     * Google 정책에 따라 PBL 5.x를 사용하는 앱은 2024년 11월 1일 부터 PBL 6.x로 업데이트 해야 합니다.
@@ -285,7 +285,7 @@
 ### NHN Cloud SDK { #84-january-25-2024-nhn-cloud-sdk }
 
 <a id="84-january-25-2024-nhn-cloud-sdk-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 안정성 개선
     * ProGuard 미적용 시 비정상 종료되는 문제를 수정하였습니다.
@@ -297,7 +297,7 @@
 ### NHN Cloud IAP { #83-january-23-2024-nhn-cloud-iap }
 
 <a id="83-january-23-2024-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * MyCard SDK 업데이트
     * Android 14 대응
@@ -309,7 +309,7 @@
 ### NHN Cloud OCR { #82-december-19-2023-nhn-cloud-ocr }
 
 <a id="82-december-19-2023-nhn-cloud-ocr-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 안정성 개선
 
@@ -320,7 +320,7 @@
 ### NHN Cloud OCR { #81-october-31-2023-nhn-cloud-ocr }
 
 <a id="81-october-31-2023-nhn-cloud-ocr-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 * Credit Card Recognizer UI 개선
     * 보안이 강화된 TextView를 적용합니다.
 
@@ -336,7 +336,7 @@
 ### NHN Cloud IAP { #80-september-26-2023-nhn-cloud-iap }
 
 <a id="80-september-26-2023-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Google Billing Client 5.2.1 업데이트
     * 구글 정책에 따라 Android 14 이상을 타겟팅하는 앱은 NHN Cloud IAP 1.8.0 이상으로 업데이트해야 합니다.
@@ -345,7 +345,7 @@
 ### NHN Cloud OCR { #80-september-26-2023-nhn-cloud-ocr }
 
 <a id="80-september-26-2023-nhn-cloud-ocr-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Camera 개선
     * Camera Preview 화면이 디스플레이를 가득 채우도록 변경합니다.
@@ -358,7 +358,7 @@
 ### NHN Cloud IAP { #71-august-29-2023-nhn-cloud-iap }
 
 <a id="71-august-29-2023-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * MyCard 테스트 결제 개선
 * MyCard 최소 지원 버전이 API 21로 상향되었습니다.
@@ -370,7 +370,7 @@
 ### NHN Cloud OCR { #70-july-11-2023-nhn-cloud-ocr }
 
 <a id="70-july-11-2023-nhn-cloud-ocr-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * OCR(ID Card Recognizer) 추가
 
@@ -381,7 +381,7 @@
 ### NHN Cloud IAP { #60-june-20-2023-nhn-cloud-iap }
 
 <a id="60-june-20-2023-nhn-cloud-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * ONE store v21 추가
 
@@ -389,7 +389,7 @@
 ### NHN Cloud Logger { #60-june-20-2023-nhn-cloud-logger }
 
 <a id="60-june-20-2023-nhn-cloud-logger-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Android Gradle Plugin 8.0 지원
 
@@ -400,7 +400,7 @@
 ### NHN Cloud IAP { #51-may-30-2023-nhn-cloud-iap }
 
 <a id="51-may-30-2023-nhn-cloud-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 결제 상세정보 전송 기능 추가
     * IAP 콘솔의 Transaction 탭에서 결제 상세정보를 조회할 수 있습니다.
@@ -412,7 +412,7 @@
 ### NHN Cloud SDK { #50-april-5-2023-nhn-cloud-sdk }
 
 <a id="50-april-5-2023-nhn-cloud-sdk-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 안정성 개선
 
@@ -420,7 +420,7 @@
 ### NHN Cloud IAP { #50-april-5-2023-nhn-cloud-iap }
 
 <a id="50-april-5-2023-nhn-cloud-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * MyCard IAP 추가
 
@@ -442,7 +442,7 @@
 ### NHN Cloud OCR { #42-february-28-2023-nhn-cloud-ocr }
 
 <a id="42-february-28-2023-nhn-cloud-ocr-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 안정성 개선
 
@@ -453,7 +453,7 @@
 ### NHN Cloud Push { #41-january-11-2023-nhn-cloud-push }
 
 <a id="41-january-11-2023-nhn-cloud-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 푸시 지표 전송 및 이벤트 처리 개선
 
@@ -464,7 +464,7 @@
 ### NHN Cloud Logger { #40-november-29-2022-nhn-cloud-logger }
 
 <a id="40-november-29-2022-nhn-cloud-logger-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 공공기관용 Logger 지원
 
@@ -472,7 +472,7 @@
 ### NHN Cloud OCR { #40-november-29-2022-nhn-cloud-ocr }
 
 <a id="40-november-29-2022-nhn-cloud-ocr-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * UI 개선
 
@@ -485,7 +485,7 @@
 ### NHN Cloud Push { #40-november-29-2022-nhn-cloud-push }
 
 <a id="40-november-29-2022-nhn-cloud-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 푸시 이벤트 전송 개선
 * Intent의 flags가 변경되는 이슈 수정
@@ -498,7 +498,7 @@
 ### NHN Cloud OCR { #30-october-25-2022-nhn-cloud-ocr }
 
 <a id="30-october-25-2022-nhn-cloud-ocr-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * OCR(Credit Card Recognizer) 추가
 
@@ -506,7 +506,7 @@
 ### NHN Cloud IAP { #30-october-25-2022-nhn-cloud-iap }
 
 <a id="30-october-25-2022-nhn-cloud-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * [모든 스토어] 활성화 구독 조회 및 미소비 결제 내역 조회 API 추가
 
@@ -525,7 +525,7 @@
 ### NHN Cloud SDK { #20-october-4-2022-nhn-cloud-sdk }
 
 <a id="20-october-4-2022-nhn-cloud-sdk-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * AndroidX 지원
     * 최소 지원 버전이 API 16으로 상향되었습니다.
@@ -534,7 +534,7 @@
 ### NHN Cloud Push { #20-october-4-2022-nhn-cloud-push }
 
 <a id="20-october-4-2022-nhn-cloud-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Android 13 대응
     * POST_NOTIFICATION 권한을 요청할 수 있는 API가 추가되었습니다.
@@ -547,12 +547,12 @@
 ### NHN Cloud IAP { #10-september-6-2022-nhn-cloud-iap }
 
 <a id="10-september-6-2022-nhn-cloud-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * ONE store v19 추가
 
 <a id="10-september-6-2022-nhn-cloud-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Google Billing Client 5.0.0 업데이트
 
@@ -563,7 +563,7 @@
 ### NHN Cloud SDK { #00-july-12-2022-nhn-cloud-sdk }
 
 <a id="00-july-12-2022-nhn-cloud-sdk-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * NHN Cloud Android SDK로 모듈명 변경
 	* TOAST Android SDK는 Deprecated 되었습니다.
@@ -575,7 +575,7 @@
 ### TOAST Logger { #toast-logger }
 
 <a id="toast-logger-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * TOAST Logger 안정화
 
@@ -586,7 +586,7 @@
 ### TOAST IAP { #toast-iap }
 
 <a id="toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * ONE store 외부 결제 추가
 
@@ -594,7 +594,7 @@
 ### TOAST Push { #toast-push }
 
 <a id="toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 하나의 Firebase 프로젝트에 등록된 다수의 안드로이드 앱 지원
 
@@ -605,7 +605,7 @@
 ### TOAST IAP { #301-may-3-2022-toast-iap }
 
 <a id="301-may-3-2022-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * ONE store v16 아이템 조회 로직 개선
 
@@ -616,7 +616,7 @@
 ### TOAST Push { #300-april-26-2022-toast-push }
 
 <a id="300-april-26-2022-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 - ADM(Amazon Device Messaging) 추가
 
@@ -649,7 +649,7 @@
 ### TOAST IAP { #290-december-07-2021-toast-iap }
 
 <a id="290-december-07-2021-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 화웨이 스토어(Huawei App Gallery) 추가
 
@@ -660,7 +660,7 @@
 ### TOAST IAP { #280-november-23-2021-toast-iap }
 
 <a id="280-november-23-2021-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Amazon Appstore 추가
 
@@ -668,7 +668,7 @@
 ### TOAST Push { #280-november-23-2021-toast-push }
 
 <a id="280-november-23-2021-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Android 12 대응
     * Pending intents mutability.
@@ -696,7 +696,7 @@
 ### TOAST IAP { #273-september-28-2021-toast-iap }
 
 <a id="273-september-28-2021-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * ONE store v16 테스트 결제 프로세스 개선
 
@@ -719,7 +719,7 @@
 ### TOAST IAP { #271-august-24-2021-toast-iap }
 
 <a id="271-august-24-2021-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 구글 구독 결제 프로세스 개선
 * ONE store v16 결제 프로세스 개선
@@ -731,7 +731,7 @@
 ### TOAST IAP { #270-august-03-2021-toast-iap }
 
 <a id="270-august-03-2021-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * ONE store v16 추가
 
@@ -742,7 +742,7 @@
 ### TOAST IAP { #260-july-06-2021-toast-iap }
 
 <a id="260-july-06-2021-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 월 결제 한도 기능 추가
 
@@ -762,13 +762,13 @@
 ### TOAST IAP { #250-april-27-2021-toast-iap }
 
 <a id="250-april-27-2021-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 구글 구독 상태 조회 API 추가
     * 구글 구독 상태를 조회할 수 있는 querySubscriptionsStatus API 가 추가되었습니다.
 
 <a id="250-april-27-2021-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 구글 결제 라이브러리 업데이트
     * 구글 결제 라이브러리 BillingClient 3.0.3이 적용되었습니다.
@@ -785,7 +785,7 @@
 ### TOAST Push { #244-january-12-2021-toast-push }
 
 <a id="244-january-12-2021-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * FCM 토큰 갱신시 업데이트 로직 개선
 
@@ -793,7 +793,7 @@
 ### TOAST Gradle Plugin(0.0.1) { #toast-gradle-plugin-001 }
 
 <a id="toast-gradle-plugin-001-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Symbol Uploader 기능 추가
 
@@ -804,7 +804,7 @@
 ### TOAST Push { #243-december-08-2020-toast-push }
 
 <a id="243-december-08-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Tencent QQ 서비스 종료에 따른 모듈 삭제
 
@@ -838,12 +838,12 @@
 ### TOAST IAP { #240-october-27-2020-toast-iap }
 
 <a id="240-october-27-2020-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Galaxy Store 추가
 
 <a id="240-october-27-2020-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 구글 결제 라이브러리 업데이트
     * 구글 결제 라이브러리 BillingClient 3.0.1이 적용되었습니다.
@@ -857,7 +857,7 @@
 ### TOAST Push { #240-october-27-2020-toast-push }
 
 <a id="240-october-27-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 알림 답장 기능 미지원 단말기에서는 답장 기능의 버튼이 생성되지 않도록 수정
 
@@ -885,7 +885,7 @@
 ### TOAST Push { #231-september-11-2020-toast-push }
 
 <a id="231-september-11-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 토큰 등록 로직 개선
 
@@ -896,7 +896,7 @@
 ### TOAST Push { #230-july-28-2020-toast-push }
 
 <a id="230-july-28-2020-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 사용자 태그 기능 지원
 
@@ -907,7 +907,7 @@
 ### TOAST IAP { #220-june-23-2020-toast-iap }
 
 <a id="220-june-23-2020-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 `TOAST IAP SDK 0.22.0 이상으로 업데이트 시 반드시 강제 업데이트를 진행해야 합니다.`
 
@@ -917,7 +917,7 @@
 ### TOAST Push { #220-june-23-2020-toast-push }
 
 <a id="220-june-23-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 기본 알림 옵션 설정 기능 개선
 
@@ -928,7 +928,7 @@
 ### TOAST Push { #212-may-26-2020-toast-push }
 
 <a id="212-may-26-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 토큰 등록 기능 개선
 
@@ -939,7 +939,7 @@
 ### TOAST Push { #211-april-28-2020-toast-push }
 
 <a id="211-april-28-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 안정성 개선
 
@@ -947,7 +947,7 @@
 ### TOAST Logger { #211-april-28-2020-toast-logger }
 
 <a id="211-april-28-2020-toast-logger-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Native Crash Reporting 기능 개선
 
@@ -958,7 +958,7 @@
 ### TOAST Logger { #210-march-24-2020-toast-logger }
 
 <a id="210-march-24-2020-toast-logger-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Native Crash Reporting (NDK) 기능 추가
 
@@ -966,7 +966,7 @@
 ### TOAST Push { #210-march-24-2020-toast-push }
 
 <a id="210-march-24-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 기본 알림 옵션에 설정 가능한 항목 추가
     * 포그라운드 알림 노출 여부 설정이 추가되었습니다.
@@ -979,7 +979,7 @@
 ### TOAST Push { #203-february-25-2020-toast-push }
 
 <a id="203-february-25-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 토큰 등록 기능 개선
     * 최초 토큰 등록 시 사용자 아이디가 설정되어 있지 않으면, 단말기 식별자를 사용하여 등록합니다.
@@ -992,7 +992,7 @@
 ### TOAST Push { #202-january-21-2020-toast-push }
 
 <a id="202-january-21-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 지표 수집 기능 개선
 * 기본 알림 채널 생성 로직 개선
@@ -1004,7 +1004,7 @@
 ### TOAST Push { #201-january-07-2020-toast-push }
 
 <a id="201-january-07-2020-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * Assets 리소스 지원
     * Assets 경로의 이미지 리소스를 지원합니다.
@@ -1015,7 +1015,7 @@
 ### TOAST IAP { #201-january-07-2020-toast-iap }
 
 <a id="201-january-07-2020-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 * 보안 강화
     * 내부 보안 정책을 강화하였습니다.
 
@@ -1032,7 +1032,7 @@
 ### TOAST Push { #194-november-26-2019-toast-push }
 
 <a id="194-november-26-2019-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * (구) pushsdk 데이터 마이그레이션 지원.
     * (구) pushsdk 에서 업데이트 한 경우 모든 데이터를 TOAST SDK 로 마이그레이션 합니다.
@@ -1044,7 +1044,7 @@
 ### TOAST Push { #193-october-18-2019-toast-push }
 
 <a id="193-october-18-2019-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 토큰 등록 기능 개선.
 
@@ -1055,7 +1055,7 @@
 ### TOAST Push { #192-october-15-2019-toast-push }
 
 <a id="192-october-15-2019-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 알림 클릭시 통지 기능 추가.
     * 사용자가 알림을 클릭하여 앱이 실행되었을 때에 대한 리스너를 등록할 수 있습니다.
@@ -1063,7 +1063,7 @@
     * 알림 수신시 배지 아이콘과 앱 숏컷 화면에 배지 카운트가 노출됩니다.
 
 <a id="192-october-15-2019-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 알림 기본 스타일 지정.
     * 미디어를 포함하지 않는 알림은 BigTextStyle 로 지정되어 두 줄 이상의 메시지도 표현됩니다.
@@ -1075,7 +1075,7 @@
 ### TOAST IAP { #191-october-02-2019-toast-iap }
 
 <a id="191-october-02-2019-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Unity Android IAP Plugin에 구매 요청 시 사용자 데이터를 영수증에 포함할 수 있는 기능이 추가되었습니다.
 
@@ -1086,7 +1086,7 @@
 ### TOAST IAP { #190-october-01-2019-toast-iap }
 
 <a id="190-october-01-2019-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Android IAP 라이브러리에 구매 요청 시 사용자 데이터를 영수증에 포함할 수 있는 기능이 추가되었습니다.
 
@@ -1094,7 +1094,7 @@
 ### TOAST Push { #190-october-01-2019-toast-push }
 
 <a id="190-october-01-2019-toast-push-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 사용자 정의 메시지 리시버 사용성 개선.
     * 알림 노출 요청시 사용자 콘텐츠 인텐트 타입이 PendingIntent 로 변경되었습니다.
@@ -1106,7 +1106,7 @@
 ### TOAST IAP { #180-august-27-2019-toast-iap }
 
 <a id="180-august-27-2019-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 소비성 구독 상품 추가.
     * 상품 타입에 소비 가능한 구독 상품이 추가되었습니다.
@@ -1120,7 +1120,7 @@
 ### TOAST Push { #180-august-27-2019-toast-push }
 
 <a id="180-august-27-2019-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 기본 알림 옵션 설정 기능 추가.
     * 작은 아이콘, 진동, 알림음 등의 기본 옵션을 설정할 수 있습니다.
@@ -1132,7 +1132,7 @@
 ### TOAST Push { #171-july-23-2019-toast-push }
 
 <a id="171-july-23-2019-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 커스텀 리시버 사용시 메시지 객체내에 FCM 발신자 ID 정보 추가.
 
@@ -1143,7 +1143,7 @@
 ### TOAST Push { #toast-pus }
 
 <a id="toast-pus-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 토큰 정보 업데이트 기능 추가.
     * 언어 및 국가 정보 등의 정보를 업데이트할 수 있습니다.
@@ -1151,7 +1151,7 @@
 * 리치 메시지 버튼의 액션("Open", "Dismiss", "Reply", etc) 통지 기능 추가.
 
 <a id="toast-pus-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 초기화 개선.
     * PushType ("FCM", "TENCENT", etc)으로 초기화가 가능합니다.
@@ -1168,7 +1168,7 @@
 ### TOAST IAP { #162-june-21-2019-toast-iap }
 
 <a id="162-june-21-2019-toast-iap-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * 사용자 아이디가 변경되었을 때 동작 개선
 * (구)IAP SDK v1.5.3 이전 결제건의 재처리 개선
@@ -1199,7 +1199,7 @@
 ### TOAST Push { #160-april-23-2019-toast-push }
 
 <a id="160-april-23-2019-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * Tencent 푸시 추가.
 * 사용자 메시지 처리 기능 추가.
@@ -1212,7 +1212,7 @@
 ### TOAST Log & Crash { #toast-log-crash }
 
 <a id="toast-log-crash-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * ProjectKey가 AppKey로 명칭 변경
     * 기존 setProjectKey는 계속 사용 가능
@@ -1221,7 +1221,7 @@
 ### TOAST IAP { #150-march-26-2019-toast-iap }
 
 <a id="150-march-26-2019-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 중국 마켓 추가.
 
@@ -1229,7 +1229,7 @@
 ### TOAST Push { #150-march-26-2019-toast-push }
 
 <a id="150-march-26-2019-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 토큰 해제 API 추가.
 * sound 필드 추가시 알림의 소리를 설정할 수 있는 기능 추가.
@@ -1275,7 +1275,7 @@
 ### TOAST IAP { #140-january-08-2019-toast-iap }
 
 <a id="140-january-08-2019-toast-iap-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * TOAST IAP Unity Plugin 추가.
 
@@ -1286,7 +1286,7 @@
 ### TOAST Core { #toast-core }
 
 <a id="toast-core-improved"></a>
-#### 기능 개선
+#### 기능 개선/변경
 
 * ToastSdk.initialize() 메소드 deprecated.
     * Application 시작 시에 자동으로 호출되도록 변경
@@ -1295,7 +1295,7 @@
 ### TOAST Push { #130-december-27-2018-toast-push }
 
 <a id="130-december-27-2018-toast-push-added"></a>
-#### 기능 추가
+#### 신규 기능 추가
 
 * 신규 기능 추가
     * Firebase Cloud Messaging(FCM)
