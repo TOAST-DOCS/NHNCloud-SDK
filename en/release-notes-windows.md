@@ -1,12 +1,10 @@
 <!-- pre-align:aligned sig=610da5e47de1 -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
-
-## NHN Cloud > SDK User Guide > Release Notes > Windows C++
+## NHN Cloud > SDK User Guide > Release Notes > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
 
 <a id="002-20240123"></a>
-
-## 2.0.0.2 (2024.01.23)
+## 2.0.0.2 (2024.01.23) { #002-20240123 }
 Download : [nhncloud-sdk-windows-2.0.0.2.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.2.zip)
 * Improved duplicate logs filtering
 * Fixed handdle leak issues when executing CrashReporter
@@ -14,8 +12,7 @@ Download : [nhncloud-sdk-windows-2.0.0.2.zip](https://static.toastoven.net/toast
 
 
 <a id="001-20220712"></a>
-
-## 2.0.0.1 (2022.07.12)
+## 2.0.0.1 (2022.07.12) { #001-20220712 }
 Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.1.zip)
 * Changed the module name to NHNCloudLogger
 	* ToastLogger has been deprecated.
@@ -24,8 +21,7 @@ Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toast
 * Fixed an issue where setting Log Types Filter is not applied when sending crash logs
 
 <a id="005-20210331"></a>
-
-## 1.0.0.5 (2021.03.31)
+## 1.0.0.5 (2021.03.31) { #005-20210331 }
 Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/1.0.0/toast-sdk-windows-1.0.0.5.zip)
 * Bug fixes
 * Changed some API interfaces
@@ -36,32 +32,26 @@ Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastclo
 	* Sample project included
 
 <a id="943-20191010"></a>
-
-## 0.9.4.3 (2019.10.10)
+## 0.9.4.3 (2019.10.10) { #943-20191010 }
 Download : [toast-sdk-windows-0.9.4.3.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.4/toast-sdk-windows-0.9.4.3.zip)
 
 
 <a id="toast-log-crash"></a>
+### TOAST Log & Crash { #toast-log-crash }
 
-### TOAST Log & Crash
-
-<a id="bug-fixes"></a>
-
+<a id="toast-log-crash-bug-fixes"></a>
 #### Bug Fixes
 
 * Fixed an issue where no crash log remains for pure virtual call / invalid parameter on x86
 
 <a id="930-20190723"></a>
-
-## 0.9.3.0 (2019.07.23)
+## 0.9.3.0 (2019.07.23) { #930-20190723 }
 Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.3/toast-sdk-windows-0.9.3.0.zip)
 
-<a id="toast-log-crash-2"></a>
+<a id="930-20190723-toast-log-crash"></a>
+### TOAST Log & Crash { #930-20190723-toast-log-crash }
 
-### TOAST Log & Crash
-
-<a id="added-features"></a>
-
+<a id="930-20190723-toast-log-crash-added-features"></a>
 #### Added Features
 
 * Initialize() function success/failure handling
@@ -73,16 +63,13 @@ Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastclo
 * Provides xp version
 
 <a id="9012-20180904"></a>
-
-## 0.9.0.12 (2018.09.04)
+## 0.9.0.12 (2018.09.04) { #9012-20180904 }
 Download : [toast-sdk-windows-0.9.0.12.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.0/toast-sdk-windows-0.9.0.12.zip)
 
-<a id="toast-log-crash-3"></a>
+<a id="9012-20180904-toast-log-crash"></a>
+### TOAST Log & Crash { #9012-20180904-toast-log-crash }
 
-### TOAST Log & Crash
-
-<a id="added"></a>
-
+<a id="9012-20180904-toast-log-crash-added"></a>
 #### Added
 
 * New Functions

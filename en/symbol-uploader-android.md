@@ -1,19 +1,16 @@
 <!-- pre-align:aligned sig=bce24ccc7be6 -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-android-symbol-uploader"></a>
-
-## NHN Cloud > SDK User Guide > Log & Crash > Android (Symbol Uploader)
+## NHN Cloud > SDK User Guide > Log & Crash > Android (Symbol Uploader) { #nhn-cloud-sdk-user-guide-log-crash-android-symbol-uploader }
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. [Add NHN Cloud Logger](/nhncloud/en/nhncloud-sdk/log-collector-android/) to your Android project.
 2. If your Android app includes native libraries, [add NHN Cloud Crash Reporter for NDK](/nhncloud/en/nhncloud-sdk/log-collector-ndk/).
 
 <a id="library-setting"></a>
-
-## Library Setting
+## Library Setting { #library-setting }
 
 Add the NHN Cloud Gradle Plugin as a buildscript dependency to your project-level build.gradle file.
 
@@ -40,8 +37,7 @@ apply plugin: 'com.toast.android.toast-services'
 ```
 
 <a id="enable-mappingtxt-file-upload"></a>
-
-## Enable mapping.txt File Upload
+## Enable mapping.txt File Upload { #enable-mappingtxt-file-upload }
 
 To render the stack trace obfuscated with ProGuard and R8 into clear human-readable code, the mapping file generated at build time must be uploaded to TOAST Log & Crash Search.
 TOAST Gradle Plugin includes an `uploadMappingFile{BUILD_VARIANT}` task to automate uploading of the mapping file.  To enable this task, make sure `mappingFileUploadEnabled` is set to `true`.
@@ -59,8 +55,7 @@ toastServices {
 ```
 
 <a id="enable-native-symbol-file-upload"></a>
-
-## Enable Native Symbol File Upload
+## Enable Native Symbol File Upload { #enable-native-symbol-file-upload }
 
 To generate readable stack trace from NDK crashes, NHN Cloud Log & Crash Search needs to know the symbols of native binaries.
 NHN Cloud Gradle Plugin includes an `uploadSymbolFile{BUILD_VARIANT}` task to automate uploading of native symbol files.
@@ -78,8 +73,7 @@ toastServices {
 ```
 
 <a id="configure-build-variants"></a>
-
-## Configure Build Variants
+## Configure Build Variants { #configure-build-variants }
 
 You can set whether to enable Appkey and upload according to Build Types, Product Flavors, or Variants configuration.
 
@@ -116,8 +110,7 @@ toastServices {
 ```
 
 <a id="execute-the-file-upload-task"></a>
-
-## Execute the File Upload Task
+## Execute the File Upload Task { #execute-the-file-upload-task }
 
 To upload a mapping file or native symbol file to NHN Cloud Log & Crash Search, you must explicitly call the upload task.
 For example:

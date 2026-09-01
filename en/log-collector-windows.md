@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=e89c3d6cd7a6 -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-windows-c"></a>
-
-## NHN Cloud > SDK User Guide > Log & Crash > Windows C++
+## NHN Cloud > SDK User Guide > Log & Crash > Windows C++ { #nhn-cloud-sdk-user-guide-log-crash-windows-c }
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. [Install NHN Cloud SDK](./getting-started-windows)
 2. [Enable Log & Crash Search](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/) in [NHN Cloud console](https://console.nhncloud.com).
 3. [Check AppKey](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/#check-appkey) in Log & Crash Search.
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
-
-## Initialize NHN Cloud Logger SDK
+## Initialize NHN Cloud Logger SDK { #initialize-nhn-cloud-logger-sdk }
 
 Set Appkey issued from Log & Crash Search as ProjectKey.
 
@@ -50,8 +47,7 @@ if (!g_nhncloud_lnc->initialize(loggerConf))
 ```
 
 <a id="set-userid"></a>
-
-## Set UserID
+## Set UserID { #set-userid }
 
 User ID can be set for NHN Cloud SDK.
 Such set UserID is common for each module of NHN Cloud SDK.
@@ -69,14 +65,12 @@ Set User ID is sent to server, along with logs, every time Log Sending API is ca
     * Get user ID of current setting.
 
 <a id="send-logs"></a>
-
-## Send Logs
+## Send Logs { #send-logs }
 
 NHN Cloud Logger provides log sending functions of five levels.
 
 <a id="send-logs-2"></a>
-
-### Send Logs
+### Send Logs { #send-logs-2 }
 * Send logs of DEBUG, INFO, WARN, ERROR, FATAL levels explicitly
     * Both of char*, wchar_t* types are supported.
     * userFields is a helper class to make it easier to use the user-defined fields.
@@ -93,11 +87,10 @@ void log(NHNCLOUD_LOGGER_LEVEL logLevel, const char* message, NHNCloudLoggerUser
 ```
 
 <a id="add-user-defined-fields"></a>
+## Add User-Defined Fields { #add-user-defined-fields }
 
-## Add User-Defined Fields
 <a id="method-1-use-the-nhncloudlogger-instance-api"></a>
-
-### Method 1: Use the NHNCloudLogger instance API
+### Method 1: Use the NHNCloudLogger instance API { #method-1-use-the-nhncloudlogger-instance-api }
 
 * A user-defined field that is managed directly by the NHNCloudLogger instance.
 
@@ -114,8 +107,7 @@ g_nhncloud_lnc->cleareUserField();
 ```
 
 <a id="method-2-use-the-nhncloudloggeruserfields-class"></a>
-
-### Method 2 : Use the NHNCloudLoggerUserFields class
+### Method 2 : Use the NHNCloudLoggerUserFields class { #method-2-use-the-nhncloudloggeruserfields-class }
 
 ```cpp
 nhncloud::logger::NHNCloudLoggerUserFields* pUserFieldHelper = nhncloud::logger::NHNCloudLoggerUserFields::GetInstance(); // Get the custom field helper class.
@@ -132,8 +124,7 @@ pUserFieldHelper->clear(); // Delete all user-defined fields configured above.
 
 *  User-defined field is same as the value exposed as "Selected Field" in "Log & Crash Search Console" > "Log Search Tab".
 
-<a id="restrictions-for-user-defined-fields"></a>
-
+<a id="method-2-use-the-nhncloudloggeruserfields-class-restrictions-for-user-defined-fields"></a>
 #### Restrictions for User-Defined Fields
 
 * Cannot use already [Reserved Fields](./log-collector-reserved-fields).
@@ -142,14 +133,12 @@ pUserFieldHelper->clear(); // Delete all user-defined fields configured above.
 
 
 <a id="collect-crash-logs"></a>
-
-## Collect Crash Logs
+## Collect Crash Logs { #collect-crash-logs }
 * When a crash occurs, the default behavior is to send a crash dump from the executable file including the SDK.
 * When a crash occurs, you can expose an error screen to the user and collect additional information.
 
 <a id="crash-log-collection-and-configuration"></a>
-
-### Crash Log Collection and Configuration
+### Crash Log Collection and Configuration { #crash-log-collection-and-configuration }
 
 ```cpp
 
@@ -195,8 +184,7 @@ if (!g_nhncloud_lnc->initialize(loggerConf))
 ```
 
 <a id="test-sending-crash-logs"></a>
-
-###  Test Sending Crash Logs
+###  Test Sending Crash Logs { #test-sending-crash-logs }
 
 * To test on crash logs sending, an exception must occur.
 * Crash logs are automatically sent by SDK when enableCrashReporter is true.
@@ -212,13 +200,11 @@ void CsampleDlg::OnBnClickedCrash()
 ```
 
 <a id="interpret-crash-logs"></a>
-
-### Interpret Crash Logs
+### Interpret Crash Logs { #interpret-crash-logs }
 
 To interpret crashes occurred in NHN Cloud Windows SDK, a symbol file must be created and uploaded to a web console.
 
-<a id="create-symbol-files"></a>
-
+<a id="interpret-crash-logs-create-symbol-files"></a>
 #### Create Symbol Files
 
 * To create a symbol file, you must use dump_syms.exe in the path of the distribution file.

@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=a84734711857 -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-android"></a>
-
-## NHN Cloud > SDK User Guide > Log & Crash > Android
+## NHN Cloud > SDK User Guide > Log & Crash > Android { #nhn-cloud-sdk-user-guide-log-crash-android }
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. [Install NHN Cloud SDK](./getting-started-android)
 2. [Enable Log & Crash Search](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/) in [NHN Cloud console](https://console.nhncloud.com).
 3. [Check AppKey](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/#check-appkey) from Log & Crash Search.
 
 <a id="library-setting"></a>
-
-## Library Setting
+## Library Setting { #library-setting }
 - Add the code as below to build.gradle.
 
 ```groovy
@@ -29,8 +26,7 @@ dependencies {
 ```
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
-
-## Initialize NHN Cloud Logger SDK
+## Initialize NHN Cloud Logger SDK { #initialize-nhn-cloud-logger-sdk }
 
 - Initialization must be performed in Application#onCreate.
 
@@ -48,14 +44,12 @@ NhnCloudLogger.initialize(configuration);
 ```
 
 <a id="send-logs"></a>
-
-## Send Logs
+## Send Logs { #send-logs }
 
 NHN Cloud Logger provides log-sending functions of five levels.
 
 <a id="specification-for-log-sending-api"></a>
-
-### Specification for Log Sending API
+### Specification for Log Sending API { #specification-for-log-sending-api }
 
 ```java
 // DEBUG level logs
@@ -75,23 +69,20 @@ static void fatal(String message);
 ```
 
 <a id="usage-example-of-log-sending-api"></a>
-
-### Usage Example of Log Sending API
+### Usage Example of Log Sending API { #usage-example-of-log-sending-api }
 
 ```java
 NhnCloudLogger.warn("NHN Cloud Log & Crash Search!");
 ```
 
 <a id="set-user-defined-field"></a>
-
-## Set User-Defined Field
+## Set User-Defined Field { #set-user-defined-field }
 
 Set a user-defined field as wanted.
 With user-defined field setting, set values are sent to server along with logs every time Log Sending API is called.
 
 <a id="specification-for-setuserfield-api"></a>
-
-### Specification for setUserField API
+### Specification for setUserField API { #specification-for-setuserfield-api }
 
 ```java
 static void setUserField(String field, Object value);
@@ -99,8 +90,7 @@ static void setUserField(String field, Object value);
 
 *  User-defined field is same as the value exposed as "Selected Field"in "Log & Crash Search Console" > "Log Search Tab".
 
-<a id="restrictions-for-user-defined-fields"></a>
-
+<a id="specification-for-setuserfield-api-restrictions-for-user-defined-fields"></a>
 #### Restrictions for User-Defined Fields
 
 * Cannot use already [Reserved Fields](./log-collector-reserved-fields).
@@ -108,30 +98,26 @@ static void setUserField(String field, Object value);
 * Replace spaces within a field name by "_".
 
 <a id="usage-example-of-setuserfield"></a>
-
-### Usage Example of setUserField
+### Usage Example of setUserField { #usage-example-of-setuserfield }
 
 ```java
 NhnCloudLogger.setUserField("nickname", "randy");
 ```
 
 <a id="further-tasks-after-sending-logs"></a>
-
-## Further Tasks after Sending Logs
+## Further Tasks after Sending Logs { #further-tasks-after-sending-logs }
 
 With listener registered, further tasks can be executed after logs are sent.
 
 <a id="specification-for-setloggerlistener-api"></a>
-
-### Specification for setLoggerListener API
+### Specification for setLoggerListener API { #specification-for-setloggerlistener-api }
 
 ```java
 static void setLoggerListener(NhnCloudLoggerListener listener);
 ```
 
 <a id="usage-example-of-setloggerlistener"></a>
-
-### Usage Example of setLoggerListener
+### Usage Example of setLoggerListener { #usage-example-of-setloggerlistener }
 
 ```java
 NhnCloudLogger.setLoggerListener(new NhnCloudLoggerListener() {
@@ -158,14 +144,12 @@ NhnCloudLogger.setLoggerListener(new NhnCloudLoggerListener() {
 ```
 
 <a id="collect-crash-logs"></a>
-
-## Collect Crash Logs
+## Collect Crash Logs { #collect-crash-logs }
 
 When an unexpected crash occurs in an app, NHN Cloud Logger records such crash information in the server.
 
 <a id="set-enable-collecting-crash-logs"></a>
-
-### Set Enable Collecting Crash Logs
+### Set Enable Collecting Crash Logs { #set-enable-collecting-crash-logs }
 
 Sending crash logs can be enabled or disabled by using setEnabledCrashReporter() .
 
@@ -183,16 +167,14 @@ NhnCloudLogger.initialize(configuration);
 > User ID setting can be checked in [Getting Started](./getting-started-android/#set-user-id).
 
 <a id="use-handled-exception-api"></a>
-
-### Use Handled Exception API
+### Use Handled Exception API { #use-handled-exception-api }
 
 For Android platforms, exceptions from a try/catch sentence can be sent by using Handled Exception API of NHN Cloud Logger.
 Such exception logs can be queried by filtering for Handled, from error type of "Log & Crash Search Console" > "App Crash Search Tab".
 For more usage details on Log & Cash Console, see [Console User Guide](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/).
 
 <a id="specification-for-handled-exception-log-api"></a>
-
-### Specification for Handled Exception Log API
+### Specification for Handled Exception Log API { #specification-for-handled-exception-log-api }
 
 ```java
 // Send Exception Information
@@ -205,8 +187,7 @@ static void report(@NonNull String message,
 ```
 
 <a id="usage-example"></a>
-
-### Usage Example
+### Usage Example { #usage-example }
 
 ```java
 try {
@@ -218,15 +199,13 @@ try {
 ```
 
 <a id="set-additional-information-in-time-for-crash-occurrence-before-sending"></a>
-
-## Set Additional Information in Time for Crash Occurrence before Sending
+## Set Additional Information in Time for Crash Occurrence before Sending { #set-additional-information-in-time-for-crash-occurrence-before-sending }
 
 Additional information can be set immediately after crash occurs.
 setUserField can be set anytime regardless of crash occurrence, whilesetCrashDataAdapter can be set at an accurate timing when a crash occurs.
 
 <a id="specification-for-setcrashdataadapter-api"></a>
-
-### Specification for setCrashDataAdapter API
+### Specification for setCrashDataAdapter API { #specification-for-setcrashdataadapter-api }
 
 ```java
 static void setCrashDataAdapter(CrashDataAdapter adapter);
@@ -235,8 +214,7 @@ static void setCrashDataAdapter(CrashDataAdapter adapter);
 * Key values of the Map data structure returned through the getUserFields function of CrashDataAdapter have the same restriction conditions as the "field" value of setUserField described in the above.
 
 <a id="usage-example-of-setcrashdataadapter"></a>
-
-### Usage Example of setCrashDataAdapter
+### Usage Example of setCrashDataAdapter { #usage-example-of-setcrashdataadapter }
 
 ```java
 NhnCloudLogger.setCrashDataAdapter(new CrashDataAdapter() {
@@ -250,16 +228,14 @@ NhnCloudLogger.setCrashDataAdapter(new CrashDataAdapter() {
 ```
 
 <a id="network-insights"></a>
-
-## Network Insights
+## Network Insights { #network-insights }
 
 Network Insights measure delay time and response values by calling URL registered in console. They may be applied to measure delays and response vales of many countries around the world (according to national codes on a device).
 
 > With Network Insights enabled in console, it is requested for one time via URL registered in the console when NHN Cloud Logger is initialized.
 
 <a id="enable-network-insights"></a>
-
-### Enable Network Insights
+### Enable Network Insights { #enable-network-insights }
 
 Network Insights can be enabled as follows.
 
@@ -269,8 +245,7 @@ Network Insights can be enabled as follows.
 4. Enable "Network Insights Logs".
 
 <a id="url-setting"></a>
-
-### URL Setting
+### URL Setting { #url-setting }
 
 URL can be set as follows.
 

@@ -1,31 +1,26 @@
 <!-- pre-align:aligned sig=ebd262208f55 -->
 
 <a id="nhn-cloud-sdk-user-guide-push-android"></a>
-
-## NHN Cloud > SDK使用ガイド > Push > Android
+## NHN Cloud > SDK使用ガイド > Push > Android { #nhn-cloud-sdk-user-guide-push-android }
 
 <a id="prerequisites"></a>
-
-## 事前準備
+## 事前準備 { #prerequisites }
 
 1. [NHN Cloud SDK](./getting-started-android)をインストールします。
 2. [NHN Cloudコンソール](https://console.nhncloud.com)で、[Pushサービスを有効化](/Notification/Push/ja/console-guide/)します。
 3. PushコンソールでAppKeyを確認します。
 
 <a id="guide-by-push-provider"></a>
-
-## Push提供者別ガイド
+## Push提供者別ガイド { #guide-by-push-provider }
 
 * [Firebase Cloud Messaging (以下FCM)ガイド](https://firebase.google.com/docs/cloud-messaging/)
 * `Tencent Push Notification (QQ) 2020年11月サービス終了`
 
 <a id="library-setting"></a>
-
-## ライブラリ設定
+## ライブラリ設定 { #library-setting }
 
 <a id="fcm"></a>
-
-### FCM
+### FCM { #fcm }
 * FCM用SDKをインストールするには、下記のコードをbuild.gradleに追加します。
 
 ```groovy
@@ -41,8 +36,7 @@ dependencies {
 ```
 
 <a id="adm"></a>
-
-### ADM
+### ADM { #adm }
 * NHN Cloud ADM Pushを使用するために、以下のようにbuild.gradleに依存関係を追加します。
 
 ```groovy
@@ -58,12 +52,10 @@ dependencies {
 ```
 
 <a id="firebase-cloud-messaging-settings"></a>
-
-## Firebase Cloud Messagingの設定
+## Firebase Cloud Messagingの設定 { #firebase-cloud-messaging-settings }
 
 <a id="add-the-project-and-app"></a>
-
-### プロジェクトおよびアプリ追加
+### プロジェクトおよびアプリ追加 { #add-the-project-and-app }
 * [Firebaseコンソール](https://console.firebase.google.com/?hl=ko)でプロジェクトを作成します。
 * コンソールの上部にある歯車ボタンをクリックして**プロジェクト設定**に移動します。
 * プロジェクト設定の**マイアプリ**で、**AndroidアプリにFirebase追加**をクリックします。
@@ -73,10 +65,9 @@ dependencies {
 * 詳細は、[AndroidプロジェクトにFirebase追加](https://firebase.google.com/docs/android/setup)をご参照ください。
 
 <a id="set-up-buildgradle"></a>
+### build.gradle設定 { #set-up-buildgradle }
 
-### build.gradle設定
-<a id="root-level-buildgradle"></a>
-
+<a id="set-up-buildgradle-root-level-buildgradle"></a>
 #### ルートレベルのbuild.gradle
 * ルートレベルのbuild.gradleに、下記のコードを追加します。
 
@@ -98,8 +89,7 @@ allprojects {
 }
 ```
 
-<a id="app-modules-buildgradle"></a>
-
+<a id="set-up-buildgradle-app-modules-buildgradle"></a>
 #### アプリモジュールのbuild.gradle
 * アプリモジュールのbuild.gradleに、下記のコードを追加します。
 
@@ -115,12 +105,10 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 <a id="amazon-device-messaging-settings"></a>
+## Amazon Device Messageing設定 { #amazon-device-messaging-settings }
 
-## Amazon Device Messageing設定
-
-<a id="add-the-project-and-app-2"></a>
-
-### プロジェクトおよびアプリ追加
+<a id="amazon-device-messaging-settings-add-the-project-and-app"></a>
+### プロジェクトおよびアプリ追加 { #amazon-device-messaging-settings-add-the-project-and-app }
 
 * [Amazon Developerコンソール](https://developer.amazon.com/settings/console/home)に移動します。
 * 上部**Apps & Services**の**My Apps**に移動します。
@@ -128,8 +116,7 @@ apply plugin: 'com.google.gms.google-services'
 * **Androidパッケージ名**、**アプリニックネーム(任意)**を入力し、**アプリ登録**ボタンをクリックします。
 
 <a id="add-the-api-key"></a>
-
-### API Key追加
+### API Key追加 { #add-the-api-key }
 
 * **My Apps**で登録したアプリを選択し、左側メニューで**App Service**をクリックします。
 * Device Messagingで**Security Profile**を作成し、登録します。
@@ -138,14 +125,12 @@ apply plugin: 'com.google.gms.google-services'
 * 詳細については、[Amazon Device Messageing - Obtain Credentials](https://developer.amazon.com/docs/adm/obtain-credentials.html)を参照してください。
 
 <a id="download-the-adm-sdk"></a>
-
-### ADM SDKのダウンロード
+### ADM SDKのダウンロード { #download-the-adm-sdk }
 
 * Amazon Developerの[Amazon Device Messaging (ADM) SDKs](https://developer.amazon.com/docs/apps-and-games/sdk-downloads.html#adm)からADM SDKをダウンロードします。
 * ダウンロードした**amazon-device-messaging-1.2.0.jar**ファイルをプロジェクトの**amazon/libs**フォルダに保存します。
 
-<a id="app-modules-buildgradle-2"></a>
-
+<a id="download-the-adm-sdk-app-modules-buildgradle"></a>
 #### アプリモジュールのbuild.gradle
 ```groovy
 dependencies {
@@ -155,8 +140,7 @@ dependencies {
 ```
 
 <a id="proguard-settings"></a>
-
-### Proguard設定
+### Proguard設定 { #proguard-settings }
 
 * Proguardを使用する場合 <b>[proguard-rules.pro](http://proguard-rules.pro)</b>ファイルに以下のように追加します。
 
@@ -170,8 +154,7 @@ dependencies {
 ```
 
 <a id="push-initialization"></a>
-
-## Push初期化
+## Push初期化 { #push-initialization }
 * NhnCloudPush.initializeを呼び出してNHN Cloud Pushを初期化します。
 * [NhnCloudPushConfiguration](./push-android/#nhncloudpushconfiguration)オブジェクトは、Push設定情報を含んでいます。
 * [NhnCloudPushConfiguration](./push-android/#nhncloudpushconfiguration)オブジェクトは、NhnCloudPushConfiguration.Builderを使用して作成できます。
@@ -179,8 +162,7 @@ dependencies {
 * 使用したいPushTypeを初期化の呼び出し時にお届けしなければなりません。
 
 <a id="fcm-initialization-example"></a>
-
-### FCM初期化例
+### FCM初期化例 { #fcm-initialization-example }
 
 ```java
 NhnCloudPushConfiguration configuration =
@@ -191,8 +173,7 @@ NhnCloudPush.initialize(PushType.FCM, configuration);
 ```
 
 <a id="adm-initialization-example"></a>
-
-### ADM初期化例
+### ADM初期化例 { #adm-initialization-example }
 
 ```java
 NhnCloudPushConfiguration configuration =
@@ -206,16 +187,14 @@ NhnCloudPush.initialize(PushType.ADM, configuration);
 > NhnCloudPush.initialize(NhnCloudPushConfiguration)を使用して初期化する場合PushTypeは自動的にFCMに設定されます。
 
 <a id="settings-when-using-notification-hub"></a>
-
-## Notification Hub使用時の設定
+## Notification Hub使用時の設定 { #settings-when-using-notification-hub }
 
 * NHN Cloud Push SDKはNotification Hubをサポートします。
 * Notification Hubを使用するにはNhnCloudPushConfiguration.Builder.setServiceType(PushServiceType.NOTIFICATION_HUB)を設定する必要があります。
 * デフォルト値はPushServiceType.PUSHであり、設定しない場合は既存Push方式が適用されます。
 
 <a id="notification-hub-fcm-initialization-example"></a>
-
-### Notification Hub + FCM初期化例
+### Notification Hub + FCM初期化例 { #notification-hub-fcm-initialization-example }
 
 ```java
 NhnCloudPushConfiguration configuration =
@@ -227,16 +206,14 @@ NhnCloudPush.initialize(PushType.FCM, configuration);
 ```
 
 <a id="service-login"></a>
-
-## サービスログイン
+## サービスログイン { #service-login }
 * NHN Cloud SDKで提供するすべてのサービス(Push、IAP、Log & Crashなど)は、1つの同じユーザーIDを使用します。
     * [NhnCloudSdk.setUserId](./getting-started-android/#set-user-id)にユーザーIDを設定できます。
 * サービスログイン段階でユーザーID設定、トークン登録機能を実装することを推奨します。
 * トークンの登録後、ユーザーIDを設定または変更すると、トークン情報を更新します。
 
 <a id="service-login-example"></a>
-
-### サービスログイン例
+### サービスログイン例 { #service-login-example }
 
 ```java
 public void onLogin(String userId) {
@@ -247,23 +224,20 @@ public void onLogin(String userId) {
 ```
 
 <a id="token-registration"></a>
-
-## トークン登録
+## トークン登録 { #token-registration }
 * NhnCloudPush.registerToken()メソッドを使用してPushトークンをNHN Cloud Pushサーバーに転送します。 この時、受信同意可否(NhnCloudPushAgreement)をパラメータで伝えます。
 * 最初のトークン登録時のユーザー名が設定されていなければ、端末識別子を使用して登録します。
 * トークンの登録に成功すると、Push メッセージを受信することができます。
 
 <a id="consent-setting"></a>
-
-### 受信同意設定
+### 受信同意設定 { #consent-setting }
 * 韓国情報通信網法規定(第50条から第50条の8)に従い、トークン登録時の通知/広告性/夜間広告性プッシュメッセージ受信に同意するかも一緒に入力を受けます。メッセージ送信時に受信に同意しているかを基準に自動的にフィルタリングします。
     * [KISAガイドへ](https://www.kisa.or.kr/2060301/form?postSeq=19)
     * [法令へ（韓国語）](http://www.law.go.kr/法令/情報通信網利用促進及び情報保護などに関する法律/%2820130218,11322,20120217%29/第50条)
 * NhnCloudPushAgreementに受信同意の可否を設定し、トークン登録時にNHN Cloud Pushサーバーに転送します。
 
 <a id="example-of-token-registration-and-agreement-setting"></a>
-
-### トークン登録例
+### トークン登録例 { #example-of-token-registration-and-agreement-setting }
 ```java
 NhnCloudPushAgreement agreement = NhnCloudPushAgreement.newBuilder(true)  // 通知を受信するか
         .setAllowAdvertisements(true)       // 広告を受信するか
@@ -287,13 +261,11 @@ NhnCloudPush.registerToken(context, agreement, new RegisterTokenCallback() {
 ```
 
 <a id="token-information-query"></a>
-
-## トークン情報照会
+## トークン情報照会 { #token-information-query }
 * NHN Cloud Pushサーバーに登録されているトークン情報を照会します。
 
 <a id="token-information-query-example"></a>
-
-### トークン情報照会例
+### トークン情報照会例 { #token-information-query-example }
 ```java
 NhnCloudPush.queryTokenInfo(ㅊontext, new QueryTokenInfoCallback() {
     @Override
@@ -313,8 +285,7 @@ NhnCloudPush.queryTokenInfo(ㅊontext, new QueryTokenInfoCallback() {
 ```
 
 <a id="token-unregistration"></a>
-
-## トークン解除
+## トークン解除 { #token-unregistration }
 * NHN Cloud Push サーバーに登録されたトークンを解除します。 解除されたトークンはメッセージの送信対象外となります。
 * `サービスログアウト後にメッセージ受信をご希望にならなければトークンを解除しなければなりません。`
 * `トークンが解除されても端末のお知らせ権限は回収されません。`
@@ -322,8 +293,7 @@ NhnCloudPush.queryTokenInfo(ㅊontext, new QueryTokenInfoCallback() {
 >すでに解除されたトークンを解除すると、「既に解除されたトークンです（Already a token has been unregistered）」というメッセージと一緒に成功を返します。
 
 <a id="token-unregistration-example"></a>
-
-### トークン解除例
+### トークン解除例 { #token-unregistration-example }
 ```java
 NhnCloudPush.unregisterToken(mContext, new UnregisterTokenCallback() {
     @Override
@@ -342,8 +312,7 @@ NhnCloudPush.unregisterToken(mContext, new UnregisterTokenCallback() {
 ```
 
 <a id="message-reception"></a>
-
-## メッセージ受信
+## メッセージ受信 { #message-reception }
 * Pushメッセージを受信時に、OnReceiveMessageListenerを通じて通知を受けることができます。
 * Pushメッセージ受信リスナーは、NhnCloudPush.setOnReceiveMessageListenerメソッドを使用して登録できます。
 * OnReceiveMessageListenerに渡された[NhnCloudPushMessage](./push-android/#nhncloudpushmessage)オブジェクトからメッセージ情報を確認できます。
@@ -353,8 +322,7 @@ NhnCloudPush.unregisterToken(mContext, new UnregisterTokenCallback() {
 > Foregroundかどうかは、OnReceiveMessageListener#onReceiveに伝達されるisForegroundで確認できます。
 
 <a id="example-of-registering-a-message-reception-listener"></a>
-
-### メッセージ受信リスナー登録例
+### メッセージ受信リスナー登録例 { #example-of-registering-a-message-reception-listener }
 
 ``` java
 public class MyApplication extends Application {
@@ -380,16 +348,14 @@ public class MyApplication extends Application {
 ```
 
 <a id="notification-permission"></a>
-
-## 通知権限
+## 通知権限 { #notification-permission }
 
 * Android 13 (APIレベル33)以上で通知表示のためにPOST\_NOTIFICATIONS権限が必要です。
 * 基本的にNHN Cloud SDK(バージョン1.2.0以上)にはマニフェストにPOST\_NOTIFICATIONS権限が含まれています。
 * アプリで通知を表示するにはランタイム権限をリクエストしなければならず、ユーザーがこの権限を付与するまでアプリで通知を表示できません。
 
 <a id="notification-permission-of-apps-targeting-android-13api-level-33-or-higher"></a>
-
-### Android 13(APIレベル33)以上をターゲティングするアプリの通知権限
+### Android 13(APIレベル33)以上をターゲティングするアプリの通知権限 { #notification-permission-of-apps-targeting-android-13api-level-33-or-higher }
 
 * Android 13(APIレベル33)以上をターゲティングする時、requestPostNotificationsPermission APIを利用して通知ランタイム権限をリクエストできます。
 
@@ -400,8 +366,7 @@ if (Build.VERSION.SDK_INT >= 33) {
 ```
 
 <a id="notification-permission-of-apps-targeting-android-12-api-level-32-or-lower"></a>
-
-### Android 12(APIレベル32)以下をターゲティングするアプリの通知権限
+### Android 12(APIレベル32)以下をターゲティングするアプリの通知権限 { #notification-permission-of-apps-targeting-android-12-api-level-32-or-lower }
 
 * Android 12(APIレベル32)以下をターゲティングする場合、アプリがフォアグラウンドにする時、アプリで通知チャンネルを初めて作成するとAndroidで自動的にユーザーに権限をリクエストします。
 * アプリがバックグラウンドで実行中の時、最初の通知チャンネルを作る場合、アプリを開くまで通知が表示されず、ユーザーに通知権限をリクエストしません。
@@ -418,16 +383,14 @@ if (Build.VERSION.SDK_INT <= 32) {
 ```
 
 <a id="notification-click"></a>
-
-## 通知クリック
+## 通知クリック { #notification-click }
 
 * ユーザーが公開された通知をクリックしアプリが実行された時に、OnClickListenerを通じて通知を受けることができます。
 * 通知クリックリスナーは、NhnCloudNotification.setOnClickListener関数を使用して登録できます。
 * アプリが実行されていない場合でも通知クリック通知を受けるためには、`Application#onCreate` から登録する必要があります。
 
 <a id="example-of-notification-click-listener-registration"></a>
-
-### 通知クリックリスナー登録例
+### 通知クリックリスナー登録例 { #example-of-notification-click-listener-registration }
 
 ```java
 public class MyApplication extends Application {
@@ -449,12 +412,10 @@ public class MyApplication extends Application {
 ```
 
 <a id="notification-settings"></a>
-
-## 通知設定
+## 通知設定 { #notification-settings }
 
 <a id="default-notification-channel-name-setting"></a>
-
-### 基本通知チャネル名の設定
+### 基本通知チャネル名の設定 { #default-notification-channel-name-setting }
 * 通知チャンネル名は、Android 8.0(API レベル26) 以上の端末の通知設定に表示するチャンネル名です。
 * 通知に別途チャンネルを設定しない場合は、基本の通知チャンネルに通知がリクエストされます。
 * 通知の基本オプション設定時、適用のための基本通知チャンネルが新しく作成されます。
@@ -462,8 +423,7 @@ public class MyApplication extends Application {
 
 > 基本通知チャンネル名を設定しない場合、アプリケーション名で自動設定されます。
 
-<a id="example-of-setting-the-default-notification-channel-name"></a>
-
+<a id="default-notification-channel-name-setting-example-of-setting-the-default-notification-channel-name"></a>
 #### デフォルト通知チャネル名の設定例
 ##### コードでの設定例
 ```java
@@ -487,16 +447,14 @@ public class MyApplication extends Application {
 ```
 
 <a id="notification-preferences-setting"></a>
-
-### 通知基本オプション設定
+### 通知基本オプション設定 { #notification-preferences-setting }
 * 通知の優先順位、小さなアイコン、背景色、LEDライト、振動、通知音を設定します。
 * アプリがフォアグラウンド状態である場合、通知を表示するかどうかを設定します。
 * バッジアイコンを使用するかどうかを設定します。
 * Android 8.0(APIレベル26)以上の端末では、基本通知チャンネルにのみオプションが適用されます。
 * `Application#onCreate`で登録したり、AndroidManifest.xmlファイルにメタデータとして定義できます。
 
-<a id="example-of-setting-notification-default-options"></a>
-
+<a id="notification-preferences-setting-example-of-setting-notification-default-options"></a>
 #### 通知基本オプションの設定例
 ##### コードでの設定例
 **全通知オプションを変更する場合**
@@ -583,24 +541,20 @@ public class MyApplication extends Application {
 ```
 
 <a id="notification-sound-setting"></a>
-
-### 通知音設定
+### 通知音設定 { #notification-sound-setting }
 * プッシュ発送時soundフィールドを追加すると、ローカルリソース（mp3、wavファイル）を通知音として設定することができます。（アンドロイド8.0未満でのみ動作）
 * お知らせはアプリケーション リソース フォルダ下位の raw フォルダにあるローカル リソースのみ使用可能です。
     * 例) main/res/raw/notification_sound.wav
 
 <a id="rich-message"></a>
-
-## リッチメッセージ
+## リッチメッセージ { #rich-message }
 
 * リッチメッセージは、お知らせのタイトル、本文と共にイメージをお知らせに表現し、ボタン、返信などのアクションを追加します。
 
 <a id="supported-rich-messages"></a>
+### サポートするリッチメッセージ { #supported-rich-messages }
 
-### サポートするリッチメッセージ
-
-<a id="button"></a>
-
+<a id="supported-rich-messages-button"></a>
 #### ボタン
 | タイプ | 機能 | アクション |
 | --- | ------- | --- |
@@ -613,8 +567,7 @@ public class MyApplication extends Application {
 
 > ボタンは最大3個までサポートします。
 
-<a id="media"></a>
-
+<a id="supported-rich-messages-media"></a>
 #### メディア
 * アプリケーション内のリソースID、Android Assetsファイル経路、URLでファイル指定が可能です。
 * 画像以外の動画、音などのメディアはサポートしません。
@@ -625,29 +578,25 @@ public class MyApplication extends Application {
 
 > ウェブ URL を使用すると、メディア ファイルのダウンロードに時間がかかります。
 
-<a id="large-icon"></a>
-
+<a id="supported-rich-messages-large-icon"></a>
 #### 大きなアイコン
 * アプリケーション内のリソースID、Android Assetsファイル経路、URLでファイル指定が可能です。
 * 大きいアイコンの画像は、1:1の割合を推奨します。
 
 > 使用済み画像が1:1の比率ではない場合、強制的に1:1に変更されるため、期待とは異なる画像が露出されることがあります。
 
-<a id="group"></a>
-
+<a id="supported-rich-messages-group"></a>
 #### グループ
 * 同じキーの通知を1つにまとめます。
 * Android 7.0(APIレベル24)以上から使用できます。
 
 <a id="register-notification-action-listener"></a>
-
-### 通知アクションリスナー登録
+### 通知アクションリスナー登録 { #register-notification-action-listener }
 * ユーザーが通知のボタン、または返信送信ボタンをクリックすると、通知アクション リスナーに通知します。
 * [PushAction](./push-android/#pushaction) オブジェクトでアクション情報を確認できます。
 * アプリが実行中でない場合でもメッセージ受信通知を受けるためには`Application#onCreate`から登録する必要があります。
 
-<a id="example-of-notification-action-listener-registration"></a>
-
+<a id="register-notification-action-listener-example-of-notification-action-listener-registration"></a>
 #### 通知アクションリスナー登録例
 
 ``` java
@@ -674,8 +623,7 @@ public class MyApplication extends Application {
 ```
 
 <a id="user-defined-message-handling"></a>
-
-## ユーザー定義メッセージ処理
+## ユーザー定義メッセージ処理 { #user-defined-message-handling }
 * メッセージの受信後、別の処理過程を実行したり、受信したメッセージの内容を修正して通知を表示しなければならない場合は、[NhnCloudPushMessageReceiver](./push-android/#nhncloudpushmessagereceiver)を継承するブロードキャストを実装する必要があります。
 * NhnCloudPushMessageReceiverを継承したブロートキャストは、AndroidManifest.xmlも必ず登録しなければなりません。
 * メッセージを受信すると、onMessageReceived関数で受信したメッセージが伝達されます。
@@ -685,8 +633,7 @@ public class MyApplication extends Application {
 > 2. 通知を直接作成する場合は、Pushサービスコンテンツを通知のコンテンツインテントとして設定することで、指標収集が可能になります。(以下の指標収集機能の追加セクション参照)
 
 <a id="example-of-nhncloudpushmessagingservice-implementation-code"></a>
-
-### NhnCloudPushMessagingService実装コード例
+### NhnCloudPushMessagingService実装コード例 { #example-of-nhncloudpushmessagingservice-implementation-code }
 ```java
 public class MyPushMessageReceiver extends NhnCloudPushMessageReceiver {
     @Override
@@ -725,8 +672,7 @@ public class MyPushMessageReceiver extends NhnCloudPushMessageReceiver {
 ```
 
 <a id="example-of-registering-in-androidmanifestxml"></a>
-
-### AndroidManifest.xml 登録例
+### AndroidManifest.xml 登録例 { #example-of-registering-in-androidmanifestxml }
 > **(注意)**
 > 1. NhnCloudPushMessageReceiverを使う場合は、必ずpermissionを設定しなければなりません。
 > 2. APIレベル31以上をターゲットとする時、exportedプロパティを設定する必要があります。 
@@ -750,12 +696,10 @@ public class MyPushMessageReceiver extends NhnCloudPushMessageReceiver {
 ```
 
 <a id="adding-the-metric-collection-feature-fcm-only"></a>
-
-### 指標収集機能の追加(FCM Only)
+### 指標収集機能の追加(FCM Only) { #adding-the-metric-collection-feature-fcm-only }
 * 通知を直接作成する場合、指標収集機能を使用するにはgetContentIntent()関数を使用して作成したインテントを通知のコンテンツインテントに設定する必要があります。
 
-<a id="example-of-adding-the-metrics-collection-feature"></a>
-
+<a id="adding-the-metric-collection-feature-fcm-only-example-of-adding-the-metrics-collection-feature"></a>
 #### 指標収集機能追加例
 ```java
 public class MyPushMessageReceiver extends NhnCloudPushMessageReceiver {
@@ -810,24 +754,20 @@ public class MyPushMessageReceiver extends NhnCloudPushMessageReceiver {
 ```
 
 <a id="using-emoji"></a>
-
-## Emoji使用
+## Emoji使用 { #using-emoji }
 > **(注意)**
 > 機器でサポートしていないemojiを使用した場合には、表示されないことがあります。
 
 <a id="user-tag"></a>
-
-## ユーザータグ
+## ユーザータグ { #user-tag }
 
 * [ユーザータグ](/Notification/Push/ja/console-guide/#_16) 機能はさまざまなユーザーIDをひとつのタグでまとめ、それを利用してメッセージを送信することができます。
 * タグ名ではなく、タグID(8桁の文字列)に基づいて動作します。タグIDはコンソール > タグメニューから作成·確認できます。
 
 <a id="modify-user-tags"></a>
+### ユーザータグ修正 { #modify-user-tags }
 
-### ユーザータグ修正
-
-<a id="example-of-modifying-user-tags"></a>
-
+<a id="modify-user-tags-example-of-modifying-user-tags"></a>
 #### ユーザータグ修正例
 
 * 入力されたタグIDリストを追加またはアップデートし、最終反映されたタグIDリストを返します。
@@ -868,13 +808,11 @@ NhnCloudPush.setUserTag(tagIds, new UserTagCallback() {
 ```
 
 <a id="retrieve-user-tags"></a>
-
-### ユーザータグ取得
+### ユーザータグ取得 { #retrieve-user-tags }
 
 * 現在のユーザーに登録されたすべてのタグIDリストを返します。
 
-<a id="example-of-retrieving-user-tags"></a>
-
+<a id="retrieve-user-tags-example-of-retrieving-user-tags"></a>
 #### ユーザータグ取得例
 
 ```java
@@ -894,11 +832,9 @@ NhnCloudPush.getUserTag(new UserTagCallback() {
 ```
 
 <a id="delete-user-tag"></a>
+### ユーザータグの削除 { #delete-user-tag }
 
-### ユーザータグの削除
-
-<a id="example-of-deleting-user-tags"></a>
-
+<a id="delete-user-tag-example-of-deleting-user-tags"></a>
 #### ユーザータグの削除例
 
 * 入力されたユーザータグIDリストを削除し、最終的に反映されたタグIDリストを返します。
@@ -939,11 +875,10 @@ NhnCloudPush.removeAllUserTag(new UserTagCallback() {
 ```
 
 <a id="nhn-cloud-push-class-reference"></a>
+## NHN Cloud Push Class Reference { #nhn-cloud-push-class-reference }
 
-## NHN Cloud Push Class Reference
 <a id="nhncloudpushconfiguration"></a>
-
-### NhnCloudPushConfiguration
+### NhnCloudPushConfiguration { #nhncloudpushconfiguration }
 * NHN Cloud Pushを初期化する時に渡されるPush設定情報です。
 
 ```java
@@ -958,8 +893,7 @@ public static Builder newBuilder(@NonNull Context context, @NonNull String appKe
 | static newBuilder | NhnCloudPushConfiguration.Builder | NhnCloudPushConfigurationオブジェクト作成のためのビルダーを作成します。 |
 
 <a id="pushresult"></a>
-
-### PushResult
+### PushResult { #pushresult }
 * 非同期APIの呼び出し時に、コールバックのレスポンスに返される結果オブジェクトです。
 
 
@@ -979,8 +913,7 @@ public boolean isFailure();
 | isFailure | boolean | 失敗したかを返します。 |
 
 <a id="tokeninfo"></a>
-
-### TokenInfo
+### TokenInfo { #tokeninfo }
 * トークン情報照会呼び出し時、コールバックで返されるトークン情報が入っているオブジェクトです。
 
 ```java
@@ -1007,8 +940,7 @@ public String getToken();
 | getToken | String | トークンを返します。 |
 
 <a id="nhncloudremotemessage"></a>
-
-### NhnCloudRemoteMessage
+### NhnCloudRemoteMessage { #nhncloudremotemessage }
 * メッセージ受信リスナー、カスタムレシーバからのメッセージ受信時に返されるオブジェクトです。
 
 ``` java
@@ -1027,8 +959,7 @@ public String getSenderId();
 | getSenderId | String | 発信者 ID を返します (FCM Only)|
 
 <a id="nhncloudpushmessage"></a>
-
-### NhnCloudPushMessage
+### NhnCloudPushMessage { #nhncloudpushmessage }
 * 受信したメッセージ内容を含むオブジェクトです。
 
 ``` java
@@ -1056,8 +987,7 @@ public Map<String, String> getExtras();
 
 
 <a id="pushaction"></a>
-
-### PushAction
+### PushAction { #pushaction }
 * ボタンアクション受信時に返されるオブジェクトがあります。
 
 ``` java
@@ -1078,8 +1008,7 @@ public String getuserText();
 | getuserText | RichMessage | ユーザーが入力した文字列を返します。 |
 
 <a id="nhncloudpushmessagereceiver"></a>
-
-### NhnCloudPushMessageReceiver
+### NhnCloudPushMessageReceiver { #nhncloudpushmessagereceiver }
 * メッセージ内容の修正、実行インテント定義、通知の直接生成などの機能のためには、ユーザーが実装する必要があるオブジェクトです。
 
 ``` java
@@ -1103,8 +1032,7 @@ public final PendingIntent getContentIntent(Context context, NhnCloudRemoteMessa
 | getContentIntent | PendingIntent | Context, NhnCloudRemoteMessage, Intent | 指標転送を含むユーザー実行インテントを返します。 |
 
 <a id="nhncloudnotificationoptions"></a>
-
-### NhnCloudNotificationOptions
+### NhnCloudNotificationOptions { #nhncloudnotificationoptions }
 * デフォルト通知オプション設定時、優先順位、小さなアイコン、背景色、LED、振動、通知音、フォアグラウンドの通知露出情報を設定するオブジェクトです。
 
 ``` java

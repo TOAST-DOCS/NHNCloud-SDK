@@ -1,19 +1,16 @@
 <!-- pre-align:aligned sig=bce24ccc7be6 -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-android-symbol-uploader"></a>
-
-## NHN Cloud > SDK使用ガイド > Log & Crash > Android (Symbol Uploader)
+## NHN Cloud > SDK使用ガイド > Log & Crash > Android (Symbol Uploader) { #nhn-cloud-sdk-user-guide-log-crash-android-symbol-uploader }
 
 <a id="prerequisites"></a>
-
-## 事前準備
+## 事前準備 { #prerequisites }
 
 1. Androidプロジェクトに[NHN Cloud Loggerを追加](/nhncloud/ja/nhncloud-sdk/log-collector-android/)します。
 2. Androidアプリにネイティブライブラリが含まれている場合は、[NHN Cloud Crash Reporter for NDKを追加](/nhncloud/ja/nhncloud-sdk/log-collector-ndk/)します。
 
 <a id="library-setting"></a>
-
-## ライブラリ設定
+## ライブラリ設定 { #library-setting }
 
 プロジェクトレベルのbuild.gradleファイルにNHN Cloud Gradle Pluginをbuildscript依存性項目に追加します。
 
@@ -40,8 +37,7 @@ apply plugin: 'com.toast.android.toast-services'
 ```
 
 <a id="enable-mappingtxt-file-upload"></a>
-
-## mapping.txtファイルアップロード使用設定
+## mapping.txtファイルアップロード使用設定 { #enable-mappingtxt-file-upload }
 
 ProGuard、R8でコード難読化されているスタックトレースを人が読むことができるコードにレンダリングするには、ビルド時に作成されたマッピングファイルをNHN Cloud Log & Crash Searchにアップロードする必要があります。
 NHN Cloud Gradle Pluginにはマッピングファイルのアップロードを自動化する`uploadMappingFile{BUILD_VARIANT}`タスクが含まれています。このタスクを有効にするには`mappingFileUploadEnabled`が`true`に設定されていることを確認します。
@@ -59,8 +55,7 @@ toastServices {
 ```
 
 <a id="enable-native-symbol-file-upload"></a>
-
-## Native symbolファイルのアップロード使用設定
+## Native symbolファイルのアップロード使用設定 { #enable-native-symbol-file-upload }
 
 NDK異常終了から読み取り可能なスタックトレースを作成するには、NHN Cloud Log & Crash Searchでネイティブバイナリのシンボルについて把握する必要があります。
 NHN Cloud Gradle Pluginにはネイティブシンボルファイルのアップロードを自動化する`uploadSymbolFile{BUILD_VARIANT}`タスクが含まれています。
@@ -78,8 +73,7 @@ toastServices {
 ```
 
 <a id="configure-build-variants"></a>
-
-## ビルド変形構成
+## ビルド変形構成 { #configure-build-variants }
 
 Build TypesまたはProduct Flavors、Variantsの構成に応じてアプリケーションキーおよびアップロードを有効にするかどうかを設定できます。
 
@@ -116,8 +110,7 @@ toastServices {
 ```
 
 <a id="execute-the-file-upload-task"></a>
-
-## ファイルアップロードタスク実行
+## ファイルアップロードタスク実行 { #execute-the-file-upload-task }
 
 マッピングファイルまたはネイティブシンボルファイルをTOAST Log & Crash Searchにアップロードするには、アップロードタスクを明示的に呼び出す必要があります。
 例えば次のとおりです。

@@ -1,18 +1,15 @@
 <!-- pre-align:aligned sig=74de1cda7688 -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-android"></a>
-
-## NHN Cloud > SDK使用ガイド > 開始する > Android
+## NHN Cloud > SDK使用ガイド > 開始する > Android { #nhn-cloud-sdk-user-guide-getting-started-android }
 
 <a id="supported-environment"></a>
-
-## サポート環境
+## サポート環境 { #supported-environment }
 
 * Android 5.1(API 22)以上
 
 <a id="nhn-cloud-sdk-components"></a>
-
-## NHN Cloud SDKの構成
+## NHN Cloud SDKの構成 { #nhn-cloud-sdk-components }
 
 Android用NHN Cloud SDKの構成は次のとおりです。
 
@@ -48,12 +45,10 @@ NHN Cloud SDKが提供するサービスの中から、希望する機能を選�
 | com.nhncloud.android:nhncloud-creditcard-recognizer:1.12.0    | Credit Card Recognizer |
 
 <a id="apply-nhn-cloud-sdk-to-android-studio-projects"></a>
-
-## NHN Cloud SDKをAndroid Studioプロジェクトに適用
+## NHN Cloud SDKをAndroid Studioプロジェクトに適用 { #apply-nhn-cloud-sdk-to-android-studio-projects }
 
 <a id="build-android-with-gradle"></a>
-
-### 1. Gradleを使用してAndroidビルド
+### 1. Gradleを使用してAndroidビルド { #build-android-with-gradle }
 
 NHN Cloud SDKのすべてのサービスを使用するには、下記のように従属性(dependency)を設定します。
 
@@ -76,22 +71,19 @@ NHN Cloud SDKが提供するサービス別の設定方法は次のとおりで�
 - [Credit Card Recognizerライブラリ設定](./creditcard-recognizer-android/#_1)
 
 <a id="build-android-with-aar"></a>
-
-### 2. AARを使用してAndroidビルド
+### 2. AARを使用してAndroidビルド { #build-android-with-aar }
 
 Android SDKは[Downloads](../../Download/#nhn-cloud-sdk)ページでダウンロードできます。
 
 <a id="set-user-id"></a>
-
-## UserID設定
+## UserID設定 { #set-user-id }
 
 NHN Cloud SDKにUserIDを設定できます。
 設定したUserIDは、NHN Cloud SDKの各モジュールで共通使用されます。
 NhnCloudLoggerのログ送信APIを呼び出すたびに、設定したUserIDをログと一緒にサーバーに送信します。
 
 <a id="specification-for-user-id-setting-api"></a>
-
-### UserID設定API仕様
+### UserID設定API仕様 { #specification-for-user-id-setting-api }
 
 ```java
 /* NhnCloudSdk.java */
@@ -103,11 +95,9 @@ public static void setUserId(String userId);
 | userId | String：ユーザーID|
 
 <a id="example-of-user-id-setting"></a>
+### UserID設定例 { #example-of-user-id-setting }
 
-### UserID設定例
-
-<a id="login"></a>
-
+<a id="example-of-user-id-setting-login"></a>
 #### ログイン
 
 ```java
@@ -115,8 +105,7 @@ public static void setUserId(String userId);
 NhnCloudSdk.setUserId(userId);
 ```
 
-<a id="logout"></a>
-
+<a id="example-of-user-id-setting-logout"></a>
 #### ログアウト
 
 ```java
@@ -125,15 +114,13 @@ NhnCloudSdk.setUserId(null);
 ```
 
 <a id="set-debug-mode"></a>
-
-## デバッグモード設定
+## デバッグモード設定 { #set-debug-mode }
 
 NHN Cloud SDKの内部ログを確認するために、デバッグモードを設定できます。
 NHN Cloud SDKに関するお問い合わせの際は、デバッグモードを有効にしていただくと、迅速にサポートできます。
 
 <a id="specification-for-debug-mode-setting-api"></a>
-
-### デバッグモード設定API仕様
+### デバッグモード設定API仕様 { #specification-for-debug-mode-setting-api }
 
 ```java
 /* NhnCloudSdk.java */
@@ -145,11 +132,9 @@ public static void setDebugMode(boolean debug);
 | debug | boolean：デバッグモードを有効にするにはtrue、無効にする場合はfalse。|
 
 <a id="usage-example-of-debug-mode-setting"></a>
+### デバッグモード設定使用例 { #usage-example-of-debug-mode-setting }
 
-### デバッグモード設定使用例
-
-<a id="enable-debug-mode"></a>
-
+<a id="usage-example-of-debug-mode-setting-enable-debug-mode"></a>
 #### デバッグモード有効化
 
 ```java
@@ -157,8 +142,7 @@ public static void setDebugMode(boolean debug);
 NhnCloudSdk.setDebugMode(true);
 ```
 
-<a id="disable-debug-mode"></a>
-
+<a id="usage-example-of-debug-mode-setting-disable-debug-mode"></a>
 #### デバッグモード無効化
 
 ```java
@@ -169,8 +153,7 @@ NhnCloudSdk.setDebugMode(false);
 > [注意]アプリをリリースする時は、デバッグモードを無効化する必要があります。
 
 <a id="use-nhn-cloud-services"></a>
-
-## NHN Cloudサービス使用
+## NHN Cloudサービス使用 { #use-nhn-cloud-services }
 
 * [Log & Crash](./log-collector-android)使用ガイド
 * [Native Crash Reporter](./log-collector-ndk)使用ガイド

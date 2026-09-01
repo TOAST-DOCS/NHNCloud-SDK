@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=a0cd6b6bb2af -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-ios"></a>
-
-## NHN Cloud > SDK User Guide > Log & Crash > iOS
+## NHN Cloud > SDK User Guide > Log & Crash > iOS { #nhn-cloud-sdk-user-guide-log-crash-ios }
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. [Install NHN Cloud SDK](./getting-started-ios).
 2. [Enable Log & Crash Search](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/) in [NHN Cloud console](https://console.nhncloud.com).
 3. [Check AppKey](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/#check-appkey) in Log & Crash Search.
 
 <a id="configuration-of-nhn-cloud-logger"></a>
-
-## Configuration of NHN Cloud Logger
+## Configuration of NHN Cloud Logger { #configuration-of-nhn-cloud-logger }
 
 * NHN Cloud Logger SDK for iOS is configured as follows.
 
@@ -24,12 +21,10 @@
 | Mandatory   | NHNCloudCore<br/>NHNCloudCommon | NHNCloudCore.framework<br/>NHNCloudCommon.framework | | OTHER_LDFLAGS = (<br/>    "-ObjC",<br/>    "-lc++" <br/>); |
 
 <a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
-
-## Apply NHN Cloud SDK to Xcode Projects
+## Apply NHN Cloud SDK to Xcode Projects { #apply-nhn-cloud-sdk-to-xcode-projects }
 
 <a id="apply-cococapods"></a>
-
-### 1. Apply Cococapods
+### 1. Apply Cococapods { #apply-cococapods }
 
 * Create a Podfile to add a pod for NHN Cloud SDK.
 
@@ -43,8 +38,7 @@ end
 ```
 
 <a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
-
-### 2. Apply NHN Cloud SDK with Swift Package Manager
+### 2. Apply NHN Cloud SDK with Swift Package Manager { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * Go to **File > Add Packages...** from XCode.
 * For the Package URL, enter 'https://github.com/nhn/nhncloud.ios.sdk' and select **Add Package**.
@@ -52,8 +46,7 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
-<a id="set-up-project"></a>
-
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** entries to **Other Linker Flags** in **Build Settings**
@@ -61,11 +54,9 @@ end
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 3. Apply NHN Cloud SDK by Downloading Binaries { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
-### 3. Apply NHN Cloud SDK by Downloading Binaries
-
-<a id="set-up-framework"></a>
-
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
 #### Set up Framework
 
 * The entire iOS SDK can be downloaded from [Downloads](../../Download/#nhn-cloud-sdk) of NHN Cloud.
@@ -73,8 +64,7 @@ end
 * To enable Crash Report of NHN Cloud Logger, CrashReporter.framework which is distributed as well, must be added to the project.
 ![linked_frameworks_logger](https://static.toastoven.net/toastcloud/sdk/ios/logger_link_frameworks_logger_202206.png)
 
-<a id="set-up-project-2"></a>
-
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** to **Other Linker Flags** at **Build Settings**.
@@ -82,18 +72,15 @@ end
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="apply-nhn-cloud-symbol-uploader"></a>
-
-## Apply NHN Cloud Symbol Uploader
+## Apply NHN Cloud Symbol Uploader { #apply-nhn-cloud-symbol-uploader }
 
 <a id="change-project-debug-settings"></a>
-
-### Change Project Debug Settings
+### Change Project Debug Settings { #change-project-debug-settings }
 * You must change build settings to change the debug information format of the project.
 * Xcode -> Project Target -> Build Settings -> Debug Information Format -> Debug -> DWARF with dSYM File
 
 <a id="upload-automatically-using-run-script-in-development-environment"></a>
-
-### Upload Automatically Using Run Script in Development Environment
+### Upload Automatically Using Run Script in Development Environment { #upload-automatically-using-run-script-in-development-environment }
 
 * Xcode -> Project Target -> Build Phases -> + -> New Run Script Phase
 * Expand the new Run Script section that shows up.
@@ -110,8 +97,7 @@ fi
 ![symbol_uploader_script_pods_path](https://static.toastoven.net/toastcloud/sdk/ios/symbol_uploader_guide_script_pods_path_202206.png)
 
 <a id="upload-manually-using-symbol-uploader"></a>
-
-### Upload Manually Using Symbol Uploader
+### Upload Manually Using Symbol Uploader { #upload-manually-using-symbol-uploader }
 
 * SymbolUploader Usage
 
@@ -144,21 +130,18 @@ OPTIONS:
 > https://console.nhncloud.com/-> Select Organization -> Select Project -> Anaytics -> Log & Crash Search -> Settings -> Symbol Files
 
 <a id="precautions-when-using-crashreport"></a>
-
-### Precautions when using CrashReport
+### Precautions when using CrashReport { #precautions-when-using-crashreport }
 
 * Crash analysis of devices using the arm64e architecture requires the use of PLCrashReporter, which is distributed with the NHN Cloud Logger.
     * Crash analysis of devices using the arm64e architecture is not possible if you use a PLCrashReporter that is downloaded or built directly from a location other than the [Downloads](../../Download/#nhn-cloud-sdk) of NHN Cloud.
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
-
-## Initialize NHN Cloud Logger SDK
+## Initialize NHN Cloud Logger SDK { #initialize-nhn-cloud-logger-sdk }
 
 * Set Appkey issued from Log & Crash Search.
 
 <a id="specification-for-initialization-api"></a>
-
-### Specification for Initialization API
+### Specification for Initialization API { #specification-for-initialization-api }
 
 ``` objc
 // Initialize
@@ -166,8 +149,7 @@ OPTIONS:
 ```
 
 <a id="example-of-initialization-procedure"></a>
-
-### Example of Initialization Procedure
+### Example of Initialization Procedure { #example-of-initialization-procedure }
 
 ```objc
 NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration configurationWithAppKey:@"YOUR_APP_KEY"];
@@ -175,14 +157,12 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 ```
 
 <a id="send-logs"></a>
-
-## Send Logs
+## Send Logs { #send-logs }
 
 * NHN Cloud Logger provides log-sending functions of five levels.
 
 <a id="specification-for-log-sending-api"></a>
-
-### Specification for Log Sending API
+### Specification for Log Sending API { #specification-for-log-sending-api }
 
 ```objc
 // DEBUG level log
@@ -202,23 +182,20 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 ```
 
 <a id="usage-example-of-log-sending-api"></a>
-
-### Usage Example of Log Sending API
+### Usage Example of Log Sending API { #usage-example-of-log-sending-api }
 
 ```objc
 [NHNCloudLogger info:@"NHN Cloud Log & Crash Search!"];
 ```
 
 <a id="set-user-defined-fields"></a>
-
-## Set User-defined Fields
+## Set User-defined Fields { #set-user-defined-fields }
 
 * Set a user-defined field as wanted.
 * With user-defined field setting, set values are sent to server along with logs, every time Log Sending API is called.
 
 <a id="specification-for-user-defined-field-setting-api"></a>
-
-### Specification for User-defined Field Setting API
+### Specification for User-defined Field Setting API { #specification-for-user-defined-field-setting-api }
 
 ```objc
 // Add User-Defined Field
@@ -227,8 +204,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 * User-defined field is same as the value exposed as "Selected Field"in "Log & Crash Search Console" > "Log Search Tab".
 
-<a id="restrictions-for-user-defined-fields"></a>
-
+<a id="specification-for-user-defined-field-setting-api-restrictions-for-user-defined-fields"></a>
 #### Restrictions for User-Defined Fields
 
 * Cannot use already [Reserved Fields](./log-collector-reserved-fields).
@@ -237,23 +213,20 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 
 <a id="usage-example-of-user-defined-fields"></a>
-
-### Usage Example of User-Defined Fields
+### Usage Example of User-Defined Fields { #usage-example-of-user-defined-fields }
 ```objc
 // Add User-Defined Field
 [NHNCloudLogger setUserFieldWithValue:@"USER_VALUE" forKey:@"USER_KEY"];
 ```
 
 <a id="collect-crash-logs"></a>
-
-## Collect Crash Logs
+## Collect Crash Logs { #collect-crash-logs }
 * NHN Cloud Logger sends crash information to logs.
 * It is enabled along with NHN Cloud Logger initialization, by setting.
 * To send crash logs, PLCrashReporter is applied.
 
 <a id="set-whether-to-enable-crashreporter"></a>
-
-### Set Whether to Enable CrashReporter
+### Set Whether to Enable CrashReporter { #set-whether-to-enable-crashreporter }
 * By default, CrashReporter is enabled when NHN Cloud Logger is initialized.
 * During NHN Cloud Logger initialization, you can set whether to use CrashReporter or not.
 * In order not to send crash logs, CrashReporter must be disabled.
@@ -261,8 +234,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 > If the User ID is set, you can check the user-specific crash experience in the 'Crash User' section of the Log & Crash Search console.
 > User ID setting can be checked in [Getting Started](./getting-started-ios/#set-user-id).
 
-<a id="enable-crashreporter"></a>
-
+<a id="set-whether-to-enable-crashreporter-enable-crashreporter"></a>
 #### Enable CrashReporter
 ```objc
 // CrashReporter Enable Configuration
@@ -270,8 +242,8 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 [NHNCloudLogger initWithConfiguration:configuration];
 ```
-<a id="disable-crashreporter"></a>
 
+<a id="set-whether-to-enable-crashreporter-disable-crashreporter"></a>
 #### Disable CrashReporter
 ```objc
 
@@ -282,22 +254,19 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 ```
 
 <a id="set-additional-information-in-time-for-crash-occurrence-before-sending"></a>
-
-## Set Additional Information in Time for Crash Occurrence before Sending
+## Set Additional Information in Time for Crash Occurrence before Sending { #set-additional-information-in-time-for-crash-occurrence-before-sending }
 
 * Additional information can be set immediately after crash occurs.
 * With user-defined field setting for Block at setShouldReportCrashHandler, additional information can be configured precisely when a crash occurs
 
 <a id="specification-for-data-adapter-api"></a>
-
-### Specification for Data Adapter API
+### Specification for Data Adapter API { #specification-for-data-adapter-api }
 ```objc
 + (void)setShouldReportCrashHandler:(void (^)(void))handler;
 ```
 
 <a id="usage-example-of-data-adapter"></a>
-
-### Usage Example of Data Adapter
+### Usage Example of Data Adapter { #usage-example-of-data-adapter }
 
 ```objc
 [NHNCloudLogger setShouldReportCrashHandler:^{
@@ -310,22 +279,19 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 ```
 
 <a id="further-tasks-after-sending-logs"></a>
-
-## Further Tasks after Sending Logs
+## Further Tasks after Sending Logs { #further-tasks-after-sending-logs }
 
 * With delegate registered, further tasks can be executed after logs are sent.
 
 
 <a id="specification-for-set-delegate-api"></a>
-
-### Specification for Set Delegate API
+### Specification for Set Delegate API { #specification-for-set-delegate-api }
 ```objc
 + (void)setDelegate:(id<NHNCloudLoggerDelegate>) delegate;
 ```
 
 <a id="specification-for-delegate-api"></a>
-
-### Specification for Delegate API
+### Specification for Delegate API { #specification-for-delegate-api }
 
 ``` objc
 @protocol NHNCloudLoggerDelegate <NSObject>
@@ -346,8 +312,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 
 <a id="usage-example-of-delegate"></a>
-
-### Usage Example of Delegate
+### Usage Example of Delegate { #usage-example-of-delegate }
 
 ```objc
 #import <NHNCloudLogger/NHNCloudLogger.h>
@@ -398,15 +363,13 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 ```
 
 <a id="network-insights"></a>
-
-## Network Insights
+## Network Insights { #network-insights }
 * Network Insights measure delay time and response values by calling URL registered in console. They may be applied to measure delays and response vales of many countries around the world (according to national codes on a device).
 
 > With Network Insights enabled in console, it is requested for one time via URL registered in the console when NHN Cloud Logger is initialized.
 
 <a id="enable-network-insights"></a>
-
-### Enable Network Insights
+### Enable Network Insights { #enable-network-insights }
 
 1. Go to [NHN Cloud Console](https://console.nhncloud.com/) and select [Log & Crash Search].
 2. Select [Settings].
@@ -414,8 +377,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 4. Enable "Network Insights Logs".
 
 <a id="url-setting"></a>
-
-### URL Setting
+### URL Setting { #url-setting }
 
 1. Go to [NHN Cloud Console](https://console.nhncloud.com/) and select [Log & Crash Search].
 2. Select [Network Insights].
@@ -423,14 +385,12 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 4. Enter URL to measure and click [Add].
 
 <a id="nhn-cloud-logger-for-government-agencies"></a>
-
-## NHN Cloud Logger for Government Agencies
+## NHN Cloud Logger for Government Agencies { #nhn-cloud-logger-for-government-agencies }
 
 <!-- TODO: translate body -->
 
 <a id="set-nhn-cloud-logger-for-government-agencies"></a>
-
-### Set NHN Cloud Logger for government agencies 
+### Set NHN Cloud Logger for government agencies { #set-nhn-cloud-logger-for-government-agencies }
 * You can configure the settings to use the cloud for government agencies by using cloudEnvironment property of NHNCloudLoggerConfiguration. 
 
 ```objc
@@ -443,8 +403,7 @@ typedef NS_ENUM(NSInteger, NHNCloudEnvironment) {
 ```
 * When not set, the default is `NHNCloudEnvironmentPublic`. 
 
-<a id="example-of-initializing-nhn-cloud-logger-for-government-agencies"></a>
-
+<a id="set-nhn-cloud-logger-for-government-agencies-example-of-initializing-nhn-cloud-logger-for-government-agencies"></a>
 #### Example of initializing NHN Cloud Logger for government agencies
 
 ```objc
@@ -455,8 +414,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 ```
 
 <a id="precautions-when-using-nhn-cloud-logger-for-government-agencies"></a>
-
-### Precautions when using NHN Cloud Logger for government agencies
+### Precautions when using NHN Cloud Logger for government agencies { #precautions-when-using-nhn-cloud-logger-for-government-agencies }
 
 * The following features are not supported for Log & Crash Search for government agencies.
     * Console Settings
