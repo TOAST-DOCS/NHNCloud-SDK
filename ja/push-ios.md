@@ -518,7 +518,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 ### Notification Service Extension設定 { #notification-service-extension-setting }
 
 * アプリのプロジェクト設定と同様に、Extensionの[プロジェクト設定](./push-ios/#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project)を追加します。
-* `iOSのExtensionはアプリと一緒にインストールされますが、アプリとは分離された別のサンドボックス環境であるため、コンテナを共有することはできません。`
+* `iOSのExtensionはアプリと一緒にインストールされますが、アプリとは分離された別のサンドボックス環境であるため、コンテナを共有しません。`
 
 <a id="notification-service-extension-setting-example"></a>
 ### Notification Service Extension設定例 { #notification-service-extension-setting-example }
