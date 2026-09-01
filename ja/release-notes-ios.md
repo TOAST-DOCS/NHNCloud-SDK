@@ -6,11 +6,11 @@
 <a id="90-2025-04-29"></a>
 ## 1.9.0 (2025. 04. 29.) { #90-2025-04-29 }
 
-<a id="nhn-cloud-push"></a>
-### NHN Cloud Push { #nhn-cloud-push }
+<a id="90-2025-04-29-nhn-cloud-push"></a>
+### NHN Cloud Push { #90-2025-04-29-nhn-cloud-push }
 
-<a id="nhn-cloud-push-added-features"></a>
-#### 機能追加 
+<a id="90-2025-04-29-nhn-cloud-push-added-features"></a>
+#### 機能追加
 * Notification Hubサポート 
     * NHNCloudPush SDKでNotification Hubを利用できます。
     * NHNCloudPushConfigurationのserviceTypeプロパティにNHNCloudPushServiceTypeNotificationHub値を設定して使用可能です。
@@ -28,10 +28,10 @@
 <a id="85-2024-10-08"></a>
 ## 1.8.5 (2024. 10. 08.) { #85-2024-10-08 }
 
-<a id="nhn-cloud-iap"></a>
-### NHN Cloud IAP { #nhn-cloud-iap }
+<a id="85-2024-10-08-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #85-2024-10-08-nhn-cloud-iap }
 
-<a id="nhn-cloud-iap-improved"></a>
+<a id="85-2024-10-08-nhn-cloud-iap-improved"></a>
 #### 改善事項
 * 決済詳細情報送信機能の改善
 
@@ -49,10 +49,10 @@
 <a id="83-2024-07-23"></a>
 ## 1.8.3 (2024. 07. 23.) { #83-2024-07-23 }
 
-<a id="common"></a>
-### 共通 { #common }
+<a id="83-2024-07-23-common"></a>
+### 共通 { #83-2024-07-23-common }
 
-<a id="common-improved"></a>
+<a id="83-2024-07-23-common-improved"></a>
 #### 改善事項
 * 安定性改善
 
@@ -107,17 +107,17 @@
 * 署名適用
     * 配布されるバイナリに`NHN Cloud Corp.`署名が適用されました。
 
-<a id="logger"></a>
-### Logger { #logger }
+<a id="71-2023-12-19-logger"></a>
+### Logger { #71-2023-12-19-logger }
 
-<a id="logger-improved"></a>
+<a id="71-2023-12-19-logger-improved"></a>
 #### 改善事項
 * Instance LoggerのNetworkInsight安定性の改善 
 
-<a id="symboluploaderv004"></a>
-### SymbolUploader(v0.0.4) { #symboluploaderv004 }
+<a id="71-2023-12-19-symboluploaderv004"></a>
+### SymbolUploader(v0.0.4) { #71-2023-12-19-symboluploaderv004 }
 
-<a id="symboluploaderv004-improved"></a>
+<a id="71-2023-12-19-symboluploaderv004-improved"></a>
 #### 改善事項
 * 安定性改善
 
@@ -151,10 +151,10 @@
 #### 改善事項
 * CountryCode取得に失敗する問題を修正
 
-<a id="nhn-cloud-ocr"></a>
-### NHN Cloud OCR { #nhn-cloud-ocr }
+<a id="62-2023-08-29-nhn-cloud-ocr"></a>
+### NHN Cloud OCR { #62-2023-08-29-nhn-cloud-ocr }
 
-<a id="nhn-cloud-ocr-added-features"></a>
+<a id="62-2023-08-29-nhn-cloud-ocr-added-features"></a>
 #### 機能追加
 * クレジットカード/身分証認識結果データに認識領域を追加
 
@@ -189,8 +189,8 @@
 * トークン登録機能の改善
     * アプリの通知権限とは関係なくトークンを登録できるオプションを提供します。
 
-<a id="50-2023-06-27-nhn-cloud-push-symboluploaderv003"></a>
-#### SymbolUploader(v0.0.3)
+<a id="50-2023-06-27-symboluploaderv003"></a>
+### SymbolUploader(v0.0.3) { #50-2023-06-27-symboluploaderv003 }
 * 安定性の改善
 
 <a id="40-2023-05-30"></a>
@@ -206,13 +206,13 @@
 <a id="40-2023-05-30-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #40-2023-05-30-nhn-cloud-iap }
 
-<a id="40-2023-05-30-nhn-cloud-iap-added-featrues"></a>
+<a id="40-2023-05-30-nhn-cloud-iap-added-features"></a>
 #### 機能追加
 * 決済詳細情報送信機能を追加 
     * IAPコンソールのTransactionタブで決済詳細情報を照会できます。
 
-<a id="40-2023-05-30-nhn-cloud-iap-symboluploaderv002"></a>
-#### SymbolUploader(v0.0.2)
+<a id="40-2023-05-30-symboluploaderv002"></a>
+### SymbolUploader(v0.0.2) { #40-2023-05-30-symboluploaderv002 }
 * run script改善 
     * Cocoapods, SPM対応追加
     
@@ -258,10 +258,10 @@
 <a id="20-2022-11-29"></a>
 ## 1.2.0 (2022. 11. 29.) { #20-2022-11-29 }
 
-<a id="nhn-cloud-logger"></a>
-### NHN Cloud Logger { #nhn-cloud-logger }
+<a id="20-2022-11-29-nhn-cloud-logger"></a>
+### NHN Cloud Logger { #20-2022-11-29-nhn-cloud-logger }
 
-<a id="nhn-cloud-logger-added-features"></a>
+<a id="20-2022-11-29-nhn-cloud-logger-added-features"></a>
 #### 機能追加
 * 公共機関用Loggerをサポート
 
@@ -318,20 +318,20 @@
 <a id="300-2022-03-29"></a>
 ## 0.30.0 (2022. 03. 29.) { #300-2022-03-29 }
 
-<a id="toast-iap"></a>
-### TOAST IAP { #toast-iap }
+<a id="300-2022-03-29-toast-iap"></a>
+### TOAST IAP { #300-2022-03-29-toast-iap }
 
-<a id="toast-iap-added-features"></a>
+<a id="300-2022-03-29-toast-iap-added-features"></a>
 #### 機能追加
 * ToastPurchaseResultにサンドボックス決済かどうかを追加(sandboxPayment)
 
 <a id="292-2021-11-23"></a>
 ## 0.29.2 (2021. 11. 23.) { #292-2021-11-23 }
 
-<a id="toast-push"></a>
-### TOAST Push { #toast-push }
+<a id="292-2021-11-23-toast-push"></a>
+### TOAST Push { #292-2021-11-23-toast-push }
 
-<a id="toast-push-improvements"></a>
+<a id="292-2021-11-23-toast-push-improvements"></a>
 #### 改善事項
 * 安全性の改善
 
@@ -373,10 +373,10 @@
 * xcframework追加
     * arm Simulatorサポートの追加
 
-<a id="toast-logger"></a>
-### TOAST Logger { #toast-logger }
+<a id="280-2021-05-25-toast-logger"></a>
+### TOAST Logger { #280-2021-05-25-toast-logger }
 
-<a id="toast-logger-crashreporter-buildinfo-20210525"></a>
+<a id="280-2021-05-25-toast-logger-crashreporter-buildinfo-20210525"></a>
 #### CrashReporter (BuildInfo 20210525)
 * アーキテクチャ分類方式の改善
     * iOS14 Core Libraryがシンボリケーションされない問題を改善
@@ -405,7 +405,7 @@
 ### TOAST IAP { #271-2020-11-24-toast-iap }
 
 <a id="271-2020-11-24-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * サブスクリプションプロダクトの再購入エラー修正 (iOS 14 ) 
 - Appstoreからプロダクト情報を得られなかった場合、ToastProductsResponseがnilを返すように変更 
  
@@ -413,7 +413,7 @@
 ### TOAST Push { #271-2020-11-24-toast-push }
 
 <a id="271-2020-11-24-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * トークン解除リクエスト時に、登録されたトークンがない場合、Callbackが発生しない問題の改善 
  
 <a id="270-2020-09-11"></a>
@@ -423,11 +423,11 @@
 ### TOAST IAP { #270-2020-09-11-toast-iap }
 
 <a id="270-2020-09-11-toast-iap-added-features"></a>
-#### 機能追加 
+#### 機能追加
 * ToastProductにローカライズされたプロダクト情報の追加 (localizedTitle、 localizedDescription) 
  
 <a id="270-2020-09-11-toast-iap-improvements"></a>
-#### 機能改善 
+#### 機能改善
 * iOS 14 beta変更事項に対応  
     * 決済失敗のDelegateが受信できない問題の改善 
      
@@ -435,7 +435,7 @@
 ### TOAST Push { #270-2020-09-11-toast-push }
 
 <a id="270-2020-09-11-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * 安全性の改善 
      
 <a id="260-2020-07-28"></a>
@@ -445,7 +445,7 @@
 ### TOAST Push { #260-2020-07-28-toast-push }
 
 <a id="260-2020-07-28-toast-push-added-features"></a>
-#### 機能追加 
+#### 機能追加
 * ユーザータグ機能のサポート 
  
 <a id="251-2020-07-03"></a>
@@ -455,14 +455,14 @@
 ### TOAST Logger { #251-2020-07-03-toast-logger }
 
 <a id="251-2020-07-03-toast-logger-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * 安全性の改善 
  
 <a id="251-2020-07-03-toast-push"></a>
 ### TOAST Push { #251-2020-07-03-toast-push }
 
 <a id="251-2020-07-03-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * 安全性の改善 
  
 <a id="250-2020-06-23"></a>
@@ -472,14 +472,14 @@
 ### 共通 { #250-2020-06-23-common }
 
 <a id="250-2020-06-23-common-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * 安全性の改善 
  
 <a id="250-2020-06-23-toast-push"></a>
 ### TOAST Push { #250-2020-06-23-toast-push }
 
 <a id="250-2020-06-23-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * 通知オプション設定のインターフェイスを分離 
  
 <a id="241-2020-05-26"></a>
@@ -489,7 +489,7 @@
 ### TOAST Push { #241-2020-05-26-toast-push }
 
 <a id="241-2020-05-26-toast-push-improvements"></a>
-#### 機能改善 
+#### 機能改善
 * トークン登録の機能改善 
  
 <a id="240-2020-04-28"></a>
@@ -504,14 +504,14 @@
 ### TOAST IAP { #240-2020-04-28-toast-iap }
 
 <a id="240-2020-04-28-toast-iap-added-features"></a>
-#### 追加事項 
+#### 追加事項
 * プロモーション決済の実行するか選択できるOptional Delegateを追加 
  
 <a id="240-2020-04-28-toast-push"></a>
 ### TOAST Push { #240-2020-04-28-toast-push }
 
 <a id="240-2020-04-28-toast-push-improvements"></a>
-#### 改善事項  
+#### 改善事項
 * 安全性の改善 
  
 <a id="230-2020-03-24"></a>
@@ -521,14 +521,14 @@
 ### TOAST Logger { #230-2020-03-24-toast-logger }
 
 <a id="230-2020-03-24-toast-logger-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * CrashReport CallStackに誤った文字列が含まれて可能性がある問題を修正 
  
 <a id="230-2020-03-24-toast-push"></a>
 ### TOAST Push { #230-2020-03-24-toast-push }
 
 <a id="230-2020-03-24-toast-push-added-features"></a>
-#### 追加事項 
+#### 追加事項
 * 通知オプション設定の機能追加 
     * 初期化時にフォアグラウンドで通知を表示するか、バッジアイコンの表示するか、通知音を使用するかの設定が可能 
      
@@ -539,7 +539,7 @@
 ### TOAST Push { #221-2020-02-25-toast-push }
 
 <a id="221-2020-02-25-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * トークン登録の機能改善 
     * 初回トークン登録時にユーザーIDが設定されていない場合は、デバイス識別子を使用して登録します。 
     * トークンに登録した後、ユーザーIDを設定、または変更すると、トークン情報を更新します。 
@@ -551,7 +551,7 @@
 ### TOAST IAP { #220-2020-02-11-toast-iap }
 
 <a id="220-2020-02-11-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * 安全性の改善 
  
  
@@ -562,14 +562,14 @@
 ### TOAST Logger { #210-2019-12-24-toast-logger }
 
 <a id="210-2019-12-24-toast-logger-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * Crash発生の位置情報の分類方式を改善するため、データを追加 
  
 <a id="210-2019-12-24-toast-iap"></a>
 ### TOAST IAP { #210-2019-12-24-toast-iap }
 
 <a id="210-2019-12-24-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
 * APIセキュリティ機能の追加
 * 安全性の改善 
 * Swiftインターフェイス追加定義 
@@ -581,7 +581,7 @@
 ### 共通 { #201-2019-12-04-common }
  
 <a id="201-2019-12-04-common-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 初期化ロジックの改善 
  
@@ -592,7 +592,7 @@
 ### TOAST Push { #200-2019-11-26-toast-push }
  
 <a id="200-2019-11-26-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * トークン登録/削除結果通知を、コールバック構造に変更、Delegate削除 
 * 以前登録した同意情報でトークンを再登録する機能追加 
@@ -606,7 +606,7 @@
 ### 共通 { #193-2019-10-29-common }
  
 <a id="193-2019-10-29-common-bug-fixes"></a>
-#### バグ修正 
+#### バグ修正
  
 * Xcode 11未満でリンカーエラー発生の問題を修正 
  
@@ -617,7 +617,7 @@
 ### TOAST Push { #192-2019-10-25-toast-push }
  
 <a id="192-2019-10-25-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * (旧) TCPushSDKマイグレーションのサポート 
  
@@ -628,7 +628,7 @@
 ### TOAST Push { #191-2019-10-18-toast-push }
  
 <a id="191-2019-10-18-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * トークン登録の機能改善 
  
@@ -639,7 +639,7 @@
 ### TOAST Push { #190-2019-10-15-toast-push }
  
 <a id="190-2019-10-15-toast-push-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * 通知実行に対する通知の機能を追加 
  
@@ -650,7 +650,7 @@
 ### 共通 { #180-2019-10-01-common }
  
 <a id="180-2019-10-01-common-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * iOS 13 / Xcode 11対応
  
@@ -658,12 +658,12 @@
 ### TOAST IAP { #180-2019-10-01-toast-iap }
  
 <a id="180-2019-10-01-toast-iap-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * 購入リクエスト時にユーザーデータ設定をの機能を追加 
  
 <a id="180-2019-10-01-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 復元機能を実行した後、復元された決済の項目のみ返すよう変更 
  
@@ -671,14 +671,14 @@
 ### TOAST Push { #180-2019-10-01-toast-push }
  
 <a id="180-2019-10-01-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * ToastPushConfigurationオブジェクトのNullabilityプロパティの変更 
 * リッチメッセージ作成ロジックの改善により、ToastPushMediaオブジェクトのsourceType、extensionのプロパティを削除 
 * リッチメッセージのソース情報にハングルURLも対応 
  
 <a id="180-2019-10-01-toast-push-bug-fixes"></a>
-#### バグ修正 
+#### バグ修正
  
 * コンソール設定で、メッセージ受信/確認の機能が未使用と設定されている場合、リッチメッセージが正常に表示されなかったバグを修正 
 * iOS 13以上の環境でデバイストークンを獲得できないバグを修正 
@@ -690,19 +690,19 @@
 ### 共通 { #170-2019-08-27-common }
  
 <a id="170-2019-08-27-common-improvements"></a>
-#### 改善事項  
+#### 改善事項
 * 安全性の改善 
  
 <a id="170-2019-08-27-toast-iap"></a>
 ### TOAST IAP { #170-2019-08-27-toast-iap }
  
 <a id="170-2019-08-27-toast-iap-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * 自動更新型の消費性サブスクリプションプロダクトの追加 
  
 <a id="170-2019-08-27-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * プロダクト一覧を照会時、invalidProductsに有効な商品が返されていた問題を修正 
  
@@ -710,7 +710,7 @@
 ### TOAST Push { #170-2019-08-27-toast-push }
  
 <a id="170-2019-08-27-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * プッシュメッセージに通知音を設定せず、送信時のデフォルト通知音が設定されるよう改善 
  
@@ -721,7 +721,7 @@
 ### 共通 { #161-2019-07-29-common }
  
 <a id="161-2019-07-29-common-improvements"></a>
-#### 改善事項  
+#### 改善事項
 * 国名コードを取得できない問題を修正 
  
 <a id="160-2019-07-23"></a>
@@ -731,7 +731,7 @@
 ### TOAST Logger { #160-2019-07-23-toast-logger }
  
 <a id="160-2019-07-23-toast-logger-improvements"></a>
-#### 改善事項  
+#### 改善事項
 * シンボルが存在するバイナリーの場合、CrashReport CallStackにシンボル文字が含まれるよう改善 
 * CrashReport Reasonが出力されない問題の修正 
  
@@ -739,7 +739,7 @@
 ### TOAST IAP { #160-2019-07-23-toast-iap }
  
 <a id="160-2019-07-23-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 決済成功状態から以前の決済状態に変更される問題を修正 
 * アプリ内での購入が許可されていない状態で決済がリクエストされていた問題を修正 
@@ -749,7 +749,7 @@
 ### TOAST Push { #160-2019-07-23-toast-push }
  
 <a id="160-2019-07-23-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * メッセージ/アクションの受信delegate変更 
  
@@ -760,7 +760,7 @@
 ### TOAST IAP { #150-2019-06-25-toast-iap }
  
 <a id="150-2019-06-25-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 新規決済、プロモーション決済、未消費内訳の詳細をリクエストすると、未完了決済のアイテムを再処理するロジックを追加 
  
@@ -768,14 +768,14 @@
 ### TOAST Push { #150-2019-06-25-toast-push }
  
 <a id="150-2019-06-25-toast-push-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * 初期化すると、国、言語コード設定を行う機能を追加 
 * トークン情報のアップデート機能を追加 
 * 通知オプション設定機能を追加 
  
 <a id="150-2019-06-25-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 通知オプションの基本設定の変更 
     * アプリ実行中は通知を表示しないよう変更 
@@ -788,7 +788,7 @@
 ### TOAST IAP { #141-2019-05-16-toast-iap }
  
 <a id="141-2019-05-16-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 処理中の再処理決済件と同一の商品購買時に保有した商品に処理される現象改善 
  
@@ -796,7 +796,7 @@
 ### TOAST Push { #141-2019-05-16-toast-push }
  
 <a id="141-2019-05-16-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 端末機カレンダーの設定によって、地表イベントの発生時間が誤って収集されていたバグ修正 
  
@@ -807,7 +807,7 @@
 ### 共通 { #140-2019-05-14-common }
  
 <a id="140-2019-05-14-common-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * Networkエラーコードの統合 
 * 安全性改善 
@@ -816,7 +816,7 @@
 ### TOAST IAP { #140-2019-05-14-toast-iap }
  
 <a id="140-2019-05-14-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 購買復元機能の改善 
     * AppStore購買内訳をベースに漏れた決済の復元機能を追加  
@@ -829,7 +829,7 @@
 ### TOAST Push { #140-2019-05-14-toast-push }
  
 <a id="140-2019-05-14-toast-push-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 安全性改善 
 * メッセージ受信Delegate で配信されるpayload 情報にメッセージID 情報追加 
@@ -842,17 +842,17 @@
 ### 共通 { #130-2019-03-26-common }
  
 <a id="130-2019-03-26-common-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * Public Classの使用性改善 
   * Description追加 
   * Nullability、 NSCoding、 NSCopyingの支援 
  
-<a id="toast-core"></a>
-### TOAST Core { #toast-core }
+<a id="130-2019-03-26-toast-core"></a>
+### TOAST Core { #130-2019-03-26-toast-core }
  
-<a id="toast-core-improvements"></a>
-#### 改善事項 
+<a id="130-2019-03-26-toast-core-improvements"></a>
+#### 改善事項
  
 * 内部例外処理追加 
  
@@ -860,13 +860,13 @@
 ### TOAST Logger { #130-2019-03-26-toast-logger }
  
 <a id="130-2019-03-26-toast-logger-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * arm64eアーキテクチャを使用する機器のCrash分析支援 
 * PLCrashReporter Dependency 変更 
  
 <a id="130-2019-03-26-toast-logger-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * Configuration Interface 変更 
   * Deprecate 
@@ -880,7 +880,7 @@
 ### TOAST IAP { #130-2019-03-26-toast-iap }
  
 <a id="130-2019-03-26-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 内部例外処理追加 
  
@@ -888,7 +888,7 @@
 ### TOAST Push { #130-2019-03-26-toast-push }
  
 <a id="130-2019-03-26-toast-push-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * unregisterToken API の追加 
  
@@ -899,18 +899,18 @@
 ### TOAST Core { #124-2019-03-19-toast-core }
  
 <a id="124-2019-03-19-toast-core-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 例外を追加する 
  
 <a id="123-2019-02-26"></a>
 ## 0.12.3 (2019. 02. 26.) { #123-2019-02-26 }
  
-<a id="toast-core-common"></a>
-### TOAST Core、 Common { #toast-core-common }
+<a id="123-2019-02-26-toast-core-common"></a>
+### TOAST Core、 Common { #123-2019-02-26-toast-core-common }
  
-<a id="toast-core-common-improvements"></a>
-#### 改善事項 
+<a id="123-2019-02-26-toast-core-common-improvements"></a>
+#### 改善事項
  
 * util関数に例外を追加 
  
@@ -918,7 +918,7 @@
 ### TOAST IAP { #123-2019-02-26-toast-iap }
  
 <a id="123-2019-02-26-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 商品情報のキャッシングを追加する 
 * 例外を追加する 
@@ -930,7 +930,7 @@
 ### TOAST Core { #122-2019-02-08---hotfix-toast-core }
  
 <a id="122-2019-02-08---hotfix-toast-core-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * ToastTransferで断続的に発生していたCrashを防止するためのコードを追加 
  
@@ -941,7 +941,7 @@
 ### TOAST IAP { #121-2019-01-08-toast-iap }
  
 <a id="121-2019-01-08-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * 特定状況で決済状態がVerifyEndの決済の再処理が動作しない問題の修正 
  
@@ -952,7 +952,7 @@
 ### TOAST CORE { #120-2018-12-27-toast-core }
  
 <a id="120-2018-12-27-toast-core-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * ToastTransferで断続的に発生していたCrashを防止するためのコードを追加 
  
@@ -960,7 +960,7 @@
 ### TOAST Push { #120-2018-12-27-toast-push }
  
 <a id="120-2018-12-27-toast-push-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * 新規機能追加 
  
@@ -968,7 +968,7 @@
 ### TOAST IAP { #120-2018-12-27-toast-iap }
  
 <a id="120-2018-12-27-toast-iap-improvements"></a>
-#### 改善事項 
+#### 改善事項
  
 * Appleで再処理するTransactionの処理ができるようにUserID Checkロジックの例外処理を追加 
 * ToastOperationで断続的に発生していたCrashを防止するためのコードを追加  
@@ -981,7 +981,7 @@
 ### TOAST IAP { #111-2018-12-04-toast-iap }
  
 <a id="111-2018-12-04-toast-iap-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * 新規機能追加 
  
@@ -989,11 +989,11 @@
 <a id="110-2018-11-20"></a>
 ## 0.11.0 (2018. 11. 20.) { #110-2018-11-20 }
  
-<a id="toast-log-crash"></a>
-### TOAST Log & Crash { #toast-log-crash }
+<a id="110-2018-11-20-toast-log-crash"></a>
+### TOAST Log & Crash { #110-2018-11-20-toast-log-crash }
  
-<a id="toast-log-crash-added-features"></a>
-#### 追加事項 
+<a id="110-2018-11-20-toast-log-crash-added-features"></a>
+#### 追加事項
  
 * Network Insights機能追加 
  
@@ -1005,6 +1005,6 @@
 ### TOAST Log & Crash { #90-2018-09-04-toast-log-crash }
  
 <a id="90-2018-09-04-toast-log-crash-added-features"></a>
-#### 追加事項 
+#### 追加事項
  
 * 新規機能追加 
