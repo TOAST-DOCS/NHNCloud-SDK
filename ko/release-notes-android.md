@@ -46,7 +46,7 @@
     * 자세한 사항은 [Android 심벌 업로더 가이드](https://docs.nhncloud.com/ko/nhncloud-sdk/ko/symbol-uploader-android/)를 참고하세요.
 
 <a id="121-october-28-2025"></a>
-## 1.12.1 (2025. 10. 28.) { #121-october-28-2025 }
+## 1.12.1(2025. 10. 28.) { #121-october-28-2025 }
 
 <a id="nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #nhn-cloud-ocr }
@@ -59,7 +59,7 @@
 * 카메라 프리뷰 화면 동기화 이슈 개선
 
 <a id="120-july-29-2025"></a>
-## 1.12.0 (2025. 07. 29.) { #120-july-29-2025 }
+## 1.12.0(2025. 07. 29.) { #120-july-29-2025 }
 
 <a id="nhn-cloud-sdk"></a>
 ### NHN Cloud SDK { #nhn-cloud-sdk }
@@ -88,7 +88,7 @@
     * 카메라 프리뷰 화면과 Surface 버퍼 해상도의 동기화 로직을 개선하였습니다.
 
 <a id="111-june-5-2025"></a>
-## 1.11.1 (2025. 06. 05.) { #111-june-5-2025 }
+## 1.11.1(2025. 06. 05.) { #111-june-5-2025 }
 
 <a id="nhn-cloud-push"></a>
 ### NHN Cloud Push { #nhn-cloud-push }
@@ -100,7 +100,7 @@
     * 잘못 설정된 Notification Hub API 도메인을 수정하여 API 호출 오류를 해결하였습니다.
 
 <a id="110-april-29-2025"></a>
-## 1.11.0 (2025. 04. 29.) { #110-april-29-2025 }
+## 1.11.0(2025. 04. 29.) { #110-april-29-2025 }
 
 <a id="110-april-29-2025-nhn-cloud-push"></a>
 ### NHN Cloud Push { #110-april-29-2025-nhn-cloud-push }
@@ -113,7 +113,7 @@
     * NhnCloudPushConfiguration.Builder.setServiceType(String) 메서드에 PushServiceType.NOTIFICATION_HUB를 설정하여 사용할 수 있습니다.
 
 <a id="100-march-25-2025"></a>
-## 1.10.0 (2025. 03. 25.) { #100-march-25-2025 }
+## 1.10.0(2025. 03. 25.) { #100-march-25-2025 }
 
 <a id="nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #nhn-cloud-iap }
@@ -139,7 +139,7 @@
     * ONE store 통합 버전(nhncloud-iap-onestore2)부터 콘솔에서 결제 히스토리 로그를 확인할 수 있습니다.
 
 <a id="95-january-23-2025"></a>
-## 1.9.5 (2025. 01. 23.) { #95-january-23-2025 }
+## 1.9.5(2025. 01. 23.) { #95-january-23-2025 }
 
 <a id="95-january-23-2025-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #95-january-23-2025-nhn-cloud-iap }
@@ -163,7 +163,7 @@
     * NhnCloudNotificationOptions.Builder의 enableVibration(boolean)을 사용해 진동 여부를 설정할 수 있습니다.
 
 <a id="94-november-15-2024"></a>
-## 1.9.4 (2024. 11. 15.) { #94-november-15-2024 }
+## 1.9.4(2024. 11. 15.) { #94-november-15-2024 }
 
 <a id="94-november-15-2024-nhn-cloud-push"></a>
 ### NHN Cloud Push { #94-november-15-2024-nhn-cloud-push }
@@ -175,7 +175,7 @@
     * 사용자의 Device ID를 Push 서비스에서 사용할 수 있도록 설정하는 API(NhnCloudPush.setDeviceId)를 추가했습니다.
 
 <a id="93-october-8-2024"></a>
-## 1.9.3 (2024. 10. 08.) { #93-october-8-2024 }
+## 1.9.3(2024. 10. 08.) { #93-october-8-2024 }
 
 <a id="93-october-8-2024-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #93-october-8-2024-nhn-cloud-iap }
@@ -197,7 +197,7 @@
     * 이제 올바르게 IllegalStateException이 발생합니다.
 
 <a id="92-august-27-2024"></a>
-## 1.9.2 (2024. 08. 27.) { #92-august-27-2024 }
+## 1.9.2(2024. 08. 27.) { #92-august-27-2024 }
 
 <a id="nhn-cloud-logger"></a>
 ### NHN Cloud Logger { #nhn-cloud-logger }
@@ -218,7 +218,7 @@
     * 앱을 삭제한 뒤 재설치하거나 앱 데이터를 삭제하면 실패한 결제가 재처리될 때 신규 구매 건으로 처리되는 문제를 개선하였습니다.
 
 <a id="91-july-23-2024"></a>
-## 1.9.1 (2024. 07. 23.) { #91-july-23-2024 }
+## 1.9.1(2024. 07. 23.) { #91-july-23-2024 }
 
 <a id="91-july-23-2024-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #91-july-23-2024-nhn-cloud-iap }
@@ -232,7 +232,7 @@
     * Android 14(API Level 34) 이상을 타기팅하는 앱은 iap_sdk-v19.01.00.aar을 사용해야 합니다.
 
 <a id="90-may-28-2024"></a>
-## 1.9.0 (2024. 05. 28.) { #90-may-28-2024 }
+## 1.9.0(2024. 05. 28.) { #90-may-28-2024 }
 
 <a id="90-may-28-2024-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #90-may-28-2024-nhn-cloud-iap }
@@ -257,7 +257,7 @@
 * 원스토어 외부결제 후 화면 방향 전환 시 상태바가 비정상적으로 노출되는 문제를 해결하였습니다.
 
 <a id="86-may-7-2024"></a>
-## 1.8.6 (2024. 05. 07.) { #86-may-7-2024 }
+## 1.8.6(2024. 05. 07.) { #86-may-7-2024 }
 
 <a id="86-may-7-2024-nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #86-may-7-2024-nhn-cloud-ocr }
@@ -268,7 +268,7 @@
 * 네트워크 시간 초과로 신용카드 인식에 실패하는 문제를 수정하였습니다.
 
 <a id="85-february-27-2024"></a>
-## 1.8.5 (2024. 02. 27.) { #85-february-27-2024 }
+## 1.8.5(2024. 02. 27.) { #85-february-27-2024 }
 
 <a id="85-february-27-2024-nhn-cloud-logger"></a>
 ### NHN Cloud Logger { #85-february-27-2024-nhn-cloud-logger }
@@ -279,7 +279,7 @@
 * 크래시 로그가 중복해서 전송되는 문제를 수정하였습니다.
 
 <a id="84-january-25-2024"></a>
-## 1.8.4 (2024. 01. 25.) { #84-january-25-2024 }
+## 1.8.4(2024. 01. 25.) { #84-january-25-2024 }
 
 <a id="84-january-25-2024-nhn-cloud-sdk"></a>
 ### NHN Cloud SDK { #84-january-25-2024-nhn-cloud-sdk }
@@ -291,7 +291,7 @@
     * ProGuard 미적용 시 비정상 종료되는 문제를 수정하였습니다.
 
 <a id="83-january-23-2024"></a>
-## 1.8.3 (2024. 01. 23.) { #83-january-23-2024 }
+## 1.8.3(2024. 01. 23.) { #83-january-23-2024 }
 
 <a id="83-january-23-2024-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #83-january-23-2024-nhn-cloud-iap }
@@ -303,7 +303,7 @@
     * Android 14 대응
 
 <a id="82-december-19-2023"></a>
-## 1.8.2 (2023. 12. 19.) { #82-december-19-2023 }
+## 1.8.2(2023. 12. 19.) { #82-december-19-2023 }
 
 <a id="82-december-19-2023-nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #82-december-19-2023-nhn-cloud-ocr }
@@ -314,7 +314,7 @@
 * 안정성 개선
 
 <a id="81-october-31-2023"></a>
-## 1.8.1 (2023. 10. 31.) { #81-october-31-2023 }
+## 1.8.1(2023. 10. 31.) { #81-october-31-2023 }
 
 <a id="81-october-31-2023-nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #81-october-31-2023-nhn-cloud-ocr }
@@ -330,7 +330,7 @@
     * 일부 저사양 디바이스에서 Auto Focus가 동작하지 않는 문제를 수정합니다.
 
 <a id="80-september-26-2023"></a>
-## 1.8.0 (2023. 09. 26.) { #80-september-26-2023 }
+## 1.8.0(2023. 09. 26.) { #80-september-26-2023 }
 
 <a id="80-september-26-2023-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #80-september-26-2023-nhn-cloud-iap }
@@ -352,7 +352,7 @@
 * 최소 지원 버전이 API 22로 상향되었습니다.
 
 <a id="71-august-29-2023"></a>
-## 1.7.1 (2023. 08. 29.) { #71-august-29-2023 }
+## 1.7.1(2023. 08. 29.) { #71-august-29-2023 }
 
 <a id="71-august-29-2023-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #71-august-29-2023-nhn-cloud-iap }
@@ -364,7 +364,7 @@
 * MyCard 최소 지원 버전이 API 21로 상향되었습니다.
 
 <a id="70-july-11-2023"></a>
-## 1.7.0 (2023. 07. 11.) { #70-july-11-2023 }
+## 1.7.0(2023. 07. 11.) { #70-july-11-2023 }
 
 <a id="70-july-11-2023-nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #70-july-11-2023-nhn-cloud-ocr }
@@ -375,7 +375,7 @@
 * OCR(ID Card Recognizer) 추가
 
 <a id="60-june-20-2023"></a>
-## 1.6.0 (2023. 06. 20.) { #60-june-20-2023 }
+## 1.6.0(2023. 06. 20.) { #60-june-20-2023 }
 
 <a id="60-june-20-2023-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #60-june-20-2023-nhn-cloud-iap }
@@ -394,7 +394,7 @@
 * Android Gradle Plugin 8.0 지원
 
 <a id="51-may-30-2023"></a>
-## 1.5.1 (2023. 05. 30.) { #51-may-30-2023 }
+## 1.5.1(2023. 05. 30.) { #51-may-30-2023 }
 
 <a id="51-may-30-2023-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #51-may-30-2023-nhn-cloud-iap }
@@ -406,7 +406,7 @@
     * IAP 콘솔의 Transaction 탭에서 결제 상세정보를 조회할 수 있습니다.
 
 <a id="50-april-5-2023"></a>
-## 1.5.0 (2023. 04. 05.) { #50-april-5-2023 }
+## 1.5.0(2023. 04. 05.) { #50-april-5-2023 }
 
 <a id="50-april-5-2023-nhn-cloud-sdk"></a>
 ### NHN Cloud SDK { #50-april-5-2023-nhn-cloud-sdk }
@@ -425,7 +425,7 @@
 * MyCard IAP 추가
 
 <a id="43-march-24-2023"></a>
-## 1.4.3 (2023. 03. 24.) { #43-march-24-2023 }
+## 1.4.3(2023. 03. 24.) { #43-march-24-2023 }
 
 <a id="43-march-24-2023-nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #43-march-24-2023-nhn-cloud-ocr }
@@ -436,7 +436,7 @@
 * NoClassDefFoundError 이슈 수정
 
 <a id="42-february-28-2023"></a>
-## 1.4.2 (2023. 02. 28.) { #42-february-28-2023 }
+## 1.4.2(2023. 02. 28.) { #42-february-28-2023 }
 
 <a id="42-february-28-2023-nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #42-february-28-2023-nhn-cloud-ocr }
@@ -447,7 +447,7 @@
 * 안정성 개선
 
 <a id="41-january-11-2023"></a>
-## 1.4.1 (2023. 01. 11.) { #41-january-11-2023 }
+## 1.4.1(2023. 01. 11.) { #41-january-11-2023 }
 
 <a id="41-january-11-2023-nhn-cloud-push"></a>
 ### NHN Cloud Push { #41-january-11-2023-nhn-cloud-push }
@@ -458,7 +458,7 @@
 * 푸시 지표 전송 및 이벤트 처리 개선
 
 <a id="40-november-29-2022"></a>
-## 1.4.0 (2022. 11. 29.) { #40-november-29-2022 }
+## 1.4.0(2022. 11. 29.) { #40-november-29-2022 }
 
 <a id="40-november-29-2022-nhn-cloud-logger"></a>
 ### NHN Cloud Logger { #40-november-29-2022-nhn-cloud-logger }
@@ -492,7 +492,7 @@
     * NhnCloudPushMessageReceiver.getContentIntent() 호출 시 전달되는 Intent에 설정된 flags가 유지되지 않는 이슈가 수정되었습니다.
 
 <a id="30-october-25-2022"></a>
-## 1.3.0 (2022. 10. 25.) { #30-october-25-2022 }
+## 1.3.0(2022. 10. 25.) { #30-october-25-2022 }
 
 <a id="30-october-25-2022-nhn-cloud-ocr"></a>
 ### NHN Cloud OCR { #30-october-25-2022-nhn-cloud-ocr }
@@ -519,7 +519,7 @@
 * NHN Cloud SDK 1.0.0 이상 버전에서 ToastPushMessageReceiver 사용 시 클릭 이벤트 수신 및 지표 수집 불가 오류 수정
 
 <a id="20-october-4-2022"></a>
-## 1.2.0 (2022. 10. 04.) { #20-october-4-2022 }
+## 1.2.0(2022. 10. 04.) { #20-october-4-2022 }
 
 <a id="20-october-4-2022-nhn-cloud-sdk"></a>
 ### NHN Cloud SDK { #20-october-4-2022-nhn-cloud-sdk }
@@ -541,7 +541,7 @@
     * Notification 채널을 생성할 수 있는 API가 추가되었습니다.  
 
 <a id="10-september-6-2022"></a>
-## 1.1.0 (2022. 09. 06.) { #10-september-6-2022 }
+## 1.1.0(2022. 09. 06.) { #10-september-6-2022 }
 
 <a id="10-september-6-2022-nhn-cloud-iap"></a>
 ### NHN Cloud IAP { #10-september-6-2022-nhn-cloud-iap }
@@ -557,7 +557,7 @@
 * Google Billing Client 5.0.0 업데이트
 
 <a id="00-july-12-2022"></a>
-## 1.0.0 (2022. 07. 12.) { #00-july-12-2022 }
+## 1.0.0(2022. 07. 12.) { #00-july-12-2022 }
 
 <a id="00-july-12-2022-nhn-cloud-sdk"></a>
 ### NHN Cloud SDK { #00-july-12-2022-nhn-cloud-sdk }
@@ -569,7 +569,7 @@
 	* TOAST Android SDK는 Deprecated 되었습니다.
 
 <a id="311-june-14-2022"></a>
-## 0.31.1 (2022. 06. 14.) { #311-june-14-2022 }
+## 0.31.1(2022. 06. 14.) { #311-june-14-2022 }
 
 <a id="toast-logger"></a>
 ### TOAST Logger { #toast-logger }
@@ -580,7 +580,7 @@
 * TOAST Logger 안정화
 
 <a id="310-may-10-2022"></a>
-## 0.31.0 (2022. 05. 10.) { #310-may-10-2022 }
+## 0.31.0(2022. 05. 10.) { #310-may-10-2022 }
 
 <a id="toast-iap"></a>
 ### TOAST IAP { #toast-iap }
@@ -599,7 +599,7 @@
 * 하나의 Firebase 프로젝트에 등록된 다수의 안드로이드 앱 지원
 
 <a id="301-may-3-2022"></a>
-## 0.30.1 (2022. 05. 03.) { #301-may-3-2022 }
+## 0.30.1(2022. 05. 03.) { #301-may-3-2022 }
 
 <a id="301-may-3-2022-toast-iap"></a>
 ### TOAST IAP { #301-may-3-2022-toast-iap }
@@ -610,7 +610,7 @@
 * ONE store v16 아이템 조회 로직 개선
 
 <a id="300-april-26-2022"></a>
-## 0.30.0 (2022. 04. 26.) { #300-april-26-2022 }
+## 0.30.0(2022. 04. 26.) { #300-april-26-2022 }
 
 <a id="300-april-26-2022-toast-push"></a>
 ### TOAST Push { #300-april-26-2022-toast-push }
@@ -621,7 +621,7 @@
 - ADM(Amazon Device Messaging) 추가
 
 <a id="292-march-29-2022"></a>
-## 0.29.2 (2022. 03. 29.) { #292-march-29-2022 }
+## 0.29.2(2022. 03. 29.) { #292-march-29-2022 }
 
 <a id="292-march-29-2022-toast-push"></a>
 ### TOAST Push { #292-march-29-2022-toast-push }
@@ -632,7 +632,7 @@
 * 토큰 갱신 시 토큰이 등록되지 않는 문제 수정
 
 <a id="291-february-22-2022"></a>
-## 0.29.1 (2022. 02. 22.) { #291-february-22-2022 }
+## 0.29.1(2022. 02. 22.) { #291-february-22-2022 }
 
 <a id="291-february-22-2022-toast-push"></a>
 ### TOAST Push { #291-february-22-2022-toast-push }
@@ -643,7 +643,7 @@
 * Google Play 서비스가 설치되어 있지 않은 디바이스에서 FCM 토큰 획득 시 크래시 이슈 수정
 
 <a id="290-december-07-2021"></a>
-## 0.29.0 (2021. 12. 07.) { #290-december-07-2021 }
+## 0.29.0(2021. 12. 07.) { #290-december-07-2021 }
 
 <a id="290-december-07-2021-toast-iap"></a>
 ### TOAST IAP { #290-december-07-2021-toast-iap }
@@ -654,7 +654,7 @@
 * 화웨이 스토어(Huawei App Gallery) 추가
 
 <a id="280-november-23-2021"></a>
-## 0.28.0 (2021. 11. 23.) { #280-november-23-2021 }
+## 0.28.0(2021. 11. 23.) { #280-november-23-2021 }
 
 <a id="280-november-23-2021-toast-iap"></a>
 ### TOAST IAP { #280-november-23-2021-toast-iap }
@@ -679,7 +679,7 @@
 이는 Android 12 이상에서 일부 기능이 정상 동작하지 않는 ToastPushMessageReceiver.getNotificationServiceIntent()를 대체합니다.
 
 <a id="274-october-26-2021"></a>
-## 0.27.4 (2021. 10. 26.) { #274-october-26-2021 }
+## 0.27.4(2021. 10. 26.) { #274-october-26-2021 }
 
 <a id="274-october-26-2021-toast-push"></a>
 ### TOAST Push { #274-october-26-2021-toast-push }
@@ -690,7 +690,7 @@
 * 사용자 알림 채널 설정이 초기화되는 오류 수정
 
 <a id="273-september-28-2021"></a>
-## 0.27.3 (2021. 09. 28.) { #273-september-28-2021 }
+## 0.27.3(2021. 09. 28.) { #273-september-28-2021 }
 
 <a id="273-september-28-2021-toast-iap"></a>
 ### TOAST IAP { #273-september-28-2021-toast-iap }
@@ -701,7 +701,7 @@
 * ONE store v16 테스트 결제 프로세스 개선
 
 <a id="272-september-06-2021"></a>
-## 0.27.2 (2021. 09. 06.) { #272-september-06-2021 }
+## 0.27.2(2021. 09. 06.) { #272-september-06-2021 }
 
 <a id="272-september-06-2021-toast-logger"></a>
 ### TOAST Logger { #272-september-06-2021-toast-logger }
@@ -713,7 +713,7 @@
     * 유니티에서 크래시 발생 시 DeviceModel이 "UNKNOWN"으로 표시되는 오류가 수정되었습니다.
 
 <a id="271-august-24-2021"></a>
-## 0.27.1 (2021. 08. 24.) { #271-august-24-2021 }
+## 0.27.1(2021. 08. 24.) { #271-august-24-2021 }
 
 <a id="271-august-24-2021-toast-iap"></a>
 ### TOAST IAP { #271-august-24-2021-toast-iap }
@@ -725,7 +725,7 @@
 * ONE store v16 결제 프로세스 개선
 
 <a id="270-august-03-2021"></a>
-## 0.27.0 (2021. 08. 03.) { #270-august-03-2021 }
+## 0.27.0(2021. 08. 03.) { #270-august-03-2021 }
 
 <a id="270-august-03-2021-toast-iap"></a>
 ### TOAST IAP { #270-august-03-2021-toast-iap }
@@ -736,7 +736,7 @@
 * ONE store v16 추가
 
 <a id="260-july-06-2021"></a>
-## 0.26.0 (2021. 07. 06.) { #260-july-06-2021 }
+## 0.26.0(2021. 07. 06.) { #260-july-06-2021 }
 
 <a id="260-july-06-2021-toast-iap"></a>
 ### TOAST IAP { #260-july-06-2021-toast-iap }
@@ -756,7 +756,7 @@
     * Firebase Messaging 22.0.0 이상에서 발생하는 오류가 수정되었습니다.
 
 <a id="250-april-27-2021"></a>
-## 0.25.0 (2021. 04. 27.) { #250-april-27-2021 }
+## 0.25.0(2021. 04. 27.) { #250-april-27-2021 }
 
 <a id="250-april-27-2021-toast-iap"></a>
 ### TOAST IAP { #250-april-27-2021-toast-iap }
@@ -779,7 +779,7 @@
 * Android 11 이상에서 간헐적으로 "취소" 가 반환되는 오류를 수정하였습니다.
 
 <a id="244-january-12-2021"></a>
-## 0.24.4 (2021. 01. 12.) { #244-january-12-2021 }
+## 0.24.4(2021. 01. 12.) { #244-january-12-2021 }
 
 <a id="244-january-12-2021-toast-push"></a>
 ### TOAST Push { #244-january-12-2021-toast-push }
@@ -790,7 +790,7 @@
 * FCM 토큰 갱신시 업데이트 로직 개선
 
 <a id="toast-gradle-plugin-001"></a>
-### TOAST Gradle Plugin (0.0.1) { #toast-gradle-plugin-001 }
+### TOAST Gradle Plugin(0.0.1) { #toast-gradle-plugin-001 }
 
 <a id="toast-gradle-plugin-001-added"></a>
 #### 기능 추가
@@ -798,7 +798,7 @@
 * Symbol Uploader 기능 추가
 
 <a id="243-december-08-2020"></a>
-## 0.24.3 (2020. 12. 08.) { #243-december-08-2020 }
+## 0.24.3(2020. 12. 08.) { #243-december-08-2020 }
 
 <a id="243-december-08-2020-toast-push"></a>
 ### TOAST Push { #243-december-08-2020-toast-push }
@@ -809,7 +809,7 @@
 * Tencent QQ 서비스 종료에 따른 모듈 삭제
 
 <a id="242-november-24-2020"></a>
-## 0.24.2 (2020. 11. 24.) { #242-november-24-2020 }
+## 0.24.2(2020. 11. 24.) { #242-november-24-2020 }
 
 <a id="242-november-24-2020-toast-push"></a>
 ### TOAST Push { #242-november-24-2020-toast-push }
@@ -820,7 +820,7 @@
 * 사용자 아이디 설정과 동시에 토큰 등록 요청시 단말기 식별자로 등록되던 문제 해결
 
 <a id="241-october-30-2020"></a>
-## 0.24.1 (2020. 10. 30.) { #241-october-30-2020 }
+## 0.24.1(2020. 10. 30.) { #241-october-30-2020 }
 
 <a id="241-october-30-2020-toast-iap"></a>
 ### TOAST IAP { #241-october-30-2020-toast-iap }
@@ -832,7 +832,7 @@
     * Galaxy Apps(Galaxy Store 이전 앱 명칭) 3.x 이하 버전에서 Timeout이 발생하는 오류를 수정하였습니다.
 
 <a id="240-october-27-2020"></a>
-## 0.24.0 (2020. 10. 27.) { #240-october-27-2020 }
+## 0.24.0(2020. 10. 27.) { #240-october-27-2020 }
 
 <a id="240-october-27-2020-toast-iap"></a>
 ### TOAST IAP { #240-october-27-2020-toast-iap }
@@ -867,7 +867,7 @@
 * 특정 상황에서 알림 채널이 새로 생성되는 버그 수정
 
 <a id="232-october-06-2020"></a>
-## 0.23.2 (2020. 10. 06.) { #232-october-06-2020 }
+## 0.23.2(2020. 10. 06.) { #232-october-06-2020 }
 
 <a id="232-october-06-2020-toast-iap"></a>
 ### TOAST IAP { #232-october-06-2020-toast-iap }
@@ -879,7 +879,7 @@
     * 구독이 "계정 보류" 또는 "유예 기간" 상태에서 결제 수단 수정으로 복원된 경우 IapService.PurchasesUpdatedListener를 통해 에러가 통지되지 않도록 수정하였습니다.
 
 <a id="231-september-11-2020"></a>
-## 0.23.1 (2020. 09. 11.) { #231-september-11-2020 }
+## 0.23.1(2020. 09. 11.) { #231-september-11-2020 }
 
 <a id="231-september-11-2020-toast-push"></a>
 ### TOAST Push { #231-september-11-2020-toast-push }
@@ -890,7 +890,7 @@
 * 토큰 등록 로직 개선
 
 <a id="230-july-28-2020"></a>
-## 0.23.0 (2020. 07. 28.) { #230-july-28-2020 }
+## 0.23.0(2020. 07. 28.) { #230-july-28-2020 }
 
 <a id="230-july-28-2020-toast-push"></a>
 ### TOAST Push { #230-july-28-2020-toast-push }
@@ -901,7 +901,7 @@
 * 사용자 태그 기능 지원
 
 <a id="220-june-23-2020"></a>
-## 0.22.0 (2020. 06. 23.) { #220-june-23-2020 }
+## 0.22.0(2020. 06. 23.) { #220-june-23-2020 }
 
 <a id="220-june-23-2020-toast-iap"></a>
 ### TOAST IAP { #220-june-23-2020-toast-iap }
@@ -922,7 +922,7 @@
 * 기본 알림 옵션 설정 기능 개선
 
 <a id="212-may-26-2020"></a>
-## 0.21.2 (2020. 05. 26.) { #212-may-26-2020 }
+## 0.21.2(2020. 05. 26.) { #212-may-26-2020 }
 
 <a id="212-may-26-2020-toast-push"></a>
 ### TOAST Push { #212-may-26-2020-toast-push }
@@ -933,7 +933,7 @@
 * 토큰 등록 기능 개선
 
 <a id="211-april-28-2020"></a>
-## 0.21.1 (2020. 04. 28.) { #211-april-28-2020 }
+## 0.21.1(2020. 04. 28.) { #211-april-28-2020 }
 
 <a id="211-april-28-2020-toast-push"></a>
 ### TOAST Push { #211-april-28-2020-toast-push }
@@ -952,7 +952,7 @@
 * Native Crash Reporting 기능 개선
 
 <a id="210-march-24-2020"></a>
-## 0.21.0 (2020. 03. 24.) { #210-march-24-2020 }
+## 0.21.0(2020. 03. 24.) { #210-march-24-2020 }
 
 <a id="210-march-24-2020-toast-logger"></a>
 ### TOAST Logger { #210-march-24-2020-toast-logger }
@@ -973,7 +973,7 @@
     * 배지 아이콘 사용 여부 설정이 추가되었습니다.
 
 <a id="203-february-25-2020"></a>
-## 0.20.3 (2020. 02. 25.) { #203-february-25-2020 }
+## 0.20.3(2020. 02. 25.) { #203-february-25-2020 }
 
 <a id="203-february-25-2020-toast-push"></a>
 ### TOAST Push { #203-february-25-2020-toast-push }
@@ -986,7 +986,7 @@
     * 토큰 등록 후 ToastSdk.setUserId() 를 사용하여 사용자 아이디를 설정 또는 변경하면 토큰 정보를 갱신합니다.
 
 <a id="202-january-21-2020"></a>
-## 0.20.2 (2020. 01. 21.) { #202-january-21-2020 }
+## 0.20.2(2020. 01. 21.) { #202-january-21-2020 }
 
 <a id="202-january-21-2020-toast-push"></a>
 ### TOAST Push { #202-january-21-2020-toast-push }
@@ -998,7 +998,7 @@
 * 기본 알림 채널 생성 로직 개선
 
 <a id="201-january-07-2020"></a>
-## 0.20.1 (2020. 01. 07.) { #201-january-07-2020 }
+## 0.20.1(2020. 01. 07.) { #201-january-07-2020 }
 
 <a id="201-january-07-2020-toast-push"></a>
 ### TOAST Push { #201-january-07-2020-toast-push }
@@ -1026,7 +1026,7 @@
     * TOAST SDK를 사용하지 않은 결제건 처리 시에 "Bad Base64 Exception"이 발생하는 오류를 수정하였습니다.
 
 <a id="194-november-26-2019"></a>
-## 0.19.4 (2019. 11. 26.) { #194-november-26-2019 }
+## 0.19.4(2019. 11. 26.) { #194-november-26-2019 }
 
 <a id="194-november-26-2019-toast-push"></a>
 ### TOAST Push { #194-november-26-2019-toast-push }
@@ -1038,7 +1038,7 @@
     * (구) pushsdk 에서 업데이트 한 경우 모든 데이터를 TOAST SDK 로 마이그레이션 합니다.
 
 <a id="193-october-18-2019"></a>
-## 0.19.3 (2019. 10. 18.) { #193-october-18-2019 }
+## 0.19.3(2019. 10. 18.) { #193-october-18-2019 }
 
 <a id="193-october-18-2019-toast-push"></a>
 ### TOAST Push { #193-october-18-2019-toast-push }
@@ -1049,7 +1049,7 @@
 * 토큰 등록 기능 개선.
 
 <a id="192-october-15-2019"></a>
-## 0.19.2 (2019. 10. 15.) { #192-october-15-2019 }
+## 0.19.2(2019. 10. 15.) { #192-october-15-2019 }
 
 <a id="192-october-15-2019-toast-push"></a>
 ### TOAST Push { #192-october-15-2019-toast-push }
@@ -1069,7 +1069,7 @@
     * 미디어를 포함하지 않는 알림은 BigTextStyle 로 지정되어 두 줄 이상의 메시지도 표현됩니다.
 
 <a id="191-october-02-2019"></a>
-## 0.19.1 (2019. 10. 02.) { #191-october-02-2019 }
+## 0.19.1(2019. 10. 02.) { #191-october-02-2019 }
 
 <a id="191-october-02-2019-toast-iap"></a>
 ### TOAST IAP { #191-october-02-2019-toast-iap }
@@ -1080,7 +1080,7 @@
 * Unity Android IAP Plugin에 구매 요청 시 사용자 데이터를 영수증에 포함할 수 있는 기능이 추가되었습니다.
 
 <a id="190-october-01-2019"></a>
-## 0.19.0 (2019. 10. 01.) { #190-october-01-2019 }
+## 0.19.0(2019. 10. 01.) { #190-october-01-2019 }
 
 <a id="190-october-01-2019-toast-iap"></a>
 ### TOAST IAP { #190-october-01-2019-toast-iap }
@@ -1100,7 +1100,7 @@
     * 알림 노출 요청시 사용자 콘텐츠 인텐트 타입이 PendingIntent 로 변경되었습니다.
 
 <a id="180-august-27-2019"></a>
-## 0.18.0 (2019. 08. 27.) { #180-august-27-2019 }
+## 0.18.0(2019. 08. 27.) { #180-august-27-2019 }
 
 <a id="180-august-27-2019-toast-iap"></a>
 ### TOAST IAP { #180-august-27-2019-toast-iap }
@@ -1126,7 +1126,7 @@
     * 작은 아이콘, 진동, 알림음 등의 기본 옵션을 설정할 수 있습니다.
 
 <a id="171-july-23-2019"></a>
-## 0.17.1 (2019. 07. 23.) { #171-july-23-2019 }
+## 0.17.1(2019. 07. 23.) { #171-july-23-2019 }
 
 <a id="171-july-23-2019-toast-push"></a>
 ### TOAST Push { #171-july-23-2019-toast-push }
@@ -1137,7 +1137,7 @@
 * 커스텀 리시버 사용시 메시지 객체내에 FCM 발신자 ID 정보 추가.
 
 <a id="170-june-25-2019"></a>
-## 0.17.0 (2019. 06. 25.) { #170-june-25-2019 }
+## 0.17.0(2019. 06. 25.) { #170-june-25-2019 }
 
 <a id="toast-pus"></a>
 ### TOAST Push { #toast-pus }
@@ -1162,7 +1162,7 @@
     * 사용자 정의 알림의 지표 전송이 간편해졌습니다.
 
 <a id="162-june-21-2019"></a>
-## 0.16.2 (2019. 06. 21.) { #162-june-21-2019 }
+## 0.16.2(2019. 06. 21.) { #162-june-21-2019 }
 
 <a id="162-june-21-2019-toast-iap"></a>
 ### TOAST IAP { #162-june-21-2019-toast-iap }
@@ -1182,7 +1182,7 @@
 * 크래시 오류 수정
 
 <a id="161-may-02-2019"></a>
-## 0.16.1 (2019. 05. 02.) { #161-may-02-2019 }
+## 0.16.1(2019. 05. 02.) { #161-may-02-2019 }
 
 <a id="toast-sdk"></a>
 ### TOAST SDK { #toast-sdk }
@@ -1193,7 +1193,7 @@
 * 'toast-sdk'에서 'toast-push-tencent' 의존성 제거.
 
 <a id="160-april-23-2019"></a>
-## 0.16.0 (2019. 04. 23.) { #160-april-23-2019 }
+## 0.16.0(2019. 04. 23.) { #160-april-23-2019 }
 
 <a id="160-april-23-2019-toast-push"></a>
 ### TOAST Push { #160-april-23-2019-toast-push }
@@ -1206,7 +1206,7 @@
     * 메시지가 수신되면 사용자가 정의한 receiver가 메시지를 처리합니다.
 
 <a id="150-march-26-2019"></a>
-## 0.15.0 (2019. 03. 26.) { #150-march-26-2019 }
+## 0.15.0(2019. 03. 26.) { #150-march-26-2019 }
 
 <a id="toast-log-crash"></a>
 ### TOAST Log & Crash { #toast-log-crash }
@@ -1236,7 +1236,7 @@
     * 안드로이드 8.0 미만에서만 동작
 
 <a id="143-march-08-2019"></a>
-## 0.14.3 (2019. 03. 08.) { #143-march-08-2019 }
+## 0.14.3(2019. 03. 08.) { #143-march-08-2019 }
 
 <a id="143-march-08-2019-toast-iap"></a>
 ### TOAST IAP { #143-march-08-2019-toast-iap }
@@ -1247,7 +1247,7 @@
 * 앱에서 Proguard를 적용하는 경우, API가 정상적으로 동작하지 않는 문제 해결.
 
 <a id="142-march-04-2019"></a>
-## 0.14.2 (2019. 03. 04.) { #142-march-04-2019 }
+## 0.14.2(2019. 03. 04.) { #142-march-04-2019 }
 
 <a id="142-march-04-2019-toast-push"></a>
 ### TOAST Push { #142-march-04-2019-toast-push }
@@ -1258,7 +1258,7 @@
 * FCM 토큰을 획득할 수 없는 경우, 크래시가 발생하는 문제 해결
 
 <a id="141-january-29-2019"></a>
-## 0.14.1 (2019. 01. 29.) { #141-january-29-2019 }
+## 0.14.1(2019. 01. 29.) { #141-january-29-2019 }
 
 <a id="141-january-29-2019-toast-iap"></a>
 ### TOAST IAP { #141-january-29-2019-toast-iap }
@@ -1269,7 +1269,7 @@
 * (구)IAP SDK 결제건을 처리하지 못하는 에러 수정.
 
 <a id="140-january-08-2019"></a>
-## 0.14.0 (2019. 01. 08.) { #140-january-08-2019 }
+## 0.14.0(2019. 01. 08.) { #140-january-08-2019 }
 
 <a id="140-january-08-2019-toast-iap"></a>
 ### TOAST IAP { #140-january-08-2019-toast-iap }
@@ -1280,7 +1280,7 @@
 * TOAST IAP Unity Plugin 추가.
 
 <a id="130-december-27-2018"></a>
-## 0.13.0 (2018. 12. 27.) { #130-december-27-2018 }
+## 0.13.0(2018. 12. 27.) { #130-december-27-2018 }
 
 <a id="toast-core"></a>
 ### TOAST Core { #toast-core }
@@ -1301,7 +1301,7 @@
     * Firebase Cloud Messaging(FCM)
 
 <a id="120-december-04-2018"></a>
-## 0.12.0 (2018. 12. 04.) { #120-december-04-2018 }
+## 0.12.0(2018. 12. 04.) { #120-december-04-2018 }
 
 <a id="120-december-04-2018-toast-iap"></a>
 ### TOAST IAP { #120-december-04-2018-toast-iap }
@@ -1314,7 +1314,7 @@
     * ONE store(소비성 상품)
 
 <a id="110-november-20-2018"></a>
-## 0.11.0 (2018. 11. 20.) { #110-november-20-2018 }
+## 0.11.0(2018. 11. 20.) { #110-november-20-2018 }
 
 <a id="110-november-20-2018-toast-log-crash"></a>
 ### TOAST Log & Crash { #110-november-20-2018-toast-log-crash }
@@ -1325,7 +1325,7 @@
 * Network Insights 기능 추가
 
 <a id="90-september-04-2018"></a>
-## 0.9.0 (2018. 09. 04.) { #90-september-04-2018 }
+## 0.9.0(2018. 09. 04.) { #90-september-04-2018 }
 
 <a id="90-september-04-2018-toast-log-crash"></a>
 ### TOAST Log & Crash { #90-september-04-2018-toast-log-crash }
