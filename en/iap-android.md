@@ -1,18 +1,17 @@
-<a id="nhn-cloud-sdk-user-guide-iap-android"></a>
+<!-- pre-align:aligned sig=3ec34520922b -->
 
-## NHN Cloud > SDK User Guide > IAP > Android
+<a id="nhn-cloud-sdk-user-guide-iap-android"></a>
+## NHN Cloud > SDK User Guide > IAP > Android { #nhn-cloud-sdk-user-guide-iap-android }
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. [Install NHN Cloud SDK](./getting-started-android).
 2. [Enable the IAP service](/Mobile%20Service/IAP/en/console-guide/) in the [NHN Cloud console](https://console.nhncloud.com).
 3. [Check the AppKey](/Mobile%20Service/IAP/en/console-guide/#appkey) in the IAP console.
 
 <a id="console-guide-for-stores"></a>
-
-## Console guide by store
+## Console guide by store { #console-guide-for-stores }
 
 - [Google console guide](/Mobile%20Service/IAP/en/console-google-guide/)
 - [ONE store console guide](/Mobile%20Service/IAP/en/console-onestore-guide/)
@@ -24,8 +23,7 @@
 > If you sell subscription products on Google Play, you must [set up Google Notifications to receive real-time subscription status](/Mobile%20Service/IAP/en/console-google-guide/#google_1).
 
 <a id="in-app-purchase-guide-for-each-store-type"></a>
-
-## In-App Purchase Guide by Store
+## In-App Purchase Guide by Store { #in-app-purchase-guide-for-each-store-type }
 
 - [Android Developers In-App Purchases](https://developer.android.com/google/play/billing)
 - [ONE store In-App Purchase API V7 (SDK V21) Guide and Download](https://onestore-dev.gitbook.io/dev/tools/tools)
@@ -34,12 +32,10 @@
 - [Huawei App Gallery In-App Purchase API Guide and Download](https://developer.huawei.com/consumer/kr/hms/huawei-iap)
 
 <a id="library-setting"></a>
-
-## Library Settings
+## Library Settings { #library-setting }
 
 <a id="google-play-store"></a>
-
-### Google Play Store
+### Google Play Store { #google-play-store }
 
 - To use in-app purchases on Google Play Store, add the dependency to build.gradle as follows.
 
@@ -56,8 +52,7 @@ dependencies {
 ```
 
 <a id="one-store"></a>
-
-### ONE store
+### ONE store { #one-store }
 
 - To use in-app purchases on ONE store, add the dependency to build.gradle as follows.
 - For ONE store V19, [download](https://github.com/ONE-store/onestore_iap_release/tree/iap19-release/android_app_sample/app/libs) the V19 IAP SDK, copy it to the libs directory, and add the dependency.
@@ -88,8 +83,7 @@ dependencies {
 > In-app purchases in the ONE store integrated version (V21) require Android 6.0 (API level 23) or later.
 
 <a id="galaxy-store"></a>
-
-### Galaxy Store
+### Galaxy Store { #galaxy-store }
 
 - To use in-app purchases on Galaxy Store, add the dependency to build.gradle as follows.
 
@@ -105,8 +99,7 @@ dependencies {
 ```
 
 <a id="amazon-appstore"></a>
-
-### Amazon Appstore
+### Amazon Appstore { #amazon-appstore }
 
 - To use in-app purchases on Amazon Appstore, add the dependency to build.gradle as follows.
 
@@ -122,8 +115,7 @@ dependencies {
 ```
 
 <a id="huawei-app-gallery"></a>
-
-### Huawei App Gallery
+### Huawei App Gallery { #huawei-app-gallery }
 
 - Add the AppGallery Connection configuration file (agconnect-service.json).
     - Sign in to [AppGallery Connect](https://developer.huawei.com/consumer/ko/service/josp/agc/index.html) and click **My projects**.
@@ -167,8 +159,7 @@ dependencies {
 ```
 
 <a id="mycard"></a>
-
-### MyCard
+### MyCard { #mycard }
 
 - To use in-app purchases with MyCard, add the dependency to build.gradle as follows.
 
@@ -184,12 +175,10 @@ dependencies {
 ```
 
 <a id="androidmanifest-setting"></a>
-
-## AndroidManifest configuration
+## AndroidManifest configuration { #androidmanifest-setting }
 
 <a id="one-store-purchase-screen-setting-optional"></a>
-
-### ONE store payment screen settings (optional)
+### ONE store payment screen settings (optional) { #one-store-purchase-screen-setting-optional }
 
 ONE store supports a full payment screen and a popup payment screen.
 You can add meta-data to AndroidManifest.xml to select either the full payment screen ("full") or the popup payment screen ("popup").
@@ -210,14 +199,12 @@ If you do not set meta-data, the default value ("full") is applied.
 For more information, see [ONE store payment screen settings](https://dev.onestore.co.kr/devpoc/reference/view/Tools).
 
 <a id="app-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore"></a>
-
-### Apps targeting Android 11 or higher (ONE store, Galaxy Store, Amazon Appstore)
+### Apps targeting Android 11 or higher (ONE store, Galaxy Store, Amazon Appstore) { #app-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore }
 
 Android 11 changes how apps query and interact with other apps that the user has installed on the device.
 To use ONE store, Galaxy Store, or Amazon Appstore payments in apps targeting Android 11 or higher, you must define a 'queries' element or permissions in AndroidManifest.xml as shown below.
 
 <a id="one-store-2"></a>
-
 #### ONE store
 
 ```xml
@@ -233,7 +220,6 @@ To use ONE store, Galaxy Store, or Amazon Appstore payments in apps targeting An
 ```
 
 <a id="galaxy-store-2"></a>
-
 #### Galaxy Store
 
 ```xml
@@ -243,8 +229,7 @@ To use ONE store, Galaxy Store, or Amazon Appstore payments in apps targeting An
 ```
 
 <a id="amazon-appstore-2"></a>
-
-### Amazon Appstore
+### Amazon Appstore { #amazon-appstore-2 }
 
 For Amazon Appstore, add permissions instead of the 'queries' element.
 
@@ -260,11 +245,9 @@ If you are using an earlier version of Android Gradle Plugin, see [Preparing you
 > <span style="color:#e11d21">**Caution!**</span> Do not apply the QUERY_ALL_PACKAGES permission to Google Play Store.
 
 <a id="mycard-2"></a>
-
-### MyCard
+### MyCard { #mycard-2 }
 
 <a id="androidname-setting"></a>
-
 #### Configure android:name
 
 If android:name is not defined, add it as follows.
@@ -295,7 +278,6 @@ class MyApplication extends NhnCloudMyCardApplication {
 ```
 
 <a id="test-payment-mode-option"></a>
-
 #### Test payment mode (optional)
 
 To test payments, add 'test_mode'. If 'test_mode' is not set, the default value is false.
@@ -308,8 +290,7 @@ To test payments, add 'test_mode'. If 'test_mode' is not set, the default value 
 ```
 
 <a id="store-codes"></a>
-
-## Store codes
+## Store codes { #store-codes }
 
 | Store | Code |
 | ----------- | ---------- |
@@ -323,8 +304,7 @@ To test payments, add 'test_mode'. If 'test_mode' is not set, the default value 
 > [Note] Store codes are defined in the [IapStoreCode](./iap-android/#iapstorecode) class.
 
 <a id="product-types"></a>
-
-## Product Types
+## Product Types { #product-types }
 
 - There are currently three supported product types: consumable products, subscription products, and consumable subscription products.
 
@@ -337,8 +317,7 @@ To test payments, add 'test_mode'. If 'test_mode' is not set, the default value 
 > [Note] Subscription products and consumable subscription products are only supported on the **Google Play Store**.
 
 <a id="in-app-purchase-iap-setting"></a>
-
-## In-App Purchase Settings
+## In-App Purchase Settings { #in-app-purchase-iap-setting }
 
 * The [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object contains in-app purchase configuration information.
 * You can create a [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object by using [NhnCloudIapConfiguration.Builder](./iap-android/#nhncloudiapconfigurationbuilder).
@@ -346,8 +325,7 @@ To test payments, add 'test_mode'. If 'test_mode' is not set, the default value 
 * Set the [store code](./iap-android/#_3) to use for in-app purchases by using the setStoreCode method.
 
 <a id="example-of-iap-setting"></a>
-
-### In-App Purchase Settings Example
+### In-App Purchase Settings Example { #example-of-iap-setting }
 
 ```java
 NhnCloudIapConfiguration configuration =
@@ -358,14 +336,12 @@ NhnCloudIapConfiguration configuration =
 ```
 
 <a id="initialize-iap"></a>
-
-## Initialize In-App Purchase
+## Initialize In-App Purchase { #initialize-iap }
 
 - Call the NhnCloudIap.initialize() method to initialize NHN Cloud IAP.
 
 <a id="specification-for-iap-initialization-api"></a>
-
-### In-App Purchase Initialization API Specification
+### In-App Purchase Initialization API Specification { #specification-for-iap-initialization-api }
 
 * Use the NhnCloudIap.initialize method to initialize in-app purchase.
 * The NhnCloudIap.initialize method takes the [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object created by [NhnCloudIapConfiguration.Builder](./iap-android/#nhncloudiapconfigurationbuilder) as a parameter.
@@ -380,8 +356,7 @@ public static void initialize(NhnCloudIapConfiguration configuration)
 | configuration | NhnCloudIapConfiguration: In-app purchase configuration |
 
 <a id="example-of-iap-initialization"></a>
-
-### In-App Purchase Initialization Example
+### In-App Purchase Initialization Example { #example-of-iap-initialization }
 
 - Initialize NhnCloudIap.
 
@@ -409,8 +384,7 @@ public class MainApplication extends Application {
 ```
 
 <a id="service-login"></a>
-
-## Service login
+## Service login { #service-login }
 
 * All products provided by the NHN Cloud SDK (IAP, Log & Crash, etc.) use a single user ID.
     * You can set the user ID with [NhnCloudSdk.setUserId](/nhncloud/en/nhncloud-sdk/getting-started-android/#userid).
@@ -418,8 +392,7 @@ public class MainApplication extends Application {
 * We recommend that you implement the following features during the service login step: setting a user ID, querying unconsumed payment history, and querying active subscription products.
 
 <a id="login"></a>
-
-### Login
+### Login { #login }
 
 ```java
 // Login.
@@ -427,8 +400,7 @@ NhnCloudSdk.setUserId(userId);
 ```
 
 <a id="logout"></a>
-
-### Logout
+### Logout { #logout }
 
 ```java
 // Logout.
@@ -438,8 +410,7 @@ NhnCloudSdk.setUserId(null);
 > [Note] When logging out of the service, you must set the user ID to null to prevent purchases from proceeding with an incorrect user ID when a promotional code is redeemed or payment reprocessing occurs.
 
 <a id="register-purchases-update-listener"></a>
-
-## Register a Payment Update Listener
+## Register a Payment Update Listener { #register-purchases-update-listener }
 
 * When a payment is made in-app, or when a promotion is redeemed or a subscription status changes (restoration, subscription renewal, etc.) in the Google Play Store app, the payment result is notified via the [IapService.PurchasesUpdatedListener](./iap-android/#iapservicepurchasesupdatedlistener) configured in NhnCloudIap.
 * You can register a payment update listener using the NhnCloudIap.registerPurchasesUpdatedListener method.
@@ -448,8 +419,7 @@ NhnCloudSdk.setUserId(null);
 > [Note] The payment update listener must be registered in Activity.onCreate() and unregistered in Activity.onDestroy().
 
 <a id="specification-for-registering-purchases-update-listener-api"></a>
-
-### Payment Update Listener Registration API Specifications
+### Payment Update Listener Registration API Specifications { #specification-for-registering-purchases-update-listener-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -463,7 +433,6 @@ public static void unregisterPurchasesUpdatedListener(IapService.PurchasesUpdate
 | unregisterPurchasesUpdatedListener | listener   | IapService.<br>PurchasesUpdatedListener: <br>Listener to unregister | Unregisters a payment update listener. |
 
 <a id="example-of-registering-purchases-update-listener"></a>
-
 #### Example of Registering a Payment Update Listener
 
 ```java
@@ -508,16 +477,14 @@ public class MainActivity extends AppCompatActivity {
 > To process payments safely, you must prevent users from closing the Activity (by clicking the Back button or the Exit button) before the payment result is notified.
 
 <a id="query-product-list"></a>
-
-## List products
+## List products { #query-product-list }
 
 * Retrieves a list of available products registered in the IAP console.
 * Products that can be purchased are returned as an [IapProductDetails](./iap-android/#iapproductdetails) list (Product Details List).
 * Products registered in the IAP console but not registered in the store are returned as an [IapProduct](./iap-android/#iapproduct) list (Invalid Product List).
 
 <a id="specification-for-product-list-query-api"></a>
-
-### Query product list API specification
+### Query product list API specification { #specification-for-product-list-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -532,8 +499,7 @@ public static void queryProductDetails(Activity activity,
 
 
 <a id="example-of-product-list-query"></a>
-
-### Product list query example
+### Product list query example { #example-of-product-list-query }
 
 ```java
 /**
@@ -562,8 +528,7 @@ void queryProductDetails() {
 ```
 
 <a id="purchase-products"></a>
-
-## Purchase Products
+## Purchase Products { #purchase-products }
 
 * You can purchase products in NHN Cloud IAP by using the product ID registered in the store.
 * Product information is included in the [IapProductDetails](./iap-android/#iapproductdetails) object returned by calling the NhnCloudIap.queryProductDetails() method.
@@ -573,8 +538,7 @@ void queryProductDetails() {
 * The product purchase result is returned through the [IapService.PurchasesUpdatedListener](./iap-android/#iapservicepurchasesupdatedlistener) registered in NhnCloudIap.
 
 <a id="specification-for-product-purchase-iap"></a>
-
-### Purchase Products IAP Specification
+### Purchase Products IAP Specification { #specification-for-product-purchase-iap }
 
 ```java
 /* NhnCloudIap.java */
@@ -588,8 +552,7 @@ public static void launchPurchaseFlow(Activity activity,
 |                    | params     | IapPurchaseFlowParams: Purchase information parameters |
 
 <a id="example-of-product-purchase"></a>
-
-### Example of Product Purchase
+### Example of Product Purchase { #example-of-product-purchase }
 
 ```java
 /**
@@ -604,8 +567,7 @@ void launchPurchaseFlow(Activity activity, String productId) {
 ```
 
 <a id="set-user-data"></a>
-
-### Set User Data
+### Set User Data { #set-user-data }
 
 * NHN Cloud IAP allows you to add user information when making a purchase request.
 * User information is set using the setDeveloperPayload() method of IapPurchaseFlowParams.Builder.
@@ -623,8 +585,7 @@ NhnCloudIap.launchPurchaseFlow(activity, params);
 > If you purchase a product using a promotion code on the Google Play Store, user data cannot be used.
 
 <a id="query-unconsumed-purchases"></a>
-
-## Query unconsumed purchases
+## Query unconsumed purchases { #query-unconsumed-purchases }
 
 * Retrieves information on one-time products (CONSUMABLE) and consumable subscription products (CONSUMABLE_AUTO_RENEWABLE) that have not yet been consumed.
 * After granting products to the user, consume the products by using the [Consume API](/Mobile%20Service/IAP/en/api-guide-for-toast-sdk/#consume-api).
@@ -633,8 +594,7 @@ NhnCloudIap.launchPurchaseFlow(activity, params);
 * The query results are returned as a list of [IapPurchase](./iap-android/#iappurchase) objects through [IapService.PurchasesResponseListener](./iap-android/#iapservicepurchasesresponselistener).
 
 <a id="specification-for-unconsumed-purchases-query-api"></a>
-
-### Query unconsumed purchases API specification
+### Query unconsumed purchases API specification { #specification-for-unconsumed-purchases-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -650,8 +610,7 @@ public static void queryConsumablePurchases(Activity activity,
 |                          | listener   | IapService.PurchasesResponseListener: <br>Listener for unconsumed purchase history query results |
 
 <a id="example-of-unconsumed-purchases-query"></a>
-
-### Query unconsumed purchases example
+### Query unconsumed purchases example { #example-of-unconsumed-purchases-query }
 
 ```java
 /**
@@ -678,8 +637,7 @@ void queryConsumablePurchases(boolean isQueryAllStores) {
 ```
 
 <a id="query-activated-subscription"></a>
-
-## Query activated subscriptions
+## Query activated subscriptions { #query-activated-subscription }
 
 * You can query activated subscription products (AUTO_RENEWABLE & CONSUMABLE_AUTO_RENEWABLE) based on the user ID.
 * Subscription products that have been paid for can continue to be queried as long as the usage period remains.
@@ -691,8 +649,7 @@ void queryConsumablePurchases(boolean isQueryAllStores) {
 > Subscription products currently only support the Google Play Store.
 
 <a id="specification-for-activated-subscription-query-api"></a>
-
-### Activated subscription query API specification
+### Activated subscription query API specification { #specification-for-activated-subscription-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -708,8 +665,7 @@ public static void queryActivatedPurchases(Activity activity,
 |                         | listener   | IapService.PurchasesResponseListener: <br>Listener for activated subscription query results |
 
 <a id="example-of-activated-subscription-query"></a>
-
-### Example of activated subscription query
+### Example of activated subscription query { #example-of-activated-subscription-query }
 
 ```java
 /**
@@ -736,8 +692,7 @@ void queryActivatedPurchases(boolean isQueryAllStores) {
 ```
 
 <a id="query-subscription-status"></a>
-
-## Query Subscription Status
+## Query Subscription Status { #query-subscription-status }
 
 * You can view the status of subscription products purchased based on the user ID.
 * Expired subscription products can be included or excluded using the includeExpiredSubscriptions setting. (default: false)
@@ -750,8 +705,7 @@ Subscription products currently only support the Google Play Store.
 ```
 
 <a id="specification-for-subscription-status-query-api"></a>
-
-### Subscription Status Query API Specification
+### Subscription Status Query API Specification { #specification-for-subscription-status-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -767,8 +721,7 @@ public static void querySubscriptionsStatus(Activity activity,
 |  | listener | IapService.SubscriptionsStatusResponseListener:<br>Listener for the subscription status query result |
 
 <a id="example-of-subscription-status-query"></a>
-
-### Subscription Status Query Example
+### Subscription Status Query Example { #example-of-subscription-status-query }
 
 ```java
 /**
@@ -792,15 +745,13 @@ private void querySubscriptionsStatus() {
 ```
 
 <a id="google-store-subscription-feature"></a>
-
-## Google Play Store subscription (recurring billing) features
+## Google Play Store subscription (recurring billing) features { #google-store-subscription-feature }
 
 This section explains how to handle lifecycle events such as renewals and expirations for subscription billing on the Google Play Store.
 For more information, see [Add subscription-specific features](https://developer.android.com/google/play/billing/billing_subscriptions).
 
 <a id="subscription-lifecycle-handling"></a>
-
-### Handle subscription lifecycle
+### Handle subscription lifecycle { #subscription-lifecycle-handling }
 
 A Google Play Store subscription goes through various state changes during its lifecycle, and your app must respond to each state accordingly.
 
@@ -821,8 +772,7 @@ A Google Play Store subscription goes through various state changes during its l
 | Expired | No | No | Past time | No |
 
 <a id="grace-period"></a>
-
-### Grace period
+### Grace period { #grace-period }
 
 If the grace period is enabled and there is a problem with the payment method at the end of a billing cycle, the subscription transitions to the grace period.
 <span style="color:#e11d21">During the grace period, users must be able to access subscription content.</span>
@@ -831,22 +781,19 @@ For more information, see [Grace period](https://developer.android.com/google/pl
 > <span style="color:#e11d21">**Caution!)**</span> If the subscription is restored during the grace period (for example, by updating the payment method), auto-renewal resumes. NHN Cloud IAP notifies you of the renewed payment result through the payment update listener (IapService.PurchaseUpdatedListener). Games and apps must ensure that the payment update listener does not expose unnecessary pop-ups to users during critical operations.
 
 <a id="ordinary-subscription-product-autorenewable"></a>
-
 #### Standard subscription product (AUTO_RENEWABLE))
 
 * Standard subscription products must be able to access subscription content during the grace period.
 * They can be queried with NhnCloudIap.queryActivatedPurchases() during the grace period.
 
 <a id="consumable-subscription-product-consumableautorenewable"></a>
-
 #### Consumable subscription product (CONSUMABLE_AUTO_RENEWABLE)
 
 * When the grace period begins, Google issues a new receipt, but if the payment method is not updated, the account will transition to on hold or be cancelled.
 * Consumable subscription products are not returned by NhnCloudIap.queryConsumablePurchases() during the grace period to prevent the product from being consumed.
 
 <a id="account-hold"></a>
-
-### Account hold
+### Account hold { #account-hold }
 
 Account hold refers to the state of a user when renewal fails due to a payment method issue.
 If a payment fails, it is retried during the grace period; if the payment continues to fail during the grace period, the subscription status becomes on hold.
@@ -858,22 +805,19 @@ For more information, see [Account hold](https://developer.android.com/google/pl
 > <span style="color:#e11d21">**Caution!)**</span> If the subscription is restored during the account hold period (for example, by updating the payment method), auto-renewal resumes. NHN Cloud IAP notifies you of the renewed payment result through the payment update listener (IapService.PurchaseUpdatedListener). Games and apps must ensure that the payment update listener does not expose unnecessary pop-ups to users during critical operations.
 
 <a id="ordinary-subscription-product-autorenewable-2"></a>
-
 #### Standard subscription product (AUTO_RENEWABLE))
 
 * Standard subscription products cannot access subscription content during the account hold period.
 * They are not returned by NhnCloudIap.queryActivatedPurchases() during the account hold period.
 
 <a id="consumable-subscription-product-consumableautorenewable-2"></a>
-
 #### Consumable subscription product (CONSUMABLE_AUTO_RENEWABLE)
 
 * Consumable subscription products do not generate new purchases during the account hold period.
 * New purchases are not returned by NhnCloudIap.queryConsumablePurchases() during the account hold period.
 
 <a id="pause"></a>
-
-### Pause
+### Pause { #pause }
 
 If you enable the pause feature, users can pause their subscription for a period of between 1 week and 3 months.
 A subscription pause takes effect after the current subscription period ends.
@@ -883,22 +827,19 @@ For more information, see [Pause](https://developer.android.com/google/play/bill
 > <span style="color:#e11d21">**Caution!)**</span> When the pause period ends, auto-renewal resumes. NHN Cloud IAP notifies you of the renewed payment result through the payment update listener (IapService.PurchaseUpdatedListener). Games and apps must ensure that the payment update listener does not expose unnecessary pop-ups to users during critical operations.
 
 <a id="ordinary-subscription-product-autorenewable-3"></a>
-
 #### Standard subscription product (AUTO_RENEWABLE))
 
 * Standard subscription products cannot access subscription content during the pause period.
 * They are not returned by NhnCloudIap.queryActivatedPurchases() during the pause period.
 
 <a id="consumable-subscription-product-consumableautorenewable-3"></a>
-
 #### Consumable subscription product (CONSUMABLE_AUTO_RENEWABLE)
 
 * Consumable subscription products do not generate new purchases during the pause period.
 * New purchases are not returned by NhnCloudIap.queryConsumablePurchases() during the pause period.
 
 <a id="resubscription"></a>
-
-### Resubscription
+### Resubscription { #resubscription }
 
 If you enable the resubscription feature, users can resubscribe to a cancelled subscription within 12 months of the subscription's expiration date.
 Resubscription creates a new subscription and purchase token.
@@ -909,12 +850,10 @@ For more information, see [Resubscription](https://developer.android.com/google/
 > <span style="color:#e11d21">**Caution!)**</span> When a subscription product is purchased through resubscription on the Google Play Store, NHN Cloud IAP notifies you of the purchased payment result through the payment update listener (IapService.PurchaseUpdatedListener). Games and apps must ensure that the payment update listener does not expose unnecessary pop-ups to users during critical operations.
 
 <a id="nhn-cloud-iap-class-reference"></a>
-
-## NHN Cloud IAP Class Reference
+## NHN Cloud IAP Class Reference { #nhn-cloud-iap-class-reference }
 
 <a id="nhncloudiapconfiguration"></a>
-
-### NhnCloudIapConfiguration
+### NhnCloudIapConfiguration { #nhncloudiapconfiguration }
 
 In-app purchase configuration information used as a parameter for the NHN Cloud IAP initialization method.
 
@@ -930,8 +869,7 @@ public String getStoreCode();
 | getStoreCode | String  | Store code information ("GG" or "ONESTORE", "GALAXY", ...) |
 
 <a id="nhncloudiapconfigurationbuilder"></a>
-
-### NhnCloudIapConfiguration.Builder
+### NhnCloudIapConfiguration.Builder { #nhncloudiapconfigurationbuilder }
 
 Creates a [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object by taking an IAP service Appkey, store type, and other parameters.
 
@@ -947,8 +885,7 @@ public void setStoreCode(String storeCode)
 | setStoreCode | storeCode  | String: Store code information   | Sets the store code.<br>("GG" or "ONESTORE", "GALAXY", ...) |
 
 <a id="iapstorecode"></a>
-
-### IapStoreCode
+### IapStoreCode { #iapstorecode }
 
 ```java
 /* IapStoreCode.java */
@@ -968,8 +905,7 @@ String MYCARD
 * MYCARD<br>Uses MyCard in-app purchases.<br>Constant Value: "MYCARD"
 
 <a id="iappurchaseresult"></a>
-
-### IapPurchaseResult
+### IapPurchaseResult { #iappurchaseresult }
 
 * An object that contains the payment result and payment information.
 
@@ -993,8 +929,7 @@ public Throwable getCause()
 | isFailure   | boolean     | Returns whether the payment failed.                 |
 
 <a id="iapresult"></a>
-
-### IapResult
+### IapResult { #iapresult }
 
 ```java
 /* IapResult.java */
@@ -1014,8 +949,7 @@ public Throwable getCause()
 | isFailure  | boolean   | Returns whether the operation failed.  |
 
 <a id="iappurchase"></a>
-
-### IapPurchase
+### IapPurchase { #iappurchase }
 
 * You can check payment information with the IapPurchase object.
 
@@ -1053,8 +987,7 @@ public String getDeveloperPayload()
 | getDeveloperPayload  | String  | Returns the user data. |
 
 <a id="iapproductdetails"></a>
-
-### IapProductDetails
+### IapProductDetails { #iapproductdetails }
 
 * You can check product details using the IapProductDetails object.
 * It includes information registered in the NHN Cloud IAP console and detailed information registered in the Google Play Console or ONE store Developer.
@@ -1091,8 +1024,7 @@ public boolean isActivated()
 | isActivated           | boolean | Whether the product is activated |
 
 <a id="iapproduct"></a>
-
-### IapProduct
+### IapProduct { #iapproduct }
 
 * You can view brief information registered in the NHN Cloud IAP console.
 
@@ -1116,8 +1048,7 @@ public boolean isActivated()
 | isActivated           | boolean | Whether the product is activated   |
 
 <a id="iappurchaseflowparams"></a>
-
-### IapPurchaseFlowParams
+### IapPurchaseFlowParams { #iappurchaseflowparams }
 
 * IapPurchaseFlowParams contains information about the product to purchase.
 
@@ -1131,8 +1062,7 @@ public String getProductId()
 | getProductId | String  | Product ID |
 
 <a id="iappurchaseflowparamsbuilder"></a>
-
-### IapPurchaseFlowParams.Builder
+### IapPurchaseFlowParams.Builder { #iappurchaseflowparamsbuilder }
 
 * Creates an IapPurchaseFlowParams object.
 
@@ -1146,8 +1076,7 @@ public void setProductId(String productId)
 | setProductId | productId  | String: product ID   | Sets the product ID. |
 
 <a id="iapquerypurchasesparams"></a>
-
-### IapQueryPurchasesParams
+### IapQueryPurchasesParams { #iapquerypurchasesparams }
 
 * IapQueryPurchasesParams sets the conditions for querying.
 
@@ -1161,8 +1090,7 @@ public String isQueryAllStores()
 | isQueryAllStores | boolean  | Query all stores   |
 
 <a id="iapquerypurchasesparamsbuilder"></a>
-
-### IapQueryPurchasesParams.Builder
+### IapQueryPurchasesParams.Builder { #iapquerypurchasesparamsbuilder }
 
 * Creates an IapQueryPurchasesParams object.
 
@@ -1176,8 +1104,7 @@ public void setQueryAllStores(boolean isQueryAllStores)
 | setQueryAllStores | isQueryAllStores | boolean: query all stores   | Sets the query scope.   |
 
 <a id="iapsubscriptionstatus"></a>
-
-### IapSubscriptionStatus
+### IapSubscriptionStatus { #iapsubscriptionstatus }
 
 * You can check the subscription status information using the IapSubscriptionStatus object.
 * Subscription status codes are defined in IapSubscriptionStatus.StatusCode.
@@ -1224,8 +1151,7 @@ public String getStatusDescription()
 | getStatusDescription | String | Returns the description of the subscription status code. |
 
 <a id="iapsubscriptionstatusstatuscode"></a>
-
-### IapSubscriptionStatus.StatusCode
+### IapSubscriptionStatus.StatusCode { #iapsubscriptionstatusstatuscode }
 
 * Represents the subscription status codes.
 
@@ -1253,8 +1179,7 @@ int UNKNOWN
 | UNKNOWN | 9999 | Undefined | The status is not defined. |
 
 <a id="iapservicepurchasesupdatedlistener"></a>
-
-### IapService.PurchasesUpdatedListener
+### IapService.PurchasesUpdatedListener { #iapservicepurchasesupdatedlistener }
 
 * When payment information is updated, you are notified through the `onPurchasesUpdated` method of an object that extends `IapService.PurchasesUpdatedListener`.
 
@@ -1263,8 +1188,7 @@ void onPurchasesUpdated(List<IapPurchaseResult> purchaseResults)
 ```
 
 <a id="iapservicepurchasesresponselistener"></a>
-
-### IapService.PurchasesResponseListener
+### IapService.PurchasesResponseListener { #iapservicepurchasesresponselistener }
 
 * When querying unconsumed payments or active subscriptions, you are notified through the `onPurchasesResponse` method of an object that extends `IapService.PurchasesResponseListener`.
 
@@ -1274,8 +1198,7 @@ void onPurchasesResponse(IapResult result,
 ```
 
 <a id="iapservicesubscriptionsstatusresponselistener"></a>
-
-### IapService.SubscriptionsStatusResponseListener
+### IapService.SubscriptionsStatusResponseListener { #iapservicesubscriptionsstatusresponselistener }
 
 * When querying subscription status, you are notified through the `onSubscriptionsStatusResponse` method of an object that extends `SubscriptionsStatusResponseListener`.
 
@@ -1285,12 +1208,10 @@ void onSubscriptionsStatusResponse(IapResult result,
 ```
 
 <a id="error-codes"></a>
-
-## Error Codes
+## Error Codes { #error-codes }
 
 <a id="common-error-codes"></a>
-
-### Common Error Codes
+### Common Error Codes { #common-error-codes }
 
 | RESULT                 | CODE | DESC                                     |
 | ---------------------- | ---- | ---------------------------------------- |
@@ -1310,8 +1231,7 @@ void onSubscriptionsStatusResponse(IapResult result,
 | UNDEFINED_ERROR        | 9999 | Undefined error. |
 
 <a id="server-error-codes"></a>
-
-### Server Error Codes
+### Server Error Codes { #server-error-codes }
 
 | RESULT                    | CODE | DESC                                     |
 | ------------------------- | ---- | ---------------------------------------- |
@@ -1322,8 +1242,7 @@ void onSubscriptionsStatusResponse(IapResult result,
 | PURCHASE_LIMIT_EXCEEDED   | 106  | Purchase limit exceeded. |
 
 <a id="one-store-error-codes"></a>
-
-### ONE store Error Codes
+### ONE store Error Codes { #one-store-error-codes }
 
 | RESULT                   | CODE | DESC                                     |
 | ------------------------ | ---- | ---------------------------------------- |
@@ -1333,8 +1252,7 @@ void onSubscriptionsStatusResponse(IapResult result,
 | ONESTORE_PURCHASE_FAILED | 304  | Purchase request failed. |
 
 <a id="galaxy-store-error-codes"></a>
-
-### Galaxy store Error Codes
+### Galaxy store Error Codes { #galaxy-store-error-codes }
 
 | RESULT                   | CODE | DESC                                     |
 | ------------------------ | ---- | ---------------------------------------- |
