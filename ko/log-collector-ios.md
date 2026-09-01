@@ -47,7 +47,7 @@ end
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
 <a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
-#### 프로젝트 설정 { #apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project }
+#### 프로젝트 설정
 
 * **Build Settings**의 **Other Linker Flags**에 **-lc++**와 **-ObjC** 항목을 추가합니다.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
@@ -57,7 +57,7 @@ end
 ### 3. 바이너리를 다운로드하여 NHN Cloud SDK 적용 { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
-#### 프레임워크 설정 { #apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework }
+#### 프레임워크 설정
 
 * NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 전체 iOS SDK를 다운로드할 수 있습니다.
 * Xcode Project에 **NHNCloudLogger.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework**를 추가합니다.
@@ -65,7 +65,7 @@ end
 ![linked_frameworks_logger](https://static.toastoven.net/toastcloud/sdk/ios/logger_link_frameworks_logger_202206.png)
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project"></a>
-#### 프로젝트 설정 { #apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project }
+#### 프로젝트 설정
 
 * **Build Settings**의 **Other Linker Flags**에 **-lc++**와 **-ObjC** 항목을 추가합니다.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
@@ -138,7 +138,7 @@ fi
 * Run Script 섹션 하단의 Input Files에 dSYM의 기본 경로를 설정합니다.
     * `${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}`
 
-![](../static/images/ios/symbol-uploader/debug-symbol-uploader-settings.png){ height="100%" }
+![debug_symbol_uploader_settings](../static/images/ios/symbol-uploader/debug-symbol-uploader-settings.png){ height="100%" }
 
 <a id="upload-manually-using-symbol-uploader"></a>
 ### Symbol Uploader를 사용하여 직접 업로드 { #upload-manually-using-symbol-uploader }
