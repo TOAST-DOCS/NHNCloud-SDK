@@ -1,19 +1,16 @@
 <!-- pre-align:aligned sig=edc80b83f7a3 -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-ios"></a>
-
-## NHN Cloud > SDK User Guide > Getting Started > iOS
+## NHN Cloud > SDK User Guide > Getting Started > iOS { #nhn-cloud-sdk-user-guide-getting-started-ios }
 
 <a id="supported-environment"></a>
-
-## Supported Environment
+## Supported Environment { #supported-environment }
 
 * iOS 11.0 or higher
 * The latest version of XCode (version 14 or higher)
 
 <a id="nhn-cloud-sdk-components"></a>
-
-## NHN Cloud SDK Components
+## NHN Cloud SDK Components { #nhn-cloud-sdk-components }
 
 * NHN Cloud SDK for iOS consists of the following:
     * [Logger](./log-collector-ios) SDK
@@ -33,12 +30,10 @@
 | OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | \* Vision.framework<br>\* AVFoundation.framework |  |
 
 <a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
-
-## Apply NHN Cloud SDK to Xcode Projects
+## Apply NHN Cloud SDK to Xcode Projects { #apply-nhn-cloud-sdk-to-xcode-projects }
 
 <a id="apply-nhn-cloud-sdk-with-cococapods"></a>
-
-### 1. Apply NHN Cloud SDK with Cococapods
+### 1. Apply NHN Cloud SDK with Cococapods { #apply-nhn-cloud-sdk-with-cococapods }
 
 * Create a Podfile and add a pod for NHN Cloud SDK.
 
@@ -52,8 +47,7 @@ end
 ```
 
 <a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
-
-### 2. Apply NHN Cloud SDK with Swift Package Manager
+### 2. Apply NHN Cloud SDK with Swift Package Manager { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * Go to **File > Add Packages...** from XCode.
 * For the Package URL, enter 'https://github.com/nhn/nhncloud.ios.sdk' and select **Add Package**.
@@ -61,8 +55,7 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
-<a id="set-up-project"></a>
-
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** entries to **Other Linker Flags** in **Build Settings**.
@@ -70,8 +63,7 @@ end
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="apply-nhn-cloud-sdk-with-carthage"></a>
-
-### 3. Apply NHN Cloud SDK with Carthage
+### 3. Apply NHN Cloud SDK with Carthage { #apply-nhn-cloud-sdk-with-carthage }
 
 * Create a Cartfile and add NHN Cloud SDK.
 
@@ -96,11 +88,9 @@ binary "https://nh.nu/nhncloudsdk"
 > For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#nhn-cloud-sdk-components).
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 4. Apply NHN Cloud SDK by Downloading Binaries { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
-### 4. Apply NHN Cloud SDK by Downloading Binaries
-
-<a id="frameworks-setup"></a>
-
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Frameworks Setup
 
 * The entire iOS SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
@@ -123,8 +113,7 @@ binary "https://nh.nu/nhncloudsdk"
 ![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework01_202206.png)
 ![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework02_202206.png)
 
-<a id="project-settings"></a>
-
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-settings"></a>
 #### Project Settings
 
 * Add **-lc++** and **-ObjC** to **Other Linker Flags** under **Build Settings**.
@@ -133,8 +122,7 @@ binary "https://nh.nu/nhncloudsdk"
 
 
 <a id="import-framework"></a>
-
-### Import Framework
+### Import Framework { #import-framework }
 
 * Import the frameworks to use.
 
@@ -147,38 +135,34 @@ binary "https://nh.nu/nhncloudsdk"
 ```
 
 <a id="set-user-id"></a>
-
-## Set User ID
+## Set User ID { #set-user-id }
 
 * User ID can be set for NHN Cloud SDK.
 * The configured User ID is commonly used in each module of NHN Cloud SDK.
 * Whenever Log Sending API of NHN Cloud Logger is called, the configured User ID is sent to a server along with logs.
 
 <a id="specification-for-user-id-setting-api"></a>
-
-### Specification for User ID Setting API
+### Specification for User ID Setting API { #specification-for-user-id-setting-api }
 
 ```objc
 + (void)setUserID:(NSString *)userID;
 ```
 
 <a id="usage-example-of-user-id-setting"></a>
-
-### Usage Example of User ID Setting
+### Usage Example of User ID Setting { #usage-example-of-user-id-setting }
 
 ```objc
 [NHNCloudSDK setUserID:@"NHNCLOUD-USER"];
 ```
-<a id="set-debug-mode"></a>
 
-## Set Debug Mode
+<a id="set-debug-mode"></a>
+## Set Debug Mode { #set-debug-mode }
 
 * To check logs within NHN Cloud SDK, the debug mode can be set.
 * When you make an inquiry regarding NHN Cloud SDK, sending the logs with the debug mode enabled can be helpful for faster response.
 
 <a id="specification-for-debug-mode-api"></a>
-
-### Specification for Debug Mode API
+### Specification for Debug Mode API { #specification-for-debug-mode-api }
 
 
 ```objc
@@ -186,8 +170,7 @@ binary "https://nh.nu/nhncloudsdk"
 ```
 
 <a id="usage-example-of-debug-mode-setting"></a>
-
-### Usage Example of Debug Mode Setting
+### Usage Example of Debug Mode Setting { #usage-example-of-debug-mode-setting }
 
 ```objc
 [NHNCloudSDK setDebugMode:YES];    // or NO
@@ -196,8 +179,7 @@ binary "https://nh.nu/nhncloudsdk"
 > [Caution] The debug mode must be disabled before releasing an app.
 
 <a id="use-nhn-cloud-service"></a>
-
-## Use NHN Cloud Service
+## Use NHN Cloud Service { #use-nhn-cloud-service }
 
 * User Guide for [Log & Crash](./log-collector-ios)
 * User Guide for [In-app Purchase](./iap-ios)

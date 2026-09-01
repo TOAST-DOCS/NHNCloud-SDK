@@ -204,7 +204,7 @@ meta-data를 설정하지 않으면 기본값("full")이 적용됩니다.
 Android 11에서는 앱이 사용자가 기기에 설치한 다른 앱을 쿼리하고 상호작용하는 방법을 변경합니다.
 Android 11 이상을 타겟팅하는 앱에서 ONE store, Galaxy Store 또는 Amazon Appstore 결제를 사용하려면 아래와 같이 AndroidManifest.xml에 'queries' 요소 또는 권한을 정의해야합니다.
 
-<a id="one-store-2"></a>
+<a id="apps-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore-one-store"></a>
 #### ONE store
 
 ```xml
@@ -219,7 +219,7 @@ Android 11 이상을 타겟팅하는 앱에서 ONE store, Galaxy Store 또는 Am
 </queries>
 ```
 
-<a id="galaxy-store-2"></a>
+<a id="apps-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore-galaxy-store"></a>
 #### Galaxy Store
 
 ```xml
@@ -228,8 +228,8 @@ Android 11 이상을 타겟팅하는 앱에서 ONE store, Galaxy Store 또는 Am
 </queries>
 ```
 
-<a id="amazon-appstore-2"></a>
-### Amazon Appstore { #amazon-appstore-2 }
+<a id="androidmanifest-configuration-amazon-appstore"></a>
+### Amazon Appstore { #androidmanifest-configuration-amazon-appstore }
 
 Amazon Appstore에서는 'queries' 요소 대신 권한을 추가합니다.
 
@@ -244,10 +244,10 @@ Amazon Appstore에서는 'queries' 요소 대신 권한을 추가합니다.
 
 > <span style="color:#e11d21">**주의!)**</span> QUERY_ALL_PACKAGES 권한을 Google Play Store에 적용하지 않도록 주의하시기 바랍니다.
 
-<a id="mycard-2"></a>
-### MyCard { #mycard-2 }
+<a id="androidmanifest-configuration-mycard"></a>
+### MyCard { #androidmanifest-configuration-mycard }
 
-<a id="androidname-setting"></a>
+<a id="androidmanifest-configuration-mycard-configure-androidname"></a>
 #### android:name 설정
 
 android:name을 정의하지 않은 경우 다음과 같이 추가합니다.
@@ -277,7 +277,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 }
 ```
 
-<a id="test-payment-mode-option"></a>
+<a id="androidmanifest-configuration-mycard-test-payment-mode-optional"></a>
 #### 테스트 결제 모드(옵션)
 
 결제 테스트를 하려면 'test_mode'를 추가합니다. 'test_mode'를 설정하지 않으면 기본값은 false입니다.
@@ -432,7 +432,7 @@ public static void unregisterPurchasesUpdatedListener(IapService.PurchasesUpdate
 | registerPurchasesUpdatedListener   | listener   | IapService.<br>PurchasesUpdatedListener: <br>결제 업데이트 리스너 | 결제 업데이트 리스너를 등록합니다.    |
 | unregisterPurchasesUpdatedListener | listener   | IapService.<br>PurchasesUpdatedListener: <br>등록 해제할 리스너 | 결제 업데이트 리스너 등록을 해제합니다. |
 
-<a id="example-of-registering-purchases-update-listener"></a>
+<a id="payment-update-listener-registration-api-specifications-example-of-registering-a-payment-update-listener"></a>
 #### 결제 업데이트 리스너 등록 예시
 
 ```java
@@ -780,13 +780,13 @@ Google Play Store의 구독은 수명주기 동안 다양한 상태 변경을 �
 
 > <span style="color:#e11d21">**주의!)**</span> 유예 기간 중 결제 수단 수정 등으로 복원되면 자동 갱신을 재개합니다. NHN Cloud IAP는 갱신된 결제건을 결제 업데이트 리스너(IapService.PurchaseUpdatedListener)를 통해 결제 결과를 통지합니다. 게임이나 앱은 중요한 동작 중 결제 업데이트 리스너에 의해 불필요한 팝업이 사용자에게 노출되지 않도록 주의해야합니다.
 
-<a id="ordinary-subscription-product-autorenewable"></a>
+<a id="grace-period-standard-subscription-product-autorenewable"></a>
 #### 일반 구독 상품 (AUTO_RENEWABLE))
 
 * 유예 기간 동안 일반 구독 상품은 정기 결제 콘텐츠에 엑세스 할 수 있어야 합니다.
 * 유예 기간 동안 NhnCloudIap.queryActivatedPurchases()로 조회할 수 있습니다.
 
-<a id="consumable-subscription-product-consumableautorenewable"></a>
+<a id="grace-period-consumable-subscription-product-consumableautorenewable"></a>
 #### 소비성 구독 상품 (CONSUMABLE_AUTO_RENEWABLE)
 
 * 유예 기간이 시작되면 구글은 새로운 영수증을 발급하나 결제 수단을 수정하지 않으면 계정 보류 상태가 되거나 취소됩니다.
@@ -804,13 +804,13 @@ Google Play Store의 구독은 수명주기 동안 다양한 상태 변경을 �
 
 > <span style="color:#e11d21">**주의!)**</span> 계정 보류 기간 중 결제 수단 수정 등으로 복원되면 자동 갱신을 재개합니다. NHN Cloud IAP는 갱신된 결제건을 결제 업데이트 리스너(IapService.PurchaseUpdatedListener)를 통해 결제 결과를 통지합니다. 게임이나 앱은 중요한 동작 중 결제 업데이트 리스너에 의해 불필요한 팝업이 사용자에게 노출되지 않도록 주의해야합니다.
 
-<a id="ordinary-subscription-product-autorenewable-2"></a>
+<a id="account-hold-standard-subscription-product-autorenewable"></a>
 #### 일반 구독 상품 (AUTO_RENEWABLE))
 
 * 계정 보류 기간 동안 일반 구독 상품은 정기 결제 콘텐츠에 엑세스 할 수 없습니다.
 * 계정 보류 기간 동안 NhnCloudIap.queryActivatedPurchases()로 조회되지 않습니다.
 
-<a id="consumable-subscription-product-consumableautorenewable-2"></a>
+<a id="account-hold-consumable-subscription-product-consumableautorenewable"></a>
 #### 소비성 구독 상품 (CONSUMABLE_AUTO_RENEWABLE)
 
 * 계정 보류 기간 동안 소비성 구독 상품은 새로운 구매를 생성하지 않습니다.
@@ -826,13 +826,13 @@ Google Play Store의 구독은 수명주기 동안 다양한 상태 변경을 �
 
 > <span style="color:#e11d21">**주의!)**</span> 일시중지 기간이 끝나면 자동 갱신을 재개합니다. NHN Cloud IAP는 갱신된 결제건을 결제 업데이트 리스너(IapService.PurchaseUpdatedListener)를 통해 결제 결과를 통지합니다. 게임이나 앱은 중요한 동작 중 결제 업데이트 리스너에 의해 불필요한 팝업이 사용자에게 노출되지 않도록 주의해야합니다.
 
-<a id="ordinary-subscription-product-autorenewable-3"></a>
+<a id="pause-standard-subscription-product-autorenewable"></a>
 #### 일반 구독 상품 (AUTO_RENEWABLE))
 
 * 일시중지 기간 동안 일반 구독 상품은 정기 결제 콘텐츠에 엑세스 할 수 없습니다.
 * 일시중지 기간 동안 NhnCloudIap.queryActivatedPurchases()로 조회되지 않습니다.
 
-<a id="consumable-subscription-product-consumableautorenewable-3"></a>
+<a id="pause-consumable-subscription-product-consumableautorenewable"></a>
 #### 소비성 구독 상품 (CONSUMABLE_AUTO_RENEWABLE)
 
 * 일시중지 기간 동안 소비성 구독 상품은 새로운 구매를 생성하지 않습니다.

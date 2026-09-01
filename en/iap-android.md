@@ -204,7 +204,7 @@ For more information, see [ONE store payment screen settings](https://dev.onesto
 Android 11 changes how apps query and interact with other apps that the user has installed on the device.
 To use ONE store, Galaxy Store, or Amazon Appstore payments in apps targeting Android 11 or higher, you must define a 'queries' element or permissions in AndroidManifest.xml as shown below.
 
-<a id="one-store-2"></a>
+<a id="apps-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore-one-store"></a>
 #### ONE store
 
 ```xml
@@ -219,7 +219,7 @@ To use ONE store, Galaxy Store, or Amazon Appstore payments in apps targeting An
 </queries>
 ```
 
-<a id="galaxy-store-2"></a>
+<a id="apps-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore-galaxy-store"></a>
 #### Galaxy Store
 
 ```xml
@@ -228,8 +228,8 @@ To use ONE store, Galaxy Store, or Amazon Appstore payments in apps targeting An
 </queries>
 ```
 
-<a id="amazon-appstore-2"></a>
-### Amazon Appstore { #amazon-appstore-2 }
+<a id="androidmanifest-configuration-amazon-appstore"></a>
+### Amazon Appstore { #androidmanifest-configuration-amazon-appstore }
 
 For Amazon Appstore, add permissions instead of the 'queries' element.
 
@@ -244,10 +244,10 @@ If you are using an earlier version of Android Gradle Plugin, see [Preparing you
 
 > <span style="color:#e11d21">**Caution!**</span> Do not apply the QUERY_ALL_PACKAGES permission to Google Play Store.
 
-<a id="mycard-2"></a>
-### MyCard { #mycard-2 }
+<a id="androidmanifest-configuration-mycard"></a>
+### MyCard { #androidmanifest-configuration-mycard }
 
-<a id="androidname-setting"></a>
+<a id="androidmanifest-configuration-mycard-configure-androidname"></a>
 #### Configure android:name
 
 If android:name is not defined, add it as follows.
@@ -277,7 +277,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 }
 ```
 
-<a id="test-payment-mode-option"></a>
+<a id="androidmanifest-configuration-mycard-test-payment-mode-optional"></a>
 #### Test payment mode (optional)
 
 To test payments, add 'test_mode'. If 'test_mode' is not set, the default value is false.
@@ -432,7 +432,7 @@ public static void unregisterPurchasesUpdatedListener(IapService.PurchasesUpdate
 | registerPurchasesUpdatedListener   | listener   | IapService.<br>PurchasesUpdatedListener: <br>Payment update listener | Registers a payment update listener.    |
 | unregisterPurchasesUpdatedListener | listener   | IapService.<br>PurchasesUpdatedListener: <br>Listener to unregister | Unregisters a payment update listener. |
 
-<a id="example-of-registering-purchases-update-listener"></a>
+<a id="payment-update-listener-registration-api-specifications-example-of-registering-a-payment-update-listener"></a>
 #### Example of Registering a Payment Update Listener
 
 ```java
@@ -780,13 +780,13 @@ For more information, see [Grace period](https://developer.android.com/google/pl
 
 > <span style="color:#e11d21">**Caution!)**</span> If the subscription is restored during the grace period (for example, by updating the payment method), auto-renewal resumes. NHN Cloud IAP notifies you of the renewed payment result through the payment update listener (IapService.PurchaseUpdatedListener). Games and apps must ensure that the payment update listener does not expose unnecessary pop-ups to users during critical operations.
 
-<a id="ordinary-subscription-product-autorenewable"></a>
+<a id="grace-period-standard-subscription-product-autorenewable"></a>
 #### Standard subscription product (AUTO_RENEWABLE))
 
 * Standard subscription products must be able to access subscription content during the grace period.
 * They can be queried with NhnCloudIap.queryActivatedPurchases() during the grace period.
 
-<a id="consumable-subscription-product-consumableautorenewable"></a>
+<a id="grace-period-consumable-subscription-product-consumableautorenewable"></a>
 #### Consumable subscription product (CONSUMABLE_AUTO_RENEWABLE)
 
 * When the grace period begins, Google issues a new receipt, but if the payment method is not updated, the account will transition to on hold or be cancelled.
@@ -804,13 +804,13 @@ For more information, see [Account hold](https://developer.android.com/google/pl
 
 > <span style="color:#e11d21">**Caution!)**</span> If the subscription is restored during the account hold period (for example, by updating the payment method), auto-renewal resumes. NHN Cloud IAP notifies you of the renewed payment result through the payment update listener (IapService.PurchaseUpdatedListener). Games and apps must ensure that the payment update listener does not expose unnecessary pop-ups to users during critical operations.
 
-<a id="ordinary-subscription-product-autorenewable-2"></a>
+<a id="account-hold-standard-subscription-product-autorenewable"></a>
 #### Standard subscription product (AUTO_RENEWABLE))
 
 * Standard subscription products cannot access subscription content during the account hold period.
 * They are not returned by NhnCloudIap.queryActivatedPurchases() during the account hold period.
 
-<a id="consumable-subscription-product-consumableautorenewable-2"></a>
+<a id="account-hold-consumable-subscription-product-consumableautorenewable"></a>
 #### Consumable subscription product (CONSUMABLE_AUTO_RENEWABLE)
 
 * Consumable subscription products do not generate new purchases during the account hold period.
@@ -826,13 +826,13 @@ For more information, see [Pause](https://developer.android.com/google/play/bill
 
 > <span style="color:#e11d21">**Caution!)**</span> When the pause period ends, auto-renewal resumes. NHN Cloud IAP notifies you of the renewed payment result through the payment update listener (IapService.PurchaseUpdatedListener). Games and apps must ensure that the payment update listener does not expose unnecessary pop-ups to users during critical operations.
 
-<a id="ordinary-subscription-product-autorenewable-3"></a>
+<a id="pause-standard-subscription-product-autorenewable"></a>
 #### Standard subscription product (AUTO_RENEWABLE))
 
 * Standard subscription products cannot access subscription content during the pause period.
 * They are not returned by NhnCloudIap.queryActivatedPurchases() during the pause period.
 
-<a id="consumable-subscription-product-consumableautorenewable-3"></a>
+<a id="pause-consumable-subscription-product-consumableautorenewable"></a>
 #### Consumable subscription product (CONSUMABLE_AUTO_RENEWABLE)
 
 * Consumable subscription products do not generate new purchases during the pause period.

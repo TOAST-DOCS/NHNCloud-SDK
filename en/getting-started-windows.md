@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=f43b6cdf1fbf -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-windows-c"></a>
-
-## NHN Cloud > SDK User Guide > Getting Started > Windows C++
+## NHN Cloud > SDK User Guide > Getting Started > Windows C++ { #nhn-cloud-sdk-user-guide-getting-started-windows-c }
 
 <a id="supported-environment"></a>
-
-## Supported Environment
+## Supported Environment { #supported-environment }
 * Windows 7
 * Windows 8
 * Windows 10
 * Windows 11
 
 <a id="structure-of-nhn-cloud-sdk"></a>
-
-## Structure of NHN Cloud SDK
+## Structure of NHN Cloud SDK { #structure-of-nhn-cloud-sdk }
 
 NHN Cloud SDK for Windows C++ has the following structure.
 
@@ -27,14 +24,12 @@ NHN Cloud SDK for Windows C++ has the following structure.
 | nhncloudsdk_example | Sample project |
 
 <a id="apply-nhn-cloud-sdk-to-visual-studio-projects"></a>
-
-## Apply NHN Cloud SDK to Visual Studio Projects
+## Apply NHN Cloud SDK to Visual Studio Projects { #apply-nhn-cloud-sdk-to-visual-studio-projects }
 
 Download NHN Cloud Windows C++ SDK from the [Download](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
 
 <a id="include-libraries"></a>
-
-### Include Libraries
+### Include Libraries { #include-libraries }
 
 1. Select **Properties** from **Project** tab on the menu bar.
 2. Set the path for SDK header files from **C/C++ > General > Additional Include Directories**.
@@ -43,13 +38,11 @@ Download NHN Cloud Windows C++ SDK from the [Download](../../Download/#nhn-cloud
 For reference: [https://msdn.microsoft.com/ko-kr/library/ms235636.aspx](https://msdn.microsoft.com/ko-kr/library/ms235636.aspx)
 
 <a id="nhncloudsdkexmple"></a>
-
-### nhncloudsdk_exmple
+### nhncloudsdk_exmple { #nhncloudsdkexmple }
 * This is a sample project written based on Visual Studio 2019.
 
 <a id="use-nhn-cloud-log-crash-search-service"></a>
-
-## Use NHN Cloud Log & Crash Search Service
+## Use NHN Cloud Log & Crash Search Service { #use-nhn-cloud-log-crash-search-service }
 
 * User Guide for [Log & Crash](./log-collector-windows)
 

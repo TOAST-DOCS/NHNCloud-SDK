@@ -1,12 +1,10 @@
 <!-- pre-align:aligned sig=b91e3d4ff2a8 -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-android-ndk"></a>
-
-## NHN Cloud > SDK使用ガイド > Log & Crash > Android (NDK)
+## NHN Cloud > SDK使用ガイド > Log & Crash > Android (NDK) { #nhn-cloud-sdk-user-guide-log-crash-android-ndk }
 
 <a id="android-ndk-crash-report"></a>
-
-## Android NDKクラッシュレポート
+## Android NDKクラッシュレポート { #android-ndk-crash-report }
 
 Androidアプリにネイティブライブラリーが含まれる場合、簡単なビルド設定でネイティブコードに対する全体スタック追跡と詳細なエラーレポートを利用できるようになります。
 
@@ -17,14 +15,12 @@ Androidアプリにネイティブライブラリーが含まれる場合、簡�
 * NHN Cloud Crash Reporter for NDKを使用するためには、**r17c以上のNDK**が必要です。
 
 <a id="prerequisites"></a>
-
-### 事前準備
+### 事前準備 { #prerequisites }
 
 1. [NHN Cloud Log & Crash](./log-collector-android)事前準備
 
 <a id="library-setting"></a>
-
-### ライブラリー設定
+### ライブラリー設定 { #library-setting }
 - アプリレベルbuild.gradleで、依存性を追加します。
 
 ```groovy
@@ -43,24 +39,21 @@ dependencies {
 ```
 
 <a id="crash-analysis"></a>
-
-### クラッシュ分析
+### クラッシュ分析 { #crash-analysis }
 
 * Nativeクラッシュが発生すると、ダンプ(.dmp)ファイルが生成されます。
 * 生成されたダインプファイルを解析する過程を、**Symbolication**といいます。
 * 正確なスタック追跡のためには、必ずシンボルファイルをアップロードしてください。
 * シンボルファイルがアップロードされたら、クラッシュ発生時にLog & Crash Searchのコンソールにおいて、分析されたクラッシュ情報を閲覧できます。
 
-<a id="symbol-upload"></a>
-
+<a id="crash-analysis-symbol-upload"></a>
 #### シンボルファイルのアップロード
 
 * シンボルファイルはProjectの特定パスに {library name}.soというファイル名で作成されます。
 * アップロードファイルの最大サイズは、500MBです。
 * {library name}.soを {library name}.so.zipに圧縮して、[Log & Crash Search > 設定 > シンボルファイル]からアップロードします。
 
-<a id="symbol-file-path"></a>
-
+<a id="crash-analysis-symbol-file-path"></a>
 #### シンボルファイルのパス
 
 - ndk-build : {PROJECT}/obj/local/{ANDROID_ABI} 配下に .soファイルが作成されます。

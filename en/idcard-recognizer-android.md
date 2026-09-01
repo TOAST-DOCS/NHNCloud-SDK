@@ -1,29 +1,24 @@
 <!-- pre-align:aligned sig=1f5ef2921c62 -->
 
 <a id="nhn-cloud-sdk-user-guide-ocr-id-card-android"></a>
-
-## NHN Cloud > SDK User Guide > OCR > ID Card (Android)
+## NHN Cloud > SDK User Guide > OCR > ID Card (Android) { #nhn-cloud-sdk-user-guide-ocr-id-card-android }
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. Enable [AI Service > OCR ] in[NHN Cloud Console](https://console.nhncloud.com).
 2. Check Appkey and SecretKey in the OCR console.
 
 <a id="supported-environment"></a>
-
-## Supported Environment
+## Supported Environment { #supported-environment }
 
 NHN Cloud ID Card Recognizer operates in Android 5.1 or higher (API level 22 or higher).
 
 <a id="set-up-project"></a>
-
-## Set up Project
+## Set up Project { #set-up-project }
 
 <a id="add-dependency"></a>
-
-### Add Dependency
+### Add Dependency { #add-dependency }
 
 Add dependencies of nhncloud-idcard-recognizer to the build.gradle file of the app.
 
@@ -38,20 +33,17 @@ dependencies {
 <br>
 
 <a id="camera-permission"></a>
-
-### Camera Permission
+### Camera Permission { #camera-permission }
 
 To use ID Card Recognizer, the permission **Manifest.permission.CAMERA** is required. You must obtain the Camera permission before using ID Card Recognizer.
 
 <br>
 
 <a id="use-id-card-recognizer"></a>
-
-## Use ID Card Recognizer
+## Use ID Card Recognizer { #use-id-card-recognizer }
 
 <a id="create-idcardrecognizer-instance"></a>
-
-### Create IdCardRecognizer instance
+### Create IdCardRecognizer instance { #create-idcardrecognizer-instance }
 
 Create an ID Card Recognizer instance.
 
@@ -66,8 +58,7 @@ val idCardRecognizer = nhnCloudOcr.createIdCardRecognizer()
 <br>
 
 <a id="get-started-with-creditcardrecognizer"></a>
-
-### Get started with CreditCardRecognizer
+### Get started with CreditCardRecognizer { #get-started-with-creditcardrecognizer }
 
 Initiate ID card recognition by calling the IdCardRecognizer's launch (Activity, IdCardRecognitionCallback) method.
 
@@ -84,8 +75,7 @@ IdCardRecognizer.launch(activity) { result, data ->
 <br>
 
 <a id="use-recognition-data"></a>
-
-### Use Recognition Data
+### Use Recognition Data { #use-recognition-data }
 
 When ID recognition is successful, ID recognition data is passed to an object that inherits and implements IdCardData.
 Depending on the ID type, a social security card is returned as an IdCardResidentData object, and a driver's license is returned as an IdCardDriverData object. 
@@ -114,8 +104,7 @@ when (data) {
 <br>
 
 <a id="verify-id-card-authenticity"></a>
-
-### Verify ID card authenticity
+### Verify ID card authenticity { #verify-id-card-authenticity }
 
 Create an IdCardAuthenticator instance to verify the authenticity of an ID.
 You can request authenticity verification using IdCardData, which is the identification result. 
@@ -153,15 +142,13 @@ nhnCloudOcr.createIdCardAuthenticator()
 <br>
 
 <a id="customize-id-recognition-screen"></a>
-
-## Customize ID recognition screen
+## Customize ID recognition screen { #customize-id-recognition-screen }
 
 You can customize and use the ID card recognition screen.
 You must use IdCardRecognitionService instead of IdCardRecognizer to configure your custom screen.
 
 <a id="create-idcardrecognitionservice-instance"></a>
-
-### Create IdCardRecognitionService Instance
+### Create IdCardRecognitionService Instance { #create-idcardrecognitionservice-instance }
 
 Create an IdCardRecognitionService instance.
 
@@ -176,8 +163,7 @@ val IdCardRecognitionService = ocrServices.createIdCardRecognitionService()
 <br>
 
 <a id="register-idcardrecognitionservice-listner"></a>
-
-### Register IdCardRecognitionService Listner
+### Register IdCardRecognitionService Listner { #register-idcardrecognitionservice-listner }
 
 Register a listener using the setIdCardRecognitionListener() method.
 When an ID card is recognized, the result is notified via the IdCardRecognitionListener.
@@ -198,8 +184,7 @@ IdCardRecognitionService.setIdCardRecognitionListener { result, data ->
 <br>
 
 <a id="process-recognition-result"></a>
-
-### Process Recognition Result
+### Process Recognition Result { #process-recognition-result }
 
 IdCardRecognitionData passed to IdCardRecognitionListener will return all results regardless of confidence rating.
 Therefore, more accurate results can be used by checking the confidence rating as shown below.
@@ -281,9 +266,8 @@ private fun isConfident(data: IdCardRecognitionData): Boolean {
 
 <br>
 
-<a id="use-recognition-data-2"></a>
-
-### Use Recognition Data
+<a id="customize-id-recognition-screen-use-recognition-data"></a>
+### Use Recognition Data { #customize-id-recognition-screen-use-recognition-data }
 
 When ID recognition is successful, ID recognition data is passed to an object implementing IdCardRecognitionData inheritance.
 Depending on the ID type, a social security card is returned as an IdCardResidentRecognitionData object, and a driver's license is returned as an IdCardDriverRecognitionData object. 
@@ -312,9 +296,8 @@ when (data) {
 
 <br>
 
-<a id="verify-id-card-authenticity-2"></a>
-
-### Verify ID card authenticity
+<a id="customize-id-recognition-screen-verify-id-card-authenticity"></a>
+### Verify ID card authenticity { #customize-id-recognition-screen-verify-id-card-authenticity }
 
 Create an IdCardAuthenticityService instance to verify the authenticity of an ID card.
 You can request authenticity verification using IdCardRecognitionData, which is the ID recognition result. 
@@ -352,8 +335,7 @@ ocrServices.createIdCardAuthenticityService()
 <br>
 
 <a id="configure-camera-preview"></a>
-
-### Configure Camera Preview
+### Configure Camera Preview { #configure-camera-preview }
 
 Add IdCardRecognitionCameraPreview to Activity or Layout of Fragment as follows to configure Camera Preview.
 
@@ -376,8 +358,7 @@ Add IdCardRecognitionCameraPreview to Activity or Layout of Fragment as follows 
 <br>
 
 <a id="change-background-color"></a>
-
-### Change Background Color
+### Change Background Color { #change-background-color }
 
 Areas except for the scan guide area appear translucent.
 Configure their colors using the "app:guideBackgroundColor" property.
@@ -393,8 +374,7 @@ Configure their colors using the "app:guideBackgroundColor" property.
 <br>
 
 <a id="user-defined-scan-guide-view"></a>
-
-### User-defined Scan Guide View
+### User-defined Scan Guide View { #user-defined-scan-guide-view }
 
 You can freely define the scan guide view by placing it as a subview of the IdCardRecognitionCameraPreview. Configure the user-defined guide view using the "app:guideView" property.
 
@@ -423,8 +403,7 @@ The size of the scan guide view is automatically adjusted.
 <br>
 
 <a id="change-guide-view-when-id-card-is-detected"></a>
-
-### Change Guide View When ID Card Is Detected
+### Change Guide View When ID Card Is Detected { #change-guide-view-when-id-card-is-detected }
 
 You can change the color or shape of the scan guide view when an ID card is detected.
 Change the color or shape of the guide view according to the value passed to setDetected(Boolean) after implementation inheritance of the OcrDetectable interface.
@@ -447,8 +426,7 @@ class CustomGuideView(
 <br>
 
 <a id="start-service"></a>
-
-### Start Service
+### Start Service { #start-service }
 
 Start IdCardRecognitionService by obtaining the instances of IdCardRecognitionCameraPreview.
 
@@ -464,8 +442,7 @@ try {
 <br>
 
 <a id="stop-service"></a>
-
-### Stop Service
+### Stop Service { #stop-service }
 
 Stop IdCardRecognitionService when the app enters the background or ID card recognition is successful.
 
@@ -476,8 +453,7 @@ idCardRecognitionService.stop()
 <br>
 
 <a id="release-service"></a>
-
-### Release Service
+### Release Service { #release-service }
 
 Release IdCardRecognitionService when Activity or Fragment's View is destroyed.
 
@@ -488,13 +464,11 @@ idCardRecognitionService.release();
 <br>
 
 <a id="set-idcardrecognizer-lifecycle"></a>
-
-### Set IdCardRecognizer Lifecycle
+### Set IdCardRecognizer Lifecycle { #set-idcardrecognizer-lifecycle }
 
 Call as follows according to Activity or the lifecycle of Fragment.
 
-<a id="activity"></a>
-
+<a id="set-idcardrecognizer-lifecycle-activity"></a>
 #### Activity
 
 ```kotlin
@@ -514,8 +488,7 @@ override fun onDestroy() {
 }
 ```
 
-<a id="fragment"></a>
-
+<a id="set-idcardrecognizer-lifecycle-fragment"></a>
 #### Fragment
 
 ```kotlin
@@ -538,8 +511,7 @@ override fun onDestroyView() {
 <br>
 
 <a id="prevent-screen-capture"></a>
-
-### Prevent Screen Capture
+### Prevent Screen Capture { #prevent-screen-capture }
 
 To prevent screen capture, add **WindowManager.LayoutParams.FLAG_SECURE** before setContentView() is called from onCreate() of Activity.
 
@@ -557,8 +529,7 @@ For more details, see [WindowManager.LayoutParams.FLAG_SECURE](https://developer
 <br>
 
 <a id="device-check"></a>
-
-### Device Check
+### Device Check { #device-check }
 
 Before starting the ID Card Recognition service, you can check whether the ID Card Recognition service is available is on the device running the application.
 To perform this check, use the IdCardRecognitionService.isAvailable(Context) method.
@@ -574,8 +545,7 @@ if (IdCardRecognitionService.isAvailable(context)) {
 <br>
 
 <a id="use-securetextview"></a>
-
-## Use SecureTextView
+## Use SecureTextView { #use-securetextview }
 
 For privacy reasons, ID data is returned as a SecureString object rather than a plain string.
 If ID recognition information is created and used as a String object, security is vulnerable, and SecureTextView can be used to display the data on the screen. 
@@ -599,8 +569,7 @@ idCardNameView.setText(name)
 ```
 
 <a id="use-securetextgroup"></a>
-
-### Use SecureTextGroup
+### Use SecureTextGroup { #use-securetextgroup }
 If you need to display multiple lines of text, you can use SecureTextGroup. 
 ```xml
 <com.nhncloud.android.ocr.SecureTextGroup
@@ -623,12 +592,10 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 
 <a id="class-references"></a>
-
-## Class References
+## Class References { #class-references }
 
 <a id="idcarddata"></a>
-
-### IdCardData
+### IdCardData { #idcarddata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -638,8 +605,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 <a id="idcardresidentdata"></a>
-
-### IdCardResidentData
+### IdCardResidentData { #idcardresidentdata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -651,8 +617,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 <a id="idcarddriverdata"></a>
-
-### IdCardDriverData
+### IdCardDriverData { #idcarddriverdata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -669,8 +634,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 
 <a id="idcardrecognitiondata"></a>
-
-### IdCardRecognitionData
+### IdCardRecognitionData { #idcardrecognitiondata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -684,8 +648,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 <a id="idcardrecognitiondataidcardvalue"></a>
-
-### IdCardRecognitionData.IdCardValue
+### IdCardRecognitionData.IdCardValue { #idcardrecognitiondataidcardvalue }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -695,8 +658,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 <a id="idcardresidentrecognitiondata"></a>
-
-### IdCardResidentRecognitionData
+### IdCardResidentRecognitionData { #idcardresidentrecognitiondata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -708,8 +670,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 <a id="idcarddriverrecognitiondata"></a>
-
-### IdCardDriverRecognitionData
+### IdCardDriverRecognitionData { #idcarddriverrecognitiondata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -725,8 +686,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 <a id="securetextview"></a>
-
-### SecureTextView
+### SecureTextView { #securetextview }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -738,8 +698,7 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 <a id="securetextgroup"></a>
-
-### SecureTextGroup
+### SecureTextGroup { #securetextgroup }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |

@@ -204,7 +204,7 @@ meta-data を設定しない場合、デフォルト値（"full"）が適用さ�
 Android 11 では、アプリがユーザーのデバイスにインストールされている他のアプリをクエリし、相互作用する方法が変更されます。
 Android 11 以上をターゲットにするアプリで ONE store、Galaxy Store、または Amazon Appstore 決済を使用するには、以下のように AndroidManifest.xml に `queries` 要素または権限を定義する必要があります。
 
-<a id="one-store-2"></a>
+<a id="apps-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore-one-store"></a>
 #### ONE store
 
 ```xml
@@ -219,7 +219,7 @@ Android 11 以上をターゲットにするアプリで ONE store、Galaxy Stor
 </queries>
 ```
 
-<a id="galaxy-store-2"></a>
+<a id="apps-targeting-android-11-or-higher-one-store-galaxy-store-amazon-appstore-galaxy-store"></a>
 #### Galaxy Store
 
 ```xml
@@ -228,8 +228,8 @@ Android 11 以上をターゲットにするアプリで ONE store、Galaxy Stor
 </queries>
 ```
 
-<a id="amazon-appstore-2"></a>
-### Amazon Appstore { #amazon-appstore-2 }
+<a id="androidmanifest-configuration-amazon-appstore"></a>
+### Amazon Appstore { #androidmanifest-configuration-amazon-appstore }
 
 Amazon Appstore では、`queries` 要素の代わりに権限を追加します。
 
@@ -244,10 +244,10 @@ Amazon Appstore では、`queries` 要素の代わりに権限を追加します
 
 > <span style="color:#e11d21">**注意！)**</span> QUERY_ALL_PACKAGES 権限を Google Play Store に適用しないよう注意してください。
 
-<a id="mycard-2"></a>
-### MyCard { #mycard-2 }
+<a id="androidmanifest-configuration-mycard"></a>
+### MyCard { #androidmanifest-configuration-mycard }
 
-<a id="androidname-setting"></a>
+<a id="androidmanifest-configuration-mycard-configure-androidname"></a>
 #### android:name 設定
 
 android:name を定義していない場合は、次のように追加します。
@@ -276,7 +276,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 }
 ```
 
-<a id="test-payment-mode-option"></a>
+<a id="androidmanifest-configuration-mycard-test-payment-mode-optional"></a>
 #### テスト決済モード（オプション）
 
 決済テストを行うには、`test_mode` を追加します。`test_mode` を設定しない場合、デフォルト値は false です。
@@ -431,7 +431,7 @@ public static void unregisterPurchasesUpdatedListener(IapService.PurchasesUpdate
 | registerPurchasesUpdatedListener   | listener   | IapService.<br>PurchasesUpdatedListener: <br>決済アップデートリスナー | 決済アップデートリスナーを登録します。    |
 | unregisterPurchasesUpdatedListener | listener   | IapService.<br>PurchasesUpdatedListener: <br>登録解除するリスナー | 決済アップデートリスナーの登録を解除します。 |
 
-<a id="example-of-registering-purchases-update-listener"></a>
+<a id="payment-update-listener-registration-api-specifications-example-of-registering-a-payment-update-listener"></a>
 #### 決済アップデートリスナー登録例
 
 ```java
@@ -779,13 +779,13 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 
 > <span style="color:#e11d21">**注意!)**</span> 猶予期間中に決済手段の変更などによって復元された場合、自動更新を再開します。NHN Cloud IAP は更新された決済件を決済アップデートリスナー(IapService.PurchaseUpdatedListener)を通じて決済結果を通知します。ゲームやアプリは、重要な動作中に決済アップデートリスナーによって不要なポップアップがユーザーに表示されないよう注意してください。
 
-<a id="ordinary-subscription-product-autorenewable"></a>
+<a id="grace-period-standard-subscription-product-autorenewable"></a>
 #### 一般サブスクリプション商品 (AUTO_RENEWABLE))
 
 * 猶予期間中、一般サブスクリプション商品は定期決済コンテンツにアクセスできる必要があります。
 * 猶予期間中は NhnCloudIap.queryActivatedPurchases() で照会できます。
 
-<a id="consumable-subscription-product-consumableautorenewable"></a>
+<a id="grace-period-consumable-subscription-product-consumableautorenewable"></a>
 #### 消費性サブスクリプション商品 (CONSUMABLE_AUTO_RENEWABLE)
 
 * 猶予期間が開始されると、Googleは新しいレシートを発行しますが、決済手段を変更しない場合はアカウント保留状態になるか取り消されます。
@@ -803,13 +803,13 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 
 > <span style="color:#e11d21">**注意!)**</span> アカウント保留期間中に決済手段の変更などによって復元された場合、自動更新を再開します。NHN Cloud IAP は更新された決済件を決済アップデートリスナー(IapService.PurchaseUpdatedListener)を通じて決済結果を通知します。ゲームやアプリは、重要な動作中に決済アップデートリスナーによって不要なポップアップがユーザーに表示されないよう注意してください。
 
-<a id="ordinary-subscription-product-autorenewable-2"></a>
+<a id="account-hold-standard-subscription-product-autorenewable"></a>
 #### 一般サブスクリプション商品 (AUTO_RENEWABLE))
 
 * アカウント保留期間中、一般サブスクリプション商品は定期決済コンテンツにアクセスできません。
 * アカウント保留期間中は NhnCloudIap.queryActivatedPurchases() で照会されません。
 
-<a id="consumable-subscription-product-consumableautorenewable-2"></a>
+<a id="account-hold-consumable-subscription-product-consumableautorenewable"></a>
 #### 消費性サブスクリプション商品 (CONSUMABLE_AUTO_RENEWABLE)
 
 * アカウント保留期間中、消費性サブスクリプション商品は新しい購入を生成しません。
@@ -825,13 +825,13 @@ Google Play Store のサブスクリプションは、ライフサイクルの�
 
 > <span style="color:#e11d21">**注意!)**</span> 一時停止期間が終了すると、自動更新を再開します。NHN Cloud IAP は更新された決済件を決済アップデートリスナー(IapService.PurchaseUpdatedListener)を通じて決済結果を通知します。ゲームやアプリは、重要な動作中に決済アップデートリスナーによって不要なポップアップがユーザーに表示されないよう注意してください。
 
-<a id="ordinary-subscription-product-autorenewable-3"></a>
+<a id="pause-standard-subscription-product-autorenewable"></a>
 #### 一般サブスクリプション商品 (AUTO_RENEWABLE))
 
 * 一時停止期間中、一般サブスクリプション商品は定期決済コンテンツにアクセスできません。
 * 一時停止期間中は NhnCloudIap.queryActivatedPurchases() で照会されません。
 
-<a id="consumable-subscription-product-consumableautorenewable-3"></a>
+<a id="pause-consumable-subscription-product-consumableautorenewable"></a>
 #### 消費性サブスクリプション商品 (CONSUMABLE_AUTO_RENEWABLE)
 
 * 一時停止期間中、消費性サブスクリプション商品は新しい購入を生成しません。

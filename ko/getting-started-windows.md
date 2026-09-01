@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=f43b6cdf1fbf -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-windows-c"></a>
-
-## NHN Cloud > SDK 사용 가이드 > 시작하기 > Windows C++
+## NHN Cloud > SDK 사용 가이드 > 시작하기 > Windows C++ { #nhn-cloud-sdk-user-guide-getting-started-windows-c }
 
 <a id="supported-environment"></a>
-
-## 지원 환경
+## 지원 환경 { #supported-environment }
 * Windows 7
 * Windows 8
 * Windows 10
 * Windows 11
 
 <a id="structure-of-nhn-cloud-sdk"></a>
-
-## NHN Cloud SDK의 구성
+## NHN Cloud SDK의 구성 { #structure-of-nhn-cloud-sdk }
 
 Windows C++ 용 NHN Cloud SDK의 구성은 다음과 같습니다.
 
@@ -27,14 +24,12 @@ Windows C++ 용 NHN Cloud SDK의 구성은 다음과 같습니다.
 | nhncloudsdk_example | 샘플 프로젝트 |
 
 <a id="apply-nhn-cloud-sdk-to-visual-studio-projects"></a>
-
-## NHN Cloud SDK를 Visual Studio 프로젝트에 적용하기
+## NHN Cloud SDK를 Visual Studio 프로젝트에 적용하기 { #apply-nhn-cloud-sdk-to-visual-studio-projects }
 
 NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 NHN Cloud Windows C++ SDK를 다운로드합니다.
 
 <a id="include-libraries"></a>
-
-### 라이브러리 포함
+### 라이브러리 포함 { #include-libraries }
 
 1. 메뉴바의 **Project** 탭에서 **Properties**를 선택합니다.
 2. **C/C++ > General > Additional Include Directories**에서 SDK의 헤더파일 경로를 설정합니다.
@@ -43,13 +38,11 @@ NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 NHN Clou
 [참고] [https://msdn.microsoft.com/ko-kr/library/ms235636.aspx](https://msdn.microsoft.com/ko-kr/library/ms235636.aspx)
 
 <a id="nhncloudsdkexmple"></a>
-
-### nhncloudsdk_exmple
+### nhncloudsdk_exmple { #nhncloudsdkexmple }
 * Visual Studio 2019 기준으로 작성한 샘플 프로젝트입니다.
 
 <a id="use-nhn-cloud-log-crash-search-service"></a>
-
-## NHN Cloud Log & Crash Search Service 사용
+## NHN Cloud Log & Crash Search Service 사용 { #use-nhn-cloud-log-crash-search-service }
 
 * [Log & Crash](./log-collector-windows) 사용 가이드
 

@@ -1,28 +1,24 @@
 <!-- pre-align:aligned sig=d6c8898829d4 -->
 
 <a id="nhn-cloud-sdk-user-guide-iap-ios"></a>
-
-## NHN Cloud > SDK User Guide > IAP > iOS
+## NHN Cloud > SDK User Guide > IAP > iOS { #nhn-cloud-sdk-user-guide-iap-ios }
 
 <a id="cautions"></a>
-
-## Cautions
+## Cautions { #cautions }
 > To use the **(New) Receipt verification + Notification V2** method, use NHN Cloud SDK iOS v1.7.0 or later.
 
 > NHN Cloud SDK iOS v1.8.0 and higher supports both **(New) Receipt Verification + Notification V2** method and **(Old) Receipt Verification + Notification V1** method.
 > How the SDK is verified depends on the IAP console settings. - [IAP Console Guide](/Mobile%20Service/IAP/en/console-apple-guide/#new-receipt-verification-notification-v2)
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. Install [NHN Cloud SDK](./getting-started-ios).
 2. [Enable Mobile Service \> IAP](/Mobile%20Service/IAP/en/console-guide/) in [NHN Cloud console](https://console.nhncloud.com).
 3. [Check AppKey](/Mobile%20Service/IAP/en/console-guide/#check-appkey) in IAP.
 
 <a id="nhn-cloud-iap-components"></a>
-
-## NHN Cloud IAP Components
+## NHN Cloud IAP Components { #nhn-cloud-iap-components }
 
 NHN Cloud IAP SDK for iOS consists of the following:
 
@@ -33,12 +29,10 @@ NHN Cloud IAP SDK for iOS consists of the following:
 
 
 <a id="apply-nhn-cloud-iap-sdk-to-xcode-projects"></a>
-
-## Apply NHN Cloud IAP SDK to Xcode Projects
+## Apply NHN Cloud IAP SDK to Xcode Projects { #apply-nhn-cloud-iap-sdk-to-xcode-projects }
 
 <a id="apply-using-cococapods"></a>
-
-### 1. Apply using Cococapods
+### 1. Apply using Cococapods { #apply-using-cococapods }
 
 * Create a Podfile and add a pod for NHN Cloud SDK.
 
@@ -52,8 +46,7 @@ end
 ```
 
 <a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
-
-### 2. Apply NHN Cloud SDK with Swift Package Manager
+### 2. Apply NHN Cloud SDK with Swift Package Manager { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * Go to **File > Add Packages...** from XCode.
 * For the Package URL, enter 'https://github.com/nhn/nhncloud.ios.sdk' and select **Add Package**.
@@ -61,8 +54,7 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
-<a id="set-up-project"></a>
-
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** entries to **Other Linker Flags** in **Build Settings**.
@@ -70,11 +62,9 @@ end
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 3. Apply NHN Cloud SDK by Downloading Binaries { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
-### 3. Apply NHN Cloud SDK by Downloading Binaries
-
-<a id="frameworks-setup"></a>
-
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Frameworks Setup
 
 * The entire iOS SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
@@ -84,8 +74,7 @@ end
 
 ![linked_frameworks_iap](https://static.toastoven.net/toastcloud/sdk/ios/iap_link_frameworks_iap_202206.png)
 
-<a id="project-setup"></a>
-
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-setup"></a>
 #### Project Setup
 
 * Add **-lc++** and **-ObjC** to **Other Linker Flags** under **Build Settings**.
@@ -94,22 +83,19 @@ end
 
 
 <a id="capabilities-setup"></a>
-
-### Capabilities Setup
+### Capabilities Setup { #capabilities-setup }
 
 * To use NHN Cloud IAP, you must enable the **In-App Purchase** option in Capabilities.
     * **Project Target > Capabilities > In-App Purchase**
 ![capabilities_iap](https://static.toastoven.net/toastcloud/sdk/ios/capability_iap_202206.png)
 
 <a id="service-login"></a>
-
-## Service Login
+## Service Login { #service-login }
 
 * All products provided by NHN Cloud SDK (Log & Crash, IAP, Push, etc.) share one user ID.
 
 <a id="login"></a>
-
-### Login
+### Login { #login }
 
 * `Without setting the user ID, features such as purchase, query of activated products, or query of unconsumed details are not available. `
 
@@ -119,8 +105,7 @@ end
 ```
 
 <a id="logout"></a>
-
-### Logout
+### Logout { #logout }
 
 ``` objc
 // Set user ID to nil after service logout is completed
@@ -128,15 +113,13 @@ end
 ```
 
 <a id="initialize-nhn-cloud-iap-sdk"></a>
-
-## Initialize NHN Cloud IAP SDK
+## Initialize NHN Cloud IAP SDK { #initialize-nhn-cloud-iap-sdk }
 
 * Set the [AppKey](/Mobile%20Service/IAP/en/console-guide/#check-appkey) issued from IAP console on the [NHNCloudIAPConfiguration](./iap-ios/#nhncloudiapconfiguration) object.
 * NHN Cloud IAP uses the [NHNCloudIAPConfiguration](./iap-ios/#nhncloudiapconfiguration) object as a parameter for initialization.
 
 <a id="specification-for-initialization-api"></a>
-
-### Specification for Initialization API
+### Specification for Initialization API { #specification-for-initialization-api }
 
 ``` objc
 // Initialize
@@ -149,8 +132,7 @@ end
 ```
 
 <a id="specification-for-delegate-api"></a>
-
-### Specification for Delegate API
+### Specification for Delegate API { #specification-for-delegate-api }
 
 * If you register [NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate), you can receive notifications on purchase result and the decision of whether to proceed with promotion payment.
     * You can decide whether to proceed with the promotion payment in SDK or request payment directly when the user wants.
@@ -174,8 +156,7 @@ end
 ```
 
 <a id="example-of-initialization-procedure"></a>
-
-### Example of Initialization Procedure
+### Example of Initialization Procedure { #example-of-initialization-procedure }
 
 ``` objc
 #import <UIKit/UIKit.h>
@@ -225,24 +206,21 @@ end
 ```
 
 <a id="query-product-list"></a>
-
-## Query Product List
+## Query Product List { #query-product-list }
 
 * Products registered in IAP console are returned as the [NHNCloudProductResponse](./iap-ios/#nhncloudproductresponse) object.
 * Among the products registered in IAP console, products that can be purchased are returned as products ([NHNCloudProduct](./iap-ios/#nhncloudproduct)).
 * Among the products registered in IAP console, products for which product information could not be obtained from Apple Store are returned as invalidProducts ([NHNCloudProduct](./iap-ios/#nhncloudproduct)).
 
 <a id="specification-for-product-list-query-api"></a>
-
-### Specification for Product List Query API
+### Specification for Product List Query API { #specification-for-product-list-query-api }
 
 ``` objc
 + (void)requestProductsWithCompletionHandler:(nullable void (^)(NHNCloudProductsResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 ```
 
 <a id="usage-example-of-product-list-query-api"></a>
-
-### Usage Example of Product List Query API
+### Usage Example of Product List Query API { #usage-example-of-product-list-query-api }
 
 ``` objc
 [NHNCloudIAP requestProductsWithCompletionHandler:^(NHNCloudProductsResponse *response, NSError *error) {
@@ -261,8 +239,7 @@ end
 ```
 
 <a id="product-types"></a>
-
-### Product Types
+### Product Types { #product-types }
 
 | Product Name    | Product Type             | Description                                     |
 | ------ | ---------------- | -------------------------------------- |
@@ -288,8 +265,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="purchase-product"></a>
-
-## Purchase Product
+## Purchase Product { #purchase-product }
 
 * A purchase result is passed via [NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate) that has been set.
 * If an app is closed during the purchase process or the purchase is interrupted due to a network error, etc., reprocessing will be performed after the IAP SDK initialization of the next app launch.
@@ -299,8 +275,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 * You can request purchase using the [NHNCloudProduct](./iap-ios/#nhncloudproduct) object or a product ID.
 
 <a id="specification-for-product-purchase-api"></a>
-
-### Specification for Product Purchase API
+### Specification for Product Purchase API { #specification-for-product-purchase-api }
 
 ``` objc
 // Request product purchase
@@ -314,8 +289,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="usage-example-of-product-purchase-api"></a>
-
-### Usage Example of Product Purchase API
+### Usage Example of Product Purchase API { #usage-example-of-product-purchase-api }
 
 ``` objc
 // Request product purchase
@@ -326,16 +300,14 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="query-activated-subscription-list"></a>
-
-## Query Activated Subscription List
+## Query Activated Subscription List { #query-activated-subscription-list }
 
 * Query list of activated subscriptions for the current user ID.
 * Subscription products (auto-renewal subscription, auto-renewal consumable subscription) for which payment is completed are returned as the [NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult) objects until they are expired.
 * If the user ID is the same, subscription products purchased on Android can also be queried.
 
 <a id="specification-for-activated-subscription-list-api"></a>
-
-### Specification for Activated Subscription List API
+### Specification for Activated Subscription List API { #specification-for-activated-subscription-list-api }
 
 ``` objc
 // Query an activated subscription list in App Store
@@ -346,8 +318,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="usage-example-of-activated-subscription-list-query-api"></a>
-
-### Usage Example of Activated Subscription List Query API
+### Usage Example of Activated Subscription List Query API { #usage-example-of-activated-subscription-list-query-api }
 
 ``` objc
 [NHNCloudIAP requestActiveSubscriptionsWithCompletionHandler:^(NSArray<NHNCloudPurchaseResult *> *purchases, NSError *error) {
@@ -362,8 +333,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="restore-purchases"></a>
-
-## Restore Purchases
+## Restore Purchases { #restore-purchases }
 
 * Restore purchases based on the items purchased with the user's AppStore account and reflect it on the IAP console.
 * Use this feature if purchased subscription products cannot be queried or activated.
@@ -371,8 +341,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 * In case of auto-renewable consumable subscription products, if there is purchases that is not reflected, it can be queried from the unconsumed purchases after restoration.
 
 <a id="specification-for-purchase-restoration-api"></a>
-
-### Specification for Purchase Restoration API
+### Specification for Purchase Restoration API { #specification-for-purchase-restoration-api }
 
 ``` objc
 // Restore purchase
@@ -380,8 +349,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="usage-example-of-purchase-restoration-api"></a>
-
-### Usage Example of Purchase Restoration API
+### Usage Example of Purchase Restoration API { #usage-example-of-purchase-restoration-api }
 
 ``` objc
 [NHNCloudIAP restoreWithCompletionHandler:^(NSArray<NHNCloudPurchaseResult *> *purchases, NSError *error) {
@@ -396,16 +364,14 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="query-unconsumed-purchases"></a>
-
-## Query Unconsumed Purchases
+## Query Unconsumed Purchases { #query-unconsumed-purchases }
 
 * An consumable product must be processed as consumed after product is provided.
 * Purchases that have not been processed as consumed are returned a an [NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult) object.
 * Auto-renewable consumable subscription products can be queried from the unconsumed purchases whenever a renewal occurs.
 
 <a id="specification-for-unconsumed-purchase-query-api"></a>
-
-### Specification for Unconsumed Purchase Query API
+### Specification for Unconsumed Purchase Query API { #specification-for-unconsumed-purchase-query-api }
 
 ``` objc
 // Query unconsumed purchases for App Store
@@ -416,8 +382,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="usage-example-of-unconsumed-purchase-query-api"></a>
-
-### Usage Example of Unconsumed Purchase Query API
+### Usage Example of Unconsumed Purchase Query API { #usage-example-of-unconsumed-purchase-query-api }
 
 ``` objc
 [NHNCloudIAP requestConsumablePurchasesWithCompletionHandler:^(NSArray<NHNCloudPurchaseResult *> *purchases, NSError *error) {
@@ -430,14 +395,12 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="consume-consumable-products"></a>
-
-## Consume Consumable Products
+## Consume Consumable Products { #consume-consumable-products }
 
 * Consumable products must be processed as consumed through REST API or Consume API of SDK, after products are provided.
 
 <a id="specification-for-consumption-api"></a>
-
-### Specification for Consumption API
+### Specification for Consumption API { #specification-for-consumption-api }
 
 ``` objc
 + (void)consumeWithPurchaseResult:(NHNCloudPurchaseResult *)result
@@ -445,8 +408,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="usage-example-of-consumption-api"></a>
-
-### Usage Example of Consumption API
+### Usage Example of Consumption API { #usage-example-of-consumption-api }
 
 ``` objc
 // Query Unconsumed Purchases
@@ -478,8 +440,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ```
 
 <a id="provide-subscription-product-management-page"></a>
-
-## Provide Subscription Product Management Page
+## Provide Subscription Product Management Page { #provide-subscription-product-management-page }
 
 * When auto-renewable subscription products are used, the Manage Subscriptions page must be provided to users.
 > [Apple Guide](https://developer.apple.com/documentation/storekit/in-app_purchase/original_api_for_in-app_purchase/subscriptions_and_offers/handling_subscriptions_billing?language=objc)
@@ -492,8 +453,7 @@ itms-apps://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscription
 ```
 
 <a id="connect-to-manage-subscription-page"></a>
-
-### Connect to Manage Subscription Page
+### Connect to Manage Subscription Page { #connect-to-manage-subscription-page }
 
 ```objc
 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://apps.apple.com/account/subscriptions"] options: @{} completionHandler:nil];
@@ -510,24 +470,21 @@ The Manage Subscriptions page of App Store is connected.
 > `Service App` appears in the return to previous app button in the top left corner of an iOS device.
 
 <a id="remain-compatible-with-old-iap-sdk"></a>
-
-## Remain Compatible with (old) IAP SDK
+## Remain Compatible with (old) IAP SDK { #remain-compatible-with-old-iap-sdk }
 
 * To remain compatible with (old) IAP SDK, reprocessing is supported for incomplete purchases created by (old) IAP SDK.
 * >To enable compatibility with (old) IAP SDK, additionally link `sqlite3 Library(libsqlite3.tdb)`.
 ![linked_sqlite3](https://static.toastoven.net/toastcloud/sdk/ios/iap_link_sqlite3_202206.png)
 
 <a id="specification-for-reprocessing-incomplete-purchase-api"></a>
-
-### Specification for Reprocessing Incomplete Purchase API
+### Specification for Reprocessing Incomplete Purchase API { #specification-for-reprocessing-incomplete-purchase-api }
 
 ``` objc
 + (void)processesIncompletePurchasesWithCompletionHandler:(nullable void (^)(NSArray <NHNCloudPurchaseResult *> * _Nullable results, NSError * _Nullable error))completionHandler;
 ```
 
 <a id="usage-example-of-reprocessing-incomplete-purchase"></a>
-
-### Usage Example of Reprocessing Incomplete Purchase
+### Usage Example of Reprocessing Incomplete Purchase { #usage-example-of-reprocessing-incomplete-purchase }
 
 ``` objc
 // Request for Reprocessing Incomplete Purchase
@@ -560,12 +517,10 @@ The Manage Subscriptions page of App Store is connected.
 
 
 <a id="nhn-cloud-iap-class-reference"></a>
-
-## NHN Cloud IAP Class Reference
+## NHN Cloud IAP Class Reference { #nhn-cloud-iap-class-reference }
 
 <a id="nhncloudiapconfiguration"></a>
-
-### NHNCloudIAPConfiguration
+### NHNCloudIAPConfiguration { #nhncloudiapconfiguration }
 
 IAP configuration information which is used as a parameter for the NHN Cloud IAP initialization method.
 
@@ -586,8 +541,7 @@ NS_SWIFT_NAME(init(appKey:));
 ```
 
 <a id="nhncloudinapppurchasedelegate"></a>
-
-## NHNCloudInAppPurchaseDelegate
+## NHNCloudInAppPurchaseDelegate { #nhncloudinapppurchasedelegate }
 
 Lets you be notified of the purchase result and set how to perform a promotion purchase.
 
@@ -610,8 +564,7 @@ NS_SWIFT_NAME(didFailPurchase(productIdentifier:error:));
 ```
 
 <a id="nhncloudproductresponse"></a>
-
-## NHNCloudProductResponse
+## NHNCloudProductResponse { #nhncloudproductresponse }
 
 Lets you check the product list information.
 
@@ -627,8 +580,7 @@ Lets you check the product list information.
 ```
 
 <a id="nhncloudproduct"></a>
-
-## NHNCloudProduct
+## NHNCloudProduct { #nhncloudproduct }
 
 Lets you check information of a product registered in NHN Cloud IAP console.
 
@@ -662,8 +614,7 @@ Lets you check information of a product registered in NHN Cloud IAP console.
 ```
 
 <a id="nhncloudpurchaseresult"></a>
-
-## NHNCloudPurchaseResult
+## NHNCloudPurchaseResult { #nhncloudpurchaseresult }
 
 Lets you check the purchase information.
 
@@ -707,8 +658,7 @@ Lets you check the purchase information.
 ```
 
 <a id="error-codes"></a>
-
-## Error Codes
+## Error Codes { #error-codes }
 ```objc
 // IAP Error
 static NSString *const NHNCloudIAPErrorDomain = @"com.nhncloud.iap";

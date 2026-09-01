@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=610da5e47de1 -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
-
-## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Windows C++
+## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
 
 <a id="002-20240123"></a>
-
-## 2.0.0.2 (2024.01.23)
+## 2.0.0.2 (2024.01.23) { #002-20240123 }
 Download : [nhncloud-sdk-windows-2.0.0.2.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.2.zip)
 * 중복 로그 필터링 개선
 * CrashReporter 실행 시 핸들 누수 문제 수정
 * 기타 안정성 개선
 
 <a id="001-20220712"></a>
-
-## 2.0.0.1 (2022.07.12)
+## 2.0.0.1 (2022.07.12) { #001-20220712 }
 Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.1.zip)
 * NHNCloudLogger 모듈명 변경
 	* ToastLogger는 Deprecated 되었습니다.
@@ -23,8 +20,7 @@ Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toast
 * 크래시 로그 전송 시 로그 유형 필터 설정이 적용되지 않는 문제 수정
 
 <a id="005-20210331"></a>
-
-## 1.0.0.5 (2021.03.31)
+## 1.0.0.5 (2021.03.31) { #005-20210331 }
 Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/1.0.0/toast-sdk-windows-1.0.0.5.zip)
 * 버그 수정
 * 일부 API 인터페이스 수정
@@ -36,31 +32,25 @@ Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastclo
 
 
 <a id="943-20191010"></a>
-
-## 0.9.4.3 (2019.10.10)
+## 0.9.4.3 (2019.10.10) { #943-20191010 }
 Download : [toast-sdk-windows-0.9.4.3.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.4/toast-sdk-windows-0.9.4.3.zip)
 
 <a id="toast-log-crash"></a>
+### TOAST Log & Crash { #toast-log-crash }
 
-### TOAST Log & Crash
-
-<a id="bug-fixes"></a>
-
+<a id="toast-log-crash-bug-fixes"></a>
 #### 버그 수정
 
 * x86에서 pure virtual call / invalid parameter 크래쉬로그가 남지 않는 현상 처리
 
 <a id="930-20190723"></a>
-
-## 0.9.3.0 (2019.07.23)
+## 0.9.3.0 (2019.07.23) { #930-20190723 }
 Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.3/toast-sdk-windows-0.9.3.0.zip)
 
-<a id="toast-log-crash-2"></a>
+<a id="930-20190723-toast-log-crash"></a>
+### TOAST Log & Crash { #930-20190723-toast-log-crash }
 
-### TOAST Log & Crash
-
-<a id="added-features"></a>
-
+<a id="930-20190723-toast-log-crash-added-features"></a>
 #### 추가 사항
 
 * Initialize() 함수 성공/실패 처리
@@ -72,16 +62,13 @@ Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastclo
 * xp 버전 제공
 
 <a id="9012-20180904"></a>
-
-## 0.9.0.12 (2018.09.04)
+## 0.9.0.12 (2018.09.04) { #9012-20180904 }
 Download : [toast-sdk-windows-0.9.0.12.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.0/toast-sdk-windows-0.9.0.12.zip)
 
-<a id="toast-log-crash-3"></a>
+<a id="9012-20180904-toast-log-crash"></a>
+### TOAST Log & Crash { #9012-20180904-toast-log-crash }
 
-### TOAST Log & Crash
-
-<a id="added"></a>
-
+<a id="9012-20180904-toast-log-crash-added"></a>
 #### 추가 사항
 
 * 신규 기능 추가

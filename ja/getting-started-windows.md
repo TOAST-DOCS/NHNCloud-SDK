@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=f43b6cdf1fbf -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-windows-c"></a>
-
-## NHN Cloud > SDK使用ガイド > 開始する > Windows C++ 
+## NHN Cloud > SDK使用ガイド > 開始する > Windows C++ { #nhn-cloud-sdk-user-guide-getting-started-windows-c }
 
 <a id="supported-environment"></a>
-
-## サポート環境
+## サポート環境 { #supported-environment }
 * Windows 7
 * Windows 8
 * Windows 10
 * Windows 11
 
 <a id="structure-of-nhn-cloud-sdk"></a>
-
-## NHN Cloud SDKの構成
+## NHN Cloud SDKの構成 { #structure-of-nhn-cloud-sdk }
 
 Windows C++用NHN Cloud SDKの構成は次のとおりです。 
 
@@ -27,14 +24,12 @@ Windows C++用NHN Cloud SDKの構成は次のとおりです。
 | nhncloudsdk_example | サンプルプロジェクト |
 
 <a id="apply-nhn-cloud-sdk-to-visual-studio-projects"></a>
-
-## NHN Cloud SDKをVisual Studioプロジェクトに適用する 
+## NHN Cloud SDKをVisual Studioプロジェクトに適用する { #apply-nhn-cloud-sdk-to-visual-studio-projects }
 
 NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページでNHN Cloud Windows C++ SDKをダウンロードします。 
 
 <a id="include-libraries"></a>
-
-### ライブラリを含める 
+### ライブラリを含める { #include-libraries }
 
 1. メニューバーの**Project**タブで**Properties**を選択します。 
 2. **C/C++ > General > Additional Include Directories**でSdkのヘッダファイルパスを設定します。 
@@ -43,12 +38,10 @@ NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページでNHN Cloud Wind
 [参考] [https://msdn.microsoft.com/ko-kr/library/ms235636.aspx](https://msdn.microsoft.com/ko-kr/library/ms235636.aspx)
 
 <a id="nhncloudsdkexmple"></a>
-
-### nhncloudsdk_exmple
+### nhncloudsdk_exmple { #nhncloudsdkexmple }
 * Visual Studio 2019で作成したサンプルプロジェクトです。
 
 <a id="use-nhn-cloud-log-crash-search-service"></a>
-
-## NHN Cloud Log & Crash Search Service使用
+## NHN Cloud Log & Crash Search Service使用 { #use-nhn-cloud-log-crash-search-service }
 
 * [Log & Crash](./log-collector-windows)使用ガイド

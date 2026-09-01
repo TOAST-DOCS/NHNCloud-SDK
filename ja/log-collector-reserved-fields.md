@@ -1,20 +1,17 @@
 <!-- pre-align:aligned sig=5dabd105fada -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-reserved-fields"></a>
-
-## NHN Cloud > SDK使用ガイド > Log & Crash > 予約されているフィールド 
+## NHN Cloud > SDK使用ガイド > Log & Crash > 予約されているフィールド { #nhn-cloud-sdk-user-guide-log-crash-reserved-fields }
  
 <a id="definition-of-reserved-fields"></a>
-
-### 予約されているフィールド定義 
+### 予約されているフィールド定義 { #definition-of-reserved-fields }
  
 予約されているフィールドは、NHN Cloud SDK内部で定義して使用しているフィールド名です。 
 NHN Cloud SDKで予約されているユーザーフィールドを使用する場合、フィールド名に'reserved_'が追加されます。 
 予約されているフィールドの検査条件は、大文字/小文字の区別をせずに文字列を比較します。 
  
 <a id="usage-example-of-reserved-fields"></a>
-
-### 予約されているフィールドの使用例 
+### 予約されているフィールドの使用例 { #usage-example-of-reserved-fields }
  
 * 予約されているフィールドと大文字/小文字が同じ場合 
  
@@ -31,8 +28,7 @@ SENDTIME -> reserved_SENDTIME
 ``` 
  
 <a id="list-of-reserved-fields"></a>
-
-### 予約されているフィールドリスト 
+### 予約されているフィールドリスト { #list-of-reserved-fields }
  
 | key | description | 
 | --- | ----------- | 

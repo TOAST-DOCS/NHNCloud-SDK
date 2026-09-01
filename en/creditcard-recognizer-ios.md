@@ -1,12 +1,10 @@
 <!-- pre-align:aligned sig=fe0eee54692e -->
 
 <a id="nhn-cloud-sdk-user-guide-ocr-credit-card-ios"></a>
-
-## NHN Cloud > SDK User Guide > OCR > Credit Card (iOS)
+## NHN Cloud > SDK User Guide > OCR > Credit Card (iOS) { #nhn-cloud-sdk-user-guide-ocr-credit-card-ios }
 
 <a id="prerequisites"></a>
-
-## Prerequisites
+## Prerequisites { #prerequisites }
 
 1. Install [NHN Cloud SDK](./getting-started-ios).
 2. Enable [AI Service > OCR ] in[NHN Cloud Console](https://console.nhncloud.com).
@@ -15,14 +13,12 @@
 <br>
 
 <a id="supported-environment"></a>
-
-## Supported Environment
+## Supported Environment { #supported-environment }
 
 NHN Cloud OCR operates in iOS 11.0 or higher.<br>
 
 <a id="configuration-of-nhn-cloud-ocr"></a>
-
-## Configuration of NHN Cloud OCR
+## Configuration of NHN Cloud OCR { #configuration-of-nhn-cloud-ocr }
 
 The configuration of NHN Cloud OCR SDK for iOS is as follows.
 
@@ -33,12 +29,10 @@ The configuration of NHN Cloud OCR SDK for iOS is as follows.
 
 
 <a id="apply-nhn-cloud-ocr-sdk-to-xcode-project"></a>
-
-## Apply NHN Cloud OCR SDK to Xcode Project
+## Apply NHN Cloud OCR SDK to Xcode Project { #apply-nhn-cloud-ocr-sdk-to-xcode-project }
 
 <a id="apply-with-cococapods"></a>
-
-### 1. Apply with Cococapods
+### 1. Apply with Cococapods { #apply-with-cococapods }
 
 * Add Pod for NHN Cloud SDK by creating a pod file.
 
@@ -52,8 +46,7 @@ end
 ```
 
 <a id="apply-nhn-cloud-sdk-using-swift-package-manager"></a>
-
-### 2. Apply NHN Cloud SDK using Swift Package Manager
+### 2. Apply NHN Cloud SDK using Swift Package Manager { #apply-nhn-cloud-sdk-using-swift-package-manager }
 
 * Go to ** File > Add Packages...** in XCode.
 * Enter https://github.com/nhn/nhncloud.ios.sdk'를https://github.com/nhn/nhncloud.ios.sdk'를and select the ** button.
@@ -61,8 +54,7 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
-<a id="set-up-project"></a>
-
+<a id="apply-nhn-cloud-sdk-using-swift-package-manager-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** to **Other Linker Flags** of **Build Settings**.
@@ -70,11 +62,9 @@ end
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="download-binaries-and-apply-to-nhn-cloud-sdk"></a>
+### Download binaries and apply to NHN Cloud SDK { #download-binaries-and-apply-to-nhn-cloud-sdk }
 
-### Download binaries and apply to NHN Cloud SDK
-
-<a id="set-up-framework"></a>
-
+<a id="download-binaries-and-apply-to-nhn-cloud-sdk-set-up-framework"></a>
 #### Set up Framework
 
 * You can download the full iOS SDK from the NHN Cloud [Downloads](../../Download/#nhn-cloud-sdk) page.
@@ -84,8 +74,7 @@ end
 ![linked_avfoundation_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/linked_avfoundation_frameworks.png)
 ![linked_frameworks_ocr](https://static.toastoven.net/toastcloud/sdk/ios/linked_frameworks_ocr.png)
 
-<a id="set-up-project-2"></a>
-
+<a id="download-binaries-and-apply-to-nhn-cloud-sdk-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** to **Other Linker Flags** of **Build Settings**.
@@ -93,8 +82,7 @@ end
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="initialize-nhncloudocr-sdk"></a>
-
-## Initialize NHNCLOUDOCR SDK
+## Initialize NHNCLOUDOCR SDK { #initialize-nhncloudocr-sdk }
 * Set AppKey and Secret issued from NHN Cloud Console in NHNCloudOCRConfiguration object.
   * AI Service -> OCR -> Document OCR -> Credit Card
 * NHNCloudOCR uses an NHNCloudOCRConfiguration object as a parameter for initialization.
@@ -105,8 +93,7 @@ Value : [Camera Permission Request Message]
 ```
 
 <a id="specification-for-initialization-api"></a>
-
-### Specification for Initialization API
+### Specification for Initialization API { #specification-for-initialization-api }
 
 ``` objc
 // reset
@@ -117,8 +104,7 @@ Value : [Camera Permission Request Message]
 ```
 
 <a id="specification-for-delegate-api"></a>
-
-### Specification for Delegate API
+### Specification for Delegate API { #specification-for-delegate-api }
 * You can be notified of the recognition result when  NHNCloudCreditCardRecognizerDelegate is registered.
 * When OCR is running, you can receive screen capture and video recording events.
 * When using the default screen provided by the SDK (implementing inherited NHNCloudCreditCardRecognizerViewController), close and confirmation events can be received.
@@ -144,12 +130,11 @@ Value : [Camera Permission Request Message]
 ```
 
 <a id="set-up-detected-image-return"></a>
-
-### Set up Detected Image Return
+### Set up Detected Image Return { #set-up-detected-image-return }
 * NHNCloudCreditCardInfo data, which is the OCR result, can be returned together with the detected image. 
     * Default is disabled. 
-<a id="specification-for-setting-up-detected-image-return-api"></a>
 
+<a id="set-up-detected-image-return-specification-for-setting-up-detected-image-return-api"></a>
 #### Specification for Setting up Detected Image Return API 
 ```objc
 @interface NHNCloudOCR : NSObject
@@ -162,11 +147,9 @@ Value : [Camera Permission Request Message]
 
 
 <a id="display-recognition-area"></a>
+### Display Recognition Area { #display-recognition-area }
 
-### Display Recognition Area
-
-<a id="return-recognition-area-api"></a>
-
+<a id="display-recognition-area-return-recognition-area-api"></a>
 #### Return Recognition Area API
 * The coordinate information of the recognized area in NHNCloudCreditCardInfo, which is the OCR result, can be returned.
 
@@ -183,8 +166,7 @@ Value : [Camera Permission Request Message]
 
 ```
 
-<a id="draw-on-the-recognition-area-imageview"></a>
-
+<a id="display-recognition-area-draw-on-the-recognition-area-imageview"></a>
 #### Draw on the Recognition Area ImageView
 
 ```objc
@@ -242,8 +224,7 @@ Value : [Camera Permission Request Message]
 ```
 
 <a id="example-of-initialization-process"></a>
-
-### Example of Initialization Process
+### Example of Initialization Process { #example-of-initialization-process }
 
 ``` objc
 #import <NHNCloudOCR/NHNCloudOCR.h>
@@ -310,27 +291,22 @@ Value : [Camera Permission Request Message]
 
 
 <a id="how-to-apply-credit-card"></a>
-
-## How to Apply Credit Card
+## How to Apply Credit Card { #how-to-apply-credit-card }
 
 <a id="nhncloudcreditcardrecognizerviewcontroller"></a>
+### NHNCloudCreditCardRecognizerViewController { #nhncloudcreditcardrecognizerviewcontroller }
 
-### NHNCloudCreditCardRecognizerViewController
-
-<a id="use-credit-card-recognizer-viewcontroller"></a>
-
+<a id="nhncloudcreditcardrecognizerviewcontroller-use-credit-card-recognizer-viewcontroller"></a>
 #### 1. Use Credit-Card Recognizer ViewController
 * You can easily use Card-Card Recognizer with the default UI by connecting a class that inherits and implements NHNCloudCreditCardRecognizerViewController to ViewController of Storyboard.
 
-<a id="create-class"></a>
-
+<a id="nhncloudcreditcardrecognizerviewcontroller-create-class"></a>
 #### 2. Create Class
 ![default_viewcontroller](https://static.toastoven.net/toastcloud/sdk/ios/default_viewcontroller.png)
 * Create a ViewController Class with NHNCloudCreditCardRecognizerViewController as a subclass. 
 
 
-<a id="connect-to-storyboard"></a>
-
+<a id="nhncloudcreditcardrecognizerviewcontroller-connect-to-storyboard"></a>
 #### 3. Connect to Storyboard
 ![create_viewcontroller](https://static.toastoven.net/toastcloud/sdk/ios/create_viewcontroller.png)
 * Add ViewController to Storyboard.
@@ -344,13 +320,11 @@ Value : [Camera Permission Request Message]
 * Set up and implement the Delegate. 
 
 <a id="customize-nhncloudcreditcardrecognizerserviceviewcontroller"></a>
-
-### Customize NHNCloudCreditCardRecognizerServiceViewController
+### Customize NHNCloudCreditCardRecognizerServiceViewController { #customize-nhncloudcreditcardrecognizerserviceviewcontroller }
 * You can customize the UI using NHNCloudCreditCardRecognizerServiceViewController.
   * **The Credit-Card guide cannot be changed because pre-defined values are used.**
 
-<a id="inherit-nhncloudcreditcardrecognizerserviceviewcontroller"></a>
-
+<a id="customize-nhncloudcreditcardrecognizerserviceviewcontroller-inherit-nhncloudcreditcardrecognizerserviceviewcontroller"></a>
 #### 1. Inherit NHNCloudCreditCardRecognizerServiceViewController 
 * You can perform customizing by implementing inheritance of NHNCloudCreditCardRecognizerServiceViewController.
 
@@ -427,23 +401,21 @@ Value : [Camera Permission Request Message]
 ```
 
 <a id="use-test-environment"></a>
-
-### Use Test Environment
+### Use Test Environment { #use-test-environment }
 * You can test OCR by using the Credit-Card guide provided to test NHNCloudOCR SDK.
   * OCR is initiated when a credit card exists in the Credit-Card guide.
     * Default value is hidden so that there is an invisible guide.
     * You can output a guide for testing by using `enableTestGuide`. 
 
-<a id="specification-for-credit-card-guide"></a>
-
+<a id="use-test-environment-specification-for-credit-card-guide"></a>
 #### Specification for Credit-Card Guide
 ```objc
 @interface NHNCloudOCRConfiguration : NSObject
 - (void)enableTestGuide;
 @end
 ```
-<a id="example-of-using-credit-card-guide"></a>
 
+<a id="use-test-environment-example-of-using-credit-card-guide"></a>
 #### Example of using Credit-Card guide
 
 ```objc
@@ -460,26 +432,23 @@ Value : [Camera Permission Request Message]
 ```
 
 <a id="control-credit-card-recognizer-viewcontroller"></a>
-
-## Control Credit-Card Recognizer ViewController
+## Control Credit-Card Recognizer ViewController { #control-credit-card-recognizer-viewcontroller }
 
 > Inherit and implement NHNCloudCreditCardRecognizerViewController or NHNCloudCreditCardRecognizerServiceViewController by referring to `How to Apply Credit Card`
 
 <a id="credit-card-recognizer-startstop"></a>
-
-### 4. Credit-Card Recognizer Start/Stop
+### 4. Credit-Card Recognizer Start/Stop { #credit-card-recognizer-startstop }
 * Start or stop Credit-Card Recognizer.
 
-<a id="specification-for-start-or-stop-credit-card-recognizer"></a>
-
+<a id="credit-card-recognizer-startstop-specification-for-start-or-stop-credit-card-recognizer"></a>
 #### Specification for Start or stop Credit-Card Recognizer.
 ```objc
 - (void)startRunning;
 - (void)stopRunning;
 - (BOOL)isRunning;
 ```
-<a id="example-of-start-or-stop-credit-card-recognizer"></a>
 
+<a id="credit-card-recognizer-startstop-example-of-start-or-stop-credit-card-recognizer"></a>
 #### Example of Start or stop Credit-Card Recognizer
 ```objc
 - (void)start {
@@ -493,20 +462,18 @@ Value : [Camera Permission Request Message]
 ```
 
 <a id="rotate-credit-card-guide"></a>
-
-### 5. Rotate Credit-Card Guide
+### 5. Rotate Credit-Card Guide { #rotate-credit-card-guide }
 * You can rotate the Credit-Card guide according to the direction of a credit card.
 
-<a id="specification-for-rotate-credit-card-guide"></a>
-
+<a id="rotate-credit-card-guide-specification-for-rotate-credit-card-guide"></a>
 #### Specification for Rotate Credit-Card Guide
 ```objc
 @property (assign, nonatomic, readonly) CGRect creditCardGuide;
 @property (assign, nonatomic, readonly) NHNCloudCreditCardOrientation creditCardGuideOrientation;
 - (void)rotateCreditCardGuideOrientation;
 ```
-<a id="example-of-using-rotate-credit-card-guide"></a>
 
+<a id="rotate-credit-card-guide-example-of-using-rotate-credit-card-guide"></a>
 #### Example of using Rotate Credit-Card Guide
 ```objc
 typedef NS_ENUM(NSInteger, NHNCloudCreditCardOrientation) {
@@ -530,20 +497,18 @@ typedef NS_ENUM(NSInteger, NHNCloudCreditCardOrientation) {
 ```
 
 <a id="light-enabledisable"></a>
-
-### 6. Light Enable/Disable
+### 6. Light Enable/Disable { #light-enabledisable }
 * Enable or disable the camera light of a device.
 
-<a id="specification-for-enabledisable-light-api"></a>
-
+<a id="light-enabledisable-specification-for-enabledisable-light-api"></a>
 #### Specification for Enable/Disable Light API
 ```objc
 - (void)enableTorchMode;
 - (void)disableTorchMode;
 - (BOOL)isEnableTorchMode;
 ```
-<a id="example-of-enable-or-disable-the-camera-light-of-a-device"></a>
 
+<a id="light-enabledisable-example-of-enable-or-disable-the-camera-light-of-a-device"></a>
 #### Example of Enable or disable the camera light of a device.
 ```objc
 - (void)torchButtonAction:(UIButton *)button {    
@@ -558,20 +523,18 @@ typedef NS_ENUM(NSInteger, NHNCloudCreditCardOrientation) {
 
 
 <a id="enabledisable-camera"></a>
-
-### 7. Enable/Disable Camera
+### 7. Enable/Disable Camera { #enabledisable-camera }
 * Enable or disable a device’s camera.
 
-<a id="specification-for-enabledisable-camera"></a>
-
+<a id="enabledisable-camera-specification-for-enabledisable-camera"></a>
 #### Specification for Enable/Disable Camera
 ```objc
 - (void)startRunningCamera;
 - (void)stopRunningCamera;
 - (BOOL)isRunnginCamera;
 ```
-<a id="example-of-enabledisable-camera"></a>
 
+<a id="enabledisable-camera-example-of-enabledisable-camera"></a>
 #### Example of Enable/Disable Camera
 ```objc
 - (void)cameraButtonAction:(UIButton *)button {    
