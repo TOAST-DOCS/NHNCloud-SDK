@@ -38,7 +38,8 @@ buildscript {
 apply plugin: 'com.toast.android.toast-services'
 ```
 
-## 인증 정보 설정
+<a id="configure-authentication-information"></a>
+## 인증 정보 설정 { #configure-authentication-information }
 
 파일 업로드 요청에는 NHN Cloud User Access Token이 필요합니다.
 앱 수준의 Gradle 파일에서 `crashReporter`의 `auth` 블록을 설정합니다.
@@ -54,7 +55,8 @@ apply plugin: 'com.toast.android.toast-services'
 | User Access Key ID와 Secret Access Key 사용(권장) | `userAccessKeyId`, `secretAccessKey` | 플러그인이 토큰을 새로 발급받아 업로드를 계속합니다. |
 | 토큰 직접 입력 | `accessToken` | 플러그인이 토큰을 갱신할 수 없으므로 새 토큰을 직접 입력해야 합니다. |
 
-### User Access Key ID와 Secret Access Key 사용
+<a id="use-user-access-key-id-and-secret-access-key"></a>
+### User Access Key ID와 Secret Access Key 사용 { #use-user-access-key-id-and-secret-access-key }
 
 Groovy DSL에서는 다음과 같이 설정합니다.
 
@@ -84,7 +86,8 @@ toastServices {
 }
 ```
 
-### User Access Token 직접 사용
+<a id="using-a-user-access-token-directly"></a>
+### User Access Token 직접 사용 { #using-a-user-access-token-directly }
 
 이미 발급받은 User Access Token을 직접 입력할 수도 있습니다.
 
@@ -102,7 +105,8 @@ toastServices {
 `accessToken`은 `userAccessKeyId`, `secretAccessKey`와 함께 설정할 수 없습니다.
 직접 입력한 토큰이 만료되면 새 토큰으로 변경해야 하므로 `userAccessKeyId`와 `secretAccessKey`를 설정하는 방식을 권장합니다.
 
-### 인증 정보 규칙
+<a id="authentication-information-rules"></a>
+### 인증 정보 규칙 { #authentication-information-rules }
 
 인증 정보에는 다음 규칙이 적용됩니다.
 
