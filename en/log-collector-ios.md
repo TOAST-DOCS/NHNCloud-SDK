@@ -1,3 +1,5 @@
+<!-- machine_translated: true -->
+
 <!-- pre-align:aligned sig=a0cd6b6bb2af -->
 
 <a id="nhn-cloud-sdk-user-guide-log-crash-ios"></a>
@@ -74,8 +76,32 @@ end
 <a id="apply-nhn-cloud-symbol-uploader"></a>
 ## Apply NHN Cloud Symbol Uploader { #apply-nhn-cloud-symbol-uploader }
 
+!!! tip "Tips"
+    The Log & Crash Search Symbol API has been updated to v3. Starting with v3, `User Access Token` authentication is required in addition to the AppKey.
+
+<a id="symbol-uploader-preparation-for-auth"></a>
+### Prepare Authentication { #symbol-uploader-preparation-for-auth }
+
+NHN Cloud User Access Token is required to call v3 APIs. You can provide it using one of the following two methods.
+
+**Method 1. Provide a User Access Key ID / Secret Access Key (recommended)**
+
+- In the console, go to the account menu in the upper-right corner and choose **API Security Settings** to create a User Access Key (User Access Key ID, Secret Access Key).
+- SymbolUploader automatically issues and uses a token with the provided key.
+- Options: `--user-access-key-id` (`-uak`), `--secret-access-key` (`-sak`)
+
+**Method 2. Provide a User Access Token directly**
+
+- Use a User Access Token (Bearer) that you have already issued.
+- Option: `--user-access-token` (`-uat`)
+
+!!! danger "Caution"
+    Method 1 (`-uak`/`-sak`) and Method 2 (`-uat`) cannot be used at the same time. Provide only one of the two.
+    If no authentication information is provided, the upload will not proceed.
+
 <a id="change-project-debug-settings"></a>
 ### Change Project Debug Settings { #change-project-debug-settings }
+
 * You must change build settings to change the debug information format of the project.
 * Xcode -> Project Target -> Build Settings -> Debug Information Format -> Debug -> DWARF with dSYM File
 
@@ -83,51 +109,96 @@ end
 ### Upload Automatically Using Run Script in Development Environment { #upload-automatically-using-run-script-in-development-environment }
 
 * Xcode -> Project Target -> Build Phases -> + -> New Run Script Phase
-* Expand the new Run Script section that shows up.
-* In the script field below the Shell field, add a new run script.
-```
+* Expand the new Run Script section that appears.
+* Add a new execution script in the script field below the Shell field.
+
+**Method 1 (User Access Key)**
+
+```sh
 if [ "${CONFIGURATION}" = "Debug" ]; then
-    ${PODS_ROOT}/NHNCloudSymbolUploader/nhncloud.ios.sdk-*/run --app-key LOG_N_CRASH_SEARCH_DEV_APPKEY
+    ${PODS_ROOT}/NHNCloudSymbolUploader/nhncloud.ios.sdk-*/run \
+        --app-key LOG_N_CRASH_SEARCH_APPKEY \
+        --user-access-key-id USER_ACCESS_KEY_ID \
+        --secret-access-key SECRET_ACCESS_KEY
 fi
 ```
-* In LOG_N_CRASH_SEARCH_APPKEY, enter AppKey of Log & Crash Search.
-* On Input Files under the Run Script section, set the default path of dSYM.
-    * ${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}
 
-![symbol_uploader_script_pods_path](https://static.toastoven.net/toastcloud/sdk/ios/symbol_uploader_guide_script_pods_path_202206.png)
+**Method 2 (User Access Token)**
+
+```sh
+if [ "${CONFIGURATION}" = "Debug" ]; then
+    ${PODS_ROOT}/NHNCloudSymbolUploader/nhncloud.ios.sdk-*/run \
+        --app-key LOG_N_CRASH_SEARCH_APPKEY \
+        --user-access-token USER_ACCESS_TOKEN
+fi
+```
+
+* You must enter the Log & Crash Search Service Appkey in `LOG_N_CRASH_SEARCH_APPKEY`.
+* For authentication information, enter the information for whichever of the two methods you use.
+    * Method 1: `USER_ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`
+    * Method 2: `USER_ACCESS_TOKEN`
+
+* Set the default path of dSYM in Input Files at the bottom of the Run Script section.
+    * `${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}`
+
+![](../static/images/ios/symbol-uploader/debug-symbol-uploader-settings.png){ height="100%" }
 
 <a id="upload-manually-using-symbol-uploader"></a>
 ### Upload Manually Using Symbol Uploader { #upload-manually-using-symbol-uploader }
 
 * SymbolUploader Usage
 
-```
-USAGE: symbol-uploader -ak <ak> -pv <pv> [-sz <sz>] <path> [--verbose]
+```sh
+USAGE: symbol-uploader -ak <ak> -pv <pv> [-sz <sz>] [-uak <uak>] [-sak <sak>] [-uat <uat>] <path> [--verbose]
 
 ARGUMENTS:
   <path>                  dSYM file path is must be entered.
 
 OPTIONS:
-  -ak, --app-key <ak>     [Log & Crash Search]'s AppKey must be entered.
+  -ak, --app-key <ak>     [Log&Crash Search]'s AppKey must be entered.
   -pv, --project-version <pv>
                           Project version must be entered.
   -sz, --service-zone <sz>
-                          You can choose between real, alpha, and demo. (default: real)
+                          You can choose between real, alpha, beta. (default: real)
+  -uak, --user-access-key-id <uak>
+                          User Access Key ID (use with -sak to issue a token).
+  -sak, --secret-access-key <sak>
+                          Secret Access Key (use with -uak to issue a token).
+  -uat, --user-access-token <uat>
+                          User Access Token (Bearer) to use directly.
   --verbose               Show more debugging information
   -h, --help              Show help information.
-
 ```
 
 * Without using Xcode's Run Script, you can upload symbols manually using SymbolUploader in the following way at any time you want.
 
-```
-./SymbolUploader --app-key {APP_KEY} --project-version {CFBundleShortVersionString || MARKETING_VERSION} {symbol path(~/Project.dSYM)}
+**Method 1 (User Access Key)**
+
+```sh
+./SymbolUploader \
+    --app-key {APP_KEY} \
+    --project-version {CFBundleShortVersionString || MARKETING_VERSION} \
+    --user-access-key-id {USER_ACCESS_KEY_ID} \
+    --secret-access-key {SECRET_ACCESS_KEY} \
+    {symbol path(~/Project.dSYM)}
 ```
 
-> `If a symbol with the same version has already been uploaded, SymbolUploader removes the uploaded symbol and performs uploading.`
-> At this time, if the filenames of the two symbol files are different, the uploaded symbol will not be removed.
-> You need to remove the uploaded symbol from the Log & Crash Search console.
-> https://console.nhncloud.com/-> Select Organization -> Select Project -> Anaytics -> Log & Crash Search -> Settings -> Symbol Files
+**Method 2 (User Access Token)**
+
+```
+./SymbolUploader \
+    --app-key {APP_KEY} \
+    --project-version {CFBundleShortVersionString || MARKETING_VERSION} \
+    --user-access-token {USER_ACCESS_TOKEN} \
+    {symbol path(~/Project.dSYM)}
+```
+
+!!! tip "Tips"
+    If a Symbol with the same filename already exists for the same version, the server rejects the upload.
+    (resultMessage: "A file with the same filename for this version has already been uploaded.")
+    In this case, SymbolUploader removes the existing Symbol with the same filename and re-uploads it.
+    If the two Symbol files have different filenames, the existing Symbol is not removed, so you must remove it manually from the Log & Crash Search console.
+    https://console.nhncloud.com/ > Select organization -> Select project > Analytics > Log & Crash Search > Settings > Symbol Files
 
 <a id="precautions-when-using-crashreport"></a>
 ### Precautions when using CrashReport { #precautions-when-using-crashreport }
@@ -214,6 +285,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="usage-example-of-user-defined-fields"></a>
 ### Usage Example of User-Defined Fields { #usage-example-of-user-defined-fields }
+
 ```objc
 // Add User-Defined Field
 [NHNCloudLogger setUserFieldWithValue:@"USER_VALUE" forKey:@"USER_KEY"];
@@ -221,12 +293,14 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="collect-crash-logs"></a>
 ## Collect Crash Logs { #collect-crash-logs }
+
 * NHN Cloud Logger sends crash information to logs.
 * It is enabled along with NHN Cloud Logger initialization, by setting.
 * To send crash logs, PLCrashReporter is applied.
 
 <a id="set-whether-to-enable-crashreporter"></a>
 ### Set Whether to Enable CrashReporter { #set-whether-to-enable-crashreporter }
+
 * By default, CrashReporter is enabled when NHN Cloud Logger is initialized.
 * During NHN Cloud Logger initialization, you can set whether to use CrashReporter or not.
 * In order not to send crash logs, CrashReporter must be disabled.
@@ -236,6 +310,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="set-whether-to-enable-crashreporter-enable-crashreporter"></a>
 #### Enable CrashReporter
+
 ```objc
 // CrashReporter Enable Configuration
 NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration configurationWithAppKey:@"YOUR_APP_KEY" enableCrashReporter:YES];
@@ -245,6 +320,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="set-whether-to-enable-crashreporter-disable-crashreporter"></a>
 #### Disable CrashReporter
+
 ```objc
 
 // CrashReporter Disable Configuration
@@ -261,6 +337,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="specification-for-data-adapter-api"></a>
 ### Specification for Data Adapter API { #specification-for-data-adapter-api }
+
 ```objc
 + (void)setShouldReportCrashHandler:(void (^)(void))handler;
 ```
@@ -286,6 +363,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="specification-for-set-delegate-api"></a>
 ### Specification for Set Delegate API { #specification-for-set-delegate-api }
+
 ```objc
 + (void)setDelegate:(id<NHNCloudLoggerDelegate>) delegate;
 ```
@@ -364,6 +442,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="network-insights"></a>
 ## Network Insights { #network-insights }
+
 * Network Insights measure delay time and response values by calling URL registered in console. They may be applied to measure delays and response vales of many countries around the world (according to national codes on a device).
 
 > With Network Insights enabled in console, it is requested for one time via URL registered in the console when NHN Cloud Logger is initialized.
@@ -391,6 +470,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 <a id="set-nhn-cloud-logger-for-government-agencies"></a>
 ### Set NHN Cloud Logger for government agencies { #set-nhn-cloud-logger-for-government-agencies }
+
 * You can configure the settings to use the cloud for government agencies by using cloudEnvironment property of NHNCloudLoggerConfiguration. 
 
 ```objc
