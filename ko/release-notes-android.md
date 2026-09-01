@@ -3,6 +3,48 @@
 <a id="nhn-cloud-sdk-user-guide-release-notes-android"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Android { #nhn-cloud-sdk-user-guide-release-notes-android }
 
+## 1.13.0 (2026. 09. 15.)
+
+### NHN Cloud Logger
+
+#### 기능 개선
+
+* Log & Crash Search API 도메인 변경
+    * 로그 수집 API 도메인이 api-logncrash.cloud.toast.com에서 api-logncrash.nhncloudservice.com으로 변경되었습니다.
+    * 설정 API 도메인이 setting-logncrash.cloud.toast.com에서 api-setting-logncrash.nhncloudservice.com으로 변경되었습니다.
+
+### NHN Cloud Push
+
+#### 기능 개선
+
+* Push API 도메인 변경
+    * 토큰 API와 사용자 태그 API 도메인이 api-push.cloud.toast.com에서 push.api.nhncloudservice.com으로 변경되었습니다.
+* Notification Hub 지표 전송 방식 개선
+    * 지표 전송이 재시도되더라도 동일한 지표가 중복 집계되지 않도록 개선하였습니다.
+
+#### 버그 수정
+
+* 알림 클릭 액션이 반복 실행되는 문제 수정
+    * Android 12 이상에서 클릭 액션을 URL로 설정한 알림을 탭한 뒤 최근 앱 목록에서 앱을 다시 열 때, 클릭 액션이 반복 실행되어 앱에 진입할 수 없던 문제를 수정하였습니다.
+* Notification Hub 토큰 등록 실패 문제 수정
+    * 사용자 ID를 변경한 뒤 토큰 등록이 항상 실패하던 문제를 수정하였습니다.
+
+### NHN Cloud OCR
+
+#### 기능 개선
+
+* OCR API 도메인 변경
+    * OCR API 도메인이 ocr.api.nhncloudservice.com에서 api-ocr.nhncloudservice.com으로 변경되었습니다.
+
+### TOAST Gradle Plugin (0.1.0)
+
+#### 기능 추가
+
+* Log & Crash Search Symbol API v3를 이용한 mapping 파일 및 native symbol 업로드 지원
+    * 0.1.0부터 심벌 업로드에 User Access Token 인증이 필요합니다.
+    * User Access Token을 직접 설정하거나 User Access Key와 Secret Access Key를 사용해 자동으로 발급받을 수 있습니다.
+    * 자세한 사항은 [Android 심벌 업로더 가이드](https://docs.nhncloud.com/ko/nhncloud-sdk/ko/symbol-uploader-android/)를 참고하세요.
+
 <a id="121-october-28-2025"></a>
 ## 1.12.1 (2025. 10. 28.) { #121-october-28-2025 }
 
