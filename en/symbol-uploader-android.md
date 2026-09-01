@@ -40,7 +40,8 @@ Apply the NHN Cloud Gradle Plugin to your app-level `build.gradle` file.
 apply plugin: 'com.toast.android.toast-services'
 ```
 
-## Configure Authentication Information
+<a id="configure-authentication-information"></a>
+## Configure Authentication Information { #configure-authentication-information }
 
 File upload requests require an NHN Cloud User Access Token.
 Configure the `auth` block of `crashReporter` in your app-level Gradle file.
@@ -56,7 +57,8 @@ You can choose one of the following two authentication methods:
 | Use User Access Key ID and Secret Access Key (recommended) | `userAccessKeyId`, `secretAccessKey` | The plugin issues a new token and continues the upload. |
 | Enter token directly | `accessToken` | The plugin cannot renew the token, so you must manually enter a new token. |
 
-### Use User Access Key ID and Secret Access Key
+<a id="use-user-access-key-id-and-secret-access-key"></a>
+### Use User Access Key ID and Secret Access Key { #use-user-access-key-id-and-secret-access-key }
 
 In Groovy DSL, configure the settings as follows.
 
@@ -86,7 +88,8 @@ toastServices {
 }
 ```
 
-### Using a User Access Token Directly
+<a id="using-a-user-access-token-directly"></a>
+### Using a User Access Token Directly { #using-a-user-access-token-directly }
 
 You can also directly enter a User Access Token that you have already been issued.
 
@@ -104,7 +107,8 @@ toastServices {
 `accessToken` cannot be configured together with `userAccessKeyId` and `secretAccessKey`.
 Because you must replace an expired directly entered token with a new one, we recommend configuring `userAccessKeyId` and `secretAccessKey` instead.
 
-### Authentication Information Rules
+<a id="authentication-information-rules"></a>
+### Authentication Information Rules { #authentication-information-rules }
 
 The following rules apply to authentication information.
 
