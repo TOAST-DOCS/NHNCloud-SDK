@@ -1,10 +1,21 @@
+<!-- machine_translated: true -->
+
 <!-- pre-align:aligned sig=610da5e47de1 -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
 ## NHN Cloud > SDK User Guide > Release Notes > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
 
 <a id="002-20240123"></a>
-## 2.0.0.2 (2024.01.23) { #002-20240123 }
+## 2.1.1.0 (September 15, 2026)
+
+Download : [nhncloud-sdk-windows-2.1.1.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.1.1/nhncloud-sdk-windows-2.1.1.0.zip)
+* Applied Log & Crash Search API domain changes
+    * Changed the log collection API domain from api-logncrash.cloud.toast.com to api-logncrash.nhncloudservice.com.
+    * Changed the settings API domain from setting-logncrash.cloud.toast.com to api-setting-logncrash.nhncloudservice.com.
+
+<a id="002-20240123"></a>
+## 2.0.0.2 (January 23, 2024) { #002-20240123 }
+
 Download : [nhncloud-sdk-windows-2.0.0.2.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.2.zip)
 * Improved duplicate logs filtering
 * Fixed handdle leak issues when executing CrashReporter
@@ -12,7 +23,8 @@ Download : [nhncloud-sdk-windows-2.0.0.2.zip](https://static.toastoven.net/toast
 
 
 <a id="001-20220712"></a>
-## 2.0.0.1 (2022.07.12) { #001-20220712 }
+## 2.0.0.1 (July 12, 2022) { #001-20220712 }
+
 Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.1.zip)
 * Changed the module name to NHNCloudLogger
 	* ToastLogger has been deprecated.
@@ -21,7 +33,8 @@ Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toast
 * Fixed an issue where setting Log Types Filter is not applied when sending crash logs
 
 <a id="005-20210331"></a>
-## 1.0.0.5 (2021.03.31) { #005-20210331 }
+## 1.0.0.5 (March 31, 2021) { #005-20210331 }
+
 Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/1.0.0/toast-sdk-windows-1.0.0.5.zip)
 * Bug fixes
 * Changed some API interfaces
@@ -32,7 +45,8 @@ Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastclo
 	* Sample project included
 
 <a id="943-20191010"></a>
-## 0.9.4.3 (2019.10.10) { #943-20191010 }
+## 0.9.4.3 (October 10, 2019) { #943-20191010 }
+
 Download : [toast-sdk-windows-0.9.4.3.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.4/toast-sdk-windows-0.9.4.3.zip)
 
 
@@ -45,7 +59,8 @@ Download : [toast-sdk-windows-0.9.4.3.zip](https://static.toastoven.net/toastclo
 * Fixed an issue where no crash log remains for pure virtual call / invalid parameter on x86
 
 <a id="930-20190723"></a>
-## 0.9.3.0 (2019.07.23) { #930-20190723 }
+## 0.9.3.0 (July 23, 2019) { #930-20190723 }
+
 Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.3/toast-sdk-windows-0.9.3.0.zip)
 
 <a id="930-20190723-toast-log-crash"></a>
@@ -63,7 +78,8 @@ Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastclo
 * Provides xp version
 
 <a id="9012-20180904"></a>
-## 0.9.0.12 (2018.09.04) { #9012-20180904 }
+## 0.9.0.12 (September 4, 2018) { #9012-20180904 }
+
 Download : [toast-sdk-windows-0.9.0.12.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.0/toast-sdk-windows-0.9.0.12.zip)
 
 <a id="9012-20180904-toast-log-crash"></a>
