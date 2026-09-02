@@ -1,10 +1,11 @@
-<!-- pre-align:aligned sig=610da5e47de1 -->
+<!-- pre-align:aligned sig=ffe9414de54f -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
 
 
-## 2.1.1.0(2026. 09. 15)
+<a id="110-september-15-2026"></a>
+## 2.1.1.0(2026. 09. 15) { #110-september-15-2026 }
 Download : [nhncloud-sdk-windows-2.1.1.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.1.1/nhncloud-sdk-windows-2.1.1.0.zip)
 * Log & Crash Search API 도메인 변경 반영
     * 로그 수집 API 도메인이 api-logncrash.cloud.toast.com에서 api-logncrash.nhncloudservice.com으로 변경되었습니다.
