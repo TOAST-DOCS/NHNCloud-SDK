@@ -5,8 +5,8 @@
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
 ## NHN Cloud > SDK使用ガイド > リリースノート > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
 
-<a id="002-20240123"></a>
-## 2.1.1.0(2026. 09. 15)
+<a id="110-september-15-2026"></a>
+## 2.1.1.0(2026. 09. 15) { #110-september-15-2026 }
 
 Download : [nhncloud-sdk-windows-2.1.1.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.1.1/nhncloud-sdk-windows-2.1.1.0.zip)
 * Log & Crash Search API ドメイン変更の反映
