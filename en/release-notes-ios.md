@@ -902,9 +902,9 @@
 <a id="150-2019-06-25-toast-push-improvements"></a>
 #### Feature Updates
 
-* Changed the default settings of notification options
+* Changed the default notification option settings
     * Changed to not display notifications while the app is running
-        * For the same behavior as before, check [here](./push-ios/#_6).
+        * To maintain the same behavior as before, see [here](./push-ios/#notification-option-setting).
 
 <a id="141-2019-05-16"></a>
 ## 0.14.1 (May 16, 2019) { #141-2019-05-16 }
