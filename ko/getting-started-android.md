@@ -64,11 +64,11 @@ dependencies {
 
 NHN Cloud SDK가 제공하는 상품별 설정 방법은 다음과 같습니다.
 
-- [Logger 라이브러리 설정](./log-collector-android/#_1)
-- [Native Crash Reporter 라이브러리 설정](./log-collector-ndk/#_1)
-- [In-app Purchase 라이브러리 설정](./iap-android/#_2)
-- [Push 라이브러리 설정](./push-android/#_2)
-- [Credit Card Recognizer 라이브러리 설정](./creditcard-recognizer-android/#_1)
+- [Logger 라이브러리 설정](./log-collector-android/#library-setting)
+- [Native Crash Reporter 라이브러리 설정](./log-collector-ndk/#library-setting)
+- [In-app Purchase 라이브러리 설정](./iap-android/#library-setting)
+- [Push 라이브러리 설정](./push-android/#library-setting)
+- [Credit Card Recognizer 라이브러리 설정](./creditcard-recognizer-android/#add-dependency)
 
 <a id="build-android-with-aar"></a>
 ### 2. AAR을 사용하여 Android 빌드 { #build-android-with-aar }

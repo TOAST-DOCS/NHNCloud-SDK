@@ -82,7 +82,7 @@ creditCardRecognizer.launch(activity) { result, data ->
 SecureString.charAt(index) 메서드는 지정된 index에 있는 문자를 반환합니다.
 
 > CreditCardData로 반환되는 신용카드 인식 정보를 String 객체로 생성하여 사용하면 보안에 취약합니다.<br>
-> 화면에 표시하기 위하여 [SecureTextView 사용](./creditcard-recognizer-android/#_18)을 참고하세요.
+> 화면에 표시하기 위하여 [SecureTextView 사용](./creditcard-recognizer-android/#use-securetextview)을 참고하세요.
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers
@@ -178,7 +178,7 @@ private fun isConfident(data: CreditCardRecognitionData): Boolean {
 SecureString.charAt(index) 메서드는 지정된 index에 있는 문자를 반환합니다.
 
 > CreditCardRecognitionData로 반환되는 신용카드 인식 정보를 String 객체로 생성하여 사용하면 보안에 취약합니다.<br>
-> 화면에 표시하기 위하여 [SecureTextView](./creditcard-recognizer-android/#_18)사용을 참고하세요.
+> 화면에 표시하기 위하여 [SecureTextView](./creditcard-recognizer-android/#use-securetextview)사용을 참고하세요.
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers
