@@ -1,6 +1,6 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=610da5e47de1 -->
+<!-- pre-align:aligned sig=ffe9414de54f -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
 ## NHN Cloud > SDK User Guide > Release Notes > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
