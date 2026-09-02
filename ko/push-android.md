@@ -143,7 +143,7 @@ dependencies {
 <a id="proguard-settings"></a>
 ### Proguard 설정 { #proguard-settings }
 
-* Proguard를 사용하는 경우 <b>[proguard-rules.pro](http://proguard-rules.pro)</b> 파일에 아래와 같이 추가합니다.
+* Proguard를 사용하는 경우 **`proguard-rules.pro`** 파일에 아래와 같이 추가합니다.
 
 ```groovy
 -libraryjars amazon/libs/amazon-device-messaging-1.2.0.jar
@@ -235,7 +235,7 @@ public void onLogin(String userId) {
 ### 수신 동의 설정 { #consent-setting }
 * 정보통신망법 규정(제50조부터 제50조의 8)에 따라 토큰 등록 시 알림/홍보성/야간홍보성 Push 메시지 수신에 관한 동의 여부도 함께 입력받습니다. 메시지 발송 시 수신 동의 여부를 기준으로 자동으로 필터링합니다.
     * [KISA 가이드 바로 가기](https://www.kisa.or.kr/2060301/form?postSeq=19)
-    * [법령 바로 가기](http://www.law.go.kr/법령/정보통신망이용촉진및정보보호등에관한법률/%2820130218,11322,20120217%29/제50조)
+    * [법령 바로 가기](https://www.law.go.kr/법령/정보통신망이용촉진및정보보호등에관한법률/제50조)
 * NhnCloudPushAgreement에 수신 동의 여부를 설정하여 토큰 등록 시 NHN Cloud Push 서버로 전송합니다.
 
 <a id="example-of-token-registration-and-agreement-setting"></a>
