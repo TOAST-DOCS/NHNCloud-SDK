@@ -519,8 +519,8 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 <a id="notification-service-extension-setting"></a>
 ### Notification Service Extension Setting { #notification-service-extension-setting }
 
-* Add the extension's [Project Settings](./push-ios/#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project) in the same way as the app's project settings.
-* `The extension for iOS is installed along with the app, but they do not share a container because it is on a separate sandbox environment which is separate from the app.'
+* Add the [project settings](./push-ios/#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project) for the Extension in the same way as the app's project settings.
+* `iOS extensions are installed alongside the app but run in a separate sandbox environment that is isolated from the app, so they do not share a container.`
 
 <a id="notification-service-extension-setting-example"></a>
 ### Notification Service Extension Setting Example { #notification-service-extension-setting-example }
