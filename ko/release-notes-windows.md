@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=610da5e47de1 -->
+<!-- pre-align:aligned sig=ffe9414de54f -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
