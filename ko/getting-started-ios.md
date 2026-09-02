@@ -93,7 +93,7 @@ binary "https://nh.nu/nhncloudsdk"
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### 프레임워크 설정
 
-* NHN Cloud의 [Downloads](../../../Download/#nhn-cloud-sdk) 페이지에서 전체 iOS SDK를 다운로드할 수 있습니다.
+* NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 전체 iOS SDK를 다운로드할 수 있습니다.
 ![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
 
 * Logger의 Crash Report 기능을 사용하려면 함께 배포되는 CrashReporter.framework도 프로젝트에 추가해야 합니다.
