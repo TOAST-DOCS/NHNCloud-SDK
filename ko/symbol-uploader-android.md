@@ -6,8 +6,8 @@
 <a id="prerequisites"></a>
 ## 사전 준비 { #prerequisites }
 
-1. Android 프로젝트에 [NHN Cloud Logger를 추가](/nhncloud/ko/nhncloud-sdk/log-collector-android/)합니다.
-2. Android 앱에 네이티브 라이브러리가 포함되어 있는 경우 [NHN Cloud Crash Reporter for NDK를 추가](/nhncloud/ko/nhncloud-sdk/log-collector-ndk/)합니다.
+1. Android 프로젝트에 [NHN Cloud Logger를 추가](/nhncloud-sdk/ko/log-collector-android/)합니다.
+2. Android 앱에 네이티브 라이브러리가 포함되어 있는 경우 [NHN Cloud Crash Reporter for NDK를 추가](/nhncloud-sdk/ko/log-collector-ndk/)합니다.
 3. NHN Cloud 콘솔에서 **User Access Key ID**와 **Secret Access Key**를 발급받습니다.
 
 <a id="library-setting"></a>
