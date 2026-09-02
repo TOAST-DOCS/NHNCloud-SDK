@@ -5,8 +5,8 @@
 <a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
 ## NHN Cloud > SDK User Guide > Release Notes > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
 
-<a id="002-20240123"></a>
-## 2.1.1.0 (September 15, 2026)
+<a id="110-september-15-2026"></a>
+## 2.1.1.0 (September 15, 2026) { #110-september-15-2026 }
 
 Download : [nhncloud-sdk-windows-2.1.1.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.1.1/nhncloud-sdk-windows-2.1.1.0.zip)
 * Applied Log & Crash Search API domain changes
