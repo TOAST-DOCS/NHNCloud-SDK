@@ -46,7 +46,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-iap-google:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-google:1.13.0'
     ...
 }
 ```
@@ -68,14 +68,14 @@ dependencies {
     // ONE store 통합 버전(V21)
     implementation 'com.onestorecorp.sdk:sdk-iap:21.00.01'
     implementation 'com.onestorecorp.sdk:sdk-configuration-kr:1.0.0'
-    implementation 'com.nhncloud.android:nhncloud-iap-onestore2:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-onestore2:1.13.0'
 
     // ONE store V17
-    implementation 'com.nhncloud.android:nhncloud-iap-onestore:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-onestore:1.13.0'
     
     // ONE store V19
     implementation files('libs/iap_sdk-v19.01.00.aar')
-    implementation 'com.nhncloud.android:nhncloud-iap-onestore-v19:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-onestore-v19:1.13.0'
     ...
 }
 ```
@@ -93,7 +93,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-iap-galaxy:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-galaxy:1.13.0'
     ...
 }
 ```
@@ -109,7 +109,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-iap-amazon:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-amazon:1.13.0'
     ...
 }
 ```
@@ -153,7 +153,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-iap-huawei:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-huawei:1.13.0'
     ...
 }
 ```
@@ -169,7 +169,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-iap-mycard:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-iap-mycard:1.13.0'
     ...
 }
 ```
@@ -322,7 +322,7 @@ class MyApplication extends NhnCloudMyCardApplication {
 * [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) 객체는 인앱 결제 설정 정보를 포함하고 있습니다.
 * [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) 객체는 [NhnCloudIapConfiguration.Builder](./iap-android/#nhncloudiapconfigurationbuilder)를 사용하여 생성할 수 있습니다.
 * IAP 콘솔에서 발급 받은 [AppKey](/Mobile%20Service/IAP/ko/console-guide/#appkey)를 setAppKey 메서드를 사용하여 설정합니다.
-* setStoreCode 메서드를 사용하여 인앱 결제에 사용할 [스토어 코드](./iap-android/#_3)를 설정합니다.
+* setStoreCode 메서드를 사용하여 인앱 결제에 사용할 [스토어 코드](./iap-android/#store-codes)를 설정합니다.
 
 <a id="example-of-iap-setting"></a>
 ### 인앱 결제 설정 예시 { #example-of-iap-setting }
@@ -387,7 +387,7 @@ public class MainApplication extends Application {
 ## 서비스 로그인 { #service-login }
 
 * NHN Cloud SDK에서 제공하는 모든 상품(IAP, Log & Crash등)은 하나의 동일한 사용자 아이디를 사용합니다.
-    * [NhnCloudSdk.setUserId](/nhncloud/ko/nhncloud-sdk/getting-started-android/#userid)로 사용자 아이디를 설정할 수 있습니다.
+    * [NhnCloudSdk.setUserId](./getting-started-android/#set-user-id)로 사용자 아이디를 설정할 수 있습니다.
     * 사용자 아이디를 설정하지 않은 경우, 결제가 진행되지 않습니다.
 * 서비스 로그인 단계에서 사용자 아이디 설정, 미소비 결제 내역 조회, 활성화된 구독 상품 조회 기능을 구현하는 것을 권장합니다.
 

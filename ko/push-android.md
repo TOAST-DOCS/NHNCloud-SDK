@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-push-fcm:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-push-fcm:1.13.0'
     ...
 }
 ```
@@ -46,7 +46,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-push-adm:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-push-adm:1.13.0'
     ...
 }
 ```
@@ -143,7 +143,7 @@ dependencies {
 <a id="proguard-settings"></a>
 ### Proguard 설정 { #proguard-settings }
 
-* Proguard를 사용하는 경우 <b>[proguard-rules.pro](http://proguard-rules.pro)</b> 파일에 아래와 같이 추가합니다.
+* Proguard를 사용하는 경우 **`proguard-rules.pro`** 파일에 아래와 같이 추가합니다.
 
 ```groovy
 -libraryjars amazon/libs/amazon-device-messaging-1.2.0.jar

@@ -26,7 +26,7 @@ NHN Cloud ID Card Recognizer는 Android 5.1 이상(API level 22 이상)에서 �
 dependencies {
     ...
     // NHN Cloud ID Card Recognizer
-    implementation 'com.nhncloud.android:nhncloud-idcard-recognizer:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-idcard-recognizer:1.13.0'
 }
 ```
 
@@ -85,7 +85,7 @@ IdCardRecognizer.launch(activity) { result, data ->
 SecureString.charAt(index) 메서드는 지정된 index에 있는 문자를 반환합니다.
 
 > IdCardData로 반환되는 신분증 인식 정보를 String 객체로 생성하여 사용하면 보안에 취약합니다.<br>
-> 화면에 표시하기 위하여 [SecureTextView 사용](./idcard-recognizer-android/#_18)을 참고하세요.
+> 화면에 표시하기 위하여 [SecureTextView 사용](./idcard-recognizer-android/#use-securetextview)을 참고하세요.
 
 ```kotlin
 when (data) {
@@ -277,7 +277,7 @@ private fun isConfident(data: IdCardRecognitionData): Boolean {
 SecureString.charAt(index) 메서드는 지정된 index에 있는 문자를 반환합니다.
 
 > IdCardRecognitionData로 반환되는 신분증 인식 정보를 String 객체로 생성하여 사용하면 보안에 취약합니다.<br>
-> 화면에 표시하기 위하여 [SecureTextView](./idcard-recognizer-android/#_18)사용을 참고하세요.
+> 화면에 표시하기 위하여 [SecureTextView](./idcard-recognizer-android/#use-securetextview)사용을 참고하세요.
 
 ```kotlin
 when (data) {
