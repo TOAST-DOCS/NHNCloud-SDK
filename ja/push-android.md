@@ -1006,8 +1006,8 @@ public String getuserText();
 | getActionType | ActionType | ActionTypeを返します。 |
 | getNotificationId | String | アクションが実行された通知のIDを返します。 |
 | getNotificationChannel | String | アクションが実行された通知のチャンネルを返します。 |
-| getMessage | NhnCloudPushMessage | アクションが設定された通知のメッセージ情報を返します。 |
-| getuserText | RichMessage | ユーザーが入力した文字列を返します。 |
+| getMessage | NhnCloudPushMessage | アクションが実行された通知のメッセージ情報を返します。 |
+| getUserText | RichMessage | ユーザーが入力した文字列を返します。 |
 
 <a id="nhncloudpushmessagereceiver"></a>
 ### NhnCloudPushMessageReceiver { #nhncloudpushmessagereceiver }
