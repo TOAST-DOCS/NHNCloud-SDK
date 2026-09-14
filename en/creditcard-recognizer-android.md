@@ -1,17 +1,26 @@
-## NHN Cloud > SDK User Guide > OCR > Credit Card (Android)
+<!-- machine_translated: true -->
 
-## Prerequisites
+<!-- pre-align:aligned sig=abf19794aceb -->
+
+<a id="nhn-cloud-sdk-user-guide-ocr-credit-card-android"></a>
+## NHN Cloud > SDK User Guide > OCR > Credit Card (Android) { #nhn-cloud-sdk-user-guide-ocr-credit-card-android }
+
+<a id="prerequisites"></a>
+## Prerequisites { #prerequisites }
 
 1. Enable [AI Service > OCR] in [NHN Cloud Console](https://console.nhncloud.com)
 2. Check Appkey and SecretKey in OCR Console.
 
-## Supported Environment
+<a id="supported-environment"></a>
+## Supported Environment { #supported-environment }
 
 NHN Cloud Credit Card Recognizer operates in Android 5.1 or higher (API level 22 or higher).
 
-## Set up Project
+<a id="set-up-project"></a>
+## Set up Project { #set-up-project }
 
-### Add Dependency
+<a id="add-dependency"></a>
+### Add Dependency { #add-dependency }
 
 Add dependencies of nhncloud-creditcard-recognizer to the build.gradle file of the app.
 
@@ -19,22 +28,25 @@ Add dependencies of nhncloud-creditcard-recognizer to the build.gradle file of t
 dependencies {
     ...
     // NHN Cloud Credit Card Recognizer
-    implementation 'com.nhncloud.android:nhncloud-creditcard-recognizer:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-creditcard-recognizer:1.13.0'
 }
 ```
 
 <br>
 
-### CAMERA Permission
+<a id="camera-permission"></a>
+### CAMERA Permission { #camera-permission }
 
 To use Credit Card Recognizer, the permission **Manifest.permission.CAMERA** is required. 
 You must obtain the Camera permission before using Credit Card Recognizer.
 
 <br>
 
-## Use Credit Card Recognizer
+<a id="use-credit-card-recognizer"></a>
+## Use Credit Card Recognizer { #use-credit-card-recognizer }
 
-### Create CreditCardRecognizer Instance
+<a id="create-creditcardrecognizer-instance"></a>
+### Create CreditCardRecognizer Instance { #create-creditcardrecognizer-instance }
 
 Create a Credit Card Recognizer instance.
 
@@ -47,7 +59,8 @@ val creditCardRecognizer = NhnCloudOcr.newBuilder(context)
 
 <br>
 
-### Initiate CreditCardRecognizer
+<a id="initiate-creditcardrecognizer"></a>
+### Initiate CreditCardRecognizer { #initiate-creditcardrecognizer }
 
 Initiate credit card recognition by calling the CreditCardRecognizer's launch(Activity, CreditCardRecognitionCallback) method.
 
@@ -63,13 +76,15 @@ creditCardRecognizer.launch(activity) { result, data ->
 
 <br>
 
-### Use Recognition Data
+<a id="use-recognition-data"></a>
+### Use Recognition Data { #use-recognition-data }
 
 When credit card recognition is successful, credit card recognition data is transferred to the CreditCardData object.
 For privacy protection, the credit card number and expiration date are returned as SecureString objects, not plain strings.
 The SecureString.charAt(index) method returns the character at the specified index.
 
-> It is vulnerable to security when you create and use the credit card recognition data that is returned as CreditCardData as a String object.
+> It is vulnerable to security when you create and use the credit card recognition data that is returned as CreditCardData as a String object.<br>
+> See [Use SecureTextView](./creditcard-recognizer-android/#use-securetextview) to display on screen.
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers
@@ -83,12 +98,14 @@ firstNumberTextView3.text = if (firstNumber.length > 3) firstNumber[3].toString(
 
 <br>
 
-## Customize Credit Card Recognition Screen
+<a id="customize-credit-card-recognition-screen"></a>
+## Customize Credit Card Recognition Screen { #customize-credit-card-recognition-screen }
 
 You can customize and use the credit card recognition screen.
 You must use CreditCardRecognitionService instead of CreditCardRecognizer to configure your custom screen.
 
-### Create CreditCardRecognitionService Instance
+<a id="create-creditcardrecognitionservice-instance"></a>
+### Create CreditCardRecognitionService Instance { #create-creditcardrecognitionservice-instance }
 
 Create a CreditCardRecognitionService instance.
 
@@ -101,7 +118,8 @@ val creditCardRecognitionService = NhnCloudOcrServices.newBuilder(context)
 
 <br>
 
-### Register CreditCardRecognitionService Listner
+<a id="register-creditcardrecognitionservice-listner"></a>
+### Register CreditCardRecognitionService Listner { #register-creditcardrecognitionservice-listner }
 
 Register a listener using the setCreditCardRecognitionListener() method.
 When a credit card is recognized, the result is notified via the CreditCardRecognitionListener.
@@ -121,7 +139,8 @@ creditCardRecognitionService.setCreditCardRecognitionListener { result, data ->
 
 <br>
 
-### Process Recognition Result
+<a id="process-recognition-result"></a>
+### Process Recognition Result { #process-recognition-result }
 
 CreditCardRecognitionData passed to CreditCardRecognitionListener will return all results regardless of confidence rating.
 Therefore, more accurate results can be used by checking the confidence rating as shown below.
@@ -155,13 +174,15 @@ private fun isConfident(data: CreditCardRecognitionData): Boolean {
 
 <br>
 
-### Use Recognition Data
+<a id="customize-credit-card-recognition-screen-use-recognition-data"></a>
+### Use Recognition Data { #customize-credit-card-recognition-screen-use-recognition-data }
 
 When credit card recognition is successful, credit card recognition data is transferred to the CreditCardRecognitionData object.
 For privacy protection, the credit card number and expiration date are returned as SecureString objects, not plain strings.
 The SecureString.charAt(index) method returns the character at the specified index.
 
-> It is vulnerable to security when you create and use the credit card recognition data that is returned as CreditCardRecognitionData as a String object.
+> It is vulnerable to security when you create and use the credit card recognition data that is returned as CreditCardRecognitionData as a String object.<br>
+> See [Use SecureTextView](./creditcard-recognizer-android/#use-securetextview) to display on screen.
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers
@@ -175,7 +196,8 @@ firstNumberTextView3.text = if (firstNumber.length > 3) firstNumber[3].toString(
 
 <br>
 
-### Configure Camera Preview
+<a id="configure-camera-preview"></a>
+### Configure Camera Preview { #configure-camera-preview }
 
 Add CreditCardRecognitionCameraPreview to Activity or Layout of Fragment as follows to configure Camera Preview.
 
@@ -197,7 +219,8 @@ Add CreditCardRecognitionCameraPreview to Activity or Layout of Fragment as foll
 
 <br>
 
-### Change Background Color
+<a id="change-background-color"></a>
+### Change Background Color { #change-background-color }
 
 Areas except for the scan guide area appear translucent.
 Set the colors of the areas by using the "app:guideBackgroundColor" property.
@@ -212,7 +235,8 @@ Set the colors of the areas by using the "app:guideBackgroundColor" property.
 
 <br>
 
-### Customize Scan Guide View
+<a id="customize-scan-guide-view"></a>
+### Customize Scan Guide View { #customize-scan-guide-view }
 
 You can freely customize the scan guide view by placing it as a subview of the CreditCardRecognitionCameraPreview. 
 Configure the user-defined guide view using the "app:guideView" property.
@@ -241,7 +265,8 @@ The size of the scan guide view is automatically adjusted.
 
 <br>
 
-### Change Guide View When Credit Card Is Detected
+<a id="change-guide-view-when-credit-card-is-detected"></a>
+### Change Guide View When Credit Card Is Detected { #change-guide-view-when-credit-card-is-detected }
 
 You can change the color or shape of the scan guide view when a credit card is detected.
 Change the color or shape of the guide view according to the value passed to setDetected(Boolean) after implementation inheritance of the CreditCardDetectable interface.
@@ -265,7 +290,8 @@ class CustomGuideView(
 
 <br>
 
-### Initiate Service
+<a id="initiate-service"></a>
+### Initiate Service { #initiate-service }
 
 Initiate CreditCardRecognitionService by obtaining the instances of CreditCardRecognitionCameraPreview.
 
@@ -280,7 +306,8 @@ try {
 
 <br>
 
-### Stop Service
+<a id="stop-service"></a>
+### Stop Service { #stop-service }
 
 Stop creditCardRecognitionService when the app enters the background or credit card recognition is successful.
 
@@ -290,7 +317,8 @@ creditCardRecognitionService.stop()
 
 <br>
 
-### Release Service
+<a id="release-service"></a>
+### Release Service { #release-service }
 
 Release creditCardRecognitionService when Activity or Fragment's View is destroyed.
 
@@ -300,10 +328,12 @@ creditCardRecognitionService.release();
 
 <br>
 
-### Set CreditCardRecognizer Lifecycle
+<a id="set-creditcardrecognizer-lifecycle"></a>
+### Set CreditCardRecognizer Lifecycle { #set-creditcardrecognizer-lifecycle }
 
  Call as follows according to Activity or the lifecycle of Fragment.
 
+<a id="set-creditcardrecognizer-lifecycle-activity"></a>
 #### Activity
 
 ```kotlin
@@ -323,6 +353,7 @@ override fun onDestroy() {
 }
 ```
 
+<a id="set-creditcardrecognizer-lifecycle-fragment"></a>
 #### Fragment
 
 ```kotlin
@@ -344,7 +375,8 @@ override fun onDestroyView() {
 
 <br>
 
-### Set Scan Direction
+<a id="set-scan-direction"></a>
+### Set Scan Direction { #set-scan-direction }
 
 Set a direction to scan the credit card.
 
@@ -355,7 +387,8 @@ creditCardRecognitionService.scanOrientation =
 
 <br>
 
-### Prevent Screen Capture
+<a id="prevent-screen-capture"></a>
+### Prevent Screen Capture { #prevent-screen-capture }
 
 To prevent screen capture, add **WindowManager.LayoutParams.FLAG_SECURE** before setContentView() is called from onCreate() of Activity.
 
@@ -372,7 +405,8 @@ For more details, see [WindowManager.LayoutParams.FLAG_SECURE](https://developer
 
 <br>
 
-### Device Check
+<a id="device-check"></a>
+### Device Check { #device-check }
 
 Before starting the Credit Card Recognition service, you can check whether the Credit Card Recognition service is available is on the device running the application.
 To perform this check, use the CreditCardRecognitionService.isAvailable(Context) method.
@@ -387,7 +421,8 @@ if (CreditCardRecognitionService.isAvailable(context)) {
 
 <br>
 
-## Use SecureTextView
+<a id="use-securetextview"></a>
+## Use SecureTextView { #use-securetextview }
 
 For privacy reasons, credit card is returned as a SecureString object rather than a plain string.
 If credit card recognition information is created and used as a String object, security is vulnerable, and SecureTextView can be used to display the data on the screen.
@@ -411,9 +446,11 @@ val firstNumberView = findViewById<SecureTextView>(credit_card_first_number_view
 firstNumberView.setText(namfirstNumbere)
 ```
 
-## Class References
+<a id="class-references"></a>
+## Class References { #class-references }
 
-### CreditCardData
+<a id="creditcarddata"></a>
+### CreditCardData { #creditcarddata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -423,7 +460,8 @@ firstNumberView.setText(namfirstNumbere)
 
 <br>
 
-### CreditCardRecognitionData
+<a id="creditcardrecognitiondata"></a>
+### CreditCardRecognitionData { #creditcardrecognitiondata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -437,7 +475,8 @@ firstNumberView.setText(namfirstNumbere)
 
 <br>
 
-### CreditCardRecognitionData.CardNumber
+<a id="creditcardrecognitiondatacardnumber"></a>
+### CreditCardRecognitionData.CardNumber { #creditcardrecognitiondatacardnumber }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -447,7 +486,8 @@ firstNumberView.setText(namfirstNumbere)
 
 <br>
 
-### CreditCardRecognitionData.ExpirationDate
+<a id="creditcardrecognitiondataexpirationdate"></a>
+### CreditCardRecognitionData.ExpirationDate { #creditcardrecognitiondataexpirationdate }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -457,7 +497,8 @@ firstNumberView.setText(namfirstNumbere)
 
 <br>
 
-### CreditCardRecognitionData.Coordinates
+<a id="creditcardrecognitiondatacoordinates"></a>
+### CreditCardRecognitionData.Coordinates { #creditcardrecognitiondatacoordinates }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -466,7 +507,8 @@ firstNumberView.setText(namfirstNumbere)
 
 <br>
 
-### SecureTextView
+<a id="securetextview"></a>
+### SecureTextView { #securetextview }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |

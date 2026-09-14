@@ -1,19 +1,25 @@
-## NHN Cloud > SDK使用ガイド > IAP > iOS
+<!-- pre-align:aligned sig=d6c8898829d4 -->
 
-## 注意事項
+<a id="nhn-cloud-sdk-user-guide-iap-ios"></a>
+## NHN Cloud > SDK使用ガイド > IAP > iOS { #nhn-cloud-sdk-user-guide-iap-ios }
+
+<a id="cautions"></a>
+## 注意事項 { #cautions }
 > **(新)領収書検証 + Notification V2** 方式を使用するにはNHN Cloud SDK iOS v1.7.0以上を使用する必要があります。
 
 > NHN Cloud SDK iOS v1.8.0から**(新)領収書検証 + Notification V2**方式と**(旧)領収書検証 + Notification V1**方式の両方をサポートします。
 > SDKの検証方式は、IAPコンソールに設定された方式によって決定されます。- [IAPコンソールガイド](/Mobile%20Service/IAP/ja/console-apple-guide/#notification-v2)
 
 
-## Prerequisites
+<a id="prerequisites"></a>
+## Prerequisites { #prerequisites }
 
 1\. [NHN Cloud SDK](./getting-started-ios)をインストールします。
 2\. [NHN Cloudコンソール](https://console.nhncloud.com)で[Mobile Service \> IAPを有効化](/Mobile%20Service/IAP/ja/console-guide/)します。
 3\. IAPで[AppKeyを確認](/Mobile%20Service/IAP/ja/console-guide/#appkey)します。
 
-## NHN Cloud IAP構成
+<a id="nhn-cloud-iap-components"></a>
+## NHN Cloud IAP構成 { #nhn-cloud-iap-components }
 
 * iOS用NHN Cloud IAP SDKの構成は次のとおりです。
 
@@ -23,9 +29,11 @@
 | Mandatory   | NHNCloudCore<br/>NHNCloudCommon | NHNCloudCore.framework<br/>NHNCloudCommon.framework | | OTHER_LDFLAGS = (<br/>    "-ObjC",<br/>    "-lc++" <br/>); |
 
 
-## NHN Cloud IAP SDKをXcodeプロジェクトに適用
+<a id="apply-nhn-cloud-iap-sdk-to-xcode-projects"></a>
+## NHN Cloud IAP SDKをXcodeプロジェクトに適用 { #apply-nhn-cloud-iap-sdk-to-xcode-projects }
 
-### 1. Cococapods適用
+<a id="apply-using-cococapods"></a>
+### 1. Cococapods適用 { #apply-using-cococapods }
 
 * Podfileを作成して、NHN Cloud SDKに対するPodを追加します。
 
@@ -38,7 +46,8 @@ target '{YOUR PROJECT TARGET NAME}' do
 end
 ```
 
-### 2. Swift Package Managerを使用してNHN Cloud SDK適用
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
+### 2. Swift Package Managerを使用してNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * XCodeで**File > Add Packages...**メニューを選択します。
 * Package URLに'https://github.com/nhn/nhncloud.ios.sdk'を入れて**Add Package**ボタンを選択します。
@@ -46,23 +55,27 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### プロジェクト設定
 
 * **Build Settings**の **Other Linker Flags**に**-lc++**と**-ObjC**項目を追加します。
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-### 3. バイナリをダウンロードしてNHN Cloud SDKを適用
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 3. バイナリをダウンロードしてNHN Cloud SDKを適用 { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Link Frameworks
 
-* NHN Cloudの[Downloads](../../../Download/#toast-sdk)ページで全体iOS SDKをダウンロードできます。
+* NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページで全体iOS SDKをダウンロードできます。
 * Xcode Projectに**NHNCloudIAP.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework, StoreKit.framework**を追加します。
 * StoreKit.frameworkは、下記の方法で追加できます。
 ![linked_storekit_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_StoreKit_202206.png)
 
 ![linked_frameworks_iap](https://static.toastoven.net/toastcloud/sdk/ios/iap_link_frameworks_iap_202206.png)
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-setup"></a>
 #### プロジェクト設定
 
 * **Build Settings**の**Other Linker Flags**に**-lc++**と**-ObjC**項目を追加します。
@@ -70,17 +83,20 @@ end
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 
-### Capabilities設定
+<a id="capabilities-setup"></a>
+### Capabilities設定 { #capabilities-setup }
 
 * NHN Cloud IAPを使用するには、Capabilitiesで**In-App Purchase**項目を有効にする必要があります。
     * **Project Target > Capabilities > In-App Purchase**
 ![capabilities_iap](https://static.toastoven.net/toastcloud/sdk/ios/capability_iap_202206.png)
 
-## サービスログイン
+<a id="service-login"></a>
+## サービスログイン { #service-login }
 
 * NHN Cloud SDKで提供するすべてのサービス(IAP、Log & Crash、Pushなど)は、同じユーザーID1つのみ使用します。
 
-### ログイン
+<a id="login"></a>
+### ログイン { #login }
 
 * `ユーザーIDが設定されていない状態では、購入、有効になっている商品照会、未消費履歴照会機能を使用できません。`
 
@@ -89,19 +105,22 @@ end
 [NHNCloudSDK setUserID:@"INPUT_USER_ID"];
 ```
 
-### ログアウト
+<a id="logout"></a>
+### ログアウト { #logout }
 
 ``` objc
 // サービスログアウト完了後、ユーザーIDをnilに設定
 [NHNCloudSDK setUserID:nil];
 ```
 
-## NHN Cloud IAP SDK初期化
+<a id="initialize-nhn-cloud-iap-sdk"></a>
+## NHN Cloud IAP SDK初期化 { #initialize-nhn-cloud-iap-sdk }
 
 * IAPコンソールで発行された[AppKey](/Mobile%20Service/IAP/ja/console-guide/#appkey)を[NHNCloudIAPConfiguration](./iap-ios/#nhncloudiapconfiguration)オブジェクトに設定します。
 * NHN Cloud IAPは初期化に[NHNCloudIAPConfiguration](./iap-ios/#nhncloudiapconfiguration)オブジェクトをパラメータとして使用します。
 
-### 初期化API仕様
+<a id="specification-for-initialization-api"></a>
+### 初期化API仕様 { #specification-for-initialization-api }
 
 ``` objc
 // 初期化
@@ -113,7 +132,8 @@ end
                      delegate:(nullable id<NHNCloudInAppPurchaseDelegate>)delegate;
 ```
 
-### Delegate API仕様
+<a id="specification-for-delegate-api"></a>
+### Delegate API仕様 { #specification-for-delegate-api }
 
 * [NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate)を登録すると、購入結果とプロモーション決済を進行するかどうかの決定についての通知を受信できます。
     * プロモーション決済をSDKで行うか、ユーザーが任意の時点で直接決済をリクエストするかを決定できます。
@@ -135,7 +155,8 @@ end
 @end
 ```
 
-### 初期化プロセス例
+<a id="example-of-initialization-procedure"></a>
+### 初期化プロセス例 { #example-of-initialization-procedure }
 
 ``` objc
 #import <UIKit/UIKit.h>
@@ -184,19 +205,22 @@ end
 @end
 ```
 
-## 商品リスト照会
+<a id="query-product-list"></a>
+## 商品リスト照会 { #query-product-list }
 
 * IAPコンソールに登録された商品が[NHNCloudProductResponse](./iap-ios/#nhncloudproductresponse)オブジェクトで返されます。
 * IAPコンソールに登録された商品のうち、購入可能な商品はproducts([NHNCloudProduct](./iap-ios/#nhncloudproduct))として返されます。
 * IAPコンソールに登録された商品のうち、ストア(Apple)で商品情報を取得できなかった商品は、invalidProducts([NHNCloudProduct](./iap-ios/#nhncloudproduct))として返されます。
 
-### 商品リスト照会API仕様
+<a id="specification-for-product-list-query-api"></a>
+### 商品リスト照会API仕様 { #specification-for-product-list-query-api }
 
 ``` objc
 + (void)requestProductsWithCompletionHandler:(nullable void (^)(NHNCloudProductsResponse * _Nullable response, NSError * _Nullable error))completionHandler;
 ```
 
-### 商品リスト照会API使用例
+<a id="usage-example-of-product-list-query-api"></a>
+### 商品リスト照会API使用例 { #usage-example-of-product-list-query-api }
 
 ``` objc
 [NHNCloudIAP requestProductsWithCompletionHandler:^(NHNCloudProductsResponse *response, NSError *error) {
@@ -214,7 +238,8 @@ end
 }
 ```
 
-### 商品の種類
+<a id="product-types"></a>
+### 商品の種類 { #product-types }
 
 | 商品名 | 商品タイプ        | 説明                                |
 | ------ | ---------------- | -------------------------------------- |
@@ -239,7 +264,8 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 };
 ```
 
-## 商品購入
+<a id="purchase-product"></a>
+## 商品購入 { #purchase-product }
 
 * 購入結果は、設定された[NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate)を通して伝達されます。
 * 購買進行中にアプリが終了したり、ネットワークエラーなどで購買が中断された場合、次回のアプリ実行におけるIAP SDK初期化以後、再処理が進みます。
@@ -248,7 +274,8 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 * 購入できない商品の場合、[NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate)を通して購入不可商品であることを示すエラーが伝達されます。
 * 商品リスト照会結果のNHNCloudProductオブジェクトまたは商品IDを利用して購入をリクエストします。
 
-#### 商品オブジェクトを利用した購入API仕様
+<a id="specification-for-product-purchase-api"></a>
+### 商品オブジェクトを利用した購入API仕様 { #specification-for-product-purchase-api }
 
 ``` objc
 // 商品購入要請
@@ -261,7 +288,8 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 + (void)purchaseWithProductIdentifier:(NSString *)productIdentifier payload:(NSString *)payload;
 ```
 
-#### 商品オブジェクトを利用した購入API使用例
+<a id="usage-example-of-product-purchase-api"></a>
+### 商品オブジェクトを利用した購入API使用例 { #usage-example-of-product-purchase-api }
 
 ``` objc
 // 商品購入要請
@@ -271,13 +299,15 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 [NHNCloudIAP purchaseWithProductIdentifier:@"PRODUCT_IDENTIFIER" payload:@"DEVELOPER_PAYLOAD"];
 ```
 
-## 有効になっている購読リスト照会
+<a id="query-activated-subscription-list"></a>
+## 有効になっている購読リスト照会 { #query-activated-subscription-list }
 
 * 現在のユーザーIDで有効なサブスクリプションリストを照会します。
 * 決済が完了したサブスクリプション商品(自動更新型サブスクリプション、自動更新型消費性サブスクリプション商品)は有効期限が切れるまで照会できます。
 * 同じユーザーIDであれば、Androidで購入した購読商品も照会されます。
 
-### 有効になっている購読リスト照会API仕様
+<a id="specification-for-activated-subscription-list-api"></a>
+### 有効になっている購読リスト照会API仕様 { #specification-for-activated-subscription-list-api }
 
 ``` objc
 // 有効になっているAppStore購読リストを照会する
@@ -287,7 +317,8 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 + (void)requestAllMarketsActiveSubscriptionsWithCompletionHandler:(nullable void (^)(NSArray<NHNCloudPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler;
 ```
 
-### 有効になっている購読リスト照会API使用例
+<a id="usage-example-of-activated-subscription-list-query-api"></a>
+### 有効になっている購読リスト照会API使用例 { #usage-example-of-activated-subscription-list-query-api }
 
 ``` objc
 [NHNCloudIAP requestActiveSubscriptionsWithCompletionHandler:^(NSArray<NHNCloudPurchaseResult *> *purchases, NSError *error) {
@@ -301,21 +332,24 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 }];
 ```
 
-## 購入復元
+<a id="restore-purchases"></a>
+## 購入復元 { #restore-purchases }
 
 * 使用者のAppStoreアカウントで購入した内訳を基準に購買内訳を復元し、IAPコンソールに反映します。
 * 購買した購読商品が照会されないか、活性化しない場合に使います。
 * 有効期限が切れた決済を含めて復元された決済が[NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult)オブジェクトで返されます。
 * 自動更新型消費性サブスクリプション商品の場合、反映されていない購入履歴が存在する場合は復元後に未消費購入履歴から照会が可能です。
 
-### 購入復元API仕様
+<a id="specification-for-purchase-restoration-api"></a>
+### 購入復元API仕様 { #specification-for-purchase-restoration-api }
 
 ``` objc
 // 購入復元
 + (void)restoreWithCompletionHandler:(nullable void (^)(NSArray<NHNCloudPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler;
 ```
 
-### 購入復元API使用例
+<a id="usage-example-of-purchase-restoration-api"></a>
+### 購入復元API使用例 { #usage-example-of-purchase-restoration-api }
 
 ``` objc
 [NHNCloudIAP restoreWithCompletionHandler:^(NSArray<NHNCloudPurchaseResult *> *purchases, NSError *error) {
@@ -329,13 +363,15 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 }];
 ```
 
-## 未消費購入履歴照会
+<a id="query-unconsumed-purchases"></a>
+## 未消費購入履歴照会 { #query-unconsumed-purchases }
 
 * 消費性商品の場合、商品支給後に消費(consume)処理を行う必要があります。
 * 消費処理されていない購入履歴が[NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult)オブジェクトで返されます。
 * 自動更新型消費性サブスクリプション商品は、更新決済が発生するたびに未消費購入履歴から照会できます。
 
-### 未消費購入履歴照会API仕様
+<a id="specification-for-unconsumed-purchase-query-api"></a>
+### 未消費購入履歴照会API仕様 { #specification-for-unconsumed-purchase-query-api }
 
 ``` objc
 // AppStore未消費購入履歴照会
@@ -345,7 +381,8 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 + (void)requestAllMarketsConsumablePurchasesWithCompletionHandler:(nullable void (^)(NSArray<NHNCloudPurchaseResult *> * _Nullable purchases, NSError * _Nullable error))completionHandler;
 ```
 
-### 未消費購入履歴照会API使用例
+<a id="usage-example-of-unconsumed-purchase-query-api"></a>
+### 未消費購入履歴照会API使用例 { #usage-example-of-unconsumed-purchase-query-api }
 
 ``` objc
 [NHNCloudIAP requestConsumablePurchasesWithCompletionHandler:^(NSArray<NHNCloudPurchaseResult *> *purchases, NSError *error) {
@@ -357,18 +394,21 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 }
 ```
 
-## 消費性商品の消費
+<a id="consume-consumable-products"></a>
+## 消費性商品の消費 { #consume-consumable-products }
 
 * 消費性商品の場合、サービスに商品支給後にREST APIまたはSDKのConsume APIで消費処理を行う必要があります。
 
-### 消費API仕様
+<a id="specification-for-consumption-api"></a>
+### 消費API仕様 { #specification-for-consumption-api }
 
 ``` objc
 + (void)consumeWithPurchaseResult:(NHNCloudPurchaseResult *)result
                 completionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler;
 ```
 
-### 消費API使用例
+<a id="usage-example-of-consumption-api"></a>
+### 消費API使用例 { #usage-example-of-consumption-api }
 
 ``` objc
 // 未消費購入履歴照会
@@ -399,7 +439,8 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 }
 ```
 
-## サブスクリプション商品管理ページの提供方法
+<a id="provide-subscription-product-management-page"></a>
+## サブスクリプション商品管理ページの提供方法 { #provide-subscription-product-management-page }
 
 * 自動更新型サブスクリプション商品を使用する場合、ユーザーに購読管理ページを提供する必要があります。
 > [Apple Guide](https://developer.apple.com/documentation/storekit/in-app_purchase/original_api_for_in-app_purchase/subscriptions_and_offers/handling_subscriptions_billing?language=objc)
@@ -411,7 +452,8 @@ https://apps.apple.com/account/subscriptions
 itms-apps://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/manageSubscription
 ```
 
-### 購読管理ページへのアクセス方法
+<a id="connect-to-manage-subscription-page"></a>
+### 購読管理ページへのアクセス方法 { #connect-to-manage-subscription-page }
 
 ```objc
 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://apps.apple.com/account/subscriptions"] options: @{} completionHandler:nil];
@@ -427,19 +469,22 @@ App Storeの購読管理ページに移動します。
 
 > iOS端末の左上の以前のアプリに戻ると`Service App`が表示されます。
 
-## (旧)IAP SDK互換性維持
+<a id="remain-compatible-with-old-iap-sdk"></a>
+## (旧)IAP SDK互換性維持 { #remain-compatible-with-old-iap-sdk }
 
 * (旧)IAP SDKとの互換性を維持できるように、(旧)IAP SDKで作成された未完了購入の件の再処理機能を提供します。
 * (旧)IAP SDKとの互換性維持機能を使用するには、`sqlite3 Library(libsqlite3.tdb)`を追加で接続(link)する必要があります。
 ![linked_sqlite3](https://static.toastoven.net/toastcloud/sdk/ios/iap_link_sqlite3_202206.png)
 
-### 未完了購入再処理API仕様
+<a id="specification-for-reprocessing-incomplete-purchase-api"></a>
+### 未完了購入再処理API仕様 { #specification-for-reprocessing-incomplete-purchase-api }
 
 ``` objc
 + (void)processesIncompletePurchasesWithCompletionHandler:(nullable void (^)(NSArray <NHNCloudPurchaseResult *> * _Nullable results, NSError * _Nullable error))completionHandler;
 ```
 
-### 未完了購入再処理API使用例
+<a id="usage-example-of-reprocessing-incomplete-purchase"></a>
+### 未完了購入再処理API使用例 { #usage-example-of-reprocessing-incomplete-purchase }
 
 ``` objc
 // 未完了購入再処理要請
@@ -471,9 +516,11 @@ App Storeの購読管理ページに移動します。
 ```
 
 
-## NHN Cloud IAP Class Reference
+<a id="nhn-cloud-iap-class-reference"></a>
+## NHN Cloud IAP Class Reference { #nhn-cloud-iap-class-reference }
 
-### NHNCloudIAPConfiguration
+<a id="nhncloudiapconfiguration"></a>
+### NHNCloudIAPConfiguration { #nhncloudiapconfiguration }
 
 NHN Cloud IAP初期化メソッドのパラメータとして使用されるアプリ内決済設定情報です。
 
@@ -493,7 +540,8 @@ NS_SWIFT_NAME(init(appKey:));
 @end
 ```
 
-## NHNCloudInAppPurchaseDelegate
+<a id="nhncloudinapppurchasedelegate"></a>
+## NHNCloudInAppPurchaseDelegate { #nhncloudinapppurchasedelegate }
 
 決済結果の通知を受け取り、プロモーション決済の実行方式を設定できます。
 
@@ -515,7 +563,8 @@ NS_SWIFT_NAME(didFailPurchase(productIdentifier:error:));
 @end
 ```
 
-## NHNCloudProductResponse
+<a id="nhncloudproductresponse"></a>
+## NHNCloudProductResponse { #nhncloudproductresponse }
 
 商品リスト情報を確認できます。
 
@@ -530,7 +579,8 @@ NS_SWIFT_NAME(didFailPurchase(productIdentifier:error:));
 @end
 ```
 
-## NHNCloudProduct
+<a id="nhncloudproduct"></a>
+## NHNCloudProduct { #nhncloudproduct }
 
 NHN Cloud IAPコンソールに登録された商品の情報を確認できます。
 
@@ -563,7 +613,8 @@ NHN Cloud IAPコンソールに登録された商品の情報を確認できま�
 @end
 ```
 
-## NHNCloudPurchaseResult
+<a id="nhncloudpurchaseresult"></a>
+## NHNCloudPurchaseResult { #nhncloudpurchaseresult }
 
 決済情報を確認できます。
 
@@ -606,7 +657,8 @@ NHN Cloud IAPコンソールに登録された商品の情報を確認できま�
 @end
 ```
 
-### エラーコード
+<a id="error-codes"></a>
+## エラーコード { #error-codes }
 ```objc
 // IAPエラーコード
 static NSString *const NHNCloudIAPErrorDomain = @"com.nhncloud.iap";

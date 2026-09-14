@@ -1,12 +1,17 @@
-## NHN Cloud > SDK 사용 가이드 > Log & Crash > 예약된 필드
+<!-- pre-align:aligned sig=5dabd105fada -->
 
-### 예약된 필드 정의
+<a id="nhn-cloud-sdk-user-guide-log-crash-reserved-fields"></a>
+## NHN Cloud > SDK 사용 가이드 > Log & Crash > 예약된 필드 { #nhn-cloud-sdk-user-guide-log-crash-reserved-fields }
+
+<a id="definition-of-reserved-fields"></a>
+### 예약된 필드 정의 { #definition-of-reserved-fields }
 
 예약된 필드는 NHN Cloud SDK 내부에서 정의하여 사용하고 있는 필드 이름입니다.
 NHN Cloud SDK에서 예약된 사용자 필드를 사용하는 경우 필드 이름에 'reserved_'가 추가됩니다.
 예약된 필드의 검사 조건은 대소문자와 관계없이 문자열을 비교합니다.
 
-### 예약된 필드의 사용 예
+<a id="usage-example-of-reserved-fields"></a>
+### 예약된 필드의 사용 예 { #usage-example-of-reserved-fields }
 
 * 예약된 필드와 대소문자가 같은 경우
 
@@ -22,7 +27,8 @@ SENDTIME -> reserved_SENDTIME
 
 ```
 
-### 예약된 필드 목록
+<a id="list-of-reserved-fields"></a>
+### 예약된 필드 목록 { #list-of-reserved-fields }
 
 | key | description |
 | --- | ----------- |
