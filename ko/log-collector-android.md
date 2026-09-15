@@ -1,12 +1,17 @@
-## NHN Cloud > SDK 사용 가이드 > Log & Crash > Android
+<!-- pre-align:aligned sig=0e590278a12e -->
 
-## 사전 준비
+<a id="nhn-cloud-sdk-user-guide-log-crash-android"></a>
+## NHN Cloud > SDK 사용 가이드 > Log & Crash > Android { #nhn-cloud-sdk-user-guide-log-crash-android }
+
+<a id="prerequisites"></a>
+## 사전 준비 { #prerequisites }
 
 1. [NHN Cloud SDK](./getting-started-android)을 설치합니다.
 2. [NHN Cloud 콘솔](https://console.nhncloud.com)에서 [Log & Crash Search를 활성화](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/)합니다.
 3. Log & Crash Search에서 [AppKey를 확인](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/#appkey)합니다.
 
-## 라이브러리 설정
+<a id="library-setting"></a>
+## 라이브러리 설정 { #library-setting }
 - 아래 코드를 build.gradle에 추가합니다.
 
 ```groovy
@@ -15,12 +20,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-logger:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-logger:1.13.0'
     ...
 }
 ```
 
-## NHN Cloud Logger SDK 초기화
+<a id="initialize-nhn-cloud-logger-sdk"></a>
+## NHN Cloud Logger SDK 초기화 { #initialize-nhn-cloud-logger-sdk }
 
 - 초기화는 반드시 Application#onCreate에서 진행되어야 합니다.
 
@@ -37,11 +43,13 @@ NhnCloudLoggerConfiguration configuration = NhnCloudLoggerConfiguration.newBuild
 NhnCloudLogger.initialize(configuration);
 ```
 
-## 로그 전송
+<a id="send-logs"></a>
+## 로그 전송 { #send-logs }
 
 NHN Cloud Logger는 5가지 레벨의 로그 전송 함수를 제공합니다.
 
-### 로그 전송 API 명세
+<a id="specification-for-log-sending-api"></a>
+### 로그 전송 API 명세 { #specification-for-log-sending-api }
 
 ```java
 // DEBUG 레벨 로그
@@ -60,18 +68,21 @@ static void error(String message);
 static void fatal(String message);
 ```
 
-### 로그 전송 API 사용 예
+<a id="usage-example-of-log-sending-api"></a>
+### 로그 전송 API 사용 예 { #usage-example-of-log-sending-api }
 
 ```java
 NhnCloudLogger.warn("NHN Cloud Log & Crash Search!");
 ```
 
-## 사용자 정의 필드 설정
+<a id="set-user-defined-field"></a>
+## 사용자 정의 필드 설정 { #set-user-defined-field }
 
 원하는 사용자 정의 필드를 설정합니다.
 사용자 정의 필드를 설정하면 로그 전송 API를 호출할 때마다 설정한 값을 로그와 함께 서버로 전송합니다.
 
-### setUserField API 명세
+<a id="specification-for-setuserfield-api"></a>
+### setUserField API 명세 { #specification-for-setuserfield-api }
 
 ```java
 static void setUserField(String field, Object value);
@@ -79,29 +90,34 @@ static void setUserField(String field, Object value);
 
 *  사용자 정의 필드는 **Log & Crash Search > 로그 검색**을 클릭한 후 **로그 검색** 화면의 **선택한 필드**에 표시되는 값과 같습니다.
 
+<a id="specification-for-setuserfield-api-restrictions-for-user-defined-fields"></a>
 #### 커스텀 필드 제약 사항
 
 * 이미 [예약된 필드](./log-collector-reserved-fields)는 사용할 수 없습니다.
 * 필드 이름은 'A-Z, a-z'로 시작하고 'A-Z, a-z, 0-9, -, _' 문자를 사용할 수 있습니다.
 * 필드 이름의 공백은 '_'로 치환됩니다.
 
-### setUserField 사용 예
+<a id="usage-example-of-setuserfield"></a>
+### setUserField 사용 예 { #usage-example-of-setuserfield }
 
 ```java
 NhnCloudLogger.setUserField("nickname", "randy");
 ```
 
-## 로그 전송 후 추가 작업 진행
+<a id="further-tasks-after-sending-logs"></a>
+## 로그 전송 후 추가 작업 진행 { #further-tasks-after-sending-logs }
 
 콜백 함수를 등록하면 로그 전송 후 추가 작업을 진행할 수 있습니다.
 
-### setLoggerListener API 명세
+<a id="specification-for-setloggerlistener-api"></a>
+### setLoggerListener API 명세 { #specification-for-setloggerlistener-api }
 
 ```java
 static void setLoggerListener(NhnCloudLoggerListener listener);
 ```
 
-### setLoggerListener 사용 예
+<a id="usage-example-of-setloggerlistener"></a>
+### setLoggerListener 사용 예 { #usage-example-of-setloggerlistener }
 
 ```java
 NhnCloudLogger.setLoggerListener(new NhnCloudLoggerListener() {
@@ -127,11 +143,13 @@ NhnCloudLogger.setLoggerListener(new NhnCloudLoggerListener() {
 });
 ```
 
-## 크래시 로그 수집
+<a id="collect-crash-logs"></a>
+## 크래시 로그 수집 { #collect-crash-logs }
 
 NHN Cloud Logger는 앱에서 예상하지 못한 크래시가 발생한 경우 크래시 정보를 서버에 기록합니다.
 
-### 크래시 로그 수집 사용 여부 설정
+<a id="set-enable-collecting-crash-logs"></a>
+### 크래시 로그 수집 사용 여부 설정 { #set-enable-collecting-crash-logs }
 
 크래시 로그 전송 기능은 setEnabledCrashReporter() 메서드를 사용하여 활성화 또는 비활성화할 수 있습니다.
 
@@ -146,15 +164,17 @@ NhnCloudLogger.initialize(configuration);
 ```
 
 > User ID가 설정되어 있으면 Log&Crash Search 콘솔의 `크래시 사용자` 항목에서 사용자별 크래시 경험을 확인 할 수 있습니다.
-> User ID 설정은 [시작하기](./getting-started-android/#userid)에서 확인 가능합니다.
+> User ID 설정은 [시작하기](./getting-started-android/#set-user-id)에서 확인 가능합니다.
 
-### Handled Exception API 사용
+<a id="use-handled-exception-api"></a>
+### Handled Exception API 사용 { #use-handled-exception-api }
 
 Android 플랫폼에서는 try/catch 구문에서 예외와 관련된 내용을 NHN Cloud Logger의 Handled Exception API를 사용하여 전송할 수 있습니다.
 이렇게 전송한 예외 로그는 콘솔에서 **Log & Crash Search > 앱 크래시 검색**을 클릭하고 **오류 유형**에서 **Handled**를 클릭해 조회할 수 있습니다.
 자세한 Log & Crash 콘솔 사용 방법은 [콘솔 사용 가이드](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/)를 참고하세요.
 
-### Handled Exception Log API 명세
+<a id="specification-for-handled-exception-log-api"></a>
+### Handled Exception Log API 명세 { #specification-for-handled-exception-log-api }
 
 ```java
 // 예외 정보 전송
@@ -166,7 +186,8 @@ static void report(@NonNull String message,
                    @Nullable Map<String, Object> userFields);
 ```
 
-### 사용 예
+<a id="usage-example"></a>
+### 사용 예 { #usage-example }
 
 ```java
 try {
@@ -177,12 +198,14 @@ try {
 }
 ```
 
-## 크래시 발생 시점에 추가 정보를 설정하여 전송
+<a id="set-additional-information-in-time-for-crash-occurrence-before-sending"></a>
+## 크래시 발생 시점에 추가 정보를 설정하여 전송 { #set-additional-information-in-time-for-crash-occurrence-before-sending }
 
 크래시 발생 직후, 추가 정보를 설정할 수 있습니다.
 setUserField는 크래시 시점과 관계없이 아무때나 설정할 수 있고, setCrashDataAdapter의 경우 정확히 크래시가 발생한 시점에 추가 정보를 설정할 수 있습니다.
 
-### setCrashDataAdapter API 명세
+<a id="specification-for-setcrashdataadapter-api"></a>
+### setCrashDataAdapter API 명세 { #specification-for-setcrashdataadapter-api }
 
 ```java
 static void setCrashDataAdapter(CrashDataAdapter adapter);
@@ -190,7 +213,8 @@ static void setCrashDataAdapter(CrashDataAdapter adapter);
 
 * CrashDataAdapter의 getUserFields 함수를 통해 리턴하는 Map 자료 구조의 키값은 위에서 설명한 setUserField의 'field값'과 같은 제약 조건을 갖습니다.
 
-### setCrashDataAdapter 사용 예
+<a id="usage-example-of-setcrashdataadapter"></a>
+### setCrashDataAdapter 사용 예 { #usage-example-of-setcrashdataadapter }
 
 ```java
 NhnCloudLogger.setCrashDataAdapter(new CrashDataAdapter() {
@@ -203,13 +227,15 @@ NhnCloudLogger.setCrashDataAdapter(new CrashDataAdapter() {
 });
 ```
 
-## Network Insights
+<a id="network-insights"></a>
+## Network Insights { #network-insights }
 
 Network Insights는 콘솔에 등록한 URL을 호출하여 지연 시간과 응답값을 측정합니다. 이를 활용해 세계 여러 나라(디바이스의 국가 코드 기준)에서의 지연 시간과 응답값을 측정할 수 있습니다.
 
 > 콘솔을 통해 Network Insights 기능을 활성화하면 NHN Cloud Logger를 초기화할 때 콘솔에 등록한 URL로 1회 요청합니다.
 
-### Network Insights 활성화
+<a id="enable-network-insights"></a>
+### Network Insights 활성화 { #enable-network-insights }
 
 Network Insights를 활성화하는 방법은 다음과 같습니다.
 
@@ -218,7 +244,8 @@ Network Insights를 활성화하는 방법은 다음과 같습니다.
 3. **로그 전송 설정** 탭을 클릭합니다.
 4. **Network Insights 로그**를 활성화합니다.
 
-### URL 설정
+<a id="url-setting"></a>
+### URL 설정 { #url-setting }
 
 URL을 설정하는 방법은 다음과 같습니다.
 

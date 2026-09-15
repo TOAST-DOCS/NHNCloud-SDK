@@ -1,15 +1,23 @@
-## NHN Cloud > SDK User Guide > Push > iOS
+<!-- machine_translated: true -->
 
-## Prerequisites
+<!-- pre-align:aligned sig=8cab0d86f5f0 -->
+
+<a id="nhn-cloud-sdk-user-guide-push-ios"></a>
+## NHN Cloud > SDK User Guide > Push > iOS { #nhn-cloud-sdk-user-guide-push-ios }
+
+<a id="prerequisites"></a>
+## Prerequisites { #prerequisites }
 
 1. Install [NHN Cloud SDK](./getting-started-ios).
 2. [Enable Notification \> Push](http://docs.nhncloud.com/en/Notification/Push/en/console-guide/) in [NHN Cloud Console](https://console.nhncloud.com).
 3. Check your AppKey in Push.
 
-## APNS Guide
+<a id="apns-guide"></a>
+## APNS Guide { #apns-guide }
 * [APNS Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html)
 
-## NHN Cloud Push Components
+<a id="nhn-cloud-push-components"></a>
+## NHN Cloud Push Components { #nhn-cloud-push-components }
 
 * NHN Cloud Push SDK for iOS consists of the following:
 
@@ -18,9 +26,11 @@
 | Push | NHNCloudPush | NHNCloudPush.framework | UserNotifications.framework<br/><br/>[NHNCloudVoIP]<br/>PushKit.framework<br/>CallKit.framework | |
 | Mandatory   | NHNCloudCore<br/>NHNCloudCommon | NHNCloudCore.framework<br/>NHNCloudCommon.framework | | OTHER_LDFLAGS = (<br/>    "-ObjC",<br/>    "-lc++" <br/>); |
 
-## Apply NHN Cloud Push SDK to Xcode Projects
+<a id="apply-nhn-cloud-push-sdk-to-xcode-projects"></a>
+## Apply NHN Cloud Push SDK to Xcode Projects { #apply-nhn-cloud-push-sdk-to-xcode-projects }
 
-### 1. Apply using Cococapods
+<a id="apply-using-cococapods"></a>
+### 1. Apply using Cococapods { #apply-using-cococapods }
 
 * Create a Podfile and add a pod for NHN Cloud SDK.
 
@@ -33,7 +43,8 @@ target '{YOUR PROJECT TARGET NAME}' do
 end
 ```
 
-### 2. Apply NHN Cloud SDK with Swift Package Manager
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
+### 2. Apply NHN Cloud SDK with Swift Package Manager { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * Go to **File > Add Packages...** from XCode.
 * For the Package URL, enter 'https://github.com/nhn/nhncloud.ios.sdk' and select **Add Package**.
@@ -41,28 +52,33 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** entries to **Other Linker Flags** in **Build Settings**.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-### 3. Apply NHN Cloud SDK by Downloading Binaries
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 3. Apply NHN Cloud SDK by Downloading Binaries { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
 #### Set up Framework
 
-* You can download the full iOS SDK from the [Downloads](../../../Download/#toast-sdk) page of NHN Cloud.
+* You can download the full iOS SDK from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
 * Add **NHNCloudPush.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework, UserNotifications.framework** to your Xcode Project.
 * UserNotifications.framework can be added in the following way.
 ![linked_usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** items to **Other Linker Flags** in **Build Settings**.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-### Capabilities Setup
+<a id="capabilities-setup"></a>
+### Capabilities Setup { #capabilities-setup }
 
 * To use NHN Cloud Push, you must enable **Push Notification** and **Background Modes** items in Capabilities.
     * **Project Target > Signing & Capabilities > + Capability > Push Notification**
@@ -72,26 +88,30 @@ end
     * In **Background Modes** items, **Remote notifications** must be enabled.
 ![capabilities](https://static.toastoven.net/toastcloud/sdk/ios/push_capabilities_202206.png)
 
-## Changes for Xcode11/iOS13
+<a id="changes-for-xcode11ios13"></a>
+## Changes for Xcode11/iOS13 { #changes-for-xcode11ios13 }
 * VoIP
     * In iOS 13 or higher, if you do not report to CallKit after receiving a VoIP message, the message reception becomes restricted. ([PushKit pushRegistry guide](https://developer.apple.com/documentation/pushkit/pkpushregistrydelegate/2875784-pushregistry))
     * The call reception screen using CallKit must be implemented in the app.
 
-## Service Login
+<a id="service-login"></a>
+## Service Login { #service-login }
 
 * All products provided by NHN Cloud SDK (Push, IAP, Log & Crash, ...) share one user ID.
 
-### Login
+<a id="login"></a>
+### Login { #login }
 
-* `If a user ID is not set at the time of initial token registration, it is registered using the device identifier.` ([Refer to the token registration section](./push-ios/#token-registration))
-* `Setting or changing the user ID after token registration will update token information.`
+* `If the user ID is not set at the time of initial token registration, the device identifier is used for registration.` ([Refer to the token registration section](./push-ios/#token-registration))
+* `If the user ID is set or changed after token registration, the token information is updated.`
 
 ``` objc
 // Service login, set the user ID
 [NHNCloudSDK setUserID:@"INPUT_USER_ID"];
 ```
 
-### Logout
+<a id="logout"></a>
+### Logout { #logout }
 
 * `Even if logout occurs, the registered token is not deleted.`
 
@@ -100,13 +120,15 @@ end
 [NHNCloudSDK setUserID:nil];
 ```
 
-## Initialize NHN Cloud Push SDK
+<a id="initialize-nhn-cloud-push-sdk"></a>
+## Initialize NHN Cloud Push SDK { #initialize-nhn-cloud-push-sdk }
 
 * `The token registration and query features cannot be used without initialization.`
 * Set the Push AppKey issued from the NHN Cloud server in the [NHNCloudPushConfiguration](./push-ios/#nhncloudpushconfiguration)object.
 * `In the development environment, the sandbox property of NHNCloudPushConfiguration의 must be set to YES to receive the message sent using the development certificate.'
 
-### Specification for Initialization API
+<a id="specification-for-initialization-api"></a>
+### Specification for Initialization API { #specification-for-initialization-api }
 
 ``` objc
 // Initialize and set Delegate
@@ -120,7 +142,8 @@ end
 + (void)setDelegate:(nullable id<NHNCloudPushDelegate>)delegate;
 ```
 
-### Specification for Delegate API
+<a id="specification-for-delegate-api"></a>
+### Specification for Delegate API { #specification-for-delegate-api }
 * When receiving a notification message while the app is running, the content of the received message is passed to the [NHNCloudPushMessage](./push-ios/#nhncloudpushmessage) object.
 * When the app is launched by the user executing (clicking) the notification, the content of the executed notification message is passed to the [NHNCloudPushMessage](./push-ios/#nhncloudpushmessage) object.
 * When the user executes (clicks) the button on the notification, the action information of the executed button is passed to the [NHNCloudPushNotificationAction](./push-ios/#nhncloudpushnotificationaction) object.
@@ -143,13 +166,15 @@ end
 @end
 ```
 
-### Settings when using Notification Hub
+<a id="settings-when-using-notification-hub"></a>
+### Settings when using Notification Hub { #settings-when-using-notification-hub }
 
 * NHN Cloud Push SDK supports Notification Hub.
 * You can use it by setting the value NHNCloudPushServiceTypeNotificationHub in the serviceType property of NHNCloudPushConfiguration.
 * The default value is NHNCloudPushServiceTypePush, and if not set, the existing Push method is applied.
 
-### Notification initialization example
+<a id="notification-initialization-example"></a>
+### Notification initialization example { #notification-initialization-example }
 
 ```objc
 NHNCloudPushConfiguration *configuration = [[NHNCloudPushConfiguration alloc] initWithAppKey:@"INPUT_YOUR_APPKEY" 
@@ -157,7 +182,8 @@ NHNCloudPushConfiguration *configuration = [[NHNCloudPushConfiguration alloc] in
 [NHNCloudPush initWithConfiguration:configuration];
 ```
 
-### Example of Initialization and Delegate Setting
+<a id="example-of-initialization-and-delegate-setting"></a>
+### Example of Initialization and Delegate Setting { #example-of-initialization-and-delegate-setting }
 
 ``` objc
 #import <NHNCloudPush/NHNCloudPush.h>
@@ -208,7 +234,8 @@ NHNCloudPushConfiguration *configuration = [[NHNCloudPushConfiguration alloc] in
 }
 ```
 
-## Notification Option Setting
+<a id="notification-option-setting"></a>
+## Notification Option Setting { #notification-option-setting }
 
 * You can set notification options with the [NHNCloudNotificationOptions](./push-ios/#nhncloudnotificationoptions) object.
 
@@ -220,13 +247,15 @@ NHNCloudPushConfiguration *configuration = [[NHNCloudPushConfiguration alloc] in
 
 * The default behavior is not to expose notifications when the app is in the foreground state, so if you want notifications to show up, you need to set the notification option.
 
-### Specification for Notification Option Setting API
+<a id="specification-for-notification-option-setting-api"></a>
+### Specification for Notification Option Setting API { #specification-for-notification-option-setting-api }
 
 ``` objc
 + (void)setNotificationOptions:(nullable NHNCloudNotificationOptions *)options;
 ```
 
-### Example of notification option setting
+<a id="example-of-notification-option-setting"></a>
+### Example of notification option setting { #example-of-notification-option-setting }
 
 ``` objc
 NHNCloudNotificationOptions *options = [[NHNCloudNotificationOptions alloc] init];
@@ -237,7 +266,8 @@ options.soundEnabled = YES;         // Set the use of notification sound (defaul
 [NHNCloudPush setNotificationOptions:options];
 ```
 
-## Token Registration
+<a id="token-registration"></a>
+## Token Registration { #token-registration }
 
 * Register the issued token information to the NHN Cloud server. At this time,  pass whether or not to agree to receive the push (NHNCloudPushAgreement) as a parameter.
 * If this is the first run, ask the user for permission to allow notifications (alwaysAllowTokenRegistration defaults to false).
@@ -247,14 +277,16 @@ options.soundEnabled = YES;         // Set the use of notification sound (defaul
         * Event if permission to allow notifications is not obtained, token can be registered.
 * If a user ID is not set at the time of initial token registration, it is registered using the device identifier.
 
-### Agreement Setting
+<a id="agreement-setting"></a>
+### Agreement Setting { #agreement-setting }
 
 * In accordance with the provisions of the Information and Communications Network Act (Articles 50 through 50-8), when registering a token, whether or not to receive notification/advertising/night-time advertising push messages must also be inputted. When sending a message, it is automatically filtered based on whether or not the user agreed to receive it.
     * [Shortcut to KISA Guide](https://www.kisa.or.kr/2060301/form?postSeq=19)
     * [Shortcut to the law](http://www.law.go.kr/법령/정보통신망이용촉진및정보보호등에관한법률/%2820130218,11322,20120217%29/제50조)
 * Set user notification message agreement information in the [NHNCloudPushAgreement](./push-ios/#nhncloudpushagreement) object.
 
-### Specification for token registration and agreement setting API
+<a id="specification-for-token-registration-and-agreement-setting-api"></a>
+### Specification for token registration and agreement setting API { #specification-for-token-registration-and-agreement-setting-api }
 
 ``` objc
 // Token registration and agreement setting
@@ -265,7 +297,8 @@ options.soundEnabled = YES;         // Set the use of notification sound (defaul
 + (void)registerWithCompletionHandler:(nullable void (^)(NHNCloudPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler;
 ```
 
-### Example of token registration and agreement setting
+<a id="example-of-token-registration-and-agreement-setting"></a>
+### Example of token registration and agreement setting { #example-of-token-registration-and-agreement-setting }
 
 ``` objc
 NHNCloudPushAgreement *agreement = [[NHNCloudPushAgreement alloc] initWithAllowNotifications:YES]; // Agree to receive notification message
@@ -286,18 +319,21 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 }];
 ```
 
-## Token Information Query
+<a id="token-information-query"></a>
+## Token Information Query { #token-information-query }
 
 * Query the last successfully registered token and setting information in the current device.
 * When the token information query is successful, the setting information of the token is returned to the [NHNCloudPushTokenInfo](./push-ios/#nhncloudpushtokeninfo) object.
 
-### Specification for Token Information Query API
+<a id="specification-for-token-information-query-api"></a>
+### Specification for Token Information Query API { #specification-for-token-information-query-api }
 
 ``` objc
 + (void)queryTokenInfoWithCompletionHandler:(void (^)(NHNCloudPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler;
 ```
 
-### Token information query example
+<a id="token-information-query-example"></a>
+### Token information query example { #token-information-query-example }
 
 ``` objc
 [NHNCloudPush queryTokenInfoWithCompletionHandler:^(NHNCloudPushTokenInfo *tokenInfo, NSError *error) {
@@ -312,19 +348,22 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 }];
 ```
 
-## Token Unregistration
+<a id="token-unregistration"></a>
+## Token Unregistration { #token-unregistration }
 
 * Unregister the token registered in the NHN Cloud server. Unregistered tokens are excluded from targets for sending messages.
 * `If you do not want to receive messages after the service logout, you must unregister the token.`
 * `Even if the token is unregistered, the notification permission on the device is not revoked.`
 
-### Specification for Token Unregistration API
+<a id="specification-for-token-unregistration-api"></a>
+### Specification for Token Unregistration API { #specification-for-token-unregistration-api }
 
 ``` objc
 + (void)unregisterWithCompletionHandler:(nullable void (^)(NSString * _Nullable deviceToken, NSError * _Nullable error))completionHandler;
 ```
 
-### Token unregistration example
+<a id="token-unregistration-example"></a>
+### Token unregistration example { #token-unregistration-example }
 
 ``` objc
 [NHNCloudPush unregisterWithCompletionHandler:^(NSString *deviceToken, NSError *error) {
@@ -339,14 +378,17 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 }];
 ```
 
-## Rich Message
+<a id="rich-message"></a>
+## Rich Message { #rich-message }
 
 * Rich messages represent the media (image, video, audio) in the notification, along with the notification's subject and body, and add actions such as buttons and replies.
 * `Rich message reception is supported in iOS 10.0+ or higher.`
 * To represent rich messages, you need to implement Notification Service Extension that inherits and implements NHNCloudPushServiceExtension in the user application. (Refer to the [Notification Service Extension](./push-ios/#notification-service-extension) section below for how to add the Notification Service Extension)
 
-### Supported Rich Messages
+<a id="supported-rich-messages"></a>
+### Supported Rich Messages { #supported-rich-messages }
 
+<a id="supported-rich-messages-button"></a>
 #### Button
 
 | Type | Feature | Action |
@@ -358,6 +400,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 
 > Up to 3 buttons per message are supported.
 
+<a id="supported-rich-messages-media"></a>
 #### Media
 
 | Type | Supported formats | Maximum size | Recommendations |
@@ -368,19 +411,22 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 
 > When a web URL is used, it takes time to download media files.
 
-## Metric Collection
+<a id="metric-collection"></a>
+## Metric Collection { #metric-collection }
 
 * This feature collects metrics for push message reception and user notification execution in the client and sends them to the NHN Cloud server.
 * The collected data can be viewed in the Statistics tab.
 * `To collect metrics, an Appkey must be defined in Push SDK initialization or info.plist file.`
 
-### Received Metric Collection Setting
+<a id="received-metric-collection-setting"></a>
+### Received Metric Collection Setting { #received-metric-collection-setting }
 
 * `Received metrics collection is supported in iOS 10.0+ or higher.`
 * Received metrics are automatically collected by the NHN Cloud Push SDK that was added to the Notification Service Extension.
 * To collect received metrics, you need to implement Notification Service Extension that inherits and implements NHNCloudPushServiceExtension in the user application. (Refer to the [Notification Service Extension](./push-ios/#notification-service-extension) section below for how to add the Notification Service Extension)
-* To enable the collection of received metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#nhn-cloud-push-sdk) in the Notification Service Extension constructor or **extension's info.plist file**.
+* To enable the collection of received metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) in the Notification Service Extension constructor or **extension's info.plist file**.
 
+<a id="received-metric-collection-setting-example-of-received-metrics-collection-setting-through-initialization"></a>
 #### Example of received metrics collection setting through initialization
 
 * `The application and extension are installed together, but since they are on separate sandbox environments, the initialization must be performed in the extension in addition to the initialization in the application.'
@@ -404,6 +450,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 @end
 ```
 
+<a id="received-metric-collection-setting-example-of-received-metrics-collection-setting-through-infoplist-definition"></a>
 #### Example of received metrics collection setting through info.plist definition
 
 * Property List
@@ -427,11 +474,13 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 </dict>
 ```
 
-### Opened Metric Collection Setting
+<a id="opened-metric-collection-setting"></a>
+### Opened Metric Collection Setting { #opened-metric-collection-setting }
 
 * Opened metrics are automatically collected from the NHN Cloud Push SDK that was added to the application.
-* To enable the collection of opened metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#nhn-cloud-push-sdk) or **application's info.plist file**.
+* To enable the collection of opened metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) or **application's info.plist file**.
 
+<a id="opened-metric-collection-setting-example-of-opened-metrics-collection-setting-through-infoplist-definition"></a>
 #### Example of opened metrics collection setting through info.plist definition
 
 * Property List
@@ -455,22 +504,26 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 </dict>
 ```
 
-## Notification Service Extension
+<a id="notification-service-extension"></a>
+## Notification Service Extension { #notification-service-extension }
 
 * `This is supported from iOS 10.0+.`
 * To collect rich messages and received metrics, Notification Service Extension that inherits and implements NHNCloudPushServiceExtension must be implemented in the application.
 
-### Create Notification Service Extension
+<a id="create-notification-service-extension"></a>
+### Create Notification Service Extension { #create-notification-service-extension }
 
 * **File New > Target > iOS > Notification Service Extension**
 ![create_ext](https://static.toastoven.net/toastcloud/sdk/ios/push_create_ext_202206.png)
 
-### Notification Service Extension Setting
+<a id="notification-service-extension-setting"></a>
+### Notification Service Extension Setting { #notification-service-extension-setting }
 
-* Add the extension's [Project Settings](./push-ios/#project-settings) in the same way as the app's project settings.
-* `The extension for iOS is installed along with the app, but they do not share a container because it is on a separate sandbox environment which is separate from the app.'
+* Add the [project settings](./push-ios/#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project) for the Extension in the same way as the app's project settings.
+* `iOS extensions are installed alongside the app but run in a separate sandbox environment that is isolated from the app, so they do not share a container.`
 
-### Notification Service Extension Setting Example
+<a id="notification-service-extension-setting-example"></a>
+### Notification Service Extension Setting Example { #notification-service-extension-setting-example }
 
 * The generated NotificationService class must inherit NHNCloudPushServiceExtension .
 * If there is no separate custom processing logic, the rich message and received metrics collection feature works just by inheritance.
@@ -484,12 +537,14 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 @end
 ```
 
-## User Tag
+<a id="user-tag"></a>
+## User Tag { #user-tag }
 
 * The [User Tag](/Notification/Push/en/console-guide/#tags) feature binds multiple user IDs in one tag and uses it to send messages.
 * It operates based on the tag ID (8-character string) rather than the tag name, and the tag ID can be created and checked in the Console > Tag menu.
 
-### Specification for User Tag Setting API
+<a id="specification-for-user-tag-setting-api"></a>
+### Specification for User Tag Setting API { #specification-for-user-tag-setting-api }
 
 ``` objc
 // Add the tag ID list of the user ID
@@ -511,8 +566,10 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 + (void)removeAllUserTagWithCompletionHandler:(nullable void (^)(NSError * _Nullable error))completionHandler;
 ```
 
-### Modify User Tags
+<a id="modify-user-tags"></a>
+### Modify User Tags { #modify-user-tags }
 
+<a id="modify-user-tags-example-of-modifying-user-tags"></a>
 #### Example of modifying user tags
 
 * Adds or updates the inputted tag ID list and returns the resulting tag ID list.
@@ -546,10 +603,12 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 }];
 ```
 
-### Retrieve User Tags
+<a id="retrieve-user-tags"></a>
+### Retrieve User Tags { #retrieve-user-tags }
 
 * Returns a list of all tag IDs registered to the current user.
 
+<a id="retrieve-user-tags-example-of-retrieving-user-tags"></a>
 #### Example of retrieving user tags
 
 ``` objc
@@ -563,8 +622,10 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 }];
 ```
 
-### Delete User Tags
+<a id="delete-user-tags"></a>
+### Delete User Tags { #delete-user-tags }
 
+<a id="delete-user-tags-example-of-deleting-user-tags"></a>
 #### Example of deleting user tags
 
 * Deletes the inputted user tag ID list and returns the resulting tag ID list.
@@ -595,11 +656,13 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 }];
 ```
 
-## VoIP
+<a id="voip"></a>
+## VoIP { #voip }
 
 * `VoIP function is supported from iOS 10.0 or higher.`
 
-### Frameworks Setup
+<a id="frameworks-setup"></a>
+### Frameworks Setup { #frameworks-setup }
 
 * To use the VoIP function of NHN Cloud Push, you need to add **PushKit.framework** and **CallKit.framework**.
 * PushKit.framework and CallKit.framework can be added in the following way.
@@ -607,7 +670,8 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 ![linked_callkit_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_CallKit_202206.png)
 ![linked_frameworks_push](https://static.toastoven.net/toastcloud/sdk/ios/push_link_frameworks_push_202206.png)
 
-### Capabilities Setup
+<a id="voip-capabilities-setup"></a>
+### Capabilities Setup { #voip-capabilities-setup }
 
 * **Project Target > Signing & Capabilities > + Capability > Background Modes**
 ![add_capability_background_modes](https://static.toastoven.net/toastcloud/sdk/ios/add_capability_background_modes_202206.png)
@@ -615,16 +679,19 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 * **Voice over IP** must be enabled.
 ![capabilities](https://static.toastoven.net/toastcloud/sdk/ios/push_capabilities_voip_202206.png)
 
-### Initialization
+<a id="initialization"></a>
+### Initialization { #initialization }
 
-* VoIP function is available only when [NHN Cloud Push SDK initialization](./push-ios/#nhn-cloud-push-sdk) has been performed.
+* VoIP function is available only when [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) has been performed.
 * The VoIP function is separated as a submodule of the NHN Cloud Push SDK.
 
-### Delegate Setting
+<a id="delegate-setting"></a>
+### Delegate Setting { #delegate-setting }
 
 * When a VoIP message is received, the content of the received message is passed to the [NHNCloudPushMessage](./push-ios/#nhncloudpushmessage) object.
 * `It is recommended to set Delegate in application:didFinishLaunchingWithOptions: function for smooth message reception.`
 
+<a id="delegate-setting-specification-for-delegate-api"></a>
 #### Specification for Delegate API
 
 ``` objc
@@ -636,6 +703,7 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 @end
 ```
 
+<a id="delegate-setting-example"></a>
 #### Delegate setting example
 
 ``` objc
@@ -666,17 +734,20 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 }
 ```
 
-### Token Registration
+<a id="voip-token-registration"></a>
+### Token Registration { #voip-token-registration }
 
 * Register the issued VoIP token information to the NHN Cloud server.
 * VoIP function does not require separate user permission and agreement information.
 
+<a id="voip-token-registration-specification-for-token-registration-api"></a>
 #### Specification for Token Registration API
 
 ```objc
 + (void)registerWithCompletionHandler:(nullable void (^)(NHNCloudPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler;
 ```
 
+<a id="voip-token-registration-token-registration-example"></a>
 #### Token registration example
 
 ```objc
@@ -692,11 +763,13 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 }];
 ```
 
-### Token Information Query
+<a id="voip-token-information-query"></a>
+### Token Information Query { #voip-token-information-query }
 
 * Query the last successfully registered token and setting information in the current device.
 * When the token information query is successful, the setting information of the token is returned to the [NHNCloudPushTokenInfo](./push-ios/#nhncloudpushtokeninfo) object.
 
+<a id="voip-token-information-query-specification-for-token-information-query-api"></a>
 #### Specification for Token Information Query API
 
 ```objc
@@ -704,6 +777,7 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 + (void)queryTokenInfoWithCompletionHandler:(void (^)(NHNCloudPushTokenInfo * _Nullable tokenInfo, NSError * _Nullable error))completionHandler;
 ```
 
+<a id="voip-token-information-query-token-information-query-example"></a>
 #### Token information query example
 
 ```objc
@@ -719,17 +793,20 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 }];
 ```
 
-### Token Unregistration
+<a id="voip-token-unregistration"></a>
+### Token Unregistration { #voip-token-unregistration }
 
 * Unregister the token registered in the NHN Cloud server. Unregistered tokens are excluded from targets for sending messages.
 * `If you do not want to receive messages after the service logout, you must unregister the token.`
 
+<a id="voip-token-unregistration-specification-for-token-unregistration-api"></a>
 #### Specification for Token Unregistration API
 
 ```objc
 + (void)unregisterWithCompletionHandler:(nullable void (^)(NSString * _Nullable deviceToken, NSError * _Nullable error))completionHandler;
 ```
 
+<a id="voip-token-unregistration-token-unregistration-example"></a>
 #### Token unregistration example
 
 ```objc
@@ -745,9 +822,11 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 }];
 ```
 
-## Error Codes
+<a id="error-codes"></a>
+## Error Codes { #error-codes }
 
-### Push Function Error Code
+<a id="push-function-error-code"></a>
+### Push Function Error Code { #push-function-error-code }
 ```objc
 extern NSErrorDomain const NHNCloudPushErrorDomain;
 
@@ -764,7 +843,8 @@ typedef NS_ERROR_ENUM(NHNCloudPushErrorDomain, NHNCloudPushError) {
 };
 ```
 
-### Network Error Codes
+<a id="network-error-codes"></a>
+### Network Error Codes { #network-error-codes }
 ``` objc
 extern NSErrorDomain const NHNCloudNHNCloudHttpErrorDomain;
 
@@ -780,9 +860,11 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 };
 ```
 
-## NHN Cloud Push Class Reference
+<a id="nhn-cloud-push-class-reference"></a>
+## NHN Cloud Push Class Reference { #nhn-cloud-push-class-reference }
 
-### NHNCloudPushConfiguration
+<a id="nhncloudpushconfiguration"></a>
+### NHNCloudPushConfiguration { #nhncloudpushconfiguration }
 * Push setting information passed when NHN Cloud Push is initialized.
 
 ``` objc
@@ -817,7 +899,8 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 @end
 ```
 
-### NHNCloudNotificationOptions
+<a id="nhncloudnotificationoptions"></a>
+### NHNCloudNotificationOptions { #nhncloudnotificationoptions }
 * Notification setting information passed when NHN Cloud Push is initialized.
 
 ``` objc
@@ -836,7 +919,8 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 ```
 
 
-### NHNCloudPushAgreement
+<a id="nhncloudpushagreement"></a>
+### NHNCloudPushAgreement { #nhncloudpushagreement }
 
 ``` objc
 @interface NHNCloudPushAgreement : NSObject
@@ -858,7 +942,8 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 @end
 ```
 
-### NHNCloudPushMessage
+<a id="nhncloudpushmessage"></a>
+### NHNCloudPushMessage { #nhncloudpushmessage }
 * An object returned when receiving a message.
 
 ```objc
@@ -879,7 +964,8 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 @end
 ```
 
-### NHNCloudPushMessage
+<a id="nhn-cloud-push-class-reference-nhncloudpushmessage"></a>
+### NHNCloudPushMessage { #nhn-cloud-push-class-reference-nhncloudpushmessage }
 * An object containing the contents of the rich message among the received message contents.
 
 ```objc
@@ -892,7 +978,8 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 @end
 ```
 
-### NHNCloudPushMedia
+<a id="nhncloudpushmedia"></a>
+### NHNCloudPushMedia { #nhncloudpushmedia }
 * An object containing media contents among the received rich messages.
 
 ```objc
@@ -905,7 +992,8 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 @end
 ```
 
-### NHNCloudPushButton
+<a id="nhncloudpushbutton"></a>
+### NHNCloudPushButton { #nhncloudpushbutton }
 * An object containing the button contents among the received rich message contents.
 
 ```objc
@@ -926,7 +1014,8 @@ typedef NS_ERROR_ENUM(NHNCloudHttpErrorDomain, NHNCloudHttpError) {
 @end
 ```
 
-### NHNCloudPushNotificationAction
+<a id="nhncloudpushnotificationaction"></a>
+### NHNCloudPushNotificationAction { #nhncloudpushnotificationaction }
 * An object returned when notification action (button, reply) is received.
 
 ```objc
@@ -955,7 +1044,8 @@ typedef NS_ENUM(NSInteger, NHNCloudPushNotificationActionType) {
 @end
 ```
 
-### NHNCloudPushTokenInfo
+<a id="nhncloudpushtokeninfo"></a>
+### NHNCloudPushTokenInfo { #nhncloudpushtokeninfo }
 * A token information object returned when requesting token information query.
 
 ``` objc

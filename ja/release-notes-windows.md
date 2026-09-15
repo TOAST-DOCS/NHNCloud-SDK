@@ -1,12 +1,29 @@
-## NHN Cloud > SDK使用ガイド > リリースノート > Windows C++
+<!-- machine_translated: true -->
 
-## 2.0.0.2 (2024.01.23)
+<!-- pre-align:aligned sig=ffe9414de54f -->
+
+<a id="nhn-cloud-sdk-user-guide-release-notes-windows-c"></a>
+## NHN Cloud > SDK使用ガイド > リリースノート > Windows C++ { #nhn-cloud-sdk-user-guide-release-notes-windows-c }
+
+<a id="110-september-15-2026"></a>
+## 2.1.1.0(2026. 09. 15) { #110-september-15-2026 }
+
+Download : [nhncloud-sdk-windows-2.1.1.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.1.1/nhncloud-sdk-windows-2.1.1.0.zip)
+* Log & Crash Search API ドメイン変更の反映
+    * ログ収集 API ドメインが api-logncrash.cloud.toast.com から api-logncrash.nhncloudservice.com に変更されました。
+    * 設定 API ドメインが setting-logncrash.cloud.toast.com から api-setting-logncrash.nhncloudservice.com に変更されました。
+
+<a id="002-20240123"></a>
+## 2.0.0.2(2024.01.23) { #002-20240123 }
+
 Download : [nhncloud-sdk-windows-2.0.0.2.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.2.zip)
 * 重複ログフィルタリング改善
 * CrashReporter実行時のハンドルリーク問題を修正
 * その他安定性の改善
 
-## 2.0.0.1 (2022.07.12)
+<a id="001-20220712"></a>
+## 2.0.0.1(2022.07.12) { #001-20220712 }
+
 Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/2.0.0/nhncloud-sdk-windows-2.0.0.1.zip)
 * NHNCloudLoggerモジュール名の変更
 	* ToastLoggerはDeprecatedになりました。
@@ -14,7 +31,9 @@ Download : [nhncloud-sdk-windows-2.0.0.1.zip](https://static.toastoven.net/toast
 * User IDがMBCS/UNICODE関数によって異なる値が反映される問題を修正
 * クラッシュログ転送時、ログタイプフィルタ設定が適用されない問題を修正
 
-## 1.0.0.5 (2021.03.31)
+<a id="005-20210331"></a>
+## 1.0.0.5(2021.03.31) { #005-20210331 }
+
 Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/1.0.0/toast-sdk-windows-1.0.0.5.zip)
 * バグ修正
 * 一部APIのインタフェースを修正
@@ -25,20 +44,28 @@ Download : [toast-sdk-windows-1.0.0.5.zip](https://static.toastoven.net/toastclo
 	* サンプルプロジェクト含む
 
 
-## 0.9.4.3 (2019.10.10)
+<a id="943-20191010"></a>
+## 0.9.4.3(2019.10.10) { #943-20191010 }
+
 Download : [toast-sdk-windows-0.9.4.3.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.4/toast-sdk-windows-0.9.4.3.zip)
 
-### TOAST Log & Crash
+<a id="toast-log-crash"></a>
+### TOAST Log & Crash { #toast-log-crash }
 
+<a id="toast-log-crash-bug-fixes"></a>
 #### バグ修正
 
 * x86でpure virtual call / invalid parameterのクラッシュログが残らない問題を修正
 
-## 0.9.3.0 (2019.07.23)
+<a id="930-20190723"></a>
+## 0.9.3.0(2019.07.23) { #930-20190723 }
+
 Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.3/toast-sdk-windows-0.9.3.0.zip)
 
-### TOAST Log & Crash
+<a id="930-20190723-toast-log-crash"></a>
+### TOAST Log & Crash { #930-20190723-toast-log-crash }
 
+<a id="930-20190723-toast-log-crash-added-features"></a>
 #### 追加事項
 
 * Initialize()関数の成功/失敗処理
@@ -49,11 +76,15 @@ Download : [toast-sdk-windows-0.9.3.0.zip](https://static.toastoven.net/toastclo
 	* visual studio 2015 (vc14)バージョンを提供
 * xpバージョンを提供
 
-## 0.9.0.12 (2018.09.04)
+<a id="9012-20180904"></a>
+## 0.9.0.12(2018.09.04) { #9012-20180904 }
+
 Download : [toast-sdk-windows-0.9.0.12.zip](https://static.toastoven.net/toastcloud/sdk_download/toast/windows/0.9.0/toast-sdk-windows-0.9.0.12.zip)
 
-### TOAST Log & Crash
+<a id="9012-20180904-toast-log-crash"></a>
+### TOAST Log & Crash { #9012-20180904-toast-log-crash }
 
+<a id="9012-20180904-toast-log-crash-added"></a>
 #### 追加事項
 
 * 新規機能追加

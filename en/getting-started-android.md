@@ -1,10 +1,17 @@
-## NHN Cloud > SDK User Guide > Getting Started > Android
+<!-- machine_translated: true -->
 
-## Supported Environment
+<!-- pre-align:aligned sig=05f610b13df2 -->
+
+<a id="nhn-cloud-sdk-user-guide-getting-started-android"></a>
+## NHN Cloud > SDK User Guide > Getting Started > Android { #nhn-cloud-sdk-user-guide-getting-started-android }
+
+<a id="supported-environment"></a>
+## Supported Environment { #supported-environment }
 
 * Android 5.1(API 22) or higher
 
-## NHN Cloud SDK Components
+<a id="nhn-cloud-sdk-components"></a>
+## NHN Cloud SDK Components { #nhn-cloud-sdk-components }
 
 NHN Cloud SDK for Android consists of the following:
 
@@ -23,25 +30,27 @@ You can selectively apply the required feature among the services provided by NH
 
 | Gradle Dependency                           | Service           |
 | ------------------------------------------- | ----------------- |
-| com.nhncloud.android:nhncloud-common:1.12.0       | Common      |
-| com.nhncloud.android:nhncloud-core:1.12.0         | Core        |
-| com.nhncloud.android:nhncloud-logger:1.12.0       | Log & Crash |
-| com.nhncloud.android:nhncloud-crash-reporter-ndk:1.12.0       | Native Crash Reporter |
-| com.nhncloud.android:nhncloud-iap-core:1.12.0     | In-app Purchase Core |
-| com.nhncloud.android:nhncloud-iap-google:1.12.0   | In-app Purchase <br>Google Play Store |
-| com.nhncloud.android:nhncloud-iap-onestore2:1.12.0 | In-app Purchase <br>ONE store(Integrated version) |
-| com.nhncloud.android:nhncloud-iap-onestore:1.12.0 | In-app Purchase <br>ONE store(v17) |
-| com.nhncloud.android:nhncloud-iap-onestore-v16:1.12.0 | In-app Purchase <br>ONE store(v16) |
-| com.nhncloud.android:nhncloud-iap-onestore-v19:1.12.0 | In-app Purchase <br>ONE store(v19) |
-| com.nhncloud.android:nhncloud-iap-onestore-v21:1.12.0 | In-app Purchase <br>ONE store(v21) |
-| com.nhncloud.android:nhncloud-iap-galaxy:1.12.0 | In-app Purchase <br>Galaxy Store |
-| com.nhncloud.android:nhncloud-push-core:1.12.0    | Push Core   |
-| com.nhncloud.android:nhncloud-push-fcm:1.12.0    | Push <br>Firebase Cloud Messaging |
-| com.nhncloud.android:nhncloud-creditcard-recognizer:1.12.0    | Credit Card Recognizer |
+| com.nhncloud.android:nhncloud-common:1.13.0       | Common      |
+| com.nhncloud.android:nhncloud-core:1.13.0         | Core        |
+| com.nhncloud.android:nhncloud-logger:1.13.0       | Log & Crash |
+| com.nhncloud.android:nhncloud-crash-reporter-ndk:1.13.0       | Native Crash Reporter |
+| com.nhncloud.android:nhncloud-iap-core:1.13.0     | In-app Purchase Core |
+| com.nhncloud.android:nhncloud-iap-google:1.13.0   | In-app Purchase <br>Google Play Store |
+| com.nhncloud.android:nhncloud-iap-onestore2:1.13.0 | In-app Purchase <br>ONE store (integrated version) |
+| com.nhncloud.android:nhncloud-iap-onestore:1.13.0 | In-app Purchase <br>ONE store(v17) |
+| com.nhncloud.android:nhncloud-iap-onestore-v16:1.13.0 | In-app Purchase <br>ONE store(v16) |
+| com.nhncloud.android:nhncloud-iap-onestore-v19:1.13.0 | In-app Purchase <br>ONE store(v19) |
+| com.nhncloud.android:nhncloud-iap-onestore-v21:1.13.0 | In-app Purchase <br>ONE store(v21) |
+| com.nhncloud.android:nhncloud-iap-galaxy:1.13.0 | In-app Purchase <br>Galaxy Store |
+| com.nhncloud.android:nhncloud-push-core:1.13.0    | Push Core   |
+| com.nhncloud.android:nhncloud-push-fcm:1.13.0    | Push <br>Firebase Cloud Messaging |
+| com.nhncloud.android:nhncloud-creditcard-recognizer:1.13.0    | Credit Card Recognizer |
 
-## Apply NHN Cloud SDK to Android Studio Projects
+<a id="apply-nhn-cloud-sdk-to-android-studio-projects"></a>
+## Apply NHN Cloud SDK to Android Studio Projects { #apply-nhn-cloud-sdk-to-android-studio-projects }
 
-### 1. Build Android with Gradle
+<a id="build-android-with-gradle"></a>
+### 1. Build Android with Gradle { #build-android-with-gradle }
 
 To use all NHN Cloud SDK services, set dependency as shown below.
 
@@ -51,29 +60,32 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.nhncloud.android:nhncloud-sdk:1.12.0'
+  implementation 'com.nhncloud.android:nhncloud-sdk:1.13.0'
 }
 ```
 
 The following describes how to set dependency for each product of NHN Cloud SDK.
 
-- [Library setting for Logger](./log-collector-android/#_1)
-- [Library setting for Native Crash Reporter](./log-collector-ndk/#_1)
-- [Library setting for In-app Purchase](./iap-android/#_2)
-- [Library setting for Push](./push-android/#_2)
-- [Library setting for Credit Card Recognizer](./creditcard-recognizer-android/#_1)
+- [Logger Library Settings](./log-collector-android/#library-setting)
+- [Native Crash Reporter Library Settings](./log-collector-ndk/#library-setting)
+- [In-app Purchase Library Settings](./iap-android/#library-setting)
+- [Push Library Settings](./push-android/#library-setting)
+- [Credit Card Recognizer Library Settings](./creditcard-recognizer-android/#add-dependency)
 
-### 2. Build Android with AAR
+<a id="build-android-with-aar"></a>
+### 2. Build Android with AAR { #build-android-with-aar }
 
-Android SDK can be downloaded from the [Downloads](../../../Download/#toast-sdk) page.
+Android SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page.
 
-## Set User ID
+<a id="set-user-id"></a>
+## Set User ID { #set-user-id }
 
 User ID can be set for NHN Cloud SDK.
 The configured User ID is commonly used in each module of NHN Cloud SDK.
 Whenever Log Sending API of NhnCloudLogger is called, the configured User ID is sent to a server along with logs.
 
-### Specification for User ID Setting API
+<a id="specification-for-user-id-setting-api"></a>
+### Specification for User ID Setting API { #specification-for-user-id-setting-api }
 
 ```java
 /* NhnCloudSdk.java */
@@ -84,8 +96,10 @@ public static void setUserId(String userId);
 | -- | -- |
 | userId | String: User ID|
 
-### Example of User ID Setting
+<a id="example-of-user-id-setting"></a>
+### Example of User ID Setting { #example-of-user-id-setting }
 
+<a id="example-of-user-id-setting-login"></a>
 #### Login
 
 ```java
@@ -93,6 +107,7 @@ public static void setUserId(String userId);
 NhnCloudSdk.setUserId(userId);
 ```
 
+<a id="example-of-user-id-setting-logout"></a>
 #### Logout
 
 ```java
@@ -100,12 +115,14 @@ NhnCloudSdk.setUserId(userId);
 NhnCloudSdk.setUserId(null);
 ```
 
-## Set Debug Mode
+<a id="set-debug-mode"></a>
+## Set Debug Mode { #set-debug-mode }
 
 To check internal logs of NHN Cloud SDK, the debug mode can be set.
 When you make an inquiry regarding NHN Cloud SDK, sending the logs with the debug mode enabled can be helpful for faster response.
 
-### Specification for Debug Mode Setting API
+<a id="specification-for-debug-mode-setting-api"></a>
+### Specification for Debug Mode Setting API { #specification-for-debug-mode-setting-api }
 
 ```java
 /* NhnCloudSdk.java */
@@ -116,8 +133,10 @@ public static void setDebugMode(boolean debug);
 | -- | -- |
 | debug | boolean: true to enable debug mode, false otherwise.|
 
-### Usage Example of Debug Mode Setting
+<a id="usage-example-of-debug-mode-setting"></a>
+### Usage Example of Debug Mode Setting { #usage-example-of-debug-mode-setting }
 
+<a id="usage-example-of-debug-mode-setting-enable-debug-mode"></a>
 #### Enable Debug Mode
 
 ```java
@@ -125,6 +144,7 @@ public static void setDebugMode(boolean debug);
 NhnCloudSdk.setDebugMode(true);
 ```
 
+<a id="usage-example-of-debug-mode-setting-disable-debug-mode"></a>
 #### Disable Debug Mode
 
 ```java
@@ -134,7 +154,8 @@ NhnCloudSdk.setDebugMode(false);
 
 > [Caution] The debug mode must be disabled before releasing an app.
 
-## Use NHN Cloud Services
+<a id="use-nhn-cloud-services"></a>
+## Use NHN Cloud Services { #use-nhn-cloud-services }
 
 * User Guide for [Log & Crash](./log-collector-android)
 * User Guide for [Native Crash Reporter](./log-collector-ndk)

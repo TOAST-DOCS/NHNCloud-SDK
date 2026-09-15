@@ -1,11 +1,16 @@
-## NHN Cloud > SDK使用ガイド > 開始する > iOS
+<!-- pre-align:aligned sig=edc80b83f7a3 -->
 
-## サポート環境
+<a id="nhn-cloud-sdk-user-guide-getting-started-ios"></a>
+## NHN Cloud > SDK使用ガイド > 開始する > iOS { #nhn-cloud-sdk-user-guide-getting-started-ios }
+
+<a id="supported-environment"></a>
+## サポート環境 { #supported-environment }
 
 * iOS 11.0以上
 * XCode最新バージョン(バージョン14以上)
 
-## NHN Cloud SDKの構成
+<a id="nhn-cloud-sdk-components"></a>
+## NHN Cloud SDKの構成 { #nhn-cloud-sdk-components }
 
 * iOS用NHN Cloud SDKの構成は次のとおりです。
     * [Logger](./log-collector-ios) SDK
@@ -24,9 +29,11 @@
 | Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | \* UserNotifications.framework<br><br>[Optional]<br>\* PushKit.framework |  |
 | OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | \* Vision.framework<br>\* AVFoundation.framework |  |
 
-## NHN Cloud SDKをXcodeプロジェクトに適用
+<a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
+## NHN Cloud SDKをXcodeプロジェクトに適用 { #apply-nhn-cloud-sdk-to-xcode-projects }
 
-### 1. Cococapodsを使用してNHN Cloud SDK適用
+<a id="apply-nhn-cloud-sdk-with-cococapods"></a>
+### 1. Cococapodsを使用してNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-with-cococapods }
 
 * Podfileを作成してNHN Cloud SDKのPodを追加します。
 
@@ -39,7 +46,8 @@ target '{YOUR PROJECT TARGET NAME}' do
 end
 ```
 
-### 2. Swift Package Managerを使用してNHN Cloud SDK適用
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
+### 2. Swift Package Managerを使用してNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * XCodeで**File > Add Packages...**メニューを選択します。
 * Package URLに'https://github.com/nhn/nhncloud.ios.sdk'を入れて**Add Package**ボタンを選択します。
@@ -47,13 +55,15 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### プロジェクト設定
 
 * **Build Settings**の **Other Linker Flags**に**-lc++**と**-ObjC**項目を追加します。
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-### 3. Carthageを使用してNHN Cloud SDK適用
+<a id="apply-nhn-cloud-sdk-with-carthage"></a>
+### 3. Carthageを使用してNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-with-carthage }
 
 * Cartfileを作成してNHN Cloud SDKを追加します。
 
@@ -75,13 +85,15 @@ binary "https://nh.nu/nhncloudsdk"
 * NHN Cloud SDKを使用するために**フレームワーク設定**と**プロジェクト設定**を行う必要があります。
 
 > サービスのいずれかの機能を選択して使用するには、サービスごとに必要なFrameworkのみ選択してプロジェクトに追加する必要があります。
-> サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](./getting-started-ios/#toast-sdk)で確認できます。  
+> サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](./getting-started-ios/#nhn-cloud-sdk-components)で確認できます。  
 
-### 4. バイナリをダウンロードしてNHN Cloud SDK適用
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 4. バイナリをダウンロードしてNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Link Frameworks
 
-* NHN Cloudの[Downloads](../../../Download/#toast-sdk)ページで全体iOS SDKをダウンロードできます。
+* NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページで全体iOS SDKをダウンロードできます。
 ![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
 
 * NHN Cloud LoggerのCrash Report機能を使用するには、一緒に配布されるCrashReporter.frameworkもプロジェクトに追加する必要があります。
@@ -101,18 +113,16 @@ binary "https://nh.nu/nhncloudsdk"
 ![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework01_202206.png)
 ![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework02_202206.png)
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-settings"></a>
 #### Project Settings
 
 * **Build Settings**の**Other Linker Flags**に**-lc++**と**-ObjC**項目を追加します。
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-* **CrashReporter.framework**を直接ダウンロードするか、ビルドした場合は**Build Settings**の**Enable Bitcode**の値を**NO**に変更する必要があります。
-    * **Project Target > Build Settings > Build Options > Enable Bitcode**
-![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> NHN Cloud SDKの[Downloads](../../../Download/#toast-sdk)ページでダウンロードしたCrashReporter.frameworkは、bitCodeをサポートします。
 
-### フレームワークのインポート
+<a id="import-framework"></a>
+### フレームワークのインポート { #import-framework }
 
 * 使用するフレームワークをインポートします(import)。
 
@@ -124,36 +134,43 @@ binary "https://nh.nu/nhncloudsdk"
 #import <NHNCloudOCR/NHNCloudOCR.h>
 ```
 
-## UserID設定
+<a id="set-user-id"></a>
+## UserID設定 { #set-user-id }
 
 * NHN Cloud SDKにユーザーIDを設定できます。
 * 設定したUserIDは、NHN Cloud SDKの各モジュールで共通使用されます。
 * NHN Cloud SDK Loggerのログ送信APIを呼び出すたびに、設定したユーザーIDをログと一緒にサーバーに送信します。
 
-### UserID API仕様
+<a id="specification-for-user-id-setting-api"></a>
+### UserID API仕様 { #specification-for-user-id-setting-api }
 
 ```objc
 + (void)setUserID:(NSString *)userID;
 ```
 
-### UserID設定使用例
+<a id="usage-example-of-user-id-setting"></a>
+### UserID設定使用例 { #usage-example-of-user-id-setting }
 
 ```objc
 [NHNCloudSDK setUserID:@"NHNCloud-USER"];
 ```
-## デバッグモード設定
+
+<a id="set-debug-mode"></a>
+## デバッグモード設定 { #set-debug-mode }
 
 * NHN Cloud SDKの内部ログを確認するために、デバッグモードを設定できます。
 * NHN Cloud SDKに関するお問い合わせの際は、デバッグモードを有効にしていただくと、迅速にサポートできます。
 
-### デバッグモード設定API仕様
+<a id="specification-for-debug-mode-api"></a>
+### デバッグモード設定API仕様 { #specification-for-debug-mode-api }
 
 
 ```objc
 + (void)setDebugMode:(BOOL)debugMode;
 ```
 
-### デバッグモード設定使用例
+<a id="usage-example-of-debug-mode-setting"></a>
+### デバッグモード設定使用例 { #usage-example-of-debug-mode-setting }
 
 ```objc
 [NHNCloudSDK setDebugMode:YES];    // or NO
@@ -161,7 +178,8 @@ binary "https://nh.nu/nhncloudsdk"
 
 > [注意]アプリをリリースする場合、デバッグモードを無効化する必要があります。
 
-## NHN Cloud SDK Service使用
+<a id="use-nhn-cloud-service"></a>
+## NHN Cloud SDK Service使用 { #use-nhn-cloud-service }
 
 * [Log & Crash](./log-collector-ios)使用ガイド
 * [In-app Purchase](./iap-ios)使用ガイド

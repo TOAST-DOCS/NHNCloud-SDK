@@ -1,17 +1,24 @@
-## NHN Cloud > SDK 사용 가이드 > OCR > ID Card (Android)
+<!-- pre-align:aligned sig=18eaf5875243 -->
 
-## 사전 준비
+<a id="nhn-cloud-sdk-user-guide-ocr-id-card-android"></a>
+## NHN Cloud > SDK 사용 가이드 > OCR > ID Card (Android) { #nhn-cloud-sdk-user-guide-ocr-id-card-android }
+
+<a id="prerequisites"></a>
+## 사전 준비 { #prerequisites }
 
 1. [NHN Cloud Console](https://console.nhncloud.com)에서 [AI Service > OCR] 서비스를 활성화합니다.
 2. OCR 콘솔에서 AppKey와 SecretKey를 확인합니다.
 
-## 지원 환경
+<a id="supported-environment"></a>
+## 지원 환경 { #supported-environment }
 
 NHN Cloud ID Card Recognizer는 Android 5.1 이상(API level 22 이상)에서 동작합니다.
 
-## 프로젝트 설정
+<a id="set-up-project"></a>
+## 프로젝트 설정 { #set-up-project }
 
-### 의존성 추가
+<a id="add-dependency"></a>
+### 의존성 추가 { #add-dependency }
 
 앱의 build.gradle 파일에 nhncloud-idcard-recognizer 의존성을 추가합니다.
 
@@ -19,22 +26,25 @@ NHN Cloud ID Card Recognizer는 Android 5.1 이상(API level 22 이상)에서 �
 dependencies {
     ...
     // NHN Cloud ID Card Recognizer
-    implementation 'com.nhncloud.android:nhncloud-idcard-recognizer:1.12.0'
+    implementation 'com.nhncloud.android:nhncloud-idcard-recognizer:1.13.0'
 }
 ```
 
 <br>
 
-### CAMERA 권한
+<a id="camera-permission"></a>
+### CAMERA 권한 { #camera-permission }
 
 ID Card Recognizer를 사용하기 위해서는 **Manifest.permission.CAMERA** 권한이 필요합니다.
 ID Card Recognizer를 시작하기 전에 카메라 권한을 획득하세요.
 
 <br>
 
-## Id Card Recognizer 사용
+<a id="use-id-card-recognizer"></a>
+## Id Card Recognizer 사용 { #use-id-card-recognizer }
 
-### IdCardRecognizer 인스턴스 생성
+<a id="create-idcardrecognizer-instance"></a>
+### IdCardRecognizer 인스턴스 생성 { #create-idcardrecognizer-instance }
 
 ID Card Recognizer 인스턴스를 생성합니다.
 
@@ -48,7 +58,8 @@ val idCardRecognizer = nhnCloudOcr.createIdCardRecognizer()
 
 <br>
 
-### IdCardRecognizer 시작하기
+<a id="get-started-with-creditcardrecognizer"></a>
+### IdCardRecognizer 시작하기 { #get-started-with-creditcardrecognizer }
 
 IdCardRecognizer의 launch(Activity, IdCardRecognitionCallback) 메서드를 호출하여 신분증 인식을 시작합니다.
 
@@ -64,7 +75,8 @@ IdCardRecognizer.launch(activity) { result, data ->
 
 <br>
 
-### 인식 데이터 사용
+<a id="use-recognition-data"></a>
+### 인식 데이터 사용 { #use-recognition-data }
 
 신분증 인식 성공 시 IdCardData를 상속 구현한 객체로 신분증 인식 데이터가 전달됩니다.
 신분증 종류에 따라 주민 등록증은 IdCardResidentData 객체로, 운전 면허증은 IdCardDriverData 객체로 반환됩니다. 
@@ -73,7 +85,7 @@ IdCardRecognizer.launch(activity) { result, data ->
 SecureString.charAt(index) 메서드는 지정된 index에 있는 문자를 반환합니다.
 
 > IdCardData로 반환되는 신분증 인식 정보를 String 객체로 생성하여 사용하면 보안에 취약합니다.<br>
-> 화면에 표시하기 위하여 [SecureTextView 사용](./idcard-recognizer-android/#_18)을 참고하세요.
+> 화면에 표시하기 위하여 [SecureTextView 사용](./idcard-recognizer-android/#use-securetextview)을 참고하세요.
 
 ```kotlin
 when (data) {
@@ -92,7 +104,8 @@ when (data) {
 
 <br>
 
-### 신분증 진위 확인
+<a id="verify-id-card-authenticity"></a>
+### 신분증 진위 확인 { #verify-id-card-authenticity }
 
 신분증 진위 확인을 위해서 IdCardAuthenticator 인스턴스를 생성합니다. 
 신분증 인식 결과인 IdCardData를 이용해 진위 확인을 요청할 수 있습니다. 
@@ -129,12 +142,14 @@ nhnCloudOcr.createIdCardAuthenticator()
 
 <br>
 
-## 신분증 인식 화면 사용자 정의
+<a id="customize-id-recognition-screen"></a>
+## 신분증 인식 화면 사용자 정의 { #customize-id-recognition-screen }
 
 신분증 인식 화면을 사용자 정의하여 사용할 수 있습니다.
 사용자 정의 화면을 구성하려면 IdCardRecognizer 대신 IdCardRecognitionService를 사용해야 합니다.
 
-### IdCardRecognitionService 인스턴스 생성
+<a id="create-idcardrecognitionservice-instance"></a>
+### IdCardRecognitionService 인스턴스 생성 { #create-idcardrecognitionservice-instance }
 
 IdCardRecognitionService 인스턴스를 생성합니다.
 
@@ -148,7 +163,8 @@ val IdCardRecognitionService = ocrServices.createIdCardRecognitionService()
 
 <br>
 
-### IdCardRecognitionService 리스너 등록
+<a id="register-idcardrecognitionservice-listner"></a>
+### IdCardRecognitionService 리스너 등록 { #register-idcardrecognitionservice-listner }
 
 setIdCardRecognitionListener() 메서드를 사용하여 리스너를 등록합니다.
 신분증이 인식되었을 때 IdCardRecognitionListener를 통해 결과가 통지됩니다.
@@ -168,7 +184,8 @@ IdCardRecognitionService.setIdCardRecognitionListener { result, data ->
 
 <br>
 
-### 인식 결과 처리
+<a id="process-recognition-result"></a>
+### 인식 결과 처리 { #process-recognition-result }
 
 IdCardRecognitionListener으로 전달되는 IdCardRecognitionData는 신뢰도(confidence rating)와 상관없이 모든 결과를 반환합니다.
 따라서 아래와 같이 신뢰도(confidence rating)를 체크하여 보다 정확한 결과를 사용할 수 있습니다.
@@ -250,7 +267,8 @@ private fun isConfident(data: IdCardRecognitionData): Boolean {
 
 <br>
 
-### 인식 데이터 사용
+<a id="customize-id-recognition-screen-use-recognition-data"></a>
+### 인식 데이터 사용 { #customize-id-recognition-screen-use-recognition-data }
 
 신분증 인식 성공 시 IdCardRecognitionData 상속 구현한 객체로 신분증 인식 데이터가 전달됩니다.
 신분증 종류에 따라 주민 등록증은 IdCardResidentRecognitionData 객체로, 운전 면허증은 IdCardDriverRecognitionData 객체로 반환됩니다. 
@@ -259,7 +277,7 @@ private fun isConfident(data: IdCardRecognitionData): Boolean {
 SecureString.charAt(index) 메서드는 지정된 index에 있는 문자를 반환합니다.
 
 > IdCardRecognitionData로 반환되는 신분증 인식 정보를 String 객체로 생성하여 사용하면 보안에 취약합니다.<br>
-> 화면에 표시하기 위하여 [SecureTextView](./idcard-recognizer-android/#_18)사용을 참고하세요.
+> 화면에 표시하기 위하여 [SecureTextView](./idcard-recognizer-android/#use-securetextview)사용을 참고하세요.
 
 ```kotlin
 when (data) {
@@ -279,7 +297,8 @@ when (data) {
 
 <br>
 
-### 신분증 진위 확인
+<a id="customize-id-recognition-screen-verify-id-card-authenticity"></a>
+### 신분증 진위 확인 { #customize-id-recognition-screen-verify-id-card-authenticity }
 
 신분증 진위 확인을 위해서 IdCardAuthenticityService 인스턴스를 생성합니다. 
 신분증 인식 결과인 IdCardRecognitionData를 이용해 진위 확인을 요청할 수 있습니다. 
@@ -316,7 +335,8 @@ ocrServices.createIdCardAuthenticityService()
 
 <br>
 
-### Camera Preview 구성
+<a id="configure-camera-preview"></a>
+### Camera Preview 구성 { #configure-camera-preview }
 
 Activity 또는 Fragment의 Layout에 아래와 같이 IdCardRecognitionCameraPreview 추가하여 Camera Preview를 구성합니다.
 
@@ -338,7 +358,8 @@ Activity 또는 Fragment의 Layout에 아래와 같이 IdCardRecognitionCameraPr
 
 <br>
 
-### 백그라운드 색상 변경
+<a id="change-background-color"></a>
+### 백그라운드 색상 변경 { #change-background-color }
 
 스캔 가이드 영역을 제외한 영역은 반투명하게 보입니다.
 이 영역의 색상을 "app:guideBackgroundColor" 속성을 사용하여 설정합니다.
@@ -353,7 +374,8 @@ Activity 또는 Fragment의 Layout에 아래와 같이 IdCardRecognitionCameraPr
 
 <br>
 
-### 스캔 가이드 뷰 사용자 정의
+<a id="user-defined-scan-guide-view"></a>
+### 스캔 가이드 뷰 사용자 정의 { #user-defined-scan-guide-view }
 
 스캔 가이드 뷰를 IdCardRecognitionCameraPreview의 하위 뷰로 배치하여 자유롭게 정의할 수 있습니다.
 사용자 정의한 가이드 뷰는 "app:guideView" 속성을 사용하여 설정합니다.
@@ -382,7 +404,8 @@ Activity 또는 Fragment의 Layout에 아래와 같이 IdCardRecognitionCameraPr
 
 <br>
 
-### 신분증 검출 시 가이드 뷰 변경
+<a id="change-guide-view-when-id-card-is-detected"></a>
+### 신분증 검출 시 가이드 뷰 변경 { #change-guide-view-when-id-card-is-detected }
 
 신분증이 검출되었을 때 스캔 가이드 뷰의 색상 또는 모양을 변경할 수 있습니다.
 OcrDetectable 인터페이스를 상속 구현하여 setDetected(Boolean)으로 전달되는 값에 따라 가이드 뷰의 색상 또는 모양을 변경합니다.
@@ -404,7 +427,8 @@ class CustomGuideView(
 
 <br>
 
-### 서비스 시작
+<a id="start-service"></a>
+### 서비스 시작 { #start-service }
 
 IdCardRecognitionCameraPreview의 인스턴스를 획득하여 IdCardRecognitionService를 시작합니다.
 
@@ -419,7 +443,8 @@ try {
 
 <br>
 
-### 서비스 정지
+<a id="stop-service"></a>
+### 서비스 정지 { #stop-service }
 
 앱이 백그라운드로 진입 또는 신분증 인식에 성공했을 때 IdCardRecognitionService를 정지합니다.
 
@@ -429,7 +454,8 @@ idCardRecognitionService.stop()
 
 <br>
 
-### 서비스 해제
+<a id="release-service"></a>
+### 서비스 해제 { #release-service }
 
 Activity 또는 Fragment의 View가 Destory 되었을 때 IdCardRecognitionService를 해제합니다.
 
@@ -439,10 +465,12 @@ idCardRecognitionService.release();
 
 <br>
 
-### IdCardRecognizer Lifecycle 설정
+<a id="set-idcardrecognizer-lifecycle"></a>
+### IdCardRecognizer Lifecycle 설정 { #set-idcardrecognizer-lifecycle }
 
 Activity 또는 Fragment의 라이프 사이클에 따라 아래와 같이 호출합니다.
 
+<a id="set-idcardrecognizer-lifecycle-activity"></a>
 #### Activity
 
 ```kotlin
@@ -462,6 +490,7 @@ override fun onDestroy() {
 }
 ```
 
+<a id="set-idcardrecognizer-lifecycle-fragment"></a>
 #### Fragment
 
 ```kotlin
@@ -483,7 +512,8 @@ override fun onDestroyView() {
 
 <br>
 
-### 화면 캡처 방지
+<a id="prevent-screen-capture"></a>
+### 화면 캡처 방지 { #prevent-screen-capture }
 
 화면 캡처 방지를 위해서 Activity의 onCreate()에서 setContentView()가 호출되기 전에 **WindowManager.LayoutParams.FLAG\_SECURE**를 추가합니다.
 
@@ -500,7 +530,8 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 <br>
 
-### 디바이스 체크
+<a id="device-check"></a>
+### 디바이스 체크 { #device-check }
 
 ID Card Recognition Service를 시작하기 전에 애플리케이션을 실행하는 기기에서 ID Card Recognition Service를 사용할 수 있는 환경인지 확인할 수 있습니다.
 이 검사를 수행하려면 IdCardRecognitionService.isAvailable(Context) 메서드를 사용합니다.
@@ -515,7 +546,8 @@ if (IdCardRecognitionService.isAvailable(context)) {
 
 <br>
 
-## SecureTextView 사용
+<a id="use-securetextview"></a>
+## SecureTextView 사용 { #use-securetextview }
 
 개인정보 보호를 위해 신분증 데이터는 일반 문자열이 아닌 SecureString 객체로 반환됩니다.
 신분증 인식 정보를 String 객체로 생성하여 사용하면 보안에 취약하며, 데이터를 화면에 표시하기 위해 SecureTextView를 사용할 수 있습니다. 
@@ -538,7 +570,8 @@ val idCardNameView = findViewById<SecureTextView>(id_card_name_view)
 idCardNameView.setText(name)
 ```
 
-### SecureTextGroup 사용
+<a id="use-securetextgroup"></a>
+### SecureTextGroup 사용 { #use-securetextgroup }
 여러 줄의 텍스트를 표시해야 한다면 SecureTextGroup을 사용할 수 있습니다. 
 ```xml
 <com.nhncloud.android.ocr.SecureTextGroup
@@ -561,9 +594,11 @@ idCardLicenseTypeView.addTextViews(licenseType)
 ```
 
 
-## Class References
+<a id="class-references"></a>
+## Class References { #class-references }
 
-### IdCardData
+<a id="idcarddata"></a>
+### IdCardData { #idcarddata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -572,7 +607,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 <br>
 
-### IdCardResidentData
+<a id="idcardresidentdata"></a>
+### IdCardResidentData { #idcardresidentdata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -583,7 +619,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 <br>
 
-### IdCardDriverData
+<a id="idcarddriverdata"></a>
+### IdCardDriverData { #idcarddriverdata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -599,7 +636,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 <br>
 
 
-### IdCardRecognitionData
+<a id="idcardrecognitiondata"></a>
+### IdCardRecognitionData { #idcardrecognitiondata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -612,7 +650,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 <br>
 
-### IdCardRecognitionData.IdCardValue
+<a id="idcardrecognitiondataidcardvalue"></a>
+### IdCardRecognitionData.IdCardValue { #idcardrecognitiondataidcardvalue }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -621,7 +660,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 <br>
 
-### IdCardResidentRecognitionData
+<a id="idcardresidentrecognitiondata"></a>
+### IdCardResidentRecognitionData { #idcardresidentrecognitiondata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -632,7 +672,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 <br>
 
-### IdCardDriverRecognitionData
+<a id="idcarddriverrecognitiondata"></a>
+### IdCardDriverRecognitionData { #idcarddriverrecognitiondata }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -647,7 +688,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 <br>
 
-### SecureTextView
+<a id="securetextview"></a>
+### SecureTextView { #securetextview }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |
@@ -658,7 +700,8 @@ idCardLicenseTypeView.addTextViews(licenseType)
 
 <br>
 
-### SecureTextGroup
+<a id="securetextgroup"></a>
+### SecureTextGroup { #securetextgroup }
 
 | Method | Returns | Parameters | Descriptions |
 | --- | --- | --- | --- |

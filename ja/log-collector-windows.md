@@ -1,12 +1,17 @@
-## NHN Cloud > SDK使用ガイド > Log & Crash > Windows C++
+<!-- pre-align:aligned sig=e89c3d6cd7a6 -->
 
-## 事前準備
+<a id="nhn-cloud-sdk-user-guide-log-crash-windows-c"></a>
+## NHN Cloud > SDK使用ガイド > Log & Crash > Windows C++ { #nhn-cloud-sdk-user-guide-log-crash-windows-c }
+
+<a id="prerequisites"></a>
+## 事前準備 { #prerequisites }
 
 1. [Install the NHN Cloud SDK](./getting-started-windows)
 2. [NHN Cloudコンソール](https://console.nhncloud.com)で[Log & Crash Searchを有効化](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/)します。
 3. Log & Crash Searchで[AppKeyを確認](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/#appkey)します。
 
-## NHN Cloud SDKの初期化
+<a id="initialize-nhn-cloud-logger-sdk"></a>
+## NHN Cloud SDKの初期化 { #initialize-nhn-cloud-logger-sdk }
 
 Log & Crash Searchで発行されたAppKeyをProjectKeyに設定します。
 
@@ -40,7 +45,8 @@ if (!g_nhncloud_lnc->initialize(loggerConf))
 
 ```
 
-## UserID設定
+<a id="set-userid"></a>
+## UserID設定 { #set-userid }
 
 ユーザーIDを設定できます。
 UserIDを設定すると、ログ送信APIを呼び出した時に、ログと一緒にユーザーIDもサーバーに送信します。
@@ -57,11 +63,13 @@ UserIDを設定すると、ログ送信APIを呼び出した時に、ログと�
 * getUserId
     * 現在設定されているユーザーIDを取得します。
 
-## ログ送信
+<a id="send-logs"></a>
+## ログ送信 { #send-logs }
 
 NHN Cloud Loggerは、5つのレベルのログ送信関数を提供します。
 
-### ログ送信
+<a id="send-logs-2"></a>
+### ログ送信 { #send-logs-2 }
 * DEBUG、INFO、WARN、ERROR、FATALレベルのログを明示的に送信
 	* char*、wchar_t*型をすべてサポートします。
 	* userFieldsはユーザー定義フィールドをより簡単に使用するためのヘルパークラスです。
@@ -77,8 +85,11 @@ void fatal(const wchar_t* message, NHNCloudLoggerUserFields* userFields = NULL);
 void log(NHNCLOUD_LOGGER_LEVEL logLevel, const char* message, NHNCloudLoggerUserFields* userFields = nullptr);
 ```
 
-## ユーザー定義フィールドの追加
-### 方法1：NHNCloudLoggerインスタンスAPI使用
+<a id="add-user-defined-fields"></a>
+## ユーザー定義フィールドの追加 { #add-user-defined-fields }
+
+<a id="method-1-use-the-nhncloudlogger-instance-api"></a>
+### 方法1：NHNCloudLoggerインスタンスAPI使用 { #method-1-use-the-nhncloudlogger-instance-api }
 
 * NHNCloudLoggerインスタンスで直接管理するユーザー定義フィールドです。
 
@@ -95,7 +106,8 @@ g_nhncloud_lnc->cleareUserField();
 
 ```
 
-### 方法2：NHNCloudLoggerUserFieldsクラス使用
+<a id="method-2-use-the-nhncloudloggeruserfields-class"></a>
+### 方法2：NHNCloudLoggerUserFieldsクラス使用 { #method-2-use-the-nhncloudloggeruserfields-class }
 
 ```cpp
 nhncloud::logger::NHNCloudLoggerUserFields* pUserFieldHelper = nhncloud::logger::NHNCloudLoggerUserFields::GetInstance();	// ユーザー定義フィールドヘルパークラスを取得します。
@@ -112,6 +124,7 @@ pUserFieldHelper->clear(); // 上で設定したユーザー定義フィール�
 
 * ユーザー定義フィールドは、**Log & Crash Search > ログ検索**をクリックした後、**ログ検索**画面の**選択したフィールド**に表示される値と同じです。
 
+<a id="method-2-use-the-nhncloudloggeruserfields-class-restrictions-for-user-defined-fields"></a>
 #### ユーザー定義(カスタム)フィールドの制約事項
 
 * すでに[予約されているフィールド](./log-collector-reserved-fields)は使用できません。
@@ -119,11 +132,13 @@ pUserFieldHelper->clear(); // 上で設定したユーザー定義フィール�
 * フィールド名のスペースは、'_'に置換されます。
 
 
-## クラッシュログの収集
+<a id="collect-crash-logs"></a>
+## クラッシュログの収集 { #collect-crash-logs }
 * クラッシュが発生すると、SDKを含む実行ファイルからクラッシュダンプを送信するのが基本動作です。
 * クラッシュ発生時、ユーザーにエラー画面を表示して追加情報を収集できます。
 
-### クラッシュログの収集と環境設定
+<a id="crash-log-collection-and-configuration"></a>
+### クラッシュログの収集と環境設定 { #crash-log-collection-and-configuration }
 
 ```cpp
 
@@ -169,7 +184,8 @@ if (!g_nhncloud_lnc->initialize(loggerConf))
 
 ```
 
-### クラッシュログ送信テスト
+<a id="test-sending-crash-logs"></a>
+### クラッシュログ送信テスト { #test-sending-crash-logs }
 
 * クラッシュログの送信をテストするには、実際に例外(Exception)が発生する必要があります。
 * クラッシュログの送信は、enableCrashReporterがtrueの場合にSDKが自動的に実行します。
@@ -184,10 +200,12 @@ void CsampleDlg::OnBnClickedCrash()
 }
 ```
 
-### クラッシュログの解析
+<a id="interpret-crash-logs"></a>
+### クラッシュログの解析 { #interpret-crash-logs }
 
 NHN Cloud Windows SDKで発生したクラッシュを解析するには、シンボルファイルを作成してWebコンソールにアップロードする必要があります。
 
+<a id="interpret-crash-logs-create-symbol-files"></a>
 #### シンボルファイルの作成
 
 * シンボルファイルを作成するには、配布ファイルのパスでdump_syms.exeを使用する必要があります。

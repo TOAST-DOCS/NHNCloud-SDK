@@ -1,11 +1,16 @@
-## NHN Cloud > SDK User Guide > Getting Started > iOS
+<!-- pre-align:aligned sig=edc80b83f7a3 -->
 
-## Supported Environment
+<a id="nhn-cloud-sdk-user-guide-getting-started-ios"></a>
+## NHN Cloud > SDK User Guide > Getting Started > iOS { #nhn-cloud-sdk-user-guide-getting-started-ios }
+
+<a id="supported-environment"></a>
+## Supported Environment { #supported-environment }
 
 * iOS 11.0 or higher
 * The latest version of XCode (version 14 or higher)
 
-## NHN Cloud SDK Components
+<a id="nhn-cloud-sdk-components"></a>
+## NHN Cloud SDK Components { #nhn-cloud-sdk-components }
 
 * NHN Cloud SDK for iOS consists of the following:
     * [Logger](./log-collector-ios) SDK
@@ -24,9 +29,11 @@
 | Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | \* UserNotifications.framework<br><br>[Optional]<br>\* PushKit.framework |  |
 | OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | \* Vision.framework<br>\* AVFoundation.framework |  |
 
-## Apply NHN Cloud SDK to Xcode Projects
+<a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
+## Apply NHN Cloud SDK to Xcode Projects { #apply-nhn-cloud-sdk-to-xcode-projects }
 
-### 1. Apply NHN Cloud SDK with Cococapods
+<a id="apply-nhn-cloud-sdk-with-cococapods"></a>
+### 1. Apply NHN Cloud SDK with Cococapods { #apply-nhn-cloud-sdk-with-cococapods }
 
 * Create a Podfile and add a pod for NHN Cloud SDK.
 
@@ -39,7 +46,8 @@ target '{YOUR PROJECT TARGET NAME}' do
 end
 ```
 
-### 2. Apply NHN Cloud SDK with Swift Package Manager
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
+### 2. Apply NHN Cloud SDK with Swift Package Manager { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * Go to **File > Add Packages...** from XCode.
 * For the Package URL, enter 'https://github.com/nhn/nhncloud.ios.sdk' and select **Add Package**.
@@ -47,13 +55,15 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### Set up Project
 
 * Add **-lc++** and **-ObjC** entries to **Other Linker Flags** in **Build Settings**.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-### 3. Apply NHN Cloud SDK with Carthage
+<a id="apply-nhn-cloud-sdk-with-carthage"></a>
+### 3. Apply NHN Cloud SDK with Carthage { #apply-nhn-cloud-sdk-with-carthage }
 
 * Create a Cartfile and add NHN Cloud SDK.
 
@@ -75,13 +85,15 @@ binary "https://nh.nu/nhncloudsdk"
 * To use NHN Cloud SDK, you must perform **Framework setting** and **Project setting**.
 
 > To use desired features among the services selectively, you need to choose only the required frameworks per service and add them to the project.
-> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#toast-sdk).
+> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#nhn-cloud-sdk-components).
 
-### 4. Apply NHN Cloud SDK by Downloading Binaries
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 4. Apply NHN Cloud SDK by Downloading Binaries { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Frameworks Setup
 
-* The entire iOS SDK can be downloaded from the [Downloads](../../../Download/#toast-sdk) page of NHN Cloud.
+* The entire iOS SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
 ![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
 
 * To use the Crash Report feature of Logger, CrashReporter.framework which is released along with the service, must be added to the project.
@@ -101,18 +113,16 @@ binary "https://nh.nu/nhncloudsdk"
 ![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework01_202206.png)
 ![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework02_202206.png)
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-settings"></a>
 #### Project Settings
 
 * Add **-lc++** and **-ObjC** to **Other Linker Flags** under **Build Settings**.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-* If you directly downloaded or built **CrashReporter.framework**, the **Enable Bitcode** under **Build Settings** must be changed to **No**.
-    * **Project Target > Build Settings > Build Options > Enable Bitcode**
-![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> CrashReporter.framework downloaded from the [Downloads](../../../Download/#toast-sdk) page of NHN Cloud supports bitcode.
 
-### Import Framework
+<a id="import-framework"></a>
+### Import Framework { #import-framework }
 
 * Import the frameworks to use.
 
@@ -124,36 +134,43 @@ binary "https://nh.nu/nhncloudsdk"
 #import <NHNCloudOCR/NHNCloudOCR.h>
 ```
 
-## Set User ID
+<a id="set-user-id"></a>
+## Set User ID { #set-user-id }
 
 * User ID can be set for NHN Cloud SDK.
 * The configured User ID is commonly used in each module of NHN Cloud SDK.
 * Whenever Log Sending API of NHN Cloud Logger is called, the configured User ID is sent to a server along with logs.
 
-### Specification for User ID Setting API
+<a id="specification-for-user-id-setting-api"></a>
+### Specification for User ID Setting API { #specification-for-user-id-setting-api }
 
 ```objc
 + (void)setUserID:(NSString *)userID;
 ```
 
-### Usage Example of User ID Setting
+<a id="usage-example-of-user-id-setting"></a>
+### Usage Example of User ID Setting { #usage-example-of-user-id-setting }
 
 ```objc
 [NHNCloudSDK setUserID:@"NHNCLOUD-USER"];
 ```
-## Set Debug Mode
+
+<a id="set-debug-mode"></a>
+## Set Debug Mode { #set-debug-mode }
 
 * To check logs within NHN Cloud SDK, the debug mode can be set.
 * When you make an inquiry regarding NHN Cloud SDK, sending the logs with the debug mode enabled can be helpful for faster response.
 
-### Specification for Debug Mode API
+<a id="specification-for-debug-mode-api"></a>
+### Specification for Debug Mode API { #specification-for-debug-mode-api }
 
 
 ```objc
 + (void)setDebugMode:(BOOL)debugMode;
 ```
 
-### Usage Example of Debug Mode Setting
+<a id="usage-example-of-debug-mode-setting"></a>
+### Usage Example of Debug Mode Setting { #usage-example-of-debug-mode-setting }
 
 ```objc
 [NHNCloudSDK setDebugMode:YES];    // or NO
@@ -161,7 +178,8 @@ binary "https://nh.nu/nhncloudsdk"
 
 > [Caution] The debug mode must be disabled before releasing an app.
 
-## Use NHN Cloud Service
+<a id="use-nhn-cloud-service"></a>
+## Use NHN Cloud Service { #use-nhn-cloud-service }
 
 * User Guide for [Log & Crash](./log-collector-ios)
 * User Guide for [In-app Purchase](./iap-ios)

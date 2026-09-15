@@ -1,12 +1,17 @@
-## NHN Cloud > SDK 사용 가이드 > Log & Crash > iOS
+<!-- pre-align:aligned sig=5213f6f0ca5c -->
 
-## Prerequisites
+<a id="nhn-cloud-sdk-user-guide-log-crash-ios"></a>
+## NHN Cloud > SDK 사용 가이드 > Log & Crash > iOS { #nhn-cloud-sdk-user-guide-log-crash-ios }
+
+<a id="prerequisites"></a>
+## Prerequisites { #prerequisites }
 
 1. [NHN Cloud SDK](./getting-started-ios)를 설치합니다.
 2. [NHN Cloud 콘솔](https://console.nhncloud.com)에서 [Log & Crash Search를 활성화](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/)합니다.
 3. Log & Crash Search에서 [AppKey를 확인](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/#appkey)합니다.
 
-## NHN Cloud Logger 구성
+<a id="configuration-of-nhn-cloud-logger"></a>
+## NHN Cloud Logger 구성 { #configuration-of-nhn-cloud-logger }
 
 * iOS용 NHN Cloud Logger SDK의 구성은 다음과 같습니다.
 
@@ -15,9 +20,11 @@
 | Log & Crash | NHNCloudLogger | NHNCloudLogger.framework | [External & Optional]<br/> * CrashReporter.framework (NHNCloud) |  |
 | Mandatory   | NHNCloudCore<br/>NHNCloudCommon | NHNCloudCore.framework<br/>NHNCloudCommon.framework | | OTHER_LDFLAGS = (<br/>    "-ObjC",<br/>    "-lc++" <br/>); |
 
-## NHN Cloud Logger SDK를 Xcode 프로젝트에 적용
+<a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
+## NHN Cloud Logger SDK를 Xcode 프로젝트에 적용 { #apply-nhn-cloud-sdk-to-xcode-projects }
 
-### 1. Cococapods 적용
+<a id="apply-cococapods"></a>
+### 1. Cococapods 적용 { #apply-cococapods }
 
 * Podfile을 생성하여 NHN Cloud SDK에 대한 pod를 추가합니다.
 
@@ -30,7 +37,8 @@ target '{YOUR PROJECT TARGET NAME}' do
 end
 ```
 
-### 2. Swift Package Manager를 사용해 NHN Cloud SDK 적용
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager"></a>
+### 2. Swift Package Manager를 사용해 NHN Cloud SDK 적용 { #apply-nhn-cloud-sdk-with-swift-package-manager }
 
 * XCode에서 **File > Add Packages...** 메뉴를 선택합니다.
 * Package URL에 'https://github.com/nhn/nhncloud.ios.sdk'를 넣고 **Add Package** 버튼을 선택합니다.
@@ -38,114 +46,191 @@ end
 
 ![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
 
+<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
 #### 프로젝트 설정
 
 * **Build Settings**의 **Other Linker Flags**에 **-lc++**와 **-ObjC** 항목을 추가합니다.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-### 3. 바이너리를 다운로드하여 NHN Cloud SDK 적용
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
+### 3. 바이너리를 다운로드하여 NHN Cloud SDK 적용 { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
 #### 프레임워크 설정
 
-* NHN Cloud의 [Downloads](../../../Download/#toast-sdk) 페이지에서 전체 iOS SDK를 다운로드할 수 있습니다.
+* NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 전체 iOS SDK를 다운로드할 수 있습니다.
 * Xcode Project에 **NHNCloudLogger.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework**를 추가합니다.
 * NHN Cloud Logger의 Crash Report 기능을 사용하려면 함께 배포되는 **CrashReporter.framework**도 프로젝트에 추가해야 합니다.
 ![linked_frameworks_logger](https://static.toastoven.net/toastcloud/sdk/ios/logger_link_frameworks_logger_202206.png)
 
+<a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project"></a>
 #### 프로젝트 설정
 
 * **Build Settings**의 **Other Linker Flags**에 **-lc++**와 **-ObjC** 항목을 추가합니다.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
 ![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
-* **CrashReporter.framework**를 직접 다운로드하거나 빌드한 경우에는 **Build Setting**의 **Enable Bitcode**의 값을 **NO**로 변경해야 합니다.
-    * **Project Target > Build Settings > Build Options > Enable Bitcode**
-![enable_bitcode](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-> NHN Cloud의 [Downloads](../../../Download/#toast-sdk) 페이지에서 다운로드한 CrashReporter.framework는 bitCode를 지원합니다.
+<a id="apply-nhn-cloud-symbol-uploader"></a>
+## NHN Cloud Symbol Uploader 적용 { #apply-nhn-cloud-symbol-uploader }
 
-## NHN Cloud Symbol Uploader 적용
+!!! tip "알아두기"
+    Log & Crash Search Symbol API가 v3로 전환되었습니다. v3부터는 앱키 외에 `User Access Token` 인증이 필요합니다.
 
-### 프로젝트의 디버그 설정 변경
+<a id="symbol-uploader-preparation-for-auth"></a>
+### 인증 준비 { #symbol-uploader-preparation-for-auth }
+
+v3 API 호출에는 NHN Cloud User Access Token이 필요하며, 다음 두 가지 방법 중 하나로 제공합니다.
+
+**방법 1. User Access Key ID / Secret Access Key로 전달(권장)**
+
+- 콘솔 우측 상단 계정 > **API 보안 설정**에서 User Access Key를 생성합니다. (User Access Key ID, Secret Access Key)
+- SymbolUploader가 전달받은 Key로 토큰을 자동 발급하여 사용합니다.
+- 옵션: `--user-access-key-id`(`-uak`), `--secret-access-key`(`-sak`)
+
+**방법 2. User Access Token을 직접 전달**
+
+- 이미 발급받은 User Access Token(Bearer)을 그대로 사용합니다.
+- 옵션: `--user-access-token`(`-uat`)
+
+!!! danger "주의"
+    방법 1(`-uak`/`-sak`)과 방법 2(`-uat`)는 동시에 사용할 수 없습니다. 둘 중 하나만 전달하세요.
+    인증 정보를 전달하지 않으면 업로드가 진행되지 않습니다.
+
+<a id="change-project-debug-settings"></a>
+### 프로젝트의 디버그 설정 변경 { #change-project-debug-settings }
 * 빌드 설정을 변경하여 프로젝트의 디버그 정보 형식을 변경해야합니다.
 * Xcode -> Project Target -> Build Settings -> Debug Information Format -> Debug -> DWARF with dSYM File
 
-### 개발 환경에서 Run Script를 사용하여 자동 업로드
+<a id="upload-automatically-using-run-script-in-development-environment"></a>
+### 개발 환경에서 Run Script를 사용하여 자동 업로드 { #upload-automatically-using-run-script-in-development-environment }
 
 * Xcode -> Project Target -> Build Phases -> + -> New Run Script Phase
 * 표시되는 새 Run Script 섹션을 펼칩니다.
 * Shell(셸) 필드 아래에 있는 스크립트 필드에서 새 실행 스크립트를 추가합니다.
-```
+
+**방법 1(User Access Key)**
+
+```sh
 if [ "${CONFIGURATION}" = "Debug" ]; then
-    ${PODS_ROOT}/NHNCloudSymbolUploader/nhncloud.ios.sdk-*/run --app-key LOG_N_CRASH_SEARCH_DEV_APPKEY
+    ${PODS_ROOT}/NHNCloudSymbolUploader/nhncloud.ios.sdk-*/run \
+        --app-key LOG_N_CRASH_SEARCH_APPKEY \
+        --user-access-key-id USER_ACCESS_KEY_ID \
+        --secret-access-key SECRET_ACCESS_KEY
 fi
 ```
-* LOG_N_CRASH_SEARCH_APPKEY에는 Log & Crash Search의 앱키를 입력해야합니다.
+
+**방법 2(User Access Token)**
+
+```sh
+if [ "${CONFIGURATION}" = "Debug" ]; then
+    ${PODS_ROOT}/NHNCloudSymbolUploader/nhncloud.ios.sdk-*/run \
+        --app-key LOG_N_CRASH_SEARCH_APPKEY \
+        --user-access-token USER_ACCESS_TOKEN
+fi
+```
+
+* `LOG_N_CRASH_SEARCH_APPKEY`에는 Log & Crash Search의 앱 키를 입력해야 합니다.
+* 인증 정보는 위 두 방법 중 사용하는 쪽의 정보를 입력해야 합니다.
+    * 방법 1: `USER_ACCESS_KEY_ID`, `SECRET_ACCESS_KEY`
+    * 방법 2: `USER_ACCESS_TOKEN`
+    
 * Run Script 섹션 하단의 Input Files에 dSYM의 기본 경로를 설정합니다.
-    * ${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}
+    * `${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}`
 
-![symbol_uploader_script_pods_path](https://static.toastoven.net/toastcloud/sdk/ios/symbol_uploader_guide_script_pods_path_202206.png)
+![debug_symbol_uploader_settings](../static/images/ios/symbol-uploader/debug-symbol-uploader-settings.png){ height="100%" }
 
-### Symbol Uploader를 사용하여 직접 업로드
+<a id="upload-manually-using-symbol-uploader"></a>
+### Symbol Uploader를 사용하여 직접 업로드 { #upload-manually-using-symbol-uploader }
 
 * SymbolUploader 사용법
 
-```
-USAGE: symbol-uploader -ak <ak> -pv <pv> [-sz <sz>] <path> [--verbose]
+```sh
+USAGE: symbol-uploader -ak <ak> -pv <pv> [-sz <sz>] [-uak <uak>] [-sak <sak>] [-uat <uat>] <path> [--verbose]
 
 ARGUMENTS:
-  <path>                  dSYM file path is must be entered. 
+  <path>                  dSYM file path is must be entered.
 
 OPTIONS:
-  -ak, --app-key <ak>     [Log&Crash Search]'s AppKey must be entered. 
+  -ak, --app-key <ak>     [Log&Crash Search]'s AppKey must be entered.
   -pv, --project-version <pv>
-                          Project version must be entered. 
+                          Project version must be entered.
   -sz, --service-zone <sz>
-                          You can choose between real, alpha, and demo. (default: real)
-  --verbose               Show more debugging information 
+                          You can choose between real, alpha, beta. (default: real)
+  -uak, --user-access-key-id <uak>
+                          User Access Key ID (use with -sak to issue a token).
+  -sak, --secret-access-key <sak>
+                          Secret Access Key (use with -uak to issue a token).
+  -uat, --user-access-token <uat>
+                          User Access Token (Bearer) to use directly.
+  --verbose               Show more debugging information
   -h, --help              Show help information.
-
 ```
 
 * Xcode의 Run Script를 사용하지 않고 사용자가 원하는 시점에 아래와 같은 방법으로 SymbolUploader를 사용하여 직접 Symbol을 업로드 할 수 있습니다.
 
-```
-./SymbolUploader --app-key {APP_KEY} --project-version {CFBundleShortVersionString || MARKETING_VERSION} {symbol path(~/Project.dSYM)}
+**방법 1(User Access Key)**
+
+```sh
+./SymbolUploader \
+    --app-key {APP_KEY} \
+    --project-version {CFBundleShortVersionString || MARKETING_VERSION} \
+    --user-access-key-id {USER_ACCESS_KEY_ID} \
+    --secret-access-key {SECRET_ACCESS_KEY} \
+    {symbol path(~/Project.dSYM)}
 ```
 
-> `동일한 버전의 Symbol이 이미 업로드되어 있는 경우 SymbolUploader는 업로드되어 있는 Symbol을 제거하고 업로드를 수행합니다.`
-> 이때 두 Symbol 파일의 `파일명이 다를 경우 업로드되어 있던 Symbol은 제거되지 않습니다.`
-> Log & Crash Search 콘솔에서 업로드되어 있는 Symbol을 제거해야 합니다.
-> https://console.nhncloud.com/-> 조직 선택 -> 프로젝트 선택 -> Anaytics -> Log & Crash Search -> 설정 -> 심벌 파일
+**방법 2(User Access Token)**
 
-### CrashReport 사용시 주의사항
+```
+./SymbolUploader \
+    --app-key {APP_KEY} \
+    --project-version {CFBundleShortVersionString || MARKETING_VERSION} \
+    --user-access-token {USER_ACCESS_TOKEN} \
+    {symbol path(~/Project.dSYM)}
+```
+
+!!! tip "알아두기"
+    동일한 버전에 같은 파일명의 Symbol이 이미 업로드되어 있는 경우 서버는 업로드를 거부합니다.
+    (resultMessage: "A file with the same filename for this version has already been uploaded.")
+    SymbolUploader는 이 경우 업로드되어 있는 동일 파일명의 Symbol을 제거하고 다시 업로드합니다.
+    두 Symbol 파일의 파일명이 다를 경우 업로드되어 있는 Symbol은 제거되지 않으므로, Log & Crash Search 콘솔에서 직접 제거해야 합니다.
+    https://console.nhncloud.com/ > 조직 선택 -> 프로젝트 선택 > Analytics > Log & Crash Search > 설정 > 심벌 파일
+
+<a id="precautions-when-using-crashreport"></a>
+### CrashReport 사용시 주의사항 { #precautions-when-using-crashreport }
 
 * arm64e 아키텍처를 사용하는 기기의 크래시 분석을 위해서는 NHN Cloud Logger와 함께 배포되는 PLCrashReporter를 사용해야 합니다.
-    * NHN Cloud의 [Downloads](../../../Download/#toast-sdk) 페이지가 아닌 다른 곳에서 다운로드하거나 직접 빌드한 PLCrashReporter를 사용할 경우 arm64e 아키텍처를 사용하는 기기의 크래시 분석이 불가능합니다.
+    * NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지가 아닌 다른 곳에서 다운로드하거나 직접 빌드한 PLCrashReporter를 사용할 경우 arm64e 아키텍처를 사용하는 기기의 크래시 분석이 불가능합니다.
 
-## NHN Cloud Logger SDK 초기화
+<a id="initialize-nhn-cloud-logger-sdk"></a>
+## NHN Cloud Logger SDK 초기화 { #initialize-nhn-cloud-logger-sdk }
 
 * Log & Crash Search에서 발급 받은 AppKey를 설정합니다.
 
-### 초기화 API 명세
+<a id="specification-for-initialization-api"></a>
+### 초기화 API 명세 { #specification-for-initialization-api }
 
 ``` objc
 // 초기화
 + (void)initWithConfiguration:(NHNCloudLoggerConfiguration *)configuration;
 ```
 
-### 초기화 예
+<a id="example-of-initialization-procedure"></a>
+### 초기화 예 { #example-of-initialization-procedure }
 
 ```objc
 NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration configurationWithAppKey:@"YOUR_APP_KEY"];
 [NHNCloudLogger initWithConfiguration:configuration];
 ```
 
-## 로그 전송
+<a id="send-logs"></a>
+## 로그 전송 { #send-logs }
 
 * NHN Cloud Logger는 5가지 레벨의 로그 전송 함수를 제공합니다.
 
-### 로그 전송 API 명세
+<a id="specification-for-log-sending-api"></a>
+### 로그 전송 API 명세 { #specification-for-log-sending-api }
 
 ```objc
 // DEBUG Level log
@@ -164,18 +249,21 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 + (void)fatal:(NSString *)message;
 ```
 
-### 로그 전송 API 사용 예
+<a id="usage-example-of-log-sending-api"></a>
+### 로그 전송 API 사용 예 { #usage-example-of-log-sending-api }
 
 ```objc
 [NHNCloudLogger info:@"NHN Cloud Log & Crash Search!"];
 ```
 
-## 사용자 정의 필드 설정
+<a id="set-user-defined-fields"></a>
+## 사용자 정의 필드 설정 { #set-user-defined-fields }
 
 * 원하는 사용자 정의 필드를 설정합니다.
 * 사용자 정의 필드를 설정하면 로그 전송 API를 호출할 때마다 설정한 값을 로그와 함께 서버로 전송합니다.
 
-### 사용자 정의 필드 API 명세
+<a id="specification-for-user-defined-field-setting-api"></a>
+### 사용자 정의 필드 API 명세 { #specification-for-user-defined-field-setting-api }
 
 ```objc
 // 사용자 정의 필드 추가
@@ -184,6 +272,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 * 사용자 정의 필드는 **Log & Crash Search > 로그 검색**을 클릭한 후 **로그 검색** 화면의 **선택한 필드**에 표시되는 값과 같습니다.
 
+<a id="specification-for-user-defined-field-setting-api-restrictions-for-user-defined-fields"></a>
 #### 사용자 정의 필드 제약사항
 
 * 이미 [예약된 필드](./log-collector-reserved-fields)는 사용할 수 없습니다.  
@@ -191,25 +280,29 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 * 필드 이름의 공백은 '_'로 치환됩니다.
 
 
-### 사용자 정의 필드 사용 예
+<a id="usage-example-of-user-defined-fields"></a>
+### 사용자 정의 필드 사용 예 { #usage-example-of-user-defined-fields }
 ```objc
 // 사용자 정의 필드 추가
 [NHNCloudLogger setUserFieldWithValue:@"USER_VALUE" forKey:@"USER_KEY"];
 ```
 
-## 크래시 로그 수집
+<a id="collect-crash-logs"></a>
+## 크래시 로그 수집 { #collect-crash-logs }
 * NHN Cloud Logger는 크래시 정보를 로그로 전송하는 기능을 제공합니다.
 * NHN Cloud Logger를 초기화할 때 함께 활성화되고 사용 여부를 설정할 수 있습니다.
 * 크래시 로그를 전송하려면 PLCrashReporter를 사용합니다.
 
-### CrashReporter 사용 여부 설정
+<a id="set-whether-to-enable-crashreporter"></a>
+### CrashReporter 사용 여부 설정 { #set-whether-to-enable-crashreporter }
 * CrashReporter 기능은 기본적으로 NHN Cloud Logger를 초기화할 때 함께 활성화됩니다.
 * NHN Cloud Logger를 초기화할 때 사용 여부를 설정할 수 있습니다.
 * 크래시 로그 전송을 기능을 사용하지 않으려면 CrashReporter 기능을 비활성화해야 합니다.
 
 > 사용자 아이디가 설정되어 있으면 Log & Crash Search 콘솔의 `크래시 사용자` 항목에서 사용자별 크래시 경험을 확인할 수 있습니다.
-> 사용자 아이디 설정은 [시작하기](./getting-started-ios/#사용자-아이디-설정)에서 확인 가능합니다.
+> 사용자 아이디 설정은 [시작하기](./getting-started-ios/#set-user-id)에서 확인 가능합니다.
 
+<a id="set-whether-to-enable-crashreporter-enable-crashreporter"></a>
 #### CrashReporter 활성화
 ```objc
 // CrashReporter 활성화
@@ -217,6 +310,8 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 
 [NHNCloudLogger initWithConfiguration:configuration];
 ```
+
+<a id="set-whether-to-enable-crashreporter-disable-crashreporter"></a>
 #### CrashReporter 비활성화
 ```objc
 // CrashReporter 비활성화
@@ -225,17 +320,20 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 [NHNCloudLogger initWithConfiguration:configuration];
 ```
 
-## 크래시 발생 시점에 추가 정보를 설정하여 전송
+<a id="set-additional-information-in-time-for-crash-occurrence-before-sending"></a>
+## 크래시 발생 시점에 추가 정보를 설정하여 전송 { #set-additional-information-in-time-for-crash-occurrence-before-sending }
 
 * 크래시 발생 직후, 추가 정보를 설정할 수 있습니다.
 * setShouldReportCrashHandler의 Block에서 사용자 정의 필드를 설정하면 정확히 크래시가 발생한 시점에 추가 정보를 설정할 수 있습니다.
 
-### Data Adapter API 명세
+<a id="specification-for-data-adapter-api"></a>
+### Data Adapter API 명세 { #specification-for-data-adapter-api }
 ```objc
 + (void)setShouldReportCrashHandler:(void (^)(void))handler;
 ```
 
-### Data Adapter 사용 예
+<a id="usage-example-of-data-adapter"></a>
+### Data Adapter 사용 예 { #usage-example-of-data-adapter }
 
 ```objc
 [NHNCloudLogger setShouldReportCrashHandler:^{
@@ -246,17 +344,20 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 }];
 ```
 
-## 로그 전송 후 추가작업 진행
+<a id="further-tasks-after-sending-logs"></a>
+## 로그 전송 후 추가작업 진행 { #further-tasks-after-sending-logs }
 
 * Delegate를 등록하면 로그 전송 후 추가 작업을 진행할 수 있습니다.
 
 
-### Delegate 설정 API 명세
+<a id="specification-for-set-delegate-api"></a>
+### Delegate 설정 API 명세 { #specification-for-set-delegate-api }
 ```objc
 + (void)setDelegate:(id<NHNCloudLoggerDelegate>) delegate;
 ```
 
-### Delegate API 명세
+<a id="specification-for-delegate-api"></a>
+### Delegate API 명세 { #specification-for-delegate-api }
 
 ``` objc
 @protocol NHNCloudLoggerDelegate <NSObject>
@@ -276,7 +377,8 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 ```
 
 
-### Delegate 설정 및 사용 예
+<a id="usage-example-of-delegate"></a>
+### Delegate 설정 및 사용 예 { #usage-example-of-delegate }
 
 ```objc
 #import <NHNCloudLogger/NHNCloudLogger.h>
@@ -326,29 +428,34 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 @end
 ```
 
-## Network Insights
+<a id="network-insights"></a>
+## Network Insights { #network-insights }
 * Network Insights는 콘솔에 등록한 URL을 호출하여 지연 시간과 응답값을 측정합니다. 이를 활용하여 세계 여러 나라(디바이스의 국가 코드 기준)에서의 지연 시간과 응답값을 측정할 수 있습니다.
 
 > 콘솔을 통해 Network Insights 기능을 활성화하면 NHN Cloud Logger를 초기화할 때, 콘솔에 등록한 URL로 1회 요청합니다.
 
-### Network Insights 활성화
+<a id="enable-network-insights"></a>
+### Network Insights 활성화 { #enable-network-insights }
 
 1. [NHN Cloud Console](https://console.nhncloud.com/)에서 **Log & Crash Search** 서비스를 클릭합니다.
 2. **설정** 메뉴를 클릭합니다.
 3. **로그 전송 설정** 탭을 클릭합니다.
 4. **Network Insights 로그**를 활성화합니다.
 
-### URL 설정
+<a id="url-setting"></a>
+### URL 설정 { #url-setting }
 
 1. [NHN Cloud Console](https://console.nhncloud.com/)에서 **Log & Crash Search** 서비스를 클릭합니다.
 2. **네트워크 인사이트** 메뉴를 클릭합니다.
 3. **URL 설정** 탭을 클릭합니다.
 4. 측정하려는 URL을 입력하고 **추가** 버튼을 클릭합니다.
 
-## 공공기관용 NHN Cloud Logger 
+<a id="nhn-cloud-logger-for-government-agencies"></a>
+## 공공기관용 NHN Cloud Logger { #nhn-cloud-logger-for-government-agencies }
 * NHN Cloud Logger는 공공기관용 클라우드 환경을 지원합니다.
 
-### 공공기관용 NHN Cloud Logger 설정하기 
+<a id="set-nhn-cloud-logger-for-government-agencies"></a>
+### 공공기관용 NHN Cloud Logger 설정하기 { #set-nhn-cloud-logger-for-government-agencies }
 * NHNCloudLoggerConfiguration의 cloudEnvironment property로 공공기관용 클라우드 사용 설정이 가능합니다. 
 
 ```objc
@@ -361,6 +468,7 @@ typedef NS_ENUM(NSInteger, NHNCloudEnvironment) {
 ```
 * 설정하지 않을 경우 기본값은 `NHNCloudEnvironmentPublic`입니다. 
 
+<a id="set-nhn-cloud-logger-for-government-agencies-example-of-initializing-nhn-cloud-logger-for-government-agencies"></a>
 #### 공공기관용 NHN Cloud Logger 초기화 예
 
 ```objc
@@ -370,7 +478,8 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 [NHNCloudLogger initWithConfiguration:configuration];
 ```
 
-### 공공기관용 NHN Cloud Logger 사용 시 주의사항
+<a id="precautions-when-using-nhn-cloud-logger-for-government-agencies"></a>
+### 공공기관용 NHN Cloud Logger 사용 시 주의사항 { #precautions-when-using-nhn-cloud-logger-for-government-agencies }
 
 * 공공기관용 Log & Crash Search는 아래 기능을 지원하지 않습니다.
     * Console Settings
