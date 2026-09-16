@@ -7,14 +7,13 @@
 ## 지원 환경 { #supported-environment }
 
 * iOS 11.0 이상
-* XCode 최신 버전(버전 14 이상)
+* XCode 최신 버전
 
 <a id="nhn-cloud-sdk-components"></a>
 ## NHN Cloud SDK의 구성 { #nhn-cloud-sdk-components }
 
 * iOS용 NHN Cloud SDK의 구성은 다음과 같습니다.
-    * [Logger](./log-collector-ios) SDK
-    * [In-app Purchase AppStore](./iap-ios) SDK
+    * [Logger](./log-collector-ios) SDK    
     * [Push](./push-ios) SDK
     * [OCR](./creditcard-recognizer-ios) SDK
 
@@ -22,10 +21,9 @@
 
 | Service | Cocoapods Pod Name | Carthage | Framework | Deployment Target | Dependency | Build Settings |
 | --- | --- | --- | --- | --- | --- | --- |
-| All | NHNCloudSDK | binary "[https://nh.nu/nhncloudsdk](https://nh.nu/nhncloudsdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudIAP.framework<br>NHNCloudPush.framework |  |  |  |
+| All | NHNCloudSDK | binary "[https://nh.nu/nhncloudsdk](https://nh.nu/nhncloudsdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudPush.framework<br>NHNCloudOCR.framework |  |  |  |
 | Mandatory | NHNCloudCore<br>NHNCloudCommon |  | NHNCloudCore.framework<br>NHNCloudCommon.framework | 11.0 |  | OTHER\_LDFLAGS = (<br>"-ObjC",<br>"-lc++"<br>); |
 | Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br>\* CrashReporter.framework (NHNCloud) |  |
-| IAP | NHNCloudIAP |  | NHNCloudIAP.framework | 11.0 | \* StoreKit.framework<br><br>[Optional]<br>\* libsqlite3.tdb |  |
 | Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | \* UserNotifications.framework<br><br>[Optional]<br>\* PushKit.framework |  |
 | OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | \* Vision.framework<br>\* AVFoundation.framework |  |
 
@@ -53,15 +51,6 @@ end
 * Package URL에 'https://github.com/nhn/nhncloud.ios.sdk'를 넣고 **Add Package** 버튼을 선택합니다.
 * 추가를 원하는 Library를 선택합니다.
 
-![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
-
-<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
-#### 프로젝트 설정
-
-* **Build Settings**의 **Other Linker Flags**에 **-lc++**와 **-ObjC** 항목을 추가합니다.
-    * **Project Target > Build Settings > Linking > Other Linker Flags**
-![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-
 <a id="apply-nhn-cloud-sdk-with-carthage"></a>
 ### 3. Carthage를 사용해 NHN Cloud SDK 적용 { #apply-nhn-cloud-sdk-with-carthage }
 
@@ -69,57 +58,40 @@ end
 
 ```sh
 # Full URL
-binary "https://api-storage.cloud.toast.com/v1/AUTH_f9e3dc598ca142d3820e1c19343d5428/carthage/NHNCloudSDK.json" 
+binary "https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_f9e3dc598ca142d3820e1c19343d5428/carthage/NHNCloudSDK.json" 
 
 # Short URL
-binary "https://nh.nu/nhncloudsdk"
+binary "https://nh.nu/sdk"
 ```
 
 * 생성된 Carthage/Build 폴더의 Framework를 Xcode 프로젝트에 추가합니다.
-![carthage_import_framework](https://static.toastoven.net/toastcloud/sdk/ios/carthage01_202206.png)
+* NHN Cloud SDK를 사용하려면 [프레임워크 설정](./getting-started-ios/#frameworks-setup)과 [프로젝트 설정](./getting-started-ios/#set-up-project)을 해야 합니다.
 
-* 프로젝트에 다음과 같이 프레임워크(framework)가 추가된 것을 확인합니다.
-![import_carthage_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/carthage02_202206.png)
-![import_carthage_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/carthage03_202206.png)
-
-* NHN Cloud SDK를 사용하려면 **프레임워크 설정**과 **프로젝트 설정**을 해야합니다.
-
-> 서비스 중 원하는 기능을 선택하여 사용하기 위해서는 서비스별로 필요한 Framework만 선택하여 프로젝트에 추가해야 합니다.
-> 서비스별로 필요한 Framework는 [NHN Cloud SDK의 구성](./getting-started-ios/#nhn-cloud-sdk-components)에서 확인할 수 있습니다.
+!!! tip "알아두기"
+    서비스 중 원하는 기능을 선택하여 사용하기 위해서는 서비스별로 필요한 Framework만 선택하여 프로젝트에 추가해야 합니다.
+    서비스별로 필요한 Framework는 [NHN Cloud SDK의 구성](./getting-started-ios/#nhn-cloud-sdk-components)에서 확인할 수 있습니다.
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 ### 4. 바이너리를 다운로드하여 NHN Cloud SDK 적용 { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
-<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
-#### 프레임워크 설정
-
 * NHN Cloud의 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 전체 iOS SDK를 다운로드할 수 있습니다.
-![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
+* 필요한 Framework를 선택하여 프로젝트에 추가합니다.
 
-* Logger의 Crash Report 기능을 사용하려면 함께 배포되는 CrashReporter.framework도 프로젝트에 추가해야 합니다.
-![import_external_framework](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_external_folder_202206.png)
+<a id="frameworks-setup"></a>
+### 프레임워크 설정 { #frameworks-setup }
 
-* 프로젝트에 다음과 같이 프레임워크(framework)가 추가된 것을 확인합니다.
-![import_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_complete_folder_202206.png)
+* Logger의 Crash Report 기능을 사용하려면 SDK의 External 폴더에 함께 배포되는 CrashReporter.xcframework를 프로젝트에 추가해야 합니다.
+* Push 기능을 사용하려면 프로젝트에 시스템 프레임워크인 UserNotifications.framework를 추가해야 합니다.
+* OCR 기능을 사용하려면 프로젝트에 시스템 프레임워크인 Vision.framework와 AVFoundation.framework를 추가해야 합니다.
 
-* IAP 기능을 사용하려면 StoreKit.framework를 추가해야 합니다.
-![linked__storekit_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_StoreKit_202206.png)
+<a id="set-up-project"></a>
+### 프로젝트 설정 { #set-up-project }
 
-* Push 기능을 사용하려면 UserNotifications.framework를 추가해야 합니다.
-![linked__usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)
-
-##### xcframework
-* xcframework를 사용하면 arm simulator에서도 NHN Cloud SDK를 사용할 수 있습니다.
-![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework01_202206.png)
-![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework02_202206.png)
-
-<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-settings"></a>
-#### 프로젝트 설정
-
+* Cocoapods 이외의 방식으로 프로젝트에 NHN Cloud SDK를 통합한 경우 아래 설정이 추가로 필요합니다.
 * **Build Settings**의 **Other Linker Flags**에 **-lc++**와 **-ObjC** 항목을 추가합니다.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
-![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
+![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="import-framework"></a>
 ### 프레임워크 가져오기 { #import-framework }
@@ -129,7 +101,6 @@ binary "https://nh.nu/nhncloudsdk"
 ```objc
 #import <NHNCloudCore/NHNCloudCore.h>
 #import <NHNCloudLogger/NHNCloudLogger.h>
-#import <NHNCloudIAP/NHNCloudIAP.h>
 #import <NHNCloudPush/NHNCloudPush.h>
 #import <NHNCloudOCR/NHNCloudOCR.h>
 ```
@@ -182,6 +153,5 @@ binary "https://nh.nu/nhncloudsdk"
 ## NHN Cloud Service 사용 { #use-nhn-cloud-service }
 
 * [Log & Crash](./log-collector-ios) 사용 가이드
-* [In-app Purchase](./iap-ios) 사용 가이드
 * [Push](./push-ios) 사용 가이드
 * [OCR](./creditcard-recognizer-ios) 사용 가이드

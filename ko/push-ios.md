@@ -95,7 +95,7 @@ end
 <a id="service-login"></a>
 ## 서비스 로그인 { #service-login }
 
-* NHN Cloud SDK에서 제공하는 모든 상품(Push, IAP, Log & Crash, ...)은 하나의 사용자 아이디를 공유합니다.
+* NHN Cloud SDK에서 제공하는 모든 상품(Logger, Push, OCR)은 하나의 사용자 아이디를 공유합니다.
 
 <a id="login"></a>
 ### 로그인 { #login }

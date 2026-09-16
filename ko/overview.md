@@ -14,7 +14,6 @@ NHN Cloud SDK는 [NHN Cloud](https://nhncloud.com/)의 다양한 서비스 라�
 NHN Cloud SDK는 다음과 같은 서비스를 제공합니다.
 
 - [Log & Crash Search](https://www.nhncloud.com/service/data-analytics/log-crash-search)
-- [IAP](https://www.nhncloud.com/service/mobile-service/iap)
 - [Push](https://www.nhncloud.com/service/notification/push)
 - [OCR](https://www.nhncloud.com/service/ai-service/ocr)
 
@@ -57,7 +56,7 @@ NHN Cloud Windows C++ SDK는 Windows 7, 10(32/64bit), 11(64bit) 환경을 지원
 Log & Crash Search 수집 서버에 로그를 전송하는 기능을 제공합니다. 수집된 로그는 NHN Cloud 콘솔의 **Log & Crash Search** 메뉴를 클릭해 확인할 수 있습니다.
 
 - [Log & Crash Search 서비스 확인](https://nhncloud.com/service/data-analytics/log-crash-search)
-                                
+                               
 
 <a id="main-features"></a>
 ### 주요 기능 { #main-features }
@@ -75,28 +74,6 @@ Log & Crash Search 수집 서버에 로그를 전송하는 기능을 제공합�
 - [Log & Crash > iOS](./log-collector-ios) 사용 가이드
 - [Log & Crash > Windows C++](./log-collector-windows) 사용 가이드
 
-<a id="nhn-cloud-iap"></a>
-## NHN Cloud IAP { #nhn-cloud-iap }
-
-모바일 통합 인앱 결제 서비스를 제공합니다.
-
-- [IAP 서비스 확인하기](https://www.nhncloud.com/service/mobile-service/iap)
-
-<a id="nhn-cloud-iap-main-features"></a>
-### 주요 기능 { #nhn-cloud-iap-main-features }
-
-| 기능 | 설명 |
-| -- | -- |
-| 일반 결제 | 일회성 상품을 판매할 수 있습니다. |
-| 구독 결제 | 구독 상품을 판매할 수 있습니다. |
-| 재처리 | 불안전하게 종료된 구매 프로세스를 복원할 수 있습니다. |
-
-<a id="nhn-cloud-iap-user-guides"></a>
-### 사용 가이드 { #nhn-cloud-iap-user-guides }
-
-- [IAP > Android](./iap-android) 사용 가이드
-- [IAP > iOS](./iap-ios) 사용 가이드
-
 <a id="nhn-cloud-push"></a>
 ## NHN Cloud Push { #nhn-cloud-push }
 
@@ -108,3 +85,19 @@ NHN Cloud Push SDK를 사용하여 Push 서비스를 손쉽게 적용할 수 있
 
 - [Push > Android](./push-android) 사용 가이드
 - [Push > iOS](./push-ios) 사용 가이드
+
+
+<a id="nhn-cloud-ocr"></a>
+## NHN Cloud OCR { #nhn-cloud-ocr }
+
+NHN Cloud OCR SDK를 사용하여 OCR 서비스를 손쉽게 적용할 수 있습니다.
+신용카드와 신분증을 인식하고 데이터를 추출 할 수 있습니다. 
+
+<a id="nhn-cloud-ocr-user-guides"></a>
+### 사용가이드 { #nhn-cloud-ocr-user-guides }
+
+- [OCR (Credit Card)> Android](./creditcard-recognizer-android)
+- [OCR (Credit Card)> iOS](./creditcard-recognizer-ios)
+
+- [OCR (ID Card)> Android](./idcard-recognizer-android)
+- [OCR (ID Card)> iOS](./idcard-recognizer-ios)
