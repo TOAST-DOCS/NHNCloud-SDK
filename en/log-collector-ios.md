@@ -466,7 +466,7 @@ NHNCloudLoggerConfiguration *configuration = [NHNCloudLoggerConfiguration config
 <a id="nhn-cloud-logger-for-government-agencies"></a>
 ## NHN Cloud Logger for Government Agencies { #nhn-cloud-logger-for-government-agencies }
 
-<!-- TODO: translate body -->
+* NHN Cloud Logger supports the cloud environment for public institutions.
 
 <a id="set-nhn-cloud-logger-for-government-agencies"></a>
 ### Set NHN Cloud Logger for government agencies { #set-nhn-cloud-logger-for-government-agencies }
