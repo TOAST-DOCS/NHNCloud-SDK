@@ -60,9 +60,8 @@ SENDTIME -> reserved_SENDTIME
 | FreeDiskSpace | 空きディスクスペース | 
 | SinkVersion | DB保存モジュールバージョン | 
 | errorCode | エラーコード | 
-| errorCode | エラーコード | 
 | crashMeta | クラッシュメタデータ | 
 | SymResult | クラッシュ分析結果 | 
 | ExceptionType | クラッシュタイプ | 
 | Location | クラッシュ発生位置 | 
-| lncIssueID | イシューID | 
+| lncIssueID | イシューID |
