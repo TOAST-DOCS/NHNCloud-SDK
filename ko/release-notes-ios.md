@@ -3,6 +3,17 @@
 <a id="nhn-cloud-sdk-user-guide-release-notes-ios"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > iOS { #nhn-cloud-sdk-user-guide-release-notes-ios }
 
+<a id="110-2026-10-13"></a>
+## 1.11.0(2026. 10. 13.) { #110-2026-10-13 }
+
+<a id="110-2026-10-13-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #110-2026-10-13-nhn-cloud-iap }
+
+<a id="110-2026-10-13-nhn-cloud-iap-improved"></a>
+#### 기능 개선/변경
+* NHN Cloud IAP 지원 종료
+    * NHN Cloud iOS SDK에서 IAP 모듈이 제거되었습니다.
+
 <a id="100-2026-09-15"></a>
 ## 1.10.0(2026. 09. 15.) { #100-2026-09-15 }
 
