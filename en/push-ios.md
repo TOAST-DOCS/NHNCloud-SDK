@@ -125,7 +125,7 @@ end
 
 * `The token registration and query features cannot be used without initialization.`
 * Set the Push AppKey issued from the NHN Cloud server in the [NHNCloudPushConfiguration](./push-ios/#nhncloudpushconfiguration)object.
-* `In the development environment, the sandbox property of NHNCloudPushConfiguration의 must be set to YES to receive the message sent using the development certificate.'
+* `In the development environment, the sandbox property of NHNCloudPushConfiguration must be set to YES to receive the message sent using the development certificate.'
 
 <a id="specification-for-initialization-api"></a>
 ### Specification for Initialization API { #specification-for-initialization-api }

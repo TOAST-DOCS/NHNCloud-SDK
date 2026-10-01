@@ -3,7 +3,7 @@
 <!-- pre-align:aligned sig=923390b5b8a7 -->
 
 <a id="nhn-cloud-sdk-user-guide-iap-android"></a>
-## NHN Cloud > SDK 사용 가이드 > IAP > Android { #nhn-cloud-sdk-user-guide-iap-android }
+## NHN Cloud > SDK 使用ガイド > IAP > Android { #nhn-cloud-sdk-user-guide-iap-android }
 
 <a id="prerequisites"></a>
 ## 事前準備 { #prerequisites }
@@ -485,7 +485,7 @@ public class MainActivity extends AppCompatActivity {
 * IAPコンソールに登録された商品のうち、ストアに登録されていない商品は [IapProduct](./iap-android/#iapproduct) リスト(Invalid Product List)として返されます。
 
 <a id="specification-for-product-list-query-api"></a>
-### 商品リスト照会 API 명세 { #specification-for-product-list-query-api }
+### 商品リスト照会 API 仕様 { #specification-for-product-list-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -595,7 +595,7 @@ NhnCloudIap.launchPurchaseFlow(activity, params);
 * 照会結果は[IapService.PurchasesResponseListener](./iap-android/#iapservicepurchasesresponselistener)を通じて[IapPurchase](./iap-android/#iappurchase)オブジェクトリストとして返されます。
 
 <a id="specification-for-unconsumed-purchases-query-api"></a>
-### 未消費決済照会 API 명세 { #specification-for-unconsumed-purchases-query-api }
+### 未消費決済照会 API 仕様 { #specification-for-unconsumed-purchases-query-api }
 
 ```java
 /* NhnCloudIap.java */
@@ -1154,7 +1154,7 @@ public String getStatusDescription()
 <a id="iapsubscriptionstatusstatuscode"></a>
 ### IapSubscriptionStatus.StatusCode { #iapsubscriptionstatusstatuscode }
 
-* 구독 상태를 나타내는 코드 입니다。
+* サブスクライブの状態を示すコードです。
 
 ```java
 /* IapSubscriptionStatus.java */

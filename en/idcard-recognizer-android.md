@@ -709,6 +709,6 @@ idCardLicenseTypeView.addTextViews(licenseType)
 | setTextSize | float |  | Set the text size. <br>The size unit is sp and defaults to 14sp. |
 | setTextColor | int |  | Set the text color. <br>The default setting is Color.Black (0xFF000000). |
 | setTypefaceStyle | Typeface, int |  | Set the text font and style. <br>The default style setting is Typeface.NORMAL.|
-| setLetterSpacing | float | | 텍스트의 문자 간격을 설정합니다. <br>기본 설정은 0em입니다. 
+| setLetterSpacing | float | | Sets the character spacing of the text. <br>The default setting is 0em.
 
 <br>
