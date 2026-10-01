@@ -10,7 +10,7 @@
 
 1. [Install NHN Cloud SDK](./getting-started-android)
 2. [Enable Log & Crash Search](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/) in [NHN Cloud console](https://console.nhncloud.com).
-3. [Check AppKey](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/#check-appkey) from Log & Crash Search.
+3. [Check AppKey](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/en/console-guide/) from Log & Crash Search.
 
 <a id="library-setting"></a>
 ## Library Setting { #library-setting }

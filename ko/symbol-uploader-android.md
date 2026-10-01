@@ -46,7 +46,7 @@ apply plugin: 'com.toast.android.toast-services'
 
 `userAccessKeyId`는 NHN Cloud 콘솔에서 발급받은 User Access Key ID, `secretAccessKey`는 함께 발급받은 Secret Access Key를 설정하는 항목입니다.
 플러그인은 두 값을 사용해 User Access Token을 자동으로 발급합니다.
-각 인증 정보의 발급 방법은 [User Access Key 토큰](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/user-access-key-token/)을 참고하세요.
+각 인증 정보의 발급 방법은 [User Access Key 토큰](/nhncloud/ko/public-api/user-access-key-token/)을 참고하세요.
 
 인증 방식은 다음 두 가지 중 하나를 선택할 수 있습니다.
 

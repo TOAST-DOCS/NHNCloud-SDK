@@ -86,7 +86,7 @@ For privacy reasons, ID data is returned as a SecureString object rather than a 
 The SecureString.charAt(index) method returns the character at the specified index.
 
 > It is vulnerable to security when you create and use the ID card recognition data that is returned as IdCardData as a String object.<br>
-> See [Use SecureTextView](./idcard-recognizer-android/#use-securetextview) to display on screen.
+> See [Use SecureTextView](#use-securetextview) to display on screen.
 
 ```kotlin
 when (data) {
@@ -278,7 +278,7 @@ For privacy reasons, ID data is returned as a SecureString object rather than a 
 The SecureString.charAt(index) method returns the character at the specified index.
 
 > It is vulnerable to security issues when you create and use the ID card recognition data returned as IdCardRecognitionData as a String object.<br>
-> See [Use SecureTextView](./idcard-recognizer-android/#use-securetextview) to display on screen.
+> See [Use SecureTextView](#use-securetextview) to display on screen.
 
 ```kotlin
 when (data) {

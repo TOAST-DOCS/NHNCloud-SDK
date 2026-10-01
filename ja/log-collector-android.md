@@ -10,7 +10,7 @@
 
 1. [NHN Cloud SDK](./getting-started-android)をインストールします。
 2. [NHN Cloudコンソール](https://console.nhncloud.com)で[Log & Crash Searchを有効化](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/)します。
-3. Log & Crash Searchで[AppKeyを確認](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/#appkey)します。
+3. Log & Crash Searchで[AppKeyを確認](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/ja/console-guide/)します。
 
 <a id="library-setting"></a>
 ## ライブラリ設定 { #library-setting }

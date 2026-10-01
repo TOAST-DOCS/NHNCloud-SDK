@@ -55,7 +55,7 @@
 * Log & Crash Search Symbol API v3を利用したマッピングファイル（mapping.txt）およびネイティブシンボル（native symbol）のアップロードに対応
     * 0.1.0からシンボルのアップロードに User Access Token 認証が必要です。
     * User Access Token を直接設定するか、User Access Key と Secret Access Key を使用して自動で発行できます。
-    * 詳細については、[Android シンボルアップローダーガイド](https://docs.nhncloud.com/ja/nhncloud-sdk/ja/symbol-uploader-android/)を参照してください。
+    * 詳細については、[Android シンボルアップローダーガイド](./symbol-uploader-android/)を参照してください。
 
 <a id="121-october-28-2025"></a>
 ## 1.12.1(2025. 10. 28.) { #121-october-28-2025 }

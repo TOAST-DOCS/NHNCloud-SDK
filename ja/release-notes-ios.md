@@ -28,7 +28,7 @@
     * v0.0.5 以降、User Access Token 認証が必要です。
       * appKey 単独認証は使用できません。User Access Token 認証が必要です。
       * User Access Token を直接設定するか、User Access Key と Secret Access Key を使用して自動で発行できます。
-      * 詳細については、[NHN Cloud Symbol Uploader 適用](https://docs.nhncloud.com/ja/nhncloud-sdk/ja/log-collector-ios/#apply-nhn-cloud-symbol-uploader)を参照してください。
+      * 詳細については、[NHN Cloud Symbol Uploader 適用](./log-collector-ios/#apply-nhn-cloud-symbol-uploader)を参照してください。
 
 <a id="100-2026-09-15-nhn-cloud-push"></a>
 ### NHN Cloud Push { #100-2026-09-15-nhn-cloud-push }
@@ -162,8 +162,8 @@
 
 * 決済検証方式の改善
     * 新規SDKでも(旧)領収書検証を使用できるように改善
-        * [(新)領収書検証 + Notification V2](/Mobile%20Service/IAP/ja/console-apple-guide/#notification-v2)
-        * [(旧)領収書検証 + Notification V1 (Deprecated)](/Mobile%20Service/IAP/ja/console-apple-guide/#notification-v1-deprecated)
+        * [(新)領収書検証 + Notification V2](/Mobile%20Service/IAP/ja/console-apple-guide/)
+        * [(旧)領収書検証 + Notification V1 (Deprecated)](/Mobile%20Service/IAP/ja/console-apple-guide/)
 
 <a id="71-2023-12-19"></a>
 ## 1.7.1 (2023. 12. 19.) { #71-2023-12-19 }
@@ -213,7 +213,7 @@
 <a id="70-2023-11-14-nhn-cloud-iap-improved"></a>
 #### 機能改善/変更
 
-* 決済検証方法の変更 - [(新)領収書検証 + Notification V2](/Mobile%20Service/IAP/ja/console-apple-guide/#notification-v2)
+* 決済検証方法の変更 - [(新)領収書検証 + Notification V2](/Mobile%20Service/IAP/ja/console-apple-guide/)
 
 <a id="62-2023-08-29"></a>
 ## 1.6.2(2023. 08. 29.) { #62-2023-08-29 }

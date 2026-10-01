@@ -10,7 +10,7 @@
 
 1. [NHN Cloud SDK](./getting-started-ios)をインストールします。
 2. [NHN Cloudコンソール](https://console.nhncloud.com)で、[Log & Crash Searchを有効化](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/)します。
-3. Log & Crash Searchで、[AppKeyを確認](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/#appkey)します。
+3. Log & Crash Searchで、[AppKeyを確認](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/ja/console-guide/)します。
 
 <a id="configuration-of-nhn-cloud-logger"></a>
 ## NHN Cloud Logger構成 { #configuration-of-nhn-cloud-logger }
@@ -61,7 +61,7 @@ end
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
 #### Link Frameworks
 
-* NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページで、全体iOS SDKをダウンロードできます。
+* NHN Cloudの[Downloads](/Download/#nhn-cloud-sdk)ページで、全体iOS SDKをダウンロードできます。
 * Xcode Projectに**NHNCloudLogger.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework**を追加します。
 * NHN Cloud LoggerのCrash Report機能を使用するには、一緒に配布される**CrashReporter.framework**もプロジェクトに追加する必要があります。
 ![linked_frameworks_logger](https://static.toastoven.net/toastcloud/sdk/ios/logger_link_frameworks_logger_202206.png)
@@ -204,7 +204,7 @@ OPTIONS:
 ### CrashReport 使用時注意事項 { #precautions-when-using-crashreport }
 
 * arm64eアーキテクチャを使用する機器のクラッシュ・分析のためにはNHN Cloud Loggerと一緒に配布されるPLCrashReporterを使用しなければなりません。
-      * NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページではない他の場所でダウンロードしたり、直接ビルドしたPLCrashReporterを使用する場合、arm64eアーキテクチャを使用する機器のクラッシュ分析が不可能です。
+      * NHN Cloudの[Downloads](/Download/#nhn-cloud-sdk)ページではない他の場所でダウンロードしたり、直接ビルドしたPLCrashReporterを使用する場合、arm64eアーキテクチャを使用する機器のクラッシュ分析が不可能です。
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
 ## NHN Cloud Logger SDK初期化 { #initialize-nhn-cloud-logger-sdk }

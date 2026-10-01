@@ -8,7 +8,7 @@
 
 1. [Install the NHN Cloud SDK](./getting-started-windows)
 2. [NHN Cloud 콘솔](https://console.nhncloud.com)에서 [Log & Crash Search를 활성화](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/)합니다.
-3. Log & Crash Search에서 [AppKey를 확인](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/#appkey)합니다.
+3. Log & Crash Search에서 [AppKey를 확인](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/ko/console-guide/)합니다.
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
 ## NHN Cloud SDK 초기화 { #initialize-nhn-cloud-logger-sdk }
@@ -217,5 +217,5 @@ NHN Cloud Windows SDK에서 발생한 크래시를 해석하려면 심벌 파일
 dump_syms sample.pdb > sample.sym
 ```
 
-* 이후 sample.sym을 zip으로 압축하여 [콘솔 서버에 업로드](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ko/console-guide/#_21)합니다.
+* 이후 sample.sym을 zip으로 압축하여 [콘솔 서버에 업로드](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/ko/console-guide/)합니다.
     * 콘솔 업로드할 때 입력하는 버전은, 초기화할 때 setProjectVersion에 입력한 버전과 같은 값이어야 합니다.

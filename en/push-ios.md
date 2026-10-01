@@ -9,7 +9,7 @@
 ## Prerequisites { #prerequisites }
 
 1. Install [NHN Cloud SDK](./getting-started-ios).
-2. [Enable Notification \> Push](http://docs.nhncloud.com/en/Notification/Push/en/console-guide/) in [NHN Cloud Console](https://console.nhncloud.com).
+2. [Enable Notification \> Push](/Notification/Push/en/console-guide/) in [NHN Cloud Console](https://console.nhncloud.com).
 3. Check your AppKey in Push.
 
 <a id="apns-guide"></a>
@@ -65,7 +65,7 @@ end
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
 #### Set up Framework
 
-* You can download the full iOS SDK from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
+* You can download the full iOS SDK from the [Downloads](/Download/#nhn-cloud-sdk) page of NHN Cloud.
 * Add **NHNCloudPush.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework, UserNotifications.framework** to your Xcode Project.
 * UserNotifications.framework can be added in the following way.
 ![linked_usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)
@@ -102,7 +102,7 @@ end
 <a id="login"></a>
 ### Login { #login }
 
-* `If the user ID is not set at the time of initial token registration, the device identifier is used for registration.` ([Refer to the token registration section](./push-ios/#token-registration))
+* `If the user ID is not set at the time of initial token registration, the device identifier is used for registration.` ([Refer to the token registration section](#token-registration))
 * `If the user ID is set or changed after token registration, the token information is updated.`
 
 ``` objc
@@ -124,7 +124,7 @@ end
 ## Initialize NHN Cloud Push SDK { #initialize-nhn-cloud-push-sdk }
 
 * `The token registration and query features cannot be used without initialization.`
-* Set the Push AppKey issued from the NHN Cloud server in the [NHNCloudPushConfiguration](./push-ios/#nhncloudpushconfiguration)object.
+* Set the Push AppKey issued from the NHN Cloud server in the [NHNCloudPushConfiguration](#nhncloudpushconfiguration)object.
 * `In the development environment, the sandbox property of NHNCloudPushConfiguration의 must be set to YES to receive the message sent using the development certificate.'
 
 <a id="specification-for-initialization-api"></a>
@@ -144,9 +144,9 @@ end
 
 <a id="specification-for-delegate-api"></a>
 ### Specification for Delegate API { #specification-for-delegate-api }
-* When receiving a notification message while the app is running, the content of the received message is passed to the [NHNCloudPushMessage](./push-ios/#nhncloudpushmessage) object.
-* When the app is launched by the user executing (clicking) the notification, the content of the executed notification message is passed to the [NHNCloudPushMessage](./push-ios/#nhncloudpushmessage) object.
-* When the user executes (clicks) the button on the notification, the action information of the executed button is passed to the [NHNCloudPushNotificationAction](./push-ios/#nhncloudpushnotificationaction) object.
+* When receiving a notification message while the app is running, the content of the received message is passed to the [NHNCloudPushMessage](#nhncloudpushmessage) object.
+* When the app is launched by the user executing (clicking) the notification, the content of the executed notification message is passed to the [NHNCloudPushMessage](#nhncloudpushmessage) object.
+* When the user executes (clicks) the button on the notification, the action information of the executed button is passed to the [NHNCloudPushNotificationAction](#nhncloudpushnotificationaction) object.
 * `It is recommended to set Delegate in application:didFinishLaunchingWithOptions: function for smooth message reception.`
 
 ``` objc
@@ -237,7 +237,7 @@ NHNCloudPushConfiguration *configuration = [[NHNCloudPushConfiguration alloc] in
 <a id="notification-option-setting"></a>
 ## Notification Option Setting { #notification-option-setting }
 
-* You can set notification options with the [NHNCloudNotificationOptions](./push-ios/#nhncloudnotificationoptions) object.
+* You can set notification options with the [NHNCloudNotificationOptions](#nhncloudnotificationoptions) object.
 
 | Option Name | Description | Default |
 | --- | --- | --- |
@@ -283,7 +283,7 @@ options.soundEnabled = YES;         // Set the use of notification sound (defaul
 * In accordance with the provisions of the Information and Communications Network Act (Articles 50 through 50-8), when registering a token, whether or not to receive notification/advertising/night-time advertising push messages must also be inputted. When sending a message, it is automatically filtered based on whether or not the user agreed to receive it.
     * [Shortcut to KISA Guide](https://www.kisa.or.kr/2060301/form?postSeq=19)
     * [Shortcut to the law](http://www.law.go.kr/법령/정보통신망이용촉진및정보보호등에관한법률/%2820130218,11322,20120217%29/제50조)
-* Set user notification message agreement information in the [NHNCloudPushAgreement](./push-ios/#nhncloudpushagreement) object.
+* Set user notification message agreement information in the [NHNCloudPushAgreement](#nhncloudpushagreement) object.
 
 <a id="specification-for-token-registration-and-agreement-setting-api"></a>
 ### Specification for token registration and agreement setting API { #specification-for-token-registration-and-agreement-setting-api }
@@ -323,7 +323,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 ## Token Information Query { #token-information-query }
 
 * Query the last successfully registered token and setting information in the current device.
-* When the token information query is successful, the setting information of the token is returned to the [NHNCloudPushTokenInfo](./push-ios/#nhncloudpushtokeninfo) object.
+* When the token information query is successful, the setting information of the token is returned to the [NHNCloudPushTokenInfo](#nhncloudpushtokeninfo) object.
 
 <a id="specification-for-token-information-query-api"></a>
 ### Specification for Token Information Query API { #specification-for-token-information-query-api }
@@ -383,7 +383,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 
 * Rich messages represent the media (image, video, audio) in the notification, along with the notification's subject and body, and add actions such as buttons and replies.
 * `Rich message reception is supported in iOS 10.0+ or higher.`
-* To represent rich messages, you need to implement Notification Service Extension that inherits and implements NHNCloudPushServiceExtension in the user application. (Refer to the [Notification Service Extension](./push-ios/#notification-service-extension) section below for how to add the Notification Service Extension)
+* To represent rich messages, you need to implement Notification Service Extension that inherits and implements NHNCloudPushServiceExtension in the user application. (Refer to the [Notification Service Extension](#notification-service-extension) section below for how to add the Notification Service Extension)
 
 <a id="supported-rich-messages"></a>
 ### Supported Rich Messages { #supported-rich-messages }
@@ -423,8 +423,8 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 
 * `Received metrics collection is supported in iOS 10.0+ or higher.`
 * Received metrics are automatically collected by the NHN Cloud Push SDK that was added to the Notification Service Extension.
-* To collect received metrics, you need to implement Notification Service Extension that inherits and implements NHNCloudPushServiceExtension in the user application. (Refer to the [Notification Service Extension](./push-ios/#notification-service-extension) section below for how to add the Notification Service Extension)
-* To enable the collection of received metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) in the Notification Service Extension constructor or **extension's info.plist file**.
+* To collect received metrics, you need to implement Notification Service Extension that inherits and implements NHNCloudPushServiceExtension in the user application. (Refer to the [Notification Service Extension](#notification-service-extension) section below for how to add the Notification Service Extension)
+* To enable the collection of received metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](#initialize-nhn-cloud-push-sdk) in the Notification Service Extension constructor or **extension's info.plist file**.
 
 <a id="received-metric-collection-setting-example-of-received-metrics-collection-setting-through-initialization"></a>
 #### Example of received metrics collection setting through initialization
@@ -478,7 +478,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 ### Opened Metric Collection Setting { #opened-metric-collection-setting }
 
 * Opened metrics are automatically collected from the NHN Cloud Push SDK that was added to the application.
-* To enable the collection of opened metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) or **application's info.plist file**.
+* To enable the collection of opened metrics, an Appkey must be defined in the [NHN Cloud Push SDK initialization](#initialize-nhn-cloud-push-sdk) or **application's info.plist file**.
 
 <a id="opened-metric-collection-setting-example-of-opened-metrics-collection-setting-through-infoplist-definition"></a>
 #### Example of opened metrics collection setting through info.plist definition
@@ -519,7 +519,7 @@ agreement.allowNightAdvertisements = YES;   // Agree to receive night-time adver
 <a id="notification-service-extension-setting"></a>
 ### Notification Service Extension Setting { #notification-service-extension-setting }
 
-* Add the [project settings](./push-ios/#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project) for the Extension in the same way as the app's project settings.
+* Add the [project settings](#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project) for the Extension in the same way as the app's project settings.
 * `iOS extensions are installed alongside the app but run in a separate sandbox environment that is isolated from the app, so they do not share a container.`
 
 <a id="notification-service-extension-setting-example"></a>
@@ -682,13 +682,13 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 <a id="initialization"></a>
 ### Initialization { #initialization }
 
-* VoIP function is available only when [NHN Cloud Push SDK initialization](./push-ios/#initialize-nhn-cloud-push-sdk) has been performed.
+* VoIP function is available only when [NHN Cloud Push SDK initialization](#initialize-nhn-cloud-push-sdk) has been performed.
 * The VoIP function is separated as a submodule of the NHN Cloud Push SDK.
 
 <a id="delegate-setting"></a>
 ### Delegate Setting { #delegate-setting }
 
-* When a VoIP message is received, the content of the received message is passed to the [NHNCloudPushMessage](./push-ios/#nhncloudpushmessage) object.
+* When a VoIP message is received, the content of the received message is passed to the [NHNCloudPushMessage](#nhncloudpushmessage) object.
 * `It is recommended to set Delegate in application:didFinishLaunchingWithOptions: function for smooth message reception.`
 
 <a id="delegate-setting-specification-for-delegate-api"></a>
@@ -767,7 +767,7 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 ### Token Information Query { #voip-token-information-query }
 
 * Query the last successfully registered token and setting information in the current device.
-* When the token information query is successful, the setting information of the token is returned to the [NHNCloudPushTokenInfo](./push-ios/#nhncloudpushtokeninfo) object.
+* When the token information query is successful, the setting information of the token is returned to the [NHNCloudPushTokenInfo](#nhncloudpushtokeninfo) object.
 
 <a id="voip-token-information-query-specification-for-token-information-query-api"></a>
 #### Specification for Token Information Query API

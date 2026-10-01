@@ -10,7 +10,7 @@
 
 1. [Install NHN Cloud SDK](./getting-started-ios).
 2. [Enable Log & Crash Search](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/) in [NHN Cloud console](https://console.nhncloud.com).
-3. [Check AppKey](/Data%20&%20Analytics/Log%20&%20Crash%20Search/en/console-guide/#check-appkey) in Log & Crash Search.
+3. [Check AppKey](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/en/console-guide/) in Log & Crash Search.
 
 <a id="configuration-of-nhn-cloud-logger"></a>
 ## Configuration of NHN Cloud Logger { #configuration-of-nhn-cloud-logger }
@@ -61,7 +61,7 @@ end
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
 #### Set up Framework
 
-* The entire iOS SDK can be downloaded from [Downloads](../../Download/#nhn-cloud-sdk) of NHN Cloud.
+* The entire iOS SDK can be downloaded from [Downloads](/Download/#nhn-cloud-sdk) of NHN Cloud.
 * Add **NHNCloudLogger.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework** to the Xcode Project.
 * To enable Crash Report of NHN Cloud Logger, CrashReporter.framework which is distributed as well, must be added to the project.
 ![linked_frameworks_logger](https://static.toastoven.net/toastcloud/sdk/ios/logger_link_frameworks_logger_202206.png)
@@ -204,7 +204,7 @@ OPTIONS:
 ### Precautions when using CrashReport { #precautions-when-using-crashreport }
 
 * Crash analysis of devices using the arm64e architecture requires the use of PLCrashReporter, which is distributed with the NHN Cloud Logger.
-    * Crash analysis of devices using the arm64e architecture is not possible if you use a PLCrashReporter that is downloaded or built directly from a location other than the [Downloads](../../Download/#nhn-cloud-sdk) of NHN Cloud.
+    * Crash analysis of devices using the arm64e architecture is not possible if you use a PLCrashReporter that is downloaded or built directly from a location other than the [Downloads](/Download/#nhn-cloud-sdk) of NHN Cloud.
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
 ## Initialize NHN Cloud Logger SDK { #initialize-nhn-cloud-logger-sdk }

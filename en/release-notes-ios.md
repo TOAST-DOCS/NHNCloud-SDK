@@ -28,7 +28,7 @@
     * Starting from v0.0.5, User Access Token authentication is required.
       * Authentication using appKey alone is not supported; User Access Token authentication is required.
       * You can configure a User Access Token directly or have one issued automatically by using a User Access Key and Secret Access Key.
-      * For more information, refer to [Apply NHN Cloud Symbol Uploader](https://docs.nhncloud.com/en/nhncloud-sdk/en/log-collector-ios/#apply-nhn-cloud-symbol-uploader).
+      * For more information, refer to [Apply NHN Cloud Symbol Uploader](./log-collector-ios/#apply-nhn-cloud-symbol-uploader).
 
 <a id="100-2026-09-15-nhn-cloud-push"></a>
 ### NHN Cloud Push { #100-2026-09-15-nhn-cloud-push }
@@ -162,8 +162,8 @@
 
 * Improved payment verification methods
     * Improved to enable (old) receipt verification in new SDKs
-        * [(New) Receipt verification + Notification V2](/Mobile%20Service/IAP/en/console-apple-guide/#new-receipt-verification-notification-v2)
-        * [(Old) Receipt verification + Notification V1 (Deprecated)](/Mobile%20Service/IAP/en/console-apple-guide/#old-receipt-verification-notification-v1-soon-to-be-deprecated)
+        * [(New) Receipt verification + Notification V2](/Mobile%20Service/IAP/en/console-apple-guide/)
+        * [(Old) Receipt verification + Notification V1 (Deprecated)](/Mobile%20Service/IAP/en/console-apple-guide/)
 
 <a id="71-2023-12-19"></a>
 ## 1.7.1 (December 19, 2023) { #71-2023-12-19 }
@@ -213,7 +213,7 @@
 <a id="70-2023-11-14-nhn-cloud-iap-improved"></a>
 #### Feature Updates
 
-* Changed payment verification methods - [(New) Receipt verification + Notification V2](/Mobile%20Service/IAP/en/console-apple-guide/#new-receipt-verification-notification-v2)
+* Changed payment verification methods - [(New) Receipt verification + Notification V2](/Mobile%20Service/IAP/en/console-apple-guide/)
 
 <a id="62-2023-08-29"></a>
 ## 1.6.2 (August 29, 2023) { #62-2023-08-29 }
