@@ -75,7 +75,7 @@ The following describes how to set dependency for each product of NHN Cloud SDK.
 <a id="build-android-with-aar"></a>
 ### 2. Build Android with AAR { #build-android-with-aar }
 
-Android SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page.
+Android SDK can be downloaded from the [Downloads](/Download/#nhn-cloud-sdk) page.
 
 <a id="set-user-id"></a>
 ## Set User ID { #set-user-id }
