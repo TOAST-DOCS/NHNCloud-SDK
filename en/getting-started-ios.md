@@ -85,7 +85,7 @@ binary "https://nh.nu/nhncloudsdk"
 * To use NHN Cloud SDK, you must perform **Framework setting** and **Project setting**.
 
 > To use desired features among the services selectively, you need to choose only the required frameworks per service and add them to the project.
-> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#nhn-cloud-sdk-components).
+> For details on required frameworks per service, see [NHN Cloud SDK Components](#nhn-cloud-sdk-components).
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 ### 4. Apply NHN Cloud SDK by Downloading Binaries { #apply-nhn-cloud-sdk-by-downloading-binaries }
@@ -93,7 +93,7 @@ binary "https://nh.nu/nhncloudsdk"
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Frameworks Setup
 
-* The entire iOS SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
+* The entire iOS SDK can be downloaded from the [Downloads](/Download/#nhn-cloud-sdk) page of NHN Cloud.
 ![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
 
 * To use the Crash Report feature of Logger, CrashReporter.framework which is released along with the service, must be added to the project.

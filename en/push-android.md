@@ -161,8 +161,8 @@ dependencies {
 ## Push Initialization { #push-initialization }
 
 * Initialize NHN Cloud Push by calling NhnCloudPush.initialize.
-* A [NhnCloudPushConfiguration](./push-android/#nhncloudpushconfiguration) object contains push configuration information.
-* A [NhnCloudPushConfiguration](./push-android/#nhncloudpushconfiguration) object can be created using NhnCloudPushConfiguration.Builder.
+* A [NhnCloudPushConfiguration](#nhncloudpushconfiguration) object contains push configuration information.
+* A [NhnCloudPushConfiguration](#nhncloudpushconfiguration) object can be created using NhnCloudPushConfiguration.Builder.
 * Pass the AppKey issued from the Push console as the parameter of NhnCloudPushConfiguration.newBuilder.
 * The PushType you want to use must be passed in the initialization call.
 
@@ -323,7 +323,7 @@ NhnCloudPush.unregisterToken(mContext, new UnregisterTokenCallback() {
 ## Message Reception { #message-reception }
 * You can be notified via OnReceiveMessageListener when a push message is received.
 * A listener for push message reception can be registered using the NhnCloudPush.setOnReceiveMessageListener function.
-* You can check message information through the [NhnCloudPushMessage](./push-android/#nhncloudpushmessage) object passed to OnReceiveMessageListener .
+* You can check message information through the [NhnCloudPushMessage](#nhncloudpushmessage) object passed to OnReceiveMessageListener .
 * To be notified of message reception even when the app is not running, you need to register the listener in `Application#onCreate`.
 
 > When receiving a message, a notification is not exposed if the user is using the app (Foreground).
@@ -598,7 +598,7 @@ public class MyApplication extends Application {
 <a id="register-notification-action-listener"></a>
 ### Register notification action listener { #register-notification-action-listener }
 * Notifies the notification action listener when the user clicks the button in the notification or the send reply button.
-* You can check the action information with the [PushAction](./push-android/#pushaction) object.
+* You can check the action information with the [PushAction](#pushaction) object.
 * To be notified of receiving messages even when the app is not running, you must register in `Application#onCreate`.
 
 <a id="register-notification-action-listener-example-of-notification-action-listener-registration"></a>
@@ -629,7 +629,7 @@ public class MyApplication extends Application {
 
 <a id="user-defined-message-handling"></a>
 ## User-defined Message Handling { #user-defined-message-handling }
-* If you need to perform a separate processing after receiving a message or expose a notification by modifying the content of the received message, you must implement a broadcast that inherits and implements [NhnCloudPushMessageReceiver](./push-android/#nhncloudpushmessagereceiver).
+* If you need to perform a separate processing after receiving a message or expose a notification by modifying the content of the received message, you must implement a broadcast that inherits and implements [NhnCloudPushMessageReceiver](#nhncloudpushmessagereceiver).
 * The broadcast that inherits and implements NhnCloudPushMessageReceiver must also be registered in AndroidManifest.xml.
 * When a message is received, the received message is sent to the onMessageReceived function.
 

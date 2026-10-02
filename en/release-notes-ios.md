@@ -28,7 +28,7 @@
     * Starting from v0.0.5, User Access Token authentication is required.
       * Authentication using appKey alone is not supported; User Access Token authentication is required.
       * You can configure a User Access Token directly or have one issued automatically by using a User Access Key and Secret Access Key.
-      * For more information, refer to [Apply NHN Cloud Symbol Uploader](https://docs.nhncloud.com/en/nhncloud-sdk/en/log-collector-ios/#apply-nhn-cloud-symbol-uploader).
+      * For more information, refer to [Apply NHN Cloud Symbol Uploader](./log-collector-ios/#apply-nhn-cloud-symbol-uploader).
 
 <a id="100-2026-09-15-nhn-cloud-push"></a>
 ### NHN Cloud Push { #100-2026-09-15-nhn-cloud-push }

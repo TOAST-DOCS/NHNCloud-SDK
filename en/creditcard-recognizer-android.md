@@ -84,7 +84,7 @@ For privacy protection, the credit card number and expiration date are returned 
 The SecureString.charAt(index) method returns the character at the specified index.
 
 > It is vulnerable to security when you create and use the credit card recognition data that is returned as CreditCardData as a String object.<br>
-> See [Use SecureTextView](./creditcard-recognizer-android/#use-securetextview) to display on screen.
+> See [Use SecureTextView](#use-securetextview) to display on screen.
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers
@@ -182,7 +182,7 @@ For privacy protection, the credit card number and expiration date are returned 
 The SecureString.charAt(index) method returns the character at the specified index.
 
 > It is vulnerable to security when you create and use the credit card recognition data that is returned as CreditCardRecognitionData as a String object.<br>
-> See [Use SecureTextView](./creditcard-recognizer-android/#use-securetextview) to display on screen.
+> See [Use SecureTextView](#use-securetextview) to display on screen.
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers

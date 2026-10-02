@@ -53,7 +53,7 @@
 * Log & Crash Search Symbol API v3를 이용한 매핑 파일(mapping.txt) 및 네이티브 심벌(native symbol) 업로드 지원
     * 0.1.0부터 심벌 업로드에 User Access Token 인증이 필요합니다.
     * User Access Token을 직접 설정하거나 User Access Key와 Secret Access Key를 사용해 자동으로 발급받을 수 있습니다.
-    * 자세한 사항은 [Android 심벌 업로더 가이드](https://docs.nhncloud.com/ko/nhncloud-sdk/ko/symbol-uploader-android/)를 참고하세요.
+    * 자세한 사항은 [Android 심벌 업로더 가이드](./symbol-uploader-android/)를 참고하세요.
 
 <a id="121-october-28-2025"></a>
 ## 1.12.1(2025. 10. 28.) { #121-october-28-2025 }

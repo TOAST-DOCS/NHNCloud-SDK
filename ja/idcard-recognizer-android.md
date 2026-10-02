@@ -87,7 +87,7 @@ IDカード認識に成功すると、IDCardDataを継承実装したオブジ�
 SecureString.charAt(index)メソッドは指定されたindexにある文字を返します。
 
 > IdCardData で返される身分証の認識情報を String オブジェクトとして生成して使用すると、セキュリティ上の脆弱性が生じます。<br>
-> 画面に表示するには、[SecureTextView の使用](./idcard-recognizer-android/#use-securetextview)を参照してください。
+> 画面に表示するには、[SecureTextView の使用](#use-securetextview)を参照してください。
 
 ```kotlin
 when (data) {
@@ -279,7 +279,7 @@ private fun isConfident(data: IdCardRecognitionData): Boolean {
 SecureString.charAt(index)メソッドは指定されたindexにある文字を返します。
 
 > IdCardRecognitionData から返される身分証認識情報を String オブジェクトとして生成して使用すると、セキュリティ上の脆弱性があります。<br>
-> 画面に表示するには、[SecureTextView](./idcard-recognizer-android/#use-securetextview) の使用を参照してください。
+> 画面に表示するには、[SecureTextView](#use-securetextview) の使用を参照してください。
 
 ```kotlin
 when (data) {
