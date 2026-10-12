@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=499fcf966eda -->
+<!-- pre-align:aligned sig=e16089ccc643 -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-ios"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > iOS { #nhn-cloud-sdk-user-guide-release-notes-ios }
