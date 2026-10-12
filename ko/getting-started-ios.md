@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=edc80b83f7a3 -->
+<!-- pre-align:aligned sig=42d42959910d -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-ios"></a>
 ## NHN Cloud > SDK 사용 가이드 > 시작하기 > iOS { #nhn-cloud-sdk-user-guide-getting-started-ios }
