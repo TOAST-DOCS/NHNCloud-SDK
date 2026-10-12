@@ -26,7 +26,7 @@ NHN Cloud SDK for Windows C++ has the following structure.
 <a id="apply-nhn-cloud-sdk-to-visual-studio-projects"></a>
 ## Apply NHN Cloud SDK to Visual Studio Projects { #apply-nhn-cloud-sdk-to-visual-studio-projects }
 
-Download NHN Cloud Windows C++ SDK from the [Download](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
+Download NHN Cloud Windows C++ SDK from the [Download](/Download/#nhn-cloud-sdk) page of NHN Cloud.
 
 <a id="include-libraries"></a>
 ### Include Libraries { #include-libraries }

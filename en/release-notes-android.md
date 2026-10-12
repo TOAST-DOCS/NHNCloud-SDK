@@ -55,7 +55,7 @@
 * Added support for uploading mapping files (mapping.txt) and native symbols using Log & Crash Search Symbol API v3
     * Starting from version 0.1.0, User Access Token authentication is required for symbol uploads.
     * You can set the User Access Token directly, or have it issued automatically by using a User Access Key and Secret Access Key.
-    * For more information, see the [Android Symbol Uploader Guide](https://docs.nhncloud.com/en/nhncloud-sdk/en/symbol-uploader-android/).
+    * For more information, see the [Android Symbol Uploader Guide](./symbol-uploader-android/).
 
 <a id="121-october-28-2025"></a>
 ## 1.12.1 (October 28, 2025) { #121-october-28-2025 }

@@ -84,7 +84,7 @@ creditCardRecognizer.launch(activity) { result, data ->
 SecureString.charAt(index)メソッドは指定されたindexにある文字を返します。
 
 > CreditCardData から返されるクレジットカード認識情報を String オブジェクトとして生成して使用すると、セキュリティ上の脆弱性が生じます。<br>
-> 画面に表示するには、[SecureTextView の使用](./creditcard-recognizer-android/#use-securetextview)を参照してください。
+> 画面に表示するには、[SecureTextView の使用](#use-securetextview)を参照してください。
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers
@@ -180,7 +180,7 @@ private fun isConfident(data: CreditCardRecognitionData): Boolean {
 SecureString.charAt(index)メソッドは指定されたindexにある文字を返します。
 
 > CreditCardRecognitionData から返されるクレジットカード認識情報を String オブジェクトとして生成して使用すると、セキュリティ上の脆弱性が生じます。<br>
-> 画面に表示するには、[SecureTextView](./creditcard-recognizer-android/#use-securetextview) の使用を参照してください。
+> 画面に表示するには、[SecureTextView](#use-securetextview) の使用を参照してください。
 
 ```kotlin
 val cardNumbers = creditCardData.cardNumbers

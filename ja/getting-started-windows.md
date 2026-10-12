@@ -26,7 +26,7 @@ Windows C++用NHN Cloud SDKの構成は次のとおりです。
 <a id="apply-nhn-cloud-sdk-to-visual-studio-projects"></a>
 ## NHN Cloud SDKをVisual Studioプロジェクトに適用する { #apply-nhn-cloud-sdk-to-visual-studio-projects }
 
-NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページでNHN Cloud Windows C++ SDKをダウンロードします。 
+NHN Cloudの[Downloads](/Download/#nhn-cloud-sdk)ページでNHN Cloud Windows C++ SDKをダウンロードします。 
 
 <a id="include-libraries"></a>
 ### ライブラリを含める { #include-libraries }

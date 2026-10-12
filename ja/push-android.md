@@ -158,8 +158,8 @@ dependencies {
 <a id="push-initialization"></a>
 ## Push初期化 { #push-initialization }
 * NhnCloudPush.initializeを呼び出してNHN Cloud Pushを初期化します。
-* [NhnCloudPushConfiguration](./push-android/#nhncloudpushconfiguration)オブジェクトは、Push設定情報を含んでいます。
-* [NhnCloudPushConfiguration](./push-android/#nhncloudpushconfiguration)オブジェクトは、NhnCloudPushConfiguration.Builderを使用して作成できます。
+* [NhnCloudPushConfiguration](#nhncloudpushconfiguration)オブジェクトは、Push設定情報を含んでいます。
+* [NhnCloudPushConfiguration](#nhncloudpushconfiguration)オブジェクトは、NhnCloudPushConfiguration.Builderを使用して作成できます。
 * Pushコンソールで発行されたAppKeyをNhnCloudPushConfiguration.newBuilderの引数に渡します。
 * 使用したいPushTypeを初期化の呼び出し時にお届けしなければなりません。
 
@@ -317,7 +317,7 @@ NhnCloudPush.unregisterToken(mContext, new UnregisterTokenCallback() {
 ## メッセージ受信 { #message-reception }
 * Pushメッセージを受信時に、OnReceiveMessageListenerを通じて通知を受けることができます。
 * Pushメッセージ受信リスナーは、NhnCloudPush.setOnReceiveMessageListenerメソッドを使用して登録できます。
-* OnReceiveMessageListenerに渡された[NhnCloudPushMessage](./push-android/#nhncloudpushmessage)オブジェクトからメッセージ情報を確認できます。
+* OnReceiveMessageListenerに渡された[NhnCloudPushMessage](#nhncloudpushmessage)オブジェクトからメッセージ情報を確認できます。
 * アプリが実行されていな場合でも、メッセージの受信通知を受信するためには`Application#onCreate`に登録してください。
 
 > メッセージを受信時にユーザーがアプリを使用中(Foreground)の場合、通知を表示しません。
@@ -595,7 +595,7 @@ public class MyApplication extends Application {
 <a id="register-notification-action-listener"></a>
 ### 通知アクションリスナー登録 { #register-notification-action-listener }
 * ユーザーが通知のボタン、または返信送信ボタンをクリックすると、通知アクション リスナーに通知します。
-* [PushAction](./push-android/#pushaction) オブジェクトでアクション情報を確認できます。
+* [PushAction](#pushaction) オブジェクトでアクション情報を確認できます。
 * アプリが実行中でない場合でもメッセージ受信通知を受けるためには`Application#onCreate`から登録する必要があります。
 
 <a id="register-notification-action-listener-example-of-notification-action-listener-registration"></a>
@@ -626,7 +626,7 @@ public class MyApplication extends Application {
 
 <a id="user-defined-message-handling"></a>
 ## ユーザー定義メッセージ処理 { #user-defined-message-handling }
-* メッセージの受信後、別の処理過程を実行したり、受信したメッセージの内容を修正して通知を表示しなければならない場合は、[NhnCloudPushMessageReceiver](./push-android/#nhncloudpushmessagereceiver)を継承するブロードキャストを実装する必要があります。
+* メッセージの受信後、別の処理過程を実行したり、受信したメッセージの内容を修正して通知を表示しなければならない場合は、[NhnCloudPushMessageReceiver](#nhncloudpushmessagereceiver)を継承するブロードキャストを実装する必要があります。
 * NhnCloudPushMessageReceiverを継承したブロートキャストは、AndroidManifest.xmlも必ず登録しなければなりません。
 * メッセージを受信すると、onMessageReceived関数で受信したメッセージが伝達されます。
 
@@ -763,7 +763,7 @@ public class MyPushMessageReceiver extends NhnCloudPushMessageReceiver {
 <a id="user-tag"></a>
 ## ユーザータグ { #user-tag }
 
-* [ユーザータグ](/Notification/Push/ja/console-guide/#_16) 機能はさまざまなユーザーIDをひとつのタグでまとめ、それを利用してメッセージを送信することができます。
+* [ユーザータグ](/Notification/Push/ja/console-guide/#tags) 機能はさまざまなユーザーIDをひとつのタグでまとめ、それを利用してメッセージを送信することができます。
 * タグ名ではなく、タグID(8桁の文字列)に基づいて動作します。タグIDはコンソール > タグメニューから作成·確認できます。
 
 <a id="modify-user-tags"></a>

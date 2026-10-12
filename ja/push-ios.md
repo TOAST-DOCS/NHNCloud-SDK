@@ -9,7 +9,7 @@
 ## Prerequisites { #prerequisites }
 
 1. [NHN Cloud SDK](./getting-started-ios)を設置します。
-2. [NHN Cloudコンソール](https://console.nhncloud.com)で [Notification \> Pushを有効化](http://docs.nhncloud.com/ja/Notification/Push/ja/console-guide/)します。
+2. [NHN Cloudコンソール](https://console.nhncloud.com)で [Notification \> Pushを有効化](/Notification/Push/ja/console-guide/)します。
 3. PushでAppKeyを確認します。
 
 <a id="apns-guide"></a>
@@ -65,7 +65,7 @@ end
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-set-up-framework"></a>
 #### フレームワーク設定
 
-* NHN Cloudの [Downloads](../../Download/#nhn-cloud-sdk)ベージでiOS SDKをダウンロードできます。
+* NHN Cloudの [Downloads](/Download/#nhn-cloud-sdk)ベージでiOS SDKをダウンロードできます。
 * Xcode Projectに、**NHNCloudPush.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework, UserNotifications.framework**を追加します。
 * UserNotifications.frameworkは下記の方法で追加できます。
 ![linked_usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)
@@ -102,7 +102,7 @@ end
 <a id="login"></a>
 ### ログイン { #login }
 
-* `最初のトークン登録時にユーザーIDが設定されていない場合、端末識別子を使用して登録します。` ([トークン登録セクションを参照](./push-ios/#token-registration))
+* `最初のトークン登録時にユーザーIDが設定されていない場合、端末識別子を使用して登録します。` ([トークン登録セクションを参照](#token-registration))
 * `トークン登録後にユーザーIDを設定または変更すると、トークン情報を更新します。`
 
 ``` objc
@@ -124,7 +124,7 @@ end
 ## NHN Cloud Push SDK初期化 { #initialize-nhn-cloud-push-sdk }
 
 * `初期化をしない状態では、トークン登録、および照会機能を使用できません。`
-* [NHNCloudPushConfiguration](./push-ios/#nhncloudpushconfiguration) オブジェクトにNHN Cloudクラウドサーバーで発行されたPush AppKeyを設定します。
+* [NHNCloudPushConfiguration](#nhncloudpushconfiguration) オブジェクトにNHN Cloudクラウドサーバーで発行されたPush AppKeyを設定します。
 * `開発環境では、必ずNHNCloudPushConfigurationのsandboxプロパティをYESに設定しないと、開発用認証書で送信したメッセージの受信ができません。`
 
 <a id="specification-for-initialization-api"></a>
@@ -144,9 +144,9 @@ end
 
 <a id="specification-for-delegate-api"></a>
 ### Delegate API明細 { #specification-for-delegate-api }
-* アプリが実行中の状態で通知メッセージを受信すると、[NHNCloudPushMessage](./push-ios/#nhncloudpushmessage) オブジェクトで受信したメッセージの内容が伝達されます。
-* ユーザーが通知を実行(クリック)してアプリが実行された時、[NHNCloudPushMessage](./push-ios/#nhncloudpushmessage)オブジェクトで実行された通知メッセージの内容がユーザーに通知されます。
-* ユーザーが通知内のボタンを実行(クリック)した時、[NHNCloudPushNotificationAction](./push-ios/#nhncloudpushnotificationaction)オブジェクトが実行されたボタンのアクション情報がシステムに伝達されます。
+* アプリが実行中の状態で通知メッセージを受信すると、[NHNCloudPushMessage](#nhncloudpushmessage) オブジェクトで受信したメッセージの内容が伝達されます。
+* ユーザーが通知を実行(クリック)してアプリが実行された時、[NHNCloudPushMessage](#nhncloudpushmessage)オブジェクトで実行された通知メッセージの内容がユーザーに通知されます。
+* ユーザーが通知内のボタンを実行(クリック)した時、[NHNCloudPushNotificationAction](#nhncloudpushnotificationaction)オブジェクトが実行されたボタンのアクション情報がシステムに伝達されます。
 * `スムーズにメッセージ受信が行えるように、application:didFinishLaunchingWithOptions: 関数でDelegate設定をお勧めいたします。`
 
 ``` objc
@@ -235,7 +235,7 @@ NHNCloudPushConfiguration *configuration = [[NHNCloudPushConfiguration alloc] in
 <a id="notification-option-setting"></a>
 ## 通知オプションの設定 { #notification-option-setting }
 
-* [NHNCloudNotificationOptions](./push-ios/#nhncloudnotificationoptions) オブジェクトで通知オプション設定が可能です。
+* [NHNCloudNotificationOptions](#nhncloudnotificationoptions) オブジェクトで通知オプション設定が可能です。
 
 | オプション名 | 説明 | デフォルト値 |
 | --- | --- | --- |
@@ -281,7 +281,7 @@ options.soundEnabled = YES;         // 通知音使用設定(default : YES)
 * 韓国における情報通信網法の規定(第50条から第50条の8)に基づき、トークン登録時の通知/広報性/夜間の広報性Pushメッセージ受信に関して、同意するかも、同時に入力されます。メッセージの送信時に、ユーザーが受信同意をしているかを基準に自動的にフィルタリングします。
     * [KISAガイドへのショートカット（韓国語）](https://www.kisa.or.kr/2060301/form?postSeq=19)
     * [法令へ（韓国語）](http://www.law.go.kr/법령/정보통신망이용촉진및정보보호등에관한법률/%2820130218,11322,20120217%29/제50조)
-* [NHNCloudPushAgreement](./push-ios/#nhncloudpushagreement) オブジェクトにユーザー通知メッセージの同意情報を設定します。
+* [NHNCloudPushAgreement](#nhncloudpushagreement) オブジェクトにユーザー通知メッセージの同意情報を設定します。
 
 <a id="specification-for-token-registration-and-agreement-setting-api"></a>
 ### トークン登録、および受信同意設定API { #specification-for-token-registration-and-agreement-setting-api }
@@ -321,7 +321,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 ## トークン情報照会 { #token-information-query }
 
 * 現在のデバイスで最後に登録に成功したトークンと設定情報を照会します。
-* トークン照会が成功すると、 [NHNCloudPushTokenInfo](./push-ios/#nhncloudpushtokeninfo) オブジェクトにトークン設定情報を返します。
+* トークン照会が成功すると、 [NHNCloudPushTokenInfo](#nhncloudpushtokeninfo) オブジェクトにトークン設定情報を返します。
 
 <a id="specification-for-token-information-query-api"></a>
 ### トークン情報照会API { #specification-for-token-information-query-api }
@@ -381,7 +381,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 
 * リッチメッセージは、通知のタイトル、本文とともにメディア(イメージ、ビデオ、オーディオ)を通知に表現し、ボタン、返信などのアクションを追加します。
 * `リッチメッセージの受信は、iOS 10.0+ 以上からサポートします。`
-* リッチメッセージの表示には、ユーザーアプリケーションにNHNCloudPushServiceExtensionを継承するNotification Service Extensionを実装する必要があります。(Notification Service Extensionの追加方法は、[Notification Service Extension](./push-ios/#notification-service-extension) セクションを参照)
+* リッチメッセージの表示には、ユーザーアプリケーションにNHNCloudPushServiceExtensionを継承するNotification Service Extensionを実装する必要があります。(Notification Service Extensionの追加方法は、[Notification Service Extension](#notification-service-extension) セクションを参照)
 
 <a id="supported-rich-messages"></a>
 ### サポートするリッチメッセージ { #supported-rich-messages }
@@ -421,8 +421,8 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 
 * `受信指標の収集は、iOS 10.0+以上からサポートします。`
 * 受信指標は、Notification Service Extensionに追加したNHN Cloud Push SDKで自動的に収集されます。
-* 受信指標を収集には、ユーザーアプリケーションにNHNCloudPushServiceExtensionを継承するNotification Service Extensionを実装しなければなりません。(Notification Service Extension追加方法は、 [Notification Service Extension](./push-ios/#notification-service-extension)セクション参照)
-* Notification Service Extensionの生成者で、[NHN Cloud Push SDK初期化](./push-ios/#initialize-nhn-cloud-push-sdk)、あるいは**エクステンションのinfo.plistファイル**にAppKeyが定義されていないと、受信指標の収集ができません。
+* 受信指標を収集には、ユーザーアプリケーションにNHNCloudPushServiceExtensionを継承するNotification Service Extensionを実装しなければなりません。(Notification Service Extension追加方法は、 [Notification Service Extension](#notification-service-extension)セクション参照)
+* Notification Service Extensionの生成者で、[NHN Cloud Push SDK初期化](#initialize-nhn-cloud-push-sdk)、あるいは**エクステンションのinfo.plistファイル**にAppKeyが定義されていないと、受信指標の収集ができません。
 
 <a id="received-metric-collection-setting-example-of-received-metrics-collection-setting-through-initialization"></a>
 #### 初期化による受信指標収集の設定例
@@ -476,7 +476,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 ### 実行(Opened)指標収集設定 { #opened-metric-collection-setting }
 
 * 実行指標は、アプリケーションに追加したNHN Cloud Push SDKから自動的に収集されます。
-* [NHN Cloud Push SDK初期化](./push-ios/#initialize-nhn-cloud-push-sdk)、あるいは**アプリケーションのinfo.plistファイル**にAppKeyが定義されている場合、実行指標の収集が可能です。
+* [NHN Cloud Push SDK初期化](#initialize-nhn-cloud-push-sdk)、あるいは**アプリケーションのinfo.plistファイル**にAppKeyが定義されている場合、実行指標の収集が可能です。
 
 <a id="opened-metric-collection-setting-example-of-opened-metrics-collection-setting-through-infoplist-definition"></a>
 #### info.plist定義による受信指標収集の設定例
@@ -517,7 +517,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 <a id="notification-service-extension-setting"></a>
 ### Notification Service Extension設定 { #notification-service-extension-setting }
 
-* アプリのプロジェクト設定と同様に、Extensionの[プロジェクト設定](./push-ios/#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project)を追加します。
+* アプリのプロジェクト設定と同様に、Extensionの[プロジェクト設定](#apply-nhn-cloud-sdk-by-downloading-binaries-set-up-project)を追加します。
 * `iOSのExtensionはアプリと一緒にインストールされますが、アプリとは分離された別のサンドボックス環境であるため、コンテナを共有しません。`
 
 <a id="notification-service-extension-setting-example"></a>
@@ -538,7 +538,7 @@ agreement.allowNightAdvertisements = YES;   // 夜間広報性通知メッセー
 <a id="user-tag"></a>
 ## ユーザー·タグ { #user-tag }
 
-* [ユーザー·タグ](/Notification/Push/ja/console-guide/#_16)能は、複数のユーザー IDをひとつのタグで結びつけ、それを活用してメッセージを送信することができます。
+* [ユーザー·タグ](/Notification/Push/ja/console-guide/#tags)能は、複数のユーザー IDをひとつのタグで結びつけ、それを活用してメッセージを送信することができます。
 * タグ名ではなく、タグID(8桁の文字列)に基づいて動作し、タグIDはコンソール > タグメニューから作成・確認できます。
 
 <a id="specification-for-user-tag-setting-api"></a>
@@ -680,13 +680,13 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 <a id="initialization"></a>
 ### 初期化 { #initialization }
 
-* VoIP機能は[NHN Cloud Push SDK 初期化](./push-ios/#initialize-nhn-cloud-push-sdk)がされていなければ使用できません。
+* VoIP機能は[NHN Cloud Push SDK 初期化](#initialize-nhn-cloud-push-sdk)がされていなければ使用できません。
 * VoIP機能はNHN Cloud Push SDKのサブモジュールで別途分離されています。
 
 <a id="delegate-setting"></a>
 ### Delegate設定 { #delegate-setting }
 
-* VoIPメッセージを受信すると、[NHNCloudPushMessage](./push-ios/#nhncloudpushmessage)オブジェクトで受信したメッセージの内容が伝達されます。
+* VoIPメッセージを受信すると、[NHNCloudPushMessage](#nhncloudpushmessage)オブジェクトで受信したメッセージの内容が伝達されます。
 * `スムーズにメッセージを受信するために application:didFinishLaunchingWithOptions: 関数でDelegate設定をお勧めします。`
 
 <a id="delegate-setting-specification-for-delegate-api"></a>
@@ -765,7 +765,7 @@ NSMutableSet<NSString *> *tagIDs = [NSMutableSet set];
 ### トークン情報照会 { #voip-token-information-query }
 
 * 現在のデバイスで最後に登録に成功したトークンと設定情報を照会します。
-* トークン照会情報に成功すると、[NHNCloudPushTokenInfo](./push-ios/#nhncloudpushtokeninfo)オブジェクトにトークンの設定情報が返されます。
+* トークン照会情報に成功すると、[NHNCloudPushTokenInfo](#nhncloudpushtokeninfo)オブジェクトにトークンの設定情報が返されます。
 
 <a id="voip-token-information-query-specification-for-token-information-query-api"></a>
 #### トークン情報照会API

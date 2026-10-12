@@ -75,7 +75,7 @@ NHN Cloud SDKが提供するサービス別の設定方法は次のとおりで�
 <a id="build-android-with-aar"></a>
 ### 2. AARを使用してAndroidビルド { #build-android-with-aar }
 
-Android SDKは[Downloads](../../Download/#nhn-cloud-sdk)ページでダウンロードできます。
+Android SDKは[Downloads](/Download/#nhn-cloud-sdk)ページでダウンロードできます。
 
 <a id="set-user-id"></a>
 ## UserID設定 { #set-user-id }

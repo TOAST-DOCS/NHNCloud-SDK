@@ -85,7 +85,7 @@ binary "https://nh.nu/nhncloudsdk"
 * NHN Cloud SDKを使用するために**フレームワーク設定**と**プロジェクト設定**を行う必要があります。
 
 > サービスのいずれかの機能を選択して使用するには、サービスごとに必要なFrameworkのみ選択してプロジェクトに追加する必要があります。
-> サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](./getting-started-ios/#nhn-cloud-sdk-components)で確認できます。  
+> サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](#nhn-cloud-sdk-components)で確認できます。  
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 ### 4. バイナリをダウンロードしてNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-by-downloading-binaries }
@@ -93,7 +93,7 @@ binary "https://nh.nu/nhncloudsdk"
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Link Frameworks
 
-* NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページで全体iOS SDKをダウンロードできます。
+* NHN Cloudの[Downloads](/Download/#nhn-cloud-sdk)ページで全体iOS SDKをダウンロードできます。
 ![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
 
 * NHN Cloud LoggerのCrash Report機能を使用するには、一緒に配布されるCrashReporter.frameworkもプロジェクトに追加する必要があります。

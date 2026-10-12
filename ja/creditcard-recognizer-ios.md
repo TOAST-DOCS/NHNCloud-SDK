@@ -67,7 +67,7 @@ end
 <a id="download-binaries-and-apply-to-nhn-cloud-sdk-set-up-framework"></a>
 #### フレームワーク設定
 
-* NHN Cloud [Downloads](../../Download/#nhn-cloud-sdk)ページで全てのiOS SDKをダウンロードできます。
+* NHN Cloud [Downloads](/Download/#nhn-cloud-sdk)ページで全てのiOS SDKをダウンロードできます。
 * Xcode Projectに**NHNCloudOCR.framework**、 **NHNCloudCore.framework**、 **NHNCloudCommon.framework、 vision.framework、 AVFoundation.framework**を追加します。
 * vision.frameworkとAVFoundation.frameworkは、以下の方法で追加できます。
 ![linked_vision_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/linked_vision_frameworks.png)

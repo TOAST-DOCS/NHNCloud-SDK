@@ -48,7 +48,7 @@ Configure the `auth` block of `crashReporter` in your app-level Gradle file.
 
 `userAccessKeyId` is the User Access Key ID issued from the NHN Cloud Console, and `secretAccessKey` is the Secret Access Key issued along with it.
 The plugin uses these two values to automatically issue a User Access Token.
-For information on how to issue each set of authentication information, see [User Access Key Token](https://docs.nhncloud.com/en/nhncloud/en/public-api/user-access-key-token/).
+For information on how to issue each set of authentication information, see [User Access Key Token](/nhncloud/en/public-api/user-access-key-token/).
 
 You can choose one of the following two authentication methods:
 
