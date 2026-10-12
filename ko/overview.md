@@ -94,7 +94,7 @@ NHN Cloud OCR SDK를 사용하여 OCR 서비스를 손쉽게 적용할 수 있�
 신용카드와 신분증을 인식하고 데이터를 추출할 수 있습니다.
 
 <a id="nhn-cloud-ocr-user-guides"></a>
-### 사용가이드 { #nhn-cloud-ocr-user-guides }
+### 사용 가이드 { #nhn-cloud-ocr-user-guides }
 
 - [OCR (Credit Card)> Android](./creditcard-recognizer-android)
 - [OCR (Credit Card)> iOS](./creditcard-recognizer-ios)
