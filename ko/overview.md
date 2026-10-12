@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=82c2a3411707 -->
+<!-- pre-align:aligned sig=c4d6d5f779f7 -->
 
 <a id="nhn-cloud-sdk-user-guide-overview"></a>
 ## NHN Cloud > SDK 사용 가이드 > 개요 { #nhn-cloud-sdk-user-guide-overview }
@@ -100,4 +100,4 @@ NHN Cloud OCR SDK를 사용하여 OCR 서비스를 손쉽게 적용할 수 있�
 - [OCR(Credit Card)> iOS](./creditcard-recognizer-ios)
 
 - [OCR(ID Card)> Android](./idcard-recognizer-android)
-- [OCR (ID Card)> iOS](./idcard-recognizer-ios)
+- [OCR(ID Card)> iOS](./idcard-recognizer-ios)

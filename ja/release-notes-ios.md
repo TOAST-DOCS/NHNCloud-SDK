@@ -1,9 +1,20 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=499fcf966eda -->
+<!-- pre-align:aligned sig=e16089ccc643 -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-ios"></a>
 ## NHN Cloud > User Guide for SDK > Release Notes > iOS { #nhn-cloud-sdk-user-guide-release-notes-ios }
+
+<a id="110-2026-10-13"></a>
+## 1.11.0(2026. 10. 13.) { #110-2026-10-13 }
+
+<a id="110-2026-10-13-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #110-2026-10-13-nhn-cloud-iap }
+
+<a id="110-2026-10-13-nhn-cloud-iap-improved"></a>
+#### 機能改善/変更
+* NHN Cloud IAPサポート終了
+    * NHN Cloud iOS SDKからIAPモジュールが削除されました。
 
 <a id="100-2026-09-15"></a>
 ## 1.10.0(2026. 09. 15.) { #100-2026-09-15 }

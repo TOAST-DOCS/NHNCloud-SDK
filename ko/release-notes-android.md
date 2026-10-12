@@ -1,4 +1,4 @@
-<!-- pre-align:aligned sig=9f1247824a5a -->
+<!-- pre-align:aligned sig=0a74911658ee -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-android"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Android { #nhn-cloud-sdk-user-guide-release-notes-android }

@@ -28,7 +28,7 @@ Add dependencies of nhncloud-creditcard-recognizer to the build.gradle file of t
 dependencies {
     ...
     // NHN Cloud Credit Card Recognizer
-    implementation 'com.nhncloud.android:nhncloud-creditcard-recognizer:1.13.0'
+    implementation 'com.nhncloud.android:nhncloud-creditcard-recognizer:1.14.0'
 }
 ```
 
