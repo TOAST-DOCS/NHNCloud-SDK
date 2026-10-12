@@ -1,9 +1,21 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=9f1247824a5a -->
+<!-- pre-align:aligned sig=0a74911658ee -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-android"></a>
 ## NHN Cloud > SDK User Guide > Release Notes > Android { #nhn-cloud-sdk-user-guide-release-notes-android }
+
+<a id="140-october-13-2026"></a>
+## 1.14.0 (October 13, 2026) { #140-october-13-2026 }
+
+<a id="140-october-13-2026-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #140-october-13-2026-nhn-cloud-iap }
+
+<a id="140-october-13-2026-nhn-cloud-iap-feature-updates"></a>
+#### Feature Updates
+
+* End of support for NHN Cloud IAP
+    * Removed the IAP-related module from NHN Cloud Android SDK.
 
 <a id="130-september-15-2026"></a>
 ## 1.13.0 (September 15, 2026) { #130-september-15-2026 }
@@ -55,7 +67,7 @@
 * Added support for uploading mapping files (mapping.txt) and native symbols using Log & Crash Search Symbol API v3
     * Starting from version 0.1.0, User Access Token authentication is required for symbol uploads.
     * You can set the User Access Token directly, or have it issued automatically by using a User Access Key and Secret Access Key.
-    * For more information, see the [Android Symbol Uploader Guide](https://docs.nhncloud.com/en/nhncloud-sdk/en/symbol-uploader-android/).
+    * For more information, see the [Android Symbol Uploader Guide](./symbol-uploader-android/).
 
 <a id="121-october-28-2025"></a>
 ## 1.12.1 (October 28, 2025) { #121-october-28-2025 }

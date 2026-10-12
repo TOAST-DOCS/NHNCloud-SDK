@@ -1,9 +1,20 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=499fcf966eda -->
+<!-- pre-align:aligned sig=e16089ccc643 -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-ios"></a>
 ## NHN Cloud > SDK User Guide > Release Notes > iOS { #nhn-cloud-sdk-user-guide-release-notes-ios }
+
+<a id="110-2026-10-13"></a>
+## 1.11.0 (October 13, 2026) { #110-2026-10-13 }
+
+<a id="110-2026-10-13-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #110-2026-10-13-nhn-cloud-iap }
+
+<a id="110-2026-10-13-nhn-cloud-iap-improved"></a>
+#### Feature Updates
+* End of support for NHN Cloud IAP
+    * The IAP module has been removed from NHN Cloud iOS SDK.
 
 <a id="100-2026-09-15"></a>
 ## 1.10.0 (September 15, 2026) { #100-2026-09-15 }
@@ -28,7 +39,7 @@
     * Starting from v0.0.5, User Access Token authentication is required.
       * Authentication using appKey alone is not supported; User Access Token authentication is required.
       * You can configure a User Access Token directly or have one issued automatically by using a User Access Key and Secret Access Key.
-      * For more information, refer to [Apply NHN Cloud Symbol Uploader](https://docs.nhncloud.com/en/nhncloud-sdk/en/log-collector-ios/#apply-nhn-cloud-symbol-uploader).
+      * For more information, refer to [Apply NHN Cloud Symbol Uploader](./log-collector-ios/#apply-nhn-cloud-symbol-uploader).
 
 <a id="100-2026-09-15-nhn-cloud-push"></a>
 ### NHN Cloud Push { #100-2026-09-15-nhn-cloud-push }

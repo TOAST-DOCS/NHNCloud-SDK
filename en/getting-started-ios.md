@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=edc80b83f7a3 -->
+<!-- machine_translated: true -->
+
+<!-- pre-align:aligned sig=42d42959910d -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-ios"></a>
 ## NHN Cloud > SDK User Guide > Getting Started > iOS { #nhn-cloud-sdk-user-guide-getting-started-ios }
@@ -7,27 +9,26 @@
 ## Supported Environment { #supported-environment }
 
 * iOS 11.0 or higher
-* The latest version of XCode (version 14 or higher)
+* The latest version of Xcode
 
 <a id="nhn-cloud-sdk-components"></a>
 ## NHN Cloud SDK Components { #nhn-cloud-sdk-components }
 
 * NHN Cloud SDK for iOS consists of the following:
     * [Logger](./log-collector-ios) SDK
-    * [In-app Purchase AppStore](./iap-ios) SDK
     * [Push](./push-ios) SDK
-     [OCR](./creditcard-recognizer-ios) SDK
+    * [Credit-Card OCR](./creditcard-recognizer-ios) SDK
+    * [ID-Card OCR](./idcard-recognizer-ios) SDK
 
 * You can selectively apply the required feature among the services provided by NHN Cloud SDK.
 
 | Service | Cocoapods Pod Name | Carthage | Framework | Deployment Target | Dependency | Build Settings |
 | --- | --- | --- | --- | --- | --- | --- |
-| All | NHNCloudSDK | binary "[https://nh.nu/nhncloudsdk](https://nh.nu/nhncloudsdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudIAP.framework<br>NHNCloudPush.framework |  |  |  |
+| All | NHNCloudSDK | binary "[https://nh.nu/sdk](https://nh.nu/sdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudPush.framework<br>NHNCloudOCR.framework |  |  |  |
 | Mandatory | NHNCloudCore<br>NHNCloudCommon |  | NHNCloudCore.framework<br>NHNCloudCommon.framework | 11.0 |  | OTHER\_LDFLAGS = (<br>"-ObjC",<br>"-lc++"<br>); |
-| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br>\* CrashReporter.framework (NHNCloud) |  |
-| IAP | NHNCloudIAP |  | NHNCloudIAP.framework | 11.0 | \* StoreKit.framework<br><br>[Optional]<br>\* libsqlite3.tdb |  |
-| Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | \* UserNotifications.framework<br><br>[Optional]<br>\* PushKit.framework |  |
-| OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | \* Vision.framework<br>\* AVFoundation.framework |  |
+| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br> CrashReporter.framework(NHNCloud) |  |
+| Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | UserNotifications.framework<br> PushKit.framework |  |
+| OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | Vision.framework<br> AVFoundation.framework |  |
 
 <a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
 ## Apply NHN Cloud SDK to Xcode Projects { #apply-nhn-cloud-sdk-to-xcode-projects }
@@ -53,15 +54,6 @@ end
 * For the Package URL, enter 'https://github.com/nhn/nhncloud.ios.sdk' and select **Add Package**.
 * Select a library you want to add.
 
-![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
-
-<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
-#### Set up Project
-
-* Add **-lc++** and **-ObjC** entries to **Other Linker Flags** in **Build Settings**.
-    * **Project Target > Build Settings > Linking > Other Linker Flags**
-![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-
 <a id="apply-nhn-cloud-sdk-with-carthage"></a>
 ### 3. Apply NHN Cloud SDK with Carthage { #apply-nhn-cloud-sdk-with-carthage }
 
@@ -69,57 +61,41 @@ end
 
 ```sh
 # Full URL
-binary "https://api-storage.cloud.toast.com/v1/AUTH_f9e3dc598ca142d3820e1c19343d5428/carthage/NHNCloudSDK.json"
+binary "https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_f9e3dc598ca142d3820e1c19343d5428/carthage/NHNCloudSDK.json" 
 
 # Short URL
-binary "https://nh.nu/nhncloudsdk"
+binary "https://nh.nu/sdk"
 ```
 
 * Add the frameworks in the created Carthage/Build folder to the Xcode project.
-![carthage_import_framework](https://static.toastoven.net/toastcloud/sdk/ios/carthage01_202206.png)
 
-* Check that the frameworks have been added to the project as shown below.
-![import_carthage_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/carthage02_202206.png)
-![import_carthage_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/carthage03_202206.png)
+* To use NHN Cloud SDK, you must perform [Framework setting](./getting-started-ios/#frameworks-setup) and [Project setting](./getting-started-ios/#set-up-project).
 
-* To use NHN Cloud SDK, you must perform **Framework setting** and **Project setting**.
-
-> To use desired features among the services selectively, you need to choose only the required frameworks per service and add them to the project.
-> For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#nhn-cloud-sdk-components).
+!!! tip "Note"
+    To use desired features among the services selectively, you need to choose only the required frameworks per service and add them to the project.
+    For details on required frameworks per service, see [NHN Cloud SDK Components](./getting-started-ios/#nhn-cloud-sdk-components).
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 ### 4. Apply NHN Cloud SDK by Downloading Binaries { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
-<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
-#### Frameworks Setup
+* You can download the full iOS SDK from the NHN Cloud [Downloads](../../Download/#nhn-cloud-sdk) page.
+* Select the required Framework and add it to your project.
 
-* The entire iOS SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
-![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
+<a id="frameworks-setup"></a>
+### Framework Setting { #frameworks-setup }
 
-* To use the Crash Report feature of Logger, CrashReporter.framework which is released along with the service, must be added to the project.
-![import_external_framework](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_external_folder_202206.png)
+* To use the Crash Report feature of Logger, you must add CrashReporter.xcframework, which is distributed together in the External folder of the SDK, to the project.
+* To use the Push feature, you must add the system framework UserNotifications.framework to the project.
+* To use the OCR feature, you must add the system frameworks Vision.framework and AVFoundation.framework to the project.
 
-* Check that the frameworks have been added to the project as shown below.
-![import_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_complete_folder_202206.png)
+<a id="set-up-project"></a>
+### Project settings { #set-up-project }
 
-* To use the IAP feature, StoreKit.framework must be added.
-![linked__storekit_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_StoreKit_202206.png)
-
-* To use the Push feature, UserNotifications.framework must be added.
-![linked__usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)
-
-##### xcframework
-* Using xcframework allows you to use NHN Cloud SDK even in arm simulator.
-![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework01_202206.png)
-![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework02_202206.png)
-
-<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-settings"></a>
-#### Project Settings
-
-* Add **-lc++** and **-ObjC** to **Other Linker Flags** under **Build Settings**.
+* If you integrated NHN Cloud SDK into your project using a method other than CocoaPods, the following additional settings are required.
+* Add **-lc++** and **-ObjC** to **Other Linker Flags** of **Build Settings**.
     * **Project Target > Build Settings > Linking > Other Linker Flags**
-![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
+![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="import-framework"></a>
 ### Import Framework { #import-framework }
@@ -129,7 +105,6 @@ binary "https://nh.nu/nhncloudsdk"
 ```objc
 #import <NHNCloudCore/NHNCloudCore.h>
 #import <NHNCloudLogger/NHNCloudLogger.h>
-#import <NHNCloudIAP/NHNCloudIAP.h>
 #import <NHNCloudPush/NHNCloudPush.h>
 #import <NHNCloudOCR/NHNCloudOCR.h>
 ```
@@ -181,7 +156,7 @@ binary "https://nh.nu/nhncloudsdk"
 <a id="use-nhn-cloud-service"></a>
 ## Use NHN Cloud Service { #use-nhn-cloud-service }
 
-* User Guide for [Log & Crash](./log-collector-ios)
-* User Guide for [In-app Purchase](./iap-ios)
-* User Guide for [Push](./push-ios)
-* User Guide for [OCR](./creditcard-recognizer-ios)
+* [Log & Crash](./log-collector-ios) User Guide
+* [Push](./push-ios) User Guide
+* [Credit-Card OCR](./creditcard-recognizer-ios) User Guide
+* [ID-Card OCR](./idcard-recognizer-ios) User Guide

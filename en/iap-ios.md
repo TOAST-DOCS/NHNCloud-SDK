@@ -67,7 +67,7 @@ end
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
 #### Frameworks Setup
 
-* The entire iOS SDK can be downloaded from the [Downloads](../../Download/#nhn-cloud-sdk) page of NHN Cloud.
+* The entire iOS SDK can be downloaded from the [Downloads](/Download/#nhn-cloud-sdk) page of NHN Cloud.
 * Add **NHNCloudIAP.framework**, **NHNCloudCore.framework**, **NHNCloudCommon.framework, StoreKit.framework** to the Xcode Project.
 * StoreKit.framework can be added in the following way.
 ![linked_storekit_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_StoreKit_202206.png)
@@ -115,8 +115,8 @@ end
 <a id="initialize-nhn-cloud-iap-sdk"></a>
 ## Initialize NHN Cloud IAP SDK { #initialize-nhn-cloud-iap-sdk }
 
-* Set the [AppKey](/Mobile%20Service/IAP/en/console-guide/#check-appkey) issued from IAP console on the [NHNCloudIAPConfiguration](./iap-ios/#nhncloudiapconfiguration) object.
-* NHN Cloud IAP uses the [NHNCloudIAPConfiguration](./iap-ios/#nhncloudiapconfiguration) object as a parameter for initialization.
+* Set the [AppKey](/Mobile%20Service/IAP/en/console-guide/#check-appkey) issued from IAP console on the [NHNCloudIAPConfiguration](#nhncloudiapconfiguration) object.
+* NHN Cloud IAP uses the [NHNCloudIAPConfiguration](#nhncloudiapconfiguration) object as a parameter for initialization.
 
 <a id="specification-for-initialization-api"></a>
 ### Specification for Initialization API { #specification-for-initialization-api }
@@ -134,7 +134,7 @@ end
 <a id="specification-for-delegate-api"></a>
 ### Specification for Delegate API { #specification-for-delegate-api }
 
-* If you register [NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate), you can receive notifications on purchase result and the decision of whether to proceed with promotion payment.
+* If you register [NHNCloudInAppPurchaseDelegate](#nhncloudinapppurchasedelegate), you can receive notifications on purchase result and the decision of whether to proceed with promotion payment.
     * You can decide whether to proceed with the promotion payment in SDK or request payment directly when the user wants.
 * The purchases for which payment is completed by reprocessing are not delegated, but are reflected on the list of unconsumed products (for consumable products) and the list of activated subscriptions (for subscription products).
 * `To receive notifications on payment result, Delegate must be set before purchase of a product.`
@@ -208,9 +208,9 @@ end
 <a id="query-product-list"></a>
 ## Query Product List { #query-product-list }
 
-* Products registered in IAP console are returned as the [NHNCloudProductResponse](./iap-ios/#nhncloudproductresponse) object.
-* Among the products registered in IAP console, products that can be purchased are returned as products ([NHNCloudProduct](./iap-ios/#nhncloudproduct)).
-* Among the products registered in IAP console, products for which product information could not be obtained from Apple Store are returned as invalidProducts ([NHNCloudProduct](./iap-ios/#nhncloudproduct)).
+* Products registered in IAP console are returned as the [NHNCloudProductResponse](#nhncloudproductresponse) object.
+* Among the products registered in IAP console, products that can be purchased are returned as products ([NHNCloudProduct](#nhncloudproduct)).
+* Among the products registered in IAP console, products for which product information could not be obtained from Apple Store are returned as invalidProducts ([NHNCloudProduct](#nhncloudproduct)).
 
 <a id="specification-for-product-list-query-api"></a>
 ### Specification for Product List Query API { #specification-for-product-list-query-api }
@@ -267,12 +267,12 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 <a id="purchase-product"></a>
 ## Purchase Product { #purchase-product }
 
-* A purchase result is passed via [NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate) that has been set.
+* A purchase result is passed via [NHNCloudInAppPurchaseDelegate](#nhncloudinapppurchasedelegate) that has been set.
 * If an app is closed during the purchase process or the purchase is interrupted due to a network error, etc., reprocessing will be performed after the IAP SDK initialization of the next app launch.
 * When you request purchase, you can add user data.
-* User data is returned in the [NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult) object of a payment result (purchase success delegate, unconsumed payment details, activated subscription, purchase restoration).
-* If the product cannot be purchased, an error indicating that the product is not available for purchase is passed via [NHNCloudInAppPurchaseDelegate](./iap-ios/#nhncloudinapppurchasedelegate).
-* You can request purchase using the [NHNCloudProduct](./iap-ios/#nhncloudproduct) object or a product ID.
+* User data is returned in the [NHNCloudPurchaseResult](#nhncloudpurchaseresult) object of a payment result (purchase success delegate, unconsumed payment details, activated subscription, purchase restoration).
+* If the product cannot be purchased, an error indicating that the product is not available for purchase is passed via [NHNCloudInAppPurchaseDelegate](#nhncloudinapppurchasedelegate).
+* You can request purchase using the [NHNCloudProduct](#nhncloudproduct) object or a product ID.
 
 <a id="specification-for-product-purchase-api"></a>
 ### Specification for Product Purchase API { #specification-for-product-purchase-api }
@@ -303,7 +303,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ## Query Activated Subscription List { #query-activated-subscription-list }
 
 * Query list of activated subscriptions for the current user ID.
-* Subscription products (auto-renewal subscription, auto-renewal consumable subscription) for which payment is completed are returned as the [NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult) objects until they are expired.
+* Subscription products (auto-renewal subscription, auto-renewal consumable subscription) for which payment is completed are returned as the [NHNCloudPurchaseResult](#nhncloudpurchaseresult) objects until they are expired.
 * If the user ID is the same, subscription products purchased on Android can also be queried.
 
 <a id="specification-for-activated-subscription-list-api"></a>
@@ -337,7 +337,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 
 * Restore purchases based on the items purchased with the user's AppStore account and reflect it on the IAP console.
 * Use this feature if purchased subscription products cannot be queried or activated.
-* Restored purchases including the expired purchases are returned a an [NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult) object.
+* Restored purchases including the expired purchases are returned a an [NHNCloudPurchaseResult](#nhncloudpurchaseresult) object.
 * In case of auto-renewable consumable subscription products, if there is purchases that is not reflected, it can be queried from the unconsumed purchases after restoration.
 
 <a id="specification-for-purchase-restoration-api"></a>
@@ -367,7 +367,7 @@ typedef NS_ENUM(NSInteger, NHNCloudProductType) {
 ## Query Unconsumed Purchases { #query-unconsumed-purchases }
 
 * An consumable product must be processed as consumed after product is provided.
-* Purchases that have not been processed as consumed are returned a an [NHNCloudPurchaseResult](./iap-ios/#nhncloudpurchaseresult) object.
+* Purchases that have not been processed as consumed are returned a an [NHNCloudPurchaseResult](#nhncloudpurchaseresult) object.
 * Auto-renewable consumable subscription products can be queried from the unconsumed purchases whenever a renewal occurs.
 
 <a id="specification-for-unconsumed-purchase-query-api"></a>

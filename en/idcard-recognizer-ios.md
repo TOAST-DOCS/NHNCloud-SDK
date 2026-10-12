@@ -67,7 +67,7 @@ end
 <a id="download-binaries-and-apply-to-nhn-cloud-sdk-set-up-framework"></a>
 #### Set up Framework
 
-* You can download the full iOS SDK from the NHN Cloud [Downloads](../../Download/#nhn-cloud-sdk) page.
+* You can download the full iOS SDK from the NHN Cloud [Downloads](/Download/#nhn-cloud-sdk) page.
 * Add **NHNCloudOCR.framework**, **NHNCloudCore.framework**, and **NHNCloudCommon.framework, vision.framework, AVFoundation.framework** to Xcode Project.
 * You can add vision.framework and AVFoundation.framework as follows. 
 ![linked_vision_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/linked_vision_frameworks.png)
