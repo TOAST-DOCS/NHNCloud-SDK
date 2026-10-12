@@ -209,7 +209,7 @@ NhnCloudPush.initialize(PushType.FCM, configuration);
 
 <a id="service-login"></a>
 ## 서비스 로그인 { #service-login }
-* NHN Cloud SDK에서 제공하는 모든 상품(Push, IAP, Log & Crash등)은 하나의 동일한 사용자 아이디를 사용합니다.
+* NHN Cloud SDK에서 제공하는 모든 상품(Push, Log & Crash 등)은 하나의 동일한 사용자 아이디를 사용합니다.
     * [NhnCloudSdk.setUserId](./getting-started-android/#set-user-id)로 사용자 아이디를 설정할 수 있습니다.
 * 서비스 로그인 단계에서 사용자 아이디 설정, 토큰 등록 기능을 구현하는 것을 권장합니다.
 * 토큰 등록 후 사용자 아이디를 설정 또는 변경하면 토큰 정보를 갱신합니다.
