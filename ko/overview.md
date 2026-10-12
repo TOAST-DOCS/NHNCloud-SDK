@@ -96,7 +96,7 @@ NHN Cloud OCR SDK를 사용하여 OCR 서비스를 손쉽게 적용할 수 있�
 <a id="nhn-cloud-ocr-user-guides"></a>
 ### 사용 가이드 { #nhn-cloud-ocr-user-guides }
 
-- [OCR (Credit Card)> Android](./creditcard-recognizer-android)
+- [OCR(Credit Card)> Android](./creditcard-recognizer-android)
 - [OCR (Credit Card)> iOS](./creditcard-recognizer-ios)
 
 - [OCR (ID Card)> Android](./idcard-recognizer-android)
