@@ -1,3 +1,5 @@
+<!-- machine_translated: true -->
+
 <!-- pre-align:aligned sig=edc80b83f7a3 -->
 
 <a id="nhn-cloud-sdk-user-guide-getting-started-ios"></a>
@@ -7,27 +9,26 @@
 ## サポート環境 { #supported-environment }
 
 * iOS 11.0以上
-* XCode最新バージョン(バージョン14以上)
+* Xcode最新バージョン
 
 <a id="nhn-cloud-sdk-components"></a>
 ## NHN Cloud SDKの構成 { #nhn-cloud-sdk-components }
 
 * iOS用NHN Cloud SDKの構成は次のとおりです。
     * [Logger](./log-collector-ios) SDK
-    * [In-app Purchase AppStore](./iap-ios) SDK
     * [Push](./push-ios) SDK
-     [OCR](./creditcard-recognizer-ios) SDK
+    * [Credit-Card OCR](./creditcard-recognizer-ios) SDK
+    * [ID-Card OCR](./idcard-recognizer-ios) SDK
 
 * NHN Cloud SDKが提供するサービスの中から、希望する機能を選択して適用できます。
 
 | Service | Cocoapods Pod Name | Carthage | Framework | Deployment Target | Dependency | Build Settings |
 | --- | --- | --- | --- | --- | --- | --- |
-| All | NHNCloudSDK | binary "[https://nh.nu/nhncloudsdk](https://nh.nu/nhncloudsdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudIAP.framework<br>NHNCloudPush.framework |  |  |  |
+| All | NHNCloudSDK | binary "[https://nh.nu/sdk](https://nh.nu/sdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudPush.framework<br>NHNCloudOCR.framework |  |  |  |
 | Mandatory | NHNCloudCore<br>NHNCloudCommon |  | NHNCloudCore.framework<br>NHNCloudCommon.framework | 11.0 |  | OTHER\_LDFLAGS = (<br>"-ObjC",<br>"-lc++"<br>); |
-| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br>\* CrashReporter.framework (NHNCloud) |  |
-| IAP | NHNCloudIAP |  | NHNCloudIAP.framework | 11.0 | \* StoreKit.framework<br><br>[Optional]<br>\* libsqlite3.tdb |  |
-| Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | \* UserNotifications.framework<br><br>[Optional]<br>\* PushKit.framework |  |
-| OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | \* Vision.framework<br>\* AVFoundation.framework |  |
+| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br> CrashReporter.framework(NHNCloud) |  |
+| Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | UserNotifications.framework<br> PushKit.framework |  |
+| OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | Vision.framework<br> AVFoundation.framework |  |
 
 <a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
 ## NHN Cloud SDKをXcodeプロジェクトに適用 { #apply-nhn-cloud-sdk-to-xcode-projects }
@@ -53,15 +54,6 @@ end
 * Package URLに'https://github.com/nhn/nhncloud.ios.sdk'を入れて**Add Package**ボタンを選択します。
 * 追加したいLibraryを選択します。
 
-![swift_package_manager](https://static.toastoven.net/toastcloud/sdk/ios/swiftpackagemanager01.png)
-
-<a id="apply-nhn-cloud-sdk-with-swift-package-manager-set-up-project"></a>
-#### プロジェクト設定
-
-* **Build Settings**の **Other Linker Flags**に**-lc++**と**-ObjC**項目を追加します。
-    * **Project Target > Build Settings > Linking > Other Linker Flags**
-![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
-
 <a id="apply-nhn-cloud-sdk-with-carthage"></a>
 ### 3. Carthageを使用してNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-with-carthage }
 
@@ -69,57 +61,41 @@ end
 
 ```sh
 # Full URL
-binary "https://api-storage.cloud.toast.com/v1/AUTH_f9e3dc598ca142d3820e1c19343d5428/carthage/NHNCloudSDK.json"
+binary "https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_f9e3dc598ca142d3820e1c19343d5428/carthage/NHNCloudSDK.json" 
 
 # Short URL
-binary "https://nh.nu/nhncloudsdk"
+binary "https://nh.nu/sdk"
 ```
 
-* 作成されたCarthage/BuildフォルダのFrameworkをXcodeプロジェクトに追加します。  
-![carthage_import_framework](https://static.toastoven.net/toastcloud/sdk/ios/carthage01_202206.png)
+* 作成されたCarthage/BuildフォルダのFrameworkをXcodeプロジェクトに追加します。
 
-* プロジェクトに次のようにフレームワーク(framework)が追加されたことを確認します。
-![import_carthage_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/carthage02_202206.png)
-![import_carthage_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/carthage03_202206.png)
+* NHN Cloud SDKを使用するには[フレームワーク設定](./getting-started-ios/#frameworks-setup)と[プロジェクト設定](./getting-started-ios/#set-up-project)を行う必要があります。
 
-* NHN Cloud SDKを使用するために**フレームワーク設定**と**プロジェクト設定**を行う必要があります。
-
-> サービスのいずれかの機能を選択して使用するには、サービスごとに必要なFrameworkのみ選択してプロジェクトに追加する必要があります。
-> サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](#nhn-cloud-sdk-components)で確認できます。  
+!!! tip "ポイント"
+    サービスのいずれかの機能を選択して使用するには、サービスごとに必要なFrameworkのみ選択してプロジェクトに追加する必要があります。
+    サービスごとに必要なFrameworkは[NHN Cloud SDKの構成](./getting-started-ios/#nhn-cloud-sdk-components)で確認できます。
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>
 ### 4. バイナリをダウンロードしてNHN Cloud SDK適用 { #apply-nhn-cloud-sdk-by-downloading-binaries }
 
-<a id="apply-nhn-cloud-sdk-by-downloading-binaries-frameworks-setup"></a>
-#### Link Frameworks
+* NHN Cloudの[Downloads](../../Download/#nhn-cloud-sdk)ページから、iOS SDK全体をダウンロードできます。
+* 必要なFrameworkを選択してプロジェクトに追加します。
 
-* NHN Cloudの[Downloads](/Download/#nhn-cloud-sdk)ページで全体iOS SDKをダウンロードできます。
-![import_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_frameworks_folder_202206.png)
+<a id="frameworks-setup"></a>
+### フレームワーク設定 { #frameworks-setup }
 
-* NHN Cloud LoggerのCrash Report機能を使用するには、一緒に配布されるCrashReporter.frameworkもプロジェクトに追加する必要があります。
-![import_external_framework](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_external_folder_202206.png)
+* LoggerのCrash Report機能を使用するには、SDKのExternalフォルダに同梱されているCrashReporter.xcframeworkをプロジェクトに追加する必要があります。
+* Push機能を使用するには、プロジェクトにシステムフレームワークであるUserNotifications.frameworkを追加する必要があります。
+* OCR機能を使用するには、プロジェクトにシステムフレームワークであるVision.frameworkとAVFoundation.frameworkを追加する必要があります。
 
-* プロジェクトに次のようにフレームワーク(framework)が追加されたことを確認します。
-![import_frameworks_complete](https://static.toastoven.net/toastcloud/sdk/ios/overview_import_complete_folder_202206.png)
+<a id="set-up-project"></a>
+### プロジェクト設定 { #set-up-project }
 
-* IAP機能を使用するには、StoreKit.frameworkを追加する必要があります。
-![linked__storekit_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_StoreKit_202206.png)
-
-* Push機能を使用するには、UserNotifications.frameworkを追加する必要があります。
-![linked__usernotifications_frameworks](https://static.toastoven.net/toastcloud/sdk/ios/overview_link_frameworks_UserNotifications_202206.png)
-
-##### xcframework
-* xcframeworkを使用するとarm simulatorでもNHN Cloud SDKを使用できます。
-![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework01_202206.png)
-![xcframework01](https://static.toastoven.net/toastcloud/sdk/ios/xcframework02_202206.png)
-
-<a id="apply-nhn-cloud-sdk-by-downloading-binaries-project-settings"></a>
-#### Project Settings
-
-* **Build Settings**の**Other Linker Flags**に**-lc++**と**-ObjC**項目を追加します。
+* Cocoapods以外の方法でプロジェクトにNHN Cloud SDKを統合した場合、以下の設定が追加で必要です。
+* **Build Settings**の**Other Linker Flags**に**-lc++**と**-ObjC**を追加します。
     * **Project Target > Build Settings > Linking > Other Linker Flags**
-![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
+![other_linker_flags](https://static.toastoven.net/toastcloud/sdk/ios/overview_settings_flags_202206.png)
 
 <a id="import-framework"></a>
 ### フレームワークのインポート { #import-framework }
@@ -129,7 +105,6 @@ binary "https://nh.nu/nhncloudsdk"
 ```objc
 #import <NHNCloudCore/NHNCloudCore.h>
 #import <NHNCloudLogger/NHNCloudLogger.h>
-#import <NHNCloudIAP/NHNCloudIAP.h>
 #import <NHNCloudPush/NHNCloudPush.h>
 #import <NHNCloudOCR/NHNCloudOCR.h>
 ```
@@ -182,6 +157,6 @@ binary "https://nh.nu/nhncloudsdk"
 ## NHN Cloud SDK Service使用 { #use-nhn-cloud-service }
 
 * [Log & Crash](./log-collector-ios)使用ガイド
-* [In-app Purchase](./iap-ios)使用ガイド
 * [Push](./push-ios)使用ガイド
-* [OCR](./creditcard-recognizer-ios)使用ガイド
+* [Credit-Card OCR](./creditcard-recognizer-ios) 使用ガイド
+* [ID-Card OCR](./idcard-recognizer-ios) 使用ガイド
