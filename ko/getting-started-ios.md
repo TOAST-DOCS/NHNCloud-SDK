@@ -15,7 +15,8 @@
 * iOS용 NHN Cloud SDK의 구성은 다음과 같습니다.
     * [Logger](./log-collector-ios) SDK    
     * [Push](./push-ios) SDK
-    * [OCR](./creditcard-recognizer-ios) SDK
+    * [Credit-Card OCR](./creditcard-recognizer-ios) SDK
+    * [ID-Card OCR](./idcard-recognizer-ios) SDK
 
 * NHN Cloud SDK가 제공하는 서비스 중 원하는 기능을 선택해 적용할 수 있습니다.
 
@@ -154,4 +155,5 @@ binary "https://nh.nu/sdk"
 
 * [Log & Crash](./log-collector-ios) 사용 가이드
 * [Push](./push-ios) 사용 가이드
-* [OCR](./creditcard-recognizer-ios) 사용 가이드
+* [Credit-Card OCR](./creditcard-recognizer-ios) 사용 가이드
+* [ID-Card OCR](./idcard-recognizer-ios) 사용 가이드
