@@ -22,11 +22,11 @@
 
 | Service | Cocoapods Pod Name | Carthage | Framework | Deployment Target | Dependency | Build Settings |
 | --- | --- | --- | --- | --- | --- | --- |
-| All | NHNCloudSDK | binary "[https://nh.nu/nhncloudsdk](https://nh.nu/nhncloudsdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudPush.framework<br>NHNCloudOCR.framework |  |  |  |
+| All | NHNCloudSDK | binary "[https://nh.nu/sdk](https://nh.nu/sdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudPush.framework<br>NHNCloudOCR.framework |  |  |  |
 | Mandatory | NHNCloudCore<br>NHNCloudCommon |  | NHNCloudCore.framework<br>NHNCloudCommon.framework | 11.0 |  | OTHER\_LDFLAGS = (<br>"-ObjC",<br>"-lc++"<br>); |
-| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br>\* CrashReporter.framework (NHNCloud) |  |
-| Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 | \* UserNotifications.framework<br><br>[Optional]<br>\* PushKit.framework |  |
-| OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 | \* Vision.framework<br>\* AVFoundation.framework |  |
+| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br> CrashReporter.framework (NHNCloud) |  |
+| Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 |  UserNotifications.framework<br> PushKit.framework |  |
+| OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 |  Vision.framework<br> AVFoundation.framework |  |
 
 <a id="apply-nhn-cloud-sdk-to-xcode-projects"></a>
 ## NHN Cloud SDK를 Xcode 프로젝트에 적용 { #apply-nhn-cloud-sdk-to-xcode-projects }
