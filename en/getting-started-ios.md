@@ -156,7 +156,7 @@ binary "https://nh.nu/sdk"
 <a id="use-nhn-cloud-service"></a>
 ## Use NHN Cloud Service { #use-nhn-cloud-service }
 
-* User Guide for [Log & Crash](./log-collector-ios)
-* User Guide for [Push](./push-ios)
+* [Log & Crash](./log-collector-ios) User Guide
+* [Push](./push-ios) User Guide
 * [Credit-Card OCR](./creditcard-recognizer-ios) User Guide
 * [ID-Card OCR](./idcard-recognizer-ios) User Guide

@@ -147,8 +147,8 @@ NhnCloudSdk.setDebugMode(false);
 <a id="use-nhn-cloud-services"></a>
 ## Use NHN Cloud Services { #use-nhn-cloud-services }
 
-* User Guide for [Log & Crash](./log-collector-android)
-* User Guide for [Native Crash Reporter](./log-collector-ndk)
-* User Guide for [Push](./push-android)
-* User Guide for [Credit Card Recognizer](./creditcard-recognizer-android)
+* [Log & Crash](./log-collector-android) User Guide
+* [Native Crash Reporter](./log-collector-ndk) User Guide
+* [Push](./push-android) User Guide
+* [Credit Card Recognizer](./creditcard-recognizer-android) User Guide
 * [ID Card Recognizer](./idcard-recognizer-android) User Guide
