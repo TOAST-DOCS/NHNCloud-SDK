@@ -7,7 +7,7 @@
 ## 지원 환경 { #supported-environment }
 
 * iOS 11.0 이상
-* XCode 최신 버전
+* Xcode 최신 버전
 
 <a id="nhn-cloud-sdk-components"></a>
 ## NHN Cloud SDK의 구성 { #nhn-cloud-sdk-components }
@@ -24,7 +24,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | All | NHNCloudSDK | binary "[https://nh.nu/sdk](https://nh.nu/sdk) | NHNCloudCore.framework<br>NHNCloudCommon.framework<br>NHNCloudLogger.framework<br>NHNCloudPush.framework<br>NHNCloudOCR.framework |  |  |  |
 | Mandatory | NHNCloudCore<br>NHNCloudCommon |  | NHNCloudCore.framework<br>NHNCloudCommon.framework | 11.0 |  | OTHER\_LDFLAGS = (<br>"-ObjC",<br>"-lc++"<br>); |
-| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br> CrashReporter.framework (NHNCloud) |  |
+| Log & Crash | NHNCloudLogger |  | NHNCloudLogger.framework | 11.0 | [External & Optional]<br> CrashReporter.framework(NHNCloud) |  |
 | Push | NHNCloudPush |  | NHNCloudPush.framework | 11.0 |  UserNotifications.framework<br> PushKit.framework |  |
 | OCR | NHNCloudOCR |  | NHNCloudOCR.framework | 11.0 |  Vision.framework<br> AVFoundation.framework |  |
 
@@ -69,7 +69,7 @@ binary "https://nh.nu/sdk"
 * NHN Cloud SDK를 사용하려면 [프레임워크 설정](./getting-started-ios/#frameworks-setup)과 [프로젝트 설정](./getting-started-ios/#set-up-project)을 해야 합니다.
 
 !!! tip "알아두기"
-    서비스 중 원하는 기능을 선택하여 사용하기 위해서는 서비스별로 필요한 Framework만 선택하여 프로젝트에 추가해야 합니다.
+    서비스 중 원하는 기능을 선택하여 사용하려면 서비스별로 필요한 Framework만 선택하여 프로젝트에 추가해야 합니다.
     서비스별로 필요한 Framework는 [NHN Cloud SDK의 구성](./getting-started-ios/#nhn-cloud-sdk-components)에서 확인할 수 있습니다.
 
 <a id="apply-nhn-cloud-sdk-by-downloading-binaries"></a>

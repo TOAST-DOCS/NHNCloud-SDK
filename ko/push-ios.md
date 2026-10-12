@@ -95,12 +95,12 @@ end
 <a id="service-login"></a>
 ## 서비스 로그인 { #service-login }
 
-* NHN Cloud SDK에서 제공하는 모든 상품(Logger, Push, OCR)은 하나의 사용자 아이디를 공유합니다.
+* NHN Cloud SDK에서 제공하는 모든 상품(Logger, Push, OCR)은 하나의 사용자 ID를 공유합니다.
 
 <a id="login"></a>
 ### 로그인 { #login }
 
-* `최초 토큰 등록 시 사용자 아이디가 설정되어 있지 않으면, 단말기 식별자를 사용하여 등록합니다.` ([토큰 등록 섹션 참고](#token-registration))
+* `최초 토큰 등록 시 사용자 ID가 설정되어 있지 않으면, 단말기 식별자를 사용하여 등록합니다.` ([토큰 등록 섹션 참고](#token-registration))
 * `토큰 등록 후 사용자 아이디를 설정 또는 변경하면 토큰 정보를 갱신합니다.`
 
 ``` objc
