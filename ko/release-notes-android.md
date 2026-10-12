@@ -3,6 +3,18 @@
 <a id="nhn-cloud-sdk-user-guide-release-notes-android"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > Android { #nhn-cloud-sdk-user-guide-release-notes-android }
 
+<a id="140-october-13-2026"></a>
+## 1.14.0(2026. 10. 13.) { #140-october-13-2026 }
+
+<a id="140-october-13-2026-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #140-october-13-2026-nhn-cloud-iap }
+
+<a id="140-october-13-2026-nhn-cloud-iap-feature-updates"></a>
+#### 기능 개선/변경
+
+* NHN Cloud IAP 지원 종료
+    * NHN Cloud Android SDK에서 IAP 관련 모듈을 제거하였습니다.
+
 <a id="130-september-15-2026"></a>
 ## 1.13.0(2026. 09. 15.) { #130-september-15-2026 }
 
