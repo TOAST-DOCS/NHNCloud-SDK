@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-push-fcm:1.13.0'
+    implementation 'com.nhncloud.android:nhncloud-push-fcm:1.14.0'
     ...
 }
 ```
@@ -49,7 +49,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-push-adm:1.13.0'
+    implementation 'com.nhncloud.android:nhncloud-push-adm:1.14.0'
     ...
 }
 ```
@@ -212,7 +212,7 @@ NhnCloudPush.initialize(PushType.FCM, configuration);
 
 <a id="service-login"></a>
 ## Service Login { #service-login }
-* All products provided by NHN Cloud SDK (Push, IAP, Log & Crash, etc.) use the same user ID.
+* All products provided by NHN Cloud SDK (Push, Log & Crash, etc.) use the same user ID.
     * You can set the user id with [NhnCloudSdk.setUserId](./getting-started-android/#set-user-id).
 * It is recommended to implement the user ID setting and token registration functions in the service login step.
 * If you set or change the user ID after registering the token, the token information is updated.
