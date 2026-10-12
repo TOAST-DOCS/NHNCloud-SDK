@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-push-fcm:1.13.0'
+    implementation 'com.nhncloud.android:nhncloud-push-fcm:1.14.0'
     ...
 }
 ```
@@ -48,7 +48,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.nhncloud.android:nhncloud-push-adm:1.13.0'
+    implementation 'com.nhncloud.android:nhncloud-push-adm:1.14.0'
     ...
 }
 ```
@@ -209,7 +209,7 @@ NhnCloudPush.initialize(PushType.FCM, configuration);
 
 <a id="service-login"></a>
 ## サービスログイン { #service-login }
-* NHN Cloud SDKで提供するすべてのサービス(Push、IAP、Log & Crashなど)は、1つの同じユーザーIDを使用します。
+* NHN Cloud SDKで提供するすべての商品(Push、Log & Crashなど)は、1つの同じユーザーIDを使用します。
     * [NhnCloudSdk.setUserId](./getting-started-android/#set-user-id)にユーザーIDを設定できます。
 * サービスログイン段階でユーザーID設定、トークン登録機能を実装することを推奨します。
 * トークンの登録後、ユーザーIDを設定または変更すると、トークン情報を更新します。
