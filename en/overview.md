@@ -1,6 +1,6 @@
 <!-- machine_translated: true -->
 
-<!-- pre-align:aligned sig=82c2a3411707 -->
+<!-- pre-align:aligned sig=c4d6d5f779f7 -->
 
 <a id="nhn-cloud-sdk-user-guide-overview"></a>
 ## NHN Cloud > SDK User Guide > Overview { #nhn-cloud-sdk-user-guide-overview }
