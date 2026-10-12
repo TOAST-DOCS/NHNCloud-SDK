@@ -101,4 +101,4 @@ NHN Cloud OCR SDKを使用して、OCRサービスを簡単に適用できます
 - [OCR(Credit Card)> iOS](./creditcard-recognizer-ios)
 
 - [OCR(ID Card)> Android](./idcard-recognizer-android)
-- [OCR (ID Card)> iOS](./idcard-recognizer-ios)
+- [OCR(ID Card)> iOS](./idcard-recognizer-ios)

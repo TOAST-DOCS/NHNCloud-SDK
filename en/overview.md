@@ -100,4 +100,4 @@ It supports Recognition of credit cards and ID cards and can Extract data from t
 - [OCR(Credit Card)> iOS](./creditcard-recognizer-ios)
 
 - [OCR(ID Card)> Android](./idcard-recognizer-android)
-- [OCR (ID Card)> iOS](./idcard-recognizer-ios)
+- [OCR(ID Card)> iOS](./idcard-recognizer-ios)
