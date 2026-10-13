@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=82c2a3411707 -->
+<!-- machine_translated: true -->
+
+<!-- pre-align:aligned sig=c4d6d5f779f7 -->
 
 <a id="nhn-cloud-sdk-user-guide-overview"></a>
 ## NHN Cloud > SDK使用ガイド > 概要 { #nhn-cloud-sdk-user-guide-overview }
@@ -14,7 +16,6 @@ NHN Cloud SDKは、[NHN Cloud](https://nhncloud.com/)の多様なサービスラ
 NHN Cloud SDKは、次のようなサービスを提供します。 
  
 - [Log & Crash Search](https://www.nhncloud.com/service/data-analytics/log-crash-search)
-- [IAP](https://www.nhncloud.com/service/mobile-service/iap) 
 - [Push](https://www.nhncloud.com/service/notification/push)
 - [OCR](https://www.nhncloud.com/service/ai-service/ocr)
  
@@ -74,29 +75,7 @@ Log & Crash Search収集サーバーにログを送信する機能を提供し�
 - [Log & Crash > Android](./log-collector-android)使用ガイド 
 - [Log & Crash > iOS](./log-collector-ios)使用ガイド 
 - [Log & Crash > Windows C++](./log-collector-windows)使用ガイド 
- 
-<a id="nhn-cloud-iap"></a>
-## NHN Cloud IAP { #nhn-cloud-iap }
- 
-モバイル統合アプリ内決済サービスを提供します。 
- 
-- [IAPサービスを確認する](https://www.nhncloud.com/service/mobile-service/iap) 
- 
-<a id="nhn-cloud-iap-main-features"></a>
-### 主な機能 { #nhn-cloud-iap-main-features }
- 
-| 機能 | 説明 | 
-| -- | -- | 
-| 一般決済 | 一回性商品を販売できます。 | 
-| 購読決済 | 購読商品を販売できます。 | 
-| 再処理 | 不安定な形で終了した購入プロセスを復元できます。 | 
- 
-<a id="nhn-cloud-iap-user-guides"></a>
-### 使用ガイド { #nhn-cloud-iap-user-guides }
- 
-- [IAP > Android](./iap-android)使用ガイド 
-- [IAP > iOS](./iap-ios)使用ガイド 
- 
+
 <a id="nhn-cloud-push"></a>
 ## NHN Cloud Push { #nhn-cloud-push }
  
@@ -108,3 +87,18 @@ NHN Cloud Push SDKを使用して、Pushサービスを簡単に適用できま�
  
 - [Push > Android](./push-android)使用ガイド 
 - [Push > iOS](./push-ios)使用ガイド 
+
+<a id="nhn-cloud-ocr"></a>
+## NHN Cloud OCR { #nhn-cloud-ocr }
+
+NHN Cloud OCR SDKを使用して、OCRサービスを簡単に適用できます。
+クレジットカードと身分証を認識し、データを抽出できます。
+
+<a id="nhn-cloud-ocr-user-guides"></a>
+### 使用ガイド { #nhn-cloud-ocr-user-guides }
+
+- [OCR(Credit Card)> Android](./creditcard-recognizer-android)
+- [OCR(Credit Card)> iOS](./creditcard-recognizer-ios)
+
+- [OCR(ID Card)> Android](./idcard-recognizer-android)
+- [OCR(ID Card)> iOS](./idcard-recognizer-ios)

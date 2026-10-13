@@ -8,7 +8,7 @@
 
 1. [Install the NHN Cloud SDK](./getting-started-windows)
 2. [NHN Cloudコンソール](https://console.nhncloud.com)で[Log & Crash Searchを有効化](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/)します。
-3. Log & Crash Searchで[AppKeyを確認](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/#appkey)します。
+3. Log & Crash Searchで[AppKeyを確認](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/ja/console-guide/#check-appkey)します。
 
 <a id="initialize-nhn-cloud-logger-sdk"></a>
 ## NHN Cloud SDKの初期化 { #initialize-nhn-cloud-logger-sdk }
@@ -217,5 +217,5 @@ NHN Cloud Windows SDKで発生したクラッシュを解析するには、シ�
 dump_syms sample.pdb > sample.sym
 ```
 
-* そしてsample.symをzipに圧縮して、[コンソールサーバーにアップロード](/Data%20&%20Analytics/Log%20&%20Crash%20Search/ja/console-guide/#_21)します。
+* そしてsample.symをzipに圧縮して、[コンソールサーバーにアップロード](/Data%20%26%20Analytics/Log%20%26%20Crash%20Search/ja/console-guide/#symbol-file)します。
     * コンソールアップロードする時に入力するバージョンは、初期化する時にsetProjectVersionに入力したバージョンと同じ値である必要があります。

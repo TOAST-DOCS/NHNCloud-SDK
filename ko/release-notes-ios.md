@@ -1,7 +1,18 @@
-<!-- pre-align:aligned sig=499fcf966eda -->
+<!-- pre-align:aligned sig=e16089ccc643 -->
 
 <a id="nhn-cloud-sdk-user-guide-release-notes-ios"></a>
 ## NHN Cloud > SDK 사용 가이드 > 릴리스 노트 > iOS { #nhn-cloud-sdk-user-guide-release-notes-ios }
+
+<a id="110-2026-10-13"></a>
+## 1.11.0(2026. 10. 13.) { #110-2026-10-13 }
+
+<a id="110-2026-10-13-nhn-cloud-iap"></a>
+### NHN Cloud IAP { #110-2026-10-13-nhn-cloud-iap }
+
+<a id="110-2026-10-13-nhn-cloud-iap-improved"></a>
+#### 기능 개선/변경
+* NHN Cloud IAP 지원 종료
+    * NHN Cloud iOS SDK에서 IAP 모듈이 제거되었습니다.
 
 <a id="100-2026-09-15"></a>
 ## 1.10.0(2026. 09. 15.) { #100-2026-09-15 }
@@ -24,7 +35,7 @@
     * v0.0.5부터 User Access Token 인증이 필요합니다. 
       * appKey 단독 인증을 사용할 수 없으며, User Access Token 인증이 필요합니다.
       * User Access Token을 직접 설정하거나 User Access Key와 Secret Access Key를 사용해 자동으로 발급받을 수 있습니다.
-      * 자세한 사항은 [NHN Cloud Symbol Uploader 적용](https://docs.nhncloud.com/ko/nhncloud-sdk/ko/log-collector-ios/#apply-nhn-cloud-symbol-uploader)을 참고합니다.
+      * 자세한 사항은 [NHN Cloud Symbol Uploader 적용](./log-collector-ios/#apply-nhn-cloud-symbol-uploader)을 참고합니다.
 
 <a id="100-2026-09-15-nhn-cloud-push"></a>
 ### NHN Cloud Push { #100-2026-09-15-nhn-cloud-push }

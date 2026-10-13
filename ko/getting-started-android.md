@@ -17,9 +17,6 @@ Android용 NHN Cloud SDK의 구성은 다음과 같습니다.
 * Core SDK
 * [Logger](./log-collector-android) SDK
 * [Native Crash Reporter](./log-collector-ndk) SDK
-* In-app Purchase Core SDK
-* [In-app Purchase Google Play Store](./iap-android) SDK
-* [In-app Purchase OneStore](./iap-android) SDK
 * Push Core SDK
 * [Push Firebase Cloud Messaging](./push-android) SDK
 * [Credit Card Recognizer](./creditcard-recognizer-android) SDK
@@ -28,21 +25,13 @@ NHN Cloud SDK가 제공하는 서비스 중 원하는 기능을 선택해 적용
 
 | Gradle Dependency                           | Service           |
 | ------------------------------------------- | ----------------- |
-| com.nhncloud.android:nhncloud-common:1.13.0       | Common      |
-| com.nhncloud.android:nhncloud-core:1.13.0         | Core        |
-| com.nhncloud.android:nhncloud-logger:1.13.0       | Log & Crash |
-| com.nhncloud.android:nhncloud-crash-reporter-ndk:1.13.0       | Native Crash Reporter |
-| com.nhncloud.android:nhncloud-iap-core:1.13.0     | In-app Purchase Core |
-| com.nhncloud.android:nhncloud-iap-google:1.13.0   | In-app Purchase <br>Google Play Store |
-| com.nhncloud.android:nhncloud-iap-onestore2:1.13.0 | In-app Purchase <br>ONE store(통합 버전) |
-| com.nhncloud.android:nhncloud-iap-onestore:1.13.0 | In-app Purchase <br>ONE store(v17) |
-| com.nhncloud.android:nhncloud-iap-onestore-v16:1.13.0 | In-app Purchase <br>ONE store(v16) |
-| com.nhncloud.android:nhncloud-iap-onestore-v19:1.13.0 | In-app Purchase <br>ONE store(v19) |
-| com.nhncloud.android:nhncloud-iap-onestore-v21:1.13.0 | In-app Purchase <br>ONE store(v21) |
-| com.nhncloud.android:nhncloud-iap-galaxy:1.13.0 | In-app Purchase <br>Galaxy Store |
-| com.nhncloud.android:nhncloud-push-core:1.13.0    | Push Core   |
-| com.nhncloud.android:nhncloud-push-fcm:1.13.0    | Push <br>Firebase Cloud Messaging |
-| com.nhncloud.android:nhncloud-creditcard-recognizer:1.13.0    | Credit Card Recognizer |
+| com.nhncloud.android:nhncloud-common:1.14.0       | Common      |
+| com.nhncloud.android:nhncloud-core:1.14.0         | Core        |
+| com.nhncloud.android:nhncloud-logger:1.14.0       | Log & Crash |
+| com.nhncloud.android:nhncloud-crash-reporter-ndk:1.14.0       | Native Crash Reporter |
+| com.nhncloud.android:nhncloud-push-core:1.14.0    | Push Core   |
+| com.nhncloud.android:nhncloud-push-fcm:1.14.0    | Push <br>Firebase Cloud Messaging |
+| com.nhncloud.android:nhncloud-creditcard-recognizer:1.14.0    | Credit Card Recognizer |
 
 <a id="apply-nhn-cloud-sdk-to-android-studio-projects"></a>
 ## NHN Cloud SDK를 Android Studio 프로젝트에 적용 { #apply-nhn-cloud-sdk-to-android-studio-projects }
@@ -58,7 +47,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.nhncloud.android:nhncloud-sdk:1.13.0'
+  implementation 'com.nhncloud.android:nhncloud-sdk:1.14.0'
 }
 ```
 
@@ -66,14 +55,14 @@ NHN Cloud SDK가 제공하는 상품별 설정 방법은 다음과 같습니다.
 
 - [Logger 라이브러리 설정](./log-collector-android/#library-setting)
 - [Native Crash Reporter 라이브러리 설정](./log-collector-ndk/#library-setting)
-- [In-app Purchase 라이브러리 설정](./iap-android/#library-setting)
 - [Push 라이브러리 설정](./push-android/#library-setting)
 - [Credit Card Recognizer 라이브러리 설정](./creditcard-recognizer-android/#add-dependency)
+- [ID Card Recognizer 라이브러리 설정](./idcard-recognizer-android/#add-dependency)
 
 <a id="build-android-with-aar"></a>
 ### 2. AAR을 사용하여 Android 빌드 { #build-android-with-aar }
 
-Android SDK는 [Downloads](../../Download/#nhn-cloud-sdk) 페이지에서 다운로드할 수 있습니다.
+Android SDK는 [Downloads](/Download/#nhn-cloud-sdk) 페이지에서 다운로드할 수 있습니다.
 
 <a id="set-user-id"></a>
 ## UserID 설정 { #set-user-id }
@@ -157,6 +146,6 @@ NhnCloudSdk.setDebugMode(false);
 
 * [Log & Crash](./log-collector-android) 사용 가이드
 * [Native Crash Reporter](./log-collector-ndk) 사용 가이드
-* [In-app Purchase](./iap-android) 사용 가이드
 * [Push](./push-android) 사용 가이드
 * [Credit Card Recognizer](./creditcard-recognizer-android) 사용 가이드
+* [ID Card Recognizer](./idcard-recognizer-android) 사용 가이드

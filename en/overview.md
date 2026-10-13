@@ -1,4 +1,6 @@
-<!-- pre-align:aligned sig=82c2a3411707 -->
+<!-- machine_translated: true -->
+
+<!-- pre-align:aligned sig=c4d6d5f779f7 -->
 
 <a id="nhn-cloud-sdk-user-guide-overview"></a>
 ## NHN Cloud > SDK User Guide > Overview { #nhn-cloud-sdk-user-guide-overview }
@@ -14,7 +16,6 @@ Although the SDK provides an integrated development environment for many service
 NHN Cloud SDK provides the following services:
 
 - [Log & Crash Search](https://www.nhncloud.com/service/data-analytics/log-crash-search)
-- [IAP](https://www.nhncloud.com/service/mobile-service/iap)
 - [Push](https://www.nhncloud.com/service/notification/push)
 - [OCR](https://www.nhncloud.com/service/ai-service/ocr)
 
@@ -74,28 +75,6 @@ This service provides capability to send logs to a collector server of Log & Cra
 - User Guide for [Log & Crash > iOS](./log-collector-ios)
 - User Guide for [Log & Crash > Windows C++](./log-collector-windows)
 
-<a id="nhn-cloud-iap"></a>
-## NHN Cloud IAP { #nhn-cloud-iap }
-
-This service provides integrated mobile in-app payment (IAP) service.
-
-- [Find out IAP Service](https://www.nhncloud.com/service/mobile-service/iap)
-
-<a id="nhn-cloud-iap-main-features"></a>
-### Main Features { #nhn-cloud-iap-main-features }
-
-| Feature | Description |
-| -- | -- |
-| General Payment | Provides features to sell one-time products. |
-| Subscription Payment | Provides features to sell subscription products. |
-| Re-processing | Provides features to restore incompletely-terminated purchase process. |
-
-<a id="nhn-cloud-iap-user-guides"></a>
-### User Guides { #nhn-cloud-iap-user-guides }
-
-- User Guide for [IAP > Android](./iap-android)
-- User Guide for [IAP > iOS](./iap-ios)
-
 <a id="nhn-cloud-push"></a>
 ## NHN Cloud Push { #nhn-cloud-push }
 
@@ -107,3 +86,18 @@ On console, you can send the notification message in a stable manner and check t
 
 - User Guide for [Push > Android](./push-android)
 - User Guide for [Push > iOS](./push-ios)
+
+<a id="nhn-cloud-ocr"></a>
+## NHN Cloud OCR { #nhn-cloud-ocr }
+
+You can easily apply the OCR service using NHN Cloud OCR SDK.
+It supports Recognition of credit cards and ID cards and can Extract data from them.
+
+<a id="nhn-cloud-ocr-user-guides"></a>
+### User Guides { #nhn-cloud-ocr-user-guides }
+
+- [OCR(Credit Card)> Android](./creditcard-recognizer-android)
+- [OCR(Credit Card)> iOS](./creditcard-recognizer-ios)
+
+- [OCR(ID Card)> Android](./idcard-recognizer-android)
+- [OCR(ID Card)> iOS](./idcard-recognizer-ios)

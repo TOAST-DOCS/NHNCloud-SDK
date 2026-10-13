@@ -303,7 +303,7 @@ To test payments, add 'test_mode'. If 'test_mode' is not set, the default value 
 | Huawei App Gallery | "HUAWEI" |
 | MyCard | "MYCARD" |
 
-> [Note] Store codes are defined in the [IapStoreCode](./iap-android/#iapstorecode) class.
+> [Note] Store codes are defined in the [IapStoreCode](#iapstorecode) class.
 
 <a id="product-types"></a>
 ## Product Types { #product-types }
@@ -321,10 +321,10 @@ To test payments, add 'test_mode'. If 'test_mode' is not set, the default value 
 <a id="in-app-purchase-iap-setting"></a>
 ## In-App Purchase Settings { #in-app-purchase-iap-setting }
 
-* The [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object contains in-app purchase configuration information.
-* You can create a [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object by using [NhnCloudIapConfiguration.Builder](./iap-android/#nhncloudiapconfigurationbuilder).
+* The [NhnCloudIapConfiguration](#nhncloudiapconfiguration) object contains in-app purchase configuration information.
+* You can create a [NhnCloudIapConfiguration](#nhncloudiapconfiguration) object by using [NhnCloudIapConfiguration.Builder](#nhncloudiapconfigurationbuilder).
 * Set the [AppKey](/Mobile%20Service/IAP/en/console-guide/#appkey) issued from the IAP console by using the setAppKey method.
-* Set the [store code](./iap-android/#store-codes) to use for in-app purchases by using the setStoreCode method.
+* Set the [store code](#store-codes) to use for in-app purchases by using the setStoreCode method.
 
 <a id="example-of-iap-setting"></a>
 ### In-App Purchase Settings Example { #example-of-iap-setting }
@@ -346,7 +346,7 @@ NhnCloudIapConfiguration configuration =
 ### In-App Purchase Initialization API Specification { #specification-for-iap-initialization-api }
 
 * Use the NhnCloudIap.initialize method to initialize in-app purchase.
-* The NhnCloudIap.initialize method takes the [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object created by [NhnCloudIapConfiguration.Builder](./iap-android/#nhncloudiapconfigurationbuilder) as a parameter.
+* The NhnCloudIap.initialize method takes the [NhnCloudIapConfiguration](#nhncloudiapconfiguration) object created by [NhnCloudIapConfiguration.Builder](#nhncloudiapconfigurationbuilder) as a parameter.
 
 ```java
 /* NhnCloudIap.java */
@@ -414,9 +414,9 @@ NhnCloudSdk.setUserId(null);
 <a id="register-purchases-update-listener"></a>
 ## Register a Payment Update Listener { #register-purchases-update-listener }
 
-* When a payment is made in-app, or when a promotion is redeemed or a subscription status changes (restoration, subscription renewal, etc.) in the Google Play Store app, the payment result is notified via the [IapService.PurchasesUpdatedListener](./iap-android/#iapservicepurchasesupdatedlistener) configured in NhnCloudIap.
+* When a payment is made in-app, or when a promotion is redeemed or a subscription status changes (restoration, subscription renewal, etc.) in the Google Play Store app, the payment result is notified via the [IapService.PurchasesUpdatedListener](#iapservicepurchasesupdatedlistener) configured in NhnCloudIap.
 * You can register a payment update listener using the NhnCloudIap.registerPurchasesUpdatedListener method.
-* You can check payment information through the list of [IapPurchaseResult](./iap-android/#iappurchaseresult) delivered via the [IapService.PurchasesUpdatedListener](./iap-android/#iapservicepurchasesupdatedlistener).
+* You can check payment information through the list of [IapPurchaseResult](#iappurchaseresult) delivered via the [IapService.PurchasesUpdatedListener](#iapservicepurchasesupdatedlistener).
 
 > [Note] The payment update listener must be registered in Activity.onCreate() and unregistered in Activity.onDestroy().
 
@@ -482,8 +482,8 @@ public class MainActivity extends AppCompatActivity {
 ## List products { #query-product-list }
 
 * Retrieves a list of available products registered in the IAP console.
-* Products that can be purchased are returned as an [IapProductDetails](./iap-android/#iapproductdetails) list (Product Details List).
-* Products registered in the IAP console but not registered in the store are returned as an [IapProduct](./iap-android/#iapproduct) list (Invalid Product List).
+* Products that can be purchased are returned as an [IapProductDetails](#iapproductdetails) list (Product Details List).
+* Products registered in the IAP console but not registered in the store are returned as an [IapProduct](#iapproduct) list (Invalid Product List).
 
 <a id="specification-for-product-list-query-api"></a>
 ### Query product list API specification { #specification-for-product-list-query-api }
@@ -533,11 +533,11 @@ void queryProductDetails() {
 ## Purchase Products { #purchase-products }
 
 * You can purchase products in NHN Cloud IAP by using the product ID registered in the store.
-* Product information is included in the [IapProductDetails](./iap-android/#iapproductdetails) object returned by calling the NhnCloudIap.queryProductDetails() method.
+* Product information is included in the [IapProductDetails](#iapproductdetails) object returned by calling the NhnCloudIap.queryProductDetails() method.
 * You can get the product ID by using the IapProductDetails.getProductId() method.
-* To purchase a product, set the product ID in the [IapPurchaseFlowParams](./iap-android/#iappurchaseflowparams) object, and then start the purchase flow by using the NhnCloudIap.launchPurchaseFlow() method.
-* You can create the [IapPurchaseFlowParams](./iap-android/#iappurchaseflowparams) object by using [IapPurchaseFlowParams.Builder](./iap-android/#iappurchaseflowparamsbuilder).
-* The product purchase result is returned through the [IapService.PurchasesUpdatedListener](./iap-android/#iapservicepurchasesupdatedlistener) registered in NhnCloudIap.
+* To purchase a product, set the product ID in the [IapPurchaseFlowParams](#iappurchaseflowparams) object, and then start the purchase flow by using the NhnCloudIap.launchPurchaseFlow() method.
+* You can create the [IapPurchaseFlowParams](#iappurchaseflowparams) object by using [IapPurchaseFlowParams.Builder](#iappurchaseflowparamsbuilder).
+* The product purchase result is returned through the [IapService.PurchasesUpdatedListener](#iapservicepurchasesupdatedlistener) registered in NhnCloudIap.
 
 <a id="specification-for-product-purchase-iap"></a>
 ### Purchase Products IAP Specification { #specification-for-product-purchase-iap }
@@ -573,7 +573,7 @@ void launchPurchaseFlow(Activity activity, String productId) {
 
 * NHN Cloud IAP allows you to add user information when making a purchase request.
 * User information is set using the setDeveloperPayload() method of IapPurchaseFlowParams.Builder.
-* You can check the set user information using the getDeveloperPayload() method of [IapPurchase](./iap-android/#iappurchase) returned when querying unconsumed purchases and active subscriptions.
+* You can check the set user information using the getDeveloperPayload() method of [IapPurchase](#iappurchase) returned when querying unconsumed purchases and active subscriptions.
 
 ```java
 String userData = "User Data"
@@ -592,8 +592,8 @@ NhnCloudIap.launchPurchaseFlow(activity, params);
 * Retrieves information on one-time products (CONSUMABLE) and consumable subscription products (CONSUMABLE_AUTO_RENEWABLE) that have not yet been consumed.
 * After granting products to the user, consume the products by using the [Consume API](/Mobile%20Service/IAP/en/api-guide-for-toast-sdk/#consume-api).
 * You can query unconsumed purchases by using the NhnCloudIap.queryConsumablePurchases() method.
-* You can query unconsumed purchases for the current store or all stores by using [IapQueryPurchasesParams](./iap-android/#iapquerypurchasesparams).
-* The query results are returned as a list of [IapPurchase](./iap-android/#iappurchase) objects through [IapService.PurchasesResponseListener](./iap-android/#iapservicepurchasesresponselistener).
+* You can query unconsumed purchases for the current store or all stores by using [IapQueryPurchasesParams](#iapquerypurchasesparams).
+* The query results are returned as a list of [IapPurchase](#iappurchase) objects through [IapService.PurchasesResponseListener](#iapservicepurchasesresponselistener).
 
 <a id="specification-for-unconsumed-purchases-query-api"></a>
 ### Query unconsumed purchases API specification { #specification-for-unconsumed-purchases-query-api }
@@ -644,8 +644,8 @@ void queryConsumablePurchases(boolean isQueryAllStores) {
 * You can query activated subscription products (AUTO_RENEWABLE & CONSUMABLE_AUTO_RENEWABLE) based on the user ID.
 * Subscription products that have been paid for can continue to be queried as long as the usage period remains.
 * You can query activated subscriptions by using the NhnCloudIap.queryActivatedPurchases() method.
-* You can query activated subscriptions for the current store or all stores by using [IapQueryPurchasesParams](./iap-android/#iapquerypurchasesparams).
-* The query result returns a list of [IapPurchase](./iap-android/#iappurchase) objects through [IapService.PurchasesResponseListener](./iap-android/#iapservicepurchasesresponselistener).
+* You can query activated subscriptions for the current store or all stores by using [IapQueryPurchasesParams](#iapquerypurchasesparams).
+* The query result returns a list of [IapPurchase](#iappurchase) objects through [IapService.PurchasesResponseListener](#iapservicepurchasesresponselistener).
 * Subscription products purchased on iOS can also be queried on Android.
 
 > Subscription products currently only support the Google Play Store.
@@ -699,8 +699,8 @@ void queryActivatedPurchases(boolean isQueryAllStores) {
 * You can view the status of subscription products purchased based on the user ID.
 * Expired subscription products can be included or excluded using the includeExpiredSubscriptions setting. (default: false)
 * You can query the subscription product status by using the NhnCloudIap.querySubscriptionsStatus() method.
-* The query result returns a list of [IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus) objects through [IapService.SubscriptionsStatusResponseListener](./iap-android/#iapservicesubscriptionsstatusresponselistener).
-* The subscription status codes used by [IapSubscriptionStatus](./iap-android/#iapsubscriptionstatus) are defined in [IapSubscriptionStatus.StatusCode](./iap-android/#iapsubscriptionstatusstatuscode).
+* The query result returns a list of [IapSubscriptionStatus](#iapsubscriptionstatus) objects through [IapService.SubscriptionsStatusResponseListener](#iapservicesubscriptionsstatusresponselistener).
+* The subscription status codes used by [IapSubscriptionStatus](#iapsubscriptionstatus) are defined in [IapSubscriptionStatus.StatusCode](#iapsubscriptionstatusstatuscode).
 
 ```
 Subscription products currently only support the Google Play Store.
@@ -873,7 +873,7 @@ public String getStoreCode();
 <a id="nhncloudiapconfigurationbuilder"></a>
 ### NhnCloudIapConfiguration.Builder { #nhncloudiapconfigurationbuilder }
 
-Creates a [NhnCloudIapConfiguration](./iap-android/#nhncloudiapconfiguration) object by taking an IAP service Appkey, store type, and other parameters.
+Creates a [NhnCloudIapConfiguration](#nhncloudiapconfiguration) object by taking an IAP service Appkey, store type, and other parameters.
 
 ```java
 /* NhnCloudIapConfiguration.java */
